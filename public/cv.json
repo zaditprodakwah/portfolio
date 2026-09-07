@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.org",
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Khoiruzzadittaqwa",
+  "alternateName": ["Zadit", "Muhzadit"],
+  "jobTitle": "Strategic Growth, Business & Research Consultant",
+  "description": "Professional consultant with 10+ years of experience across executive business proposal drafting, high-conversion SEO, quantitative academic research data processing, and lightweight client web performance.",
+  "url": "https://zadit.pages.dev",
+  "email": "muhzadit@gmail.com",
+  "telephone": "+6282316363177",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cirebon",
+    "addressRegion": "Jawa Barat",
+    "addressCountry": "ID"
+  },
+  "sameAs": [
+    "https://www.sribu.com/id/users/muhzadit",
+    "https://linkedin.com/in/muhzadit",
+    "https://github.com/muhzadit",
+    "https://kontak.link/muhzadit"
+  ],
+  "knowsAbout": [
+    "Executive Business Proposals",
+    "Investor Pitch Decks",
+    "Feasibility Studies",
+    "Supply Chain Workflow Mapping",
+    "Search Engine Optimization (SEO)",
+    "Commercial Intent Keyword Discovery",
+    "Conversion Copywriting",
+    "Academic Research Methodology",
+    "Quantitative Statistical Analysis (SPSS, Python)",
+    "SINTA Accredited Journal Guidance",
+    "Web Performance & Core Web Vitals",
+    "Tech-Agnostic Web Optimization (WordPress, Next.js, Headless)"
+  ],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5.0",
+      "bestRating": "5"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sribu"
+    }
+  }
+}

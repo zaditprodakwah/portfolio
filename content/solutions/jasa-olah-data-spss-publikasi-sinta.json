@@ -1,0 +1,93 @@
+{
+  "slug": "jasa-olah-data-spss-publikasi-sinta",
+  "pillarId": "academic-research",
+  "pillarName": "Olah Data Statistik & Riset SINTA",
+  "title": "Jasa Olah Data Statistik SPSS & Bimbingan Jurnal SINTA: Metodologi Kuantitatif Tahan Uji Sidang",
+  "metaDescription": "Layanan analisis data statistik SPSS, uji validitas kuesioner, uji asumsi klasik, dan bimbingan publikasi jurnal terakreditasi SINTA 2-4. Bebas plagiasi, etis, dan siap uji sidang.",
+  "focusKeyword": "jasa olah data spss sinta",
+  "secondaryKeywords": [
+    "bimbingan statistik skripsi tesis",
+    "uji validitas reliabilitas kuesioner",
+    "analisis regresi berganda spss"
+  ],
+  "directAnswer": {
+    "summary": "Analisis data kuantitatif untuk publikasi ilmiah dan tesis menuntut pemenuhan ketat asumsi klasik statistika (normalitas, multikolinearitas, heteroskedastisitas) serta validitas instrumen empiris. Bukan sekadar menekan tombol perangkat lunak, melainkan menyusun justifikasi saintifik yang tahan terhadap telaah kritis reviewer jurnal SINTA dan penguji sidang.",
+    "takeaways": [
+      "Bimbingan metodologis komprehensif, bukan jalan pintas joki ilegal yang membahayakan gelar akademik.",
+      "Uji validitas & reliabilitas instrumen dengan nilai Cronbach Alpha teruji (> 0.80).",
+      "Penyusunan matriks tanggapan reviewer jurnal (rebuttal letter framework) yang argumentatif dan santun.",
+      "Tabel output statistik disajikan rapi sesuai standar publikasi internasional (APA 7th Edition)."
+    ]
+  },
+  "triadFramework": {
+    "stakeholderDilemma": "Dosen dan mahasiswa pascasarjana seringkali menghadapi batas waktu kelulusan atau masa kenaikan jabatan akademik yang ketat. Kekhawatiran terbesar adalah naskah langsung ditolak (desk-reject) oleh redaksi jurnal karena instrumen kuesioner dinilai cacat atau terjadi manipulasi data (p-hacking).",
+    "diplomaticNavigation": "Kami memberikan bimbingan diplomasi saintifik: membantu peneliti memahami logika di balik angka statistiknya, mempertahankan keterbatasan penelitian secara elegan, serta menyusun argumentasi ilmiah yang meyakinkan saat berhadapan dengan catatan kritis dewan reviewer.",
+    "executionDeliverable": "Laporan pengujian SPSS lengkap dengan sintaks dan interpretasi kata demi kata, panduan menjawab pertanyaan penguji, naskah metode penelitian yang rapi, serta matriks perbaikan revisi jurnal SINTA."
+  },
+  "impactDashboard": {
+    "businessRoi": [
+      {
+        "label": "Status Naskah",
+        "value": "Diterima Terbit SINTA 2"
+      },
+      {
+        "label": "Hasil Sidang Tesis",
+        "value": "Lulus Predikat Memuaskan"
+      },
+      {
+        "label": "Keamanan Akademik",
+        "value": "100% Bebas Plagiasi & Etis"
+      }
+    ],
+    "technicalRigor": [
+      {
+        "label": "Cronbach Alpha",
+        "value": "0.892 (Sangat Reliabel)"
+      },
+      {
+        "label": "Goodness of Fit R²",
+        "value": "0.674 (p < 0.001)"
+      },
+      {
+        "label": "Multikolinearitas",
+        "value": "VIF < 2.5 (Bebas Masalah)"
+      }
+    ]
+  },
+  "competitorMatrix": [
+    {
+      "dimension": "Etika & Keaslian Data",
+      "ourSolution": "Bimbingan konsultatif transparan; data riil dianalisis sesuai kaidah ilmiah tanpa manipulasi.",
+      "legacyAgency": "Biro riset mahal dengan waktu tunggu lama dan minim penjelasan logika statistik.",
+      "cheapFreelance": "Joki skripsi abal-abal yang merekayasa angka (faking data) berisiko pencabutan gelar."
+    },
+    {
+      "dimension": "Kesiapan Menghadapi Reviewer",
+      "ourSolution": "Disediakan panduan argumen metodologi dan draf rebuttal letter siap kirim.",
+      "legacyAgency": "Hanya menyerahkan tabel output tanpa pendampingan revisi mendalam.",
+      "cheapFreelance": "Langsung lepas tangan saat peneliti menerima catatan revisi kritis dari penguji."
+    },
+    {
+      "dimension": "Format Penyajian",
+      "ourSolution": "Format tabel APA 7th Edition siap tempel ke naskah jurnal tanpa perlu format ulang.",
+      "legacyAgency": "Screenshot kasar dari layar software statistik.",
+      "cheapFreelance": "Tabel berantakan tanpa uji asumsi klasik yang memadai."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apakah layanan ini merupakan jasa joki?",
+      "answer": "Sama sekali bukan. Kami menyediakan layanan bimbingan metodologi dan pengolahan data statistik resmi. Klien dibimbing untuk memahami setiap angka dan tabel sehingga menguasai materi seutuhnya saat sidang atau wawancara akademik."
+    },
+    {
+      "question": "Software statistik apa saja yang didukung?",
+      "answer": "Kami berpengalaman luas menggunakan IBM SPSS Statistics, SmartPLS (SEM-PLS), AMOS (CB-SEM), serta analisis komputasi Python untuk pemodelan data besar."
+    }
+  ],
+  "relatedEntities": [
+    "analisis-spss",
+    "uji-validitas-reliabilitas",
+    "publikasi-sinta",
+    "statistics-data"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "slug": "audit-technical-seo-core-web-vitals",
+  "pillarId": "marketing-seo",
+  "pillarName": "SEO, Konten & Konversi Digital",
+  "title": "Audit Technical SEO & Core Web Vitals: Konversi Organik Berkelanjutan Bebas Biaya Server Bulanan",
+  "metaDescription": "Layanan audit technical SEO on-page, perbaikan Core Web Vitals (LCP < 1.2s), dan restrukturisasi tautan internal silo. Peningkatan ranking Google organik tanpa ketergantungan PBN.",
+  "focusKeyword": "jasa audit technical seo website",
+  "secondaryKeywords": [
+    "optimasi core web vitals indonesia",
+    "jasa optimasi kecepatan website",
+    "strategi internal linking seo"
+  ],
+  "directAnswer": {
+    "summary": "Technical SEO modern bukan sekadar memasang plugin di WordPress atau membeli backlink massal di forum. Inti dari dominasi pencarian Google saat ini adalah kecepatan muat di jaringan seluler (LCP & INP), arsitektur tautan internal berbasis silo topik yang rapi, serta metadata terstruktur (JSON-LD) yang ramah terhadap mesin perayap AI seperti Google Gemini, Perplexity, dan ChatGPT Search.",
+    "takeaways": [
+      "Penghapusan skrip berat yang menghambat pengalaman render ponsel pengunjung.",
+      "Penataan topical silo internal linking yang mengalirkan link equity secara deterministik.",
+      "Optimasi Core Web Vitals dengan skor 98-100 di Google PageSpeed Insights.",
+      "Solusi arsitektur cerdas yang mengeliminasi biaya sewa server bulanan yang boros."
+    ]
+  },
+  "triadFramework": {
+    "stakeholderDilemma": "Pemilik bisnis seringkali merasa frustrasi setelah menghabiskan puluhan juta rupiah untuk agensi SEO yang hanya menyajikan grafik impresi kosmetik tanpa pernah menghasilkan kontak masuk (leads) nyata. Di sisi teknis, situs web lambat dibuka di ponsel sehingga calon pembeli kabur dalam 3 detik pertama.",
+    "diplomaticNavigation": "Kami menyelaraskan tujuan teknis dengan bahasa profit bisnis: mengalihkan KPI dari sekadar peringkat kata kunci generik ke arah pencarian berniat beli tinggi (commercial intent), serta mendidik tim internal agar dapat mempertahankan kualitas konten tanpa harus terus bergantung pada pihak ketiga.",
+    "executionDeliverable": "Laporan Audit Technical SEO menyeluruh, kode perbaikan Core Web Vitals siap pakai, diagram peta tautan internal berbasis graf, serta konfigurasi caching edge Cloudflare yang menghemat 100% biaya server hosting."
+  },
+  "impactDashboard": {
+    "businessRoi": [
+      {
+        "label": "Pertumbuhan Qualified Leads",
+        "value": "+140% Inbound WhatsApp"
+      },
+      {
+        "label": "Efisiensi Biaya Hosting",
+        "value": "100% Hemat ($0/Bulan)"
+      },
+      {
+        "label": "Rasio Pentalan (Bounce Rate)",
+        "value": "Turun Drastis ke 28%"
+      }
+    ],
+    "technicalRigor": [
+      {
+        "label": "Google PageSpeed Mobile",
+        "value": "99 / 100 Skor Kinerja"
+      },
+      {
+        "label": "Largest Contentful Paint (LCP)",
+        "value": "0.6 Detik (Sangat Cepat)"
+      },
+      {
+        "label": "Time to First Byte (TTFB)",
+        "value": "< 30ms via Edge CDN"
+      }
+    ]
+  },
+  "competitorMatrix": [
+    {
+      "dimension": "Metode Optimasi",
+      "ourSolution": "Pembersihan kode sumber, arsitektur data terstruktur, dan penataan topical silo organik.",
+      "legacyAgency": "Membeli paket backlink PBN murahan yang berisiko terkena penalti deindex Google.",
+      "cheapFreelance": "Hanya menginstal plugin SEO standar tanpa memahami logika perayapan Googlebot."
+    },
+    {
+      "dimension": "Orientasi Hasil",
+      "ourSolution": "Fokus pada konversi calon pembeli nyata dan kecepatan render ponsel pengguna.",
+      "legacyAgency": "Hanya membanggakan impresi kata kunci acak yang tidak menghasilkan transaksi.",
+      "cheapFreelance": "Tidak ada analisis alur konversi pengunjung."
+    },
+    {
+      "dimension": "Biaya Infrastruktur Berkelanjutan",
+      "ourSolution": "Arsitektur static export edge Cloudflare: $0 biaya server hosting selamanya.",
+      "legacyAgency": "Mewajibkan klien menyewa dedicated server / VPS mahal yang menguras kas bulanan.",
+      "cheapFreelance": "Membiarkan website tetap lemot di shared hosting murah."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apakah website berbasis WordPress bisa dioptimasi dengan metode ini?",
+      "answer": "Bisa. Kami dapat mengaudit dan mengoptimalkan instalasi WordPress eksisting klien, atau membantu migrasi bertahap ke arsitektur headless yang jauh lebih cepat dan aman."
+    },
+    {
+      "question": "Berapa lama hasil optimasi SEO mulai terlihat?",
+      "answer": "Perbaikan kecepatan situs dan pengalaman pengguna langsung terasa seketika setelah deploy. Untuk kenaikan peringkat Google pada kata kunci berniat komersial, pergerakan organik umumnya terverifikasi dalam 4 hingga 8 minggu."
+    }
+  ],
+  "relatedEntities": [
+    "technical-seo",
+    "core-web-vitals",
+    "seo-strategy",
+    "web-engineering"
+  ]
+}

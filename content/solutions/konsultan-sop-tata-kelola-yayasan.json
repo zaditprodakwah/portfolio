@@ -1,0 +1,92 @@
+{
+  "slug": "konsultan-sop-tata-kelola-yayasan",
+  "pillarId": "business-docs",
+  "pillarName": "Dokumen, Tata Kelola & Administrasi Bisnis",
+  "title": "Konsultan Penyusunan SOP & Tata Kelola Lembaga Yayasan: Akuntabilitas Donatur & Siap Audit",
+  "metaDescription": "Jasa perancangan Standar Operasional Prosedur (SOP) lembaga nirlaba dan yayasan. Pemisahan rekening dana, tata kelola kepengurusan, dan kepatuhan audit transparansi publik.",
+  "focusKeyword": "konsultan sop yayasan",
+  "secondaryKeywords": [
+    "tata kelola lembaga nirlaba",
+    "manual prosedur administrasi yayasan",
+    "sop keuangan yayasan"
+  ],
+  "directAnswer": {
+    "summary": "Tata kelola yayasan dan lembaga sosial memerlukan pemisahan fungsi operasional yang tegas antara pembina, pengurus, dan pengawas, serta sistem administrasi keuangan transparan (pemisahan rekening wakaf, zakat/infaq, dan operasional). SOP yang kuat menjamin perlindungan hukum bagi pengurus dan menjaga kepercayaan donatur dari risiko kecurigaan publik.",
+    "takeaways": [
+      "Perancangan SOP kontekstual yang disesuaikan dengan kapasitas sumber daya manusia di lapangan.",
+      "Pemisahan alur verifikasi pengeluaran dana untuk mencegah konflik kepentingan.",
+      "Kepatuhan terhadap regulasi Undang-Undang Yayasan dan standar pelaporan pertanggungjawaban publik.",
+      "Dilengkapi form ceklis harian dan alur kerja visual (flowchart) yang mudah dijalankan staf."
+    ]
+  },
+  "triadFramework": {
+    "stakeholderDilemma": "Pengurus yayasan seringkali terjebak dalam dilema antara menjaga niat keikhlasan berkhidmat dengan tuntutan profesionalisme hukum. Tanpa SOP tertulis, risiko temuan audit eksternal, ketidakcocokan saldo kas, atau perselisihan antar pengurus dapat menghancurkan reputasi lembaga yang dibangun bertahun-tahun.",
+    "diplomaticNavigation": "Kami mengedepankan pendekatan tata kelola yang inklusif dan solutif: merumuskan aturan yang dipahami seluruh relawan dan staf tanpa mematikan kelincahan program sosial, serta menanamkan budaya transparansi pelaporan yang menenangkan dewan pembina dan donatur.",
+    "executionDeliverable": "Buku Panduan SOP Tata Kelola Lembaga (terdiri dari 18 modul kerja terpadu), matriks wewenang otorisasi keuangan, template laporan bulanan donatur, serta flowchart operasional visual."
+  },
+  "impactDashboard": {
+    "businessRoi": [
+      {
+        "label": "Hasil Audit Keuangan",
+        "value": "WTP (Wajar Tanpa Pengecualian)"
+      },
+      {
+        "label": "Kepercayaan Donatur",
+        "value": "Retensi Donatur Naik 45%"
+      },
+      {
+        "label": "Keamanan Legal",
+        "value": "100% Sesuai UU Yayasan"
+      }
+    ],
+    "technicalRigor": [
+      {
+        "label": "Modul SOP Disahkan",
+        "value": "18 Prosedur Baku"
+      },
+      {
+        "label": "Sistem Rekening",
+        "value": "Multi-Account Segregated"
+      },
+      {
+        "label": "Waktu Adopsi Staf",
+        "value": "Pelatihan 2 Hari Tuntas"
+      }
+    ]
+  },
+  "competitorMatrix": [
+    {
+      "dimension": "Kesesuaian dengan Karakter Lembaga",
+      "ourSolution": "Dirancang khusus memahami nuansa etika sosial, kelembagaan dakwah/amal, dan budaya kerja relawan.",
+      "legacyAgency": "Menerapkan SOP korporasi kaku yang tidak realistis dijalankan oleh pengurus yayasan.",
+      "cheapFreelance": "Download template gratis di Google yang pasal-pasalnya tidak relevan dengan hukum yayasan."
+    },
+    {
+      "dimension": "Kemudahan Eksekusi Harian",
+      "ourSolution": "Dilengkapi lembar kendali (form checklist) dan bagan alir yang langsung dapat diprint staf.",
+      "legacyAgency": "Dokumen tebal ratusan halaman yang berakhir tersimpan di lemari tanpa pernah dibuka.",
+      "cheapFreelance": "File teks mentah tanpa formulir kerja pendukung."
+    },
+    {
+      "dimension": "Pendampingan Implementasi",
+      "ourSolution": "Sesi pengarahan dan simulasi langsung dengan pengurus hingga sistem berjalan stabil.",
+      "legacyAgency": "Hanya menyerahkan buku cetak tanpa mendampingi masa transisi.",
+      "cheapFreelance": "Tidak ada pendampingan setelah dokumen dikirim."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apakah SOP ini cocok untuk yayasan yang baru berdiri?",
+      "answer": "Sangat cocok. Justru memulai yayasan dengan fondasi SOP yang rapi sejak awal akan mencegah kebiasaan buruk dalam pencampuran kas pribadi dan kas operasional lembaga."
+    },
+    {
+      "question": "Apakah mencakup SOP pengadaan barang dan logistik?",
+      "answer": "Ya, paket SOP tata kelola kami mencakup administrasi persuratan, keuangan kas kecil, penerimaan donasi, pengadaan perlengkapan, serta pengelolaan inventaris aset wakaf."
+    }
+  ],
+  "relatedEntities": [
+    "sop-administrasi",
+    "business-admin",
+    "studi-kelayakan"
+  ]
+}

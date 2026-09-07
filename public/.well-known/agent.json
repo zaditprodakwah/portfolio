@@ -1,0 +1,25 @@
+{
+  "name": "Zadit Strategic Advisory Agent",
+  "description": "Autonomous discovery card for Muhammad Khoiruzzadittaqwa (Zadit) - Strategic Growth, Business & Research Consultant.",
+  "url": "https://zadit.pages.dev",
+  "version": "1.0.0",
+  "capabilities": [
+    "business_proposals",
+    "investor_pitch_decks",
+    "b2b_seo_growth",
+    "conversion_copywriting",
+    "quantitative_statistics",
+    "sinta_journal_publishing",
+    "web_performance_optimization"
+  ],
+  "contact": {
+    "whatsapp": "https://wa.me/6282316363177",
+    "email": "muhzadit@gmail.com",
+    "sribu": "https://www.sribu.com/id/users/muhzadit"
+  },
+  "endpoints": {
+    "resume_pdf": "https://zadit.pages.dev/cv.pdf",
+    "cv_json": "https://zadit.pages.dev/cv.json",
+    "llms_txt": "https://zadit.pages.dev/llms.txt"
+  }
+}

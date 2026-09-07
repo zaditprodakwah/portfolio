@@ -1,0 +1,93 @@
+{
+  "slug": "proposal-bisnis-rantai-pasok-investor",
+  "pillarId": "business-docs",
+  "pillarName": "Dokumen, Tata Kelola & Administrasi Bisnis",
+  "title": "Jasa Penyusunan Proposal Bisnis & Rantai Pasok Investor: Standar Perbankan Tanpa Proyeksi Fiktif",
+  "metaDescription": "Layanan penyusunan proposal bisnis kemitraan dan studi kelayakan rantai pasok berstandar perbankan. Mitigasi risiko operasional, proyeksi cash-flow riil, dan presentasi siap investor.",
+  "focusKeyword": "jasa pembuatan proposal bisnis investor",
+  "secondaryKeywords": [
+    "studi kelayakan rantai pasok",
+    "proposal usaha kemitraan",
+    "pitch deck agribisnis"
+  ],
+  "directAnswer": {
+    "summary": "Proposal bisnis berstandar investor bukan sekadar dokumen presentasi berdesain rapi, melainkan pembuktian mitigasi risiko operasional, validasi rantai pasok (supply chain), dan proyeksi arus kas 5 tahun yang dapat dipertanggungjawabkan di hadapan perbankan maupun komite investasi.",
+    "takeaways": [
+      "Kalkulasi logistik dan mitigasi susut riil menggantikan angka klaim fiktif.",
+      "Struktur dokumen memenuhi standar evaluasi kelayakan kredit usaha perbankan.",
+      "Dilengkapi peta rantai pasok interaktif untuk transparansi distribusi multi-gerai.",
+      "Proses pendampingan langsung bersama analis tanpa perantara perwakilan penjualan."
+    ]
+  },
+  "triadFramework": {
+    "stakeholderDilemma": "Investor dan mitra dagang telah jenuh membaca proposal bisnis dengan grafik pendapatan eksponensial tanpa kalkulasi teknis rantai pasok. Di sisi lain, pemilik usaha cemas modal tertahan akibat tidak transparannya perjanjian bagi hasil dan tata kelola konsinyasi.",
+    "diplomaticNavigation": "Kami menyusun dokumen yang berfokus pada titik mitigasi risiko daripada klaim keuntungan berlebih. Kami menjembatani ekspektasi investor akan kepastian hukum dengan fleksibilitas operasional harian yang dibutuhkan manajemen lapangan.",
+    "executionDeliverable": "Laporan Feasibility Study komprehensif 45 halaman, model keuangan Excel dengan sensitivitas inflasi, serta peta rantai pasok interaktif yang memetakan jalur distribusi dari sentra panen hingga 120 gerai ritel modern."
+  },
+  "impactDashboard": {
+    "businessRoi": [
+      {
+        "label": "Komitmen Mitra",
+        "value": "120 Gerai Ritel"
+      },
+      {
+        "label": "Kesiapan Rapat Direksi",
+        "value": "100% Lolos Uji Kelayakan"
+      },
+      {
+        "label": "Efisiensi Siklus Modal",
+        "value": "Siklus Putar Kas 14 Hari"
+      }
+    ],
+    "technicalRigor": [
+      {
+        "label": "Kalkulasi Spoilage Rate",
+        "value": "Terkunci < 3.2%"
+      },
+      {
+        "label": "Horizon Proyeksi Finansial",
+        "value": "5 Tahun Model Dinamis"
+      },
+      {
+        "label": "Waktu Penyusunan",
+        "value": "14 Hari Kerja Tuntas"
+      }
+    ]
+  },
+  "competitorMatrix": [
+    {
+      "dimension": "Kedalaman Riset & Data",
+      "ourSolution": "Data lapangan spesifik industri, kalkulasi rute logistik, dan rasio susut nyata.",
+      "legacyAgency": "Menggunakan template korporat umum dengan biaya belasan juta rupiah.",
+      "cheapFreelance": "Copy-paste dari proposal internet tanpa verifikasi kelayakan operasional."
+    },
+    {
+      "dimension": "Mitigasi Risiko Hukum & Audit",
+      "ourSolution": "Pasal kemitraan transparan, batasan tanggung jawab wanprestasi, dan klausul audit.",
+      "legacyAgency": "Biaya legal review terpisah dan proses lambat berminggu-minggu.",
+      "cheapFreelance": "Tidak ada klausul mitigasi risiko sehingga rawan sengketa saat usaha berjalan."
+    },
+    {
+      "dimension": "Akses Komunikasi",
+      "ourSolution": "Konsultasi langsung intensif dengan analis eksekutor (one-on-one).",
+      "legacyAgency": "Berlapis melalui account executive / junior staff.",
+      "cheapFreelance": "Respon tidak konsisten dan tidak memahami logika keuangan bisnis."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Berapa lama proses penyusunan proposal bisnis kemitraan ini?",
+      "answer": "Rata-rata 10 hingga 14 hari kerja tergantung pada kelengkapan data awal yang dimiliki klien dan kompleksitas alur rantai pasok."
+    },
+    {
+      "question": "Apakah saya mendapatkan berkas sumber yang dapat diedit?",
+      "answer": "Ya, klien menerima berkas dokumen master (DOCX), slide presentasi (PPTX/PDF), serta spreadsheet model keuangan (XLSX) yang dinamis."
+    }
+  ],
+  "relatedEntities": [
+    "studi-kelayakan",
+    "proposal-kemitraan",
+    "business-admin",
+    "sop-administrasi"
+  ]
+}
