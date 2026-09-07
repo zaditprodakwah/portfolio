@@ -161,10 +161,13 @@ export const ConsultationBuilder: React.FC = () => {
           {/* Step 2: Name & Organization Inputs */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
+              <label htmlFor="consultation-client-name" className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
                 {lang === 'id' ? '2. Nama Lengkap Anda' : '2. Your Full Name'}
               </label>
               <input
+                id="consultation-client-name"
+                name="clientName"
+                autoComplete="name"
                 type="text"
                 placeholder={lang === 'id' ? 'Misal: Budi Santoso' : 'e.g. John Doe'}
                 value={clientName}
@@ -174,10 +177,13 @@ export const ConsultationBuilder: React.FC = () => {
             </div>
 
             <div className="space-y-2">
-              <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
+              <label htmlFor="consultation-org-name" className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
                 {lang === 'id' ? 'Nama Usaha / Lembaga / Kampus' : 'Organization / University / Business'}
               </label>
               <input
+                id="consultation-org-name"
+                name="organization"
+                autoComplete="organization"
                 type="text"
                 placeholder={lang === 'id' ? 'Misal: PT Maju Bersama / Univ. Indonesia' : 'e.g. Acme Corp / Stanford Univ'}
                 value={organization}
@@ -190,7 +196,7 @@ export const ConsultationBuilder: React.FC = () => {
           {/* Step 3: Optional Notes / Details */}
           <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
+              <label htmlFor="consultation-notes" className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
                 {lang === 'id' ? '3. Keterangan Tambahan / Pertanyaan' : '3. Context / Questions'}
               </label>
               <span className="text-xs font-mono text-slate-700 uppercase font-semibold">
@@ -198,6 +204,8 @@ export const ConsultationBuilder: React.FC = () => {
               </span>
             </div>
             <textarea
+              id="consultation-notes"
+              name="notes"
               rows={3}
               placeholder={
                 lang === 'id'

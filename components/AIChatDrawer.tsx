@@ -217,7 +217,13 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
             }}
             className="flex gap-2"
           >
+            <label htmlFor="ai-chat-input" className="sr-only">
+              {lang === 'id' ? 'Tanya Asisten AI' : 'Ask AI Assistant'}
+            </label>
             <input
+              id="ai-chat-input"
+              name="chatMessage"
+              aria-label={lang === 'id' ? 'Tanya Asisten AI' : 'Ask AI Assistant'}
               type="text"
               placeholder={lang === 'id' ? 'Ketik pertanyaan untuk Zadit...' : 'Ask a question about Zadit...'}
               value={inputValue}

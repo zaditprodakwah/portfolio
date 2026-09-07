@@ -2,8 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { ShieldCheck, MessageSquareCode, X, Sparkles } from "lucide-react";
-import { cvProfile } from "@/lib/cv-data";
+import { MessageSquareCode, X } from "lucide-react";
 
 interface PersonalGreetingCapsuleProps {
   lang?: "id" | "en";
@@ -18,11 +17,11 @@ export function PersonalGreetingCapsule({ lang = "id", onOpenChat }: PersonalGre
     // Check sessionStorage so it does not disturb returning navigations
     const seen = sessionStorage.getItem("has_seen_greeting_capsule_v1");
     if (!seen) {
-      // Gentle delay of 800ms before floating in
+      // Gentle delay before floating in
       const timer = setTimeout(() => {
         setIsVisible(true);
         setIsDismissed(false);
-      }, 800);
+      }, 600);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -38,7 +37,7 @@ export function PersonalGreetingCapsule({ lang = "id", onOpenChat }: PersonalGre
   return (
     <aside
       aria-label={lang === "id" ? "Sapaan Personal Zadit" : "Personal Greeting from Zadit"}
-      className={`fixed bottom-5 right-5 z-40 max-w-sm sm:max-w-md w-[calc(100%-2.5rem)] bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-2xl p-4 sm:p-5 transition-all duration-300 transform ${
+      className={`fixed bottom-20 sm:bottom-5 left-3 right-3 sm:left-auto sm:right-5 z-40 max-w-sm sm:max-w-md bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-2xl p-4 sm:p-5 transition-all duration-300 transform ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0 pointer-events-none"
       }`}
     >
@@ -53,19 +52,20 @@ export function PersonalGreetingCapsule({ lang = "id", onOpenChat }: PersonalGre
       </button>
 
       <div className="flex items-start gap-3.5 sm:gap-4 pr-6">
-        {/* Photo with Online Dot */}
+        {/* Photo with Online Dot (Without priority to prevent unused preload warning) */}
         <div className="relative shrink-0 mt-0.5">
-          <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-xl overflow-hidden ring-2 ring-teal-600/20 shadow-sm relative bg-slate-100">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden ring-2 ring-teal-600/20 shadow-sm relative bg-slate-100">
             <Image
               src="/foto-zadit.jpg"
               alt="Muhammad Khoiruzzadittaqwa"
               fill
+              sizes="(max-width: 640px) 48px, 56px"
               className="object-cover"
-              priority
+              loading="lazy"
             />
           </div>
           <span
-            className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full shadow-xs"
+            className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full shadow-xs"
             title="Online & Siap Berdiskusi"
           />
         </div>
@@ -77,10 +77,10 @@ export function PersonalGreetingCapsule({ lang = "id", onOpenChat }: PersonalGre
             </h3>
           </div>
 
-          <p className="text-xs text-slate-600 leading-snug line-clamp-3 mb-3">
+          <p className="text-xs text-slate-600 leading-snug line-clamp-2 sm:line-clamp-3 mb-2.5">
             {lang === "id"
-              ? "Halo! Sedang mempersiapkan naskah jurnal SINTA, olah data statistik rumit, atau butuh web cepat performa tinggi? Mari kita bahas solusinya."
-              : "Hello! Finalizing a research manuscript, statistical modeling, or building a high-speed web platform? Feel free to discuss your requirements directly."}
+              ? "Halo! Sedang mempersiapkan naskah jurnal SINTA, olah data statistik rumit, atau butuh web cepat? Mari kita selesaikan solusinya."
+              : "Hello! Finalizing a research manuscript, statistical modeling, or building a high-speed web platform? Feel free to discuss your requirements."}
           </p>
 
           <div className="flex items-center gap-2">
@@ -94,7 +94,7 @@ export function PersonalGreetingCapsule({ lang = "id", onOpenChat }: PersonalGre
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white text-[11px] font-heading font-bold tracking-wide uppercase transition-colors shadow-xs cursor-pointer"
               >
                 <MessageSquareCode className="w-3.5 h-3.5" />
-                <span>{lang === "id" ? "Mulai Tanya AI" : "Chat with AI"}</span>
+                <span>{lang === "id" ? "Tanya AI" : "Chat with AI"}</span>
               </button>
             )}
 
