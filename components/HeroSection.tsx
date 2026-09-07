@@ -12,7 +12,6 @@ import {
   FileCheck2,
 } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
-import { useLanguage } from "@/lib/LanguageContext";
 import { AudienceQualifier } from "./AudienceQualifier";
 
 interface HeroSectionProps {
@@ -20,49 +19,48 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
-  const { lang } = useLanguage();
-  const stats = cvProfile.stats[lang];
+    const stats = cvProfile.stats.id;
 
   // 4 Interactive Rotating Problem-Solution Pillars with Problem-Centric Hooks + SEO Spectrum
   const pillars = [
     {
       id: "academic",
-      label: lang === "id" ? "Riset, Skripsi & Olah Data" : "Research & Statistics",
+      label: true ? "Riset, Skripsi & Olah Data" : "Research & Statistics",
       icon: GraduationCap,
-      headline: lang === "id" 
+      headline: true 
         ? "Mengurai kebuntuan olah data statistik (SPSS, SEM, Python), uji hipotesis, dan naskah riset agar siap sidang dan lolos telaah jurnal tanpa revisi berulang." 
         : "Overcoming quantitative data bottlenecks (SPSS, SEM, Python), hypothesis tests, and research papers for defense readiness and journal peer-review.",
-      badge: lang === "id" ? "Bimbingan Metodologi & Olah Data Statistik" : "Methodology & Statistical Modeling",
+      badge: true ? "Bimbingan Metodologi & Olah Data Statistik" : "Methodology & Statistical Modeling",
       link: "/layanan/olah-data-statistik-sinta"
     },
     {
       id: "business",
-      label: lang === "id" ? "Proposal Usaha & SOP" : "Proposals & SOP",
+      label: true ? "Proposal Usaha & SOP" : "Proposals & SOP",
       icon: Briefcase,
-      headline: lang === "id" 
+      headline: true 
         ? "Menyusun proposal kemitraan investor, model keuangan BEP realistis, dan standardisasi SOP operasional agar bisnis mandiri tanpa hambatan birokrasi." 
         : "Drafting executive investor proposals, commercial feasibility models, and operational SOPs that eliminate owner bottlenecks.",
-      badge: lang === "id" ? "Unit Economics & Standardisasi Operasional" : "Unit Economics & Process Standardization",
+      badge: true ? "Unit Economics & Standardisasi Operasional" : "Unit Economics & Process Standardization",
       link: "/layanan/dokumen-administrasi-bisnis"
     },
     {
       id: "web",
-      label: lang === "id" ? "Website Bisnis & Konversi" : "Business Web & Conversion",
+      label: true ? "Website Bisnis & Konversi" : "Business Web & Conversion",
       icon: Globe,
-      headline: lang === "id" 
+      headline: true 
         ? "Membangun website profil usaha dan landing page yang terbuka instan di ponsel pelanggan, bebas downtime, dan langsung terhubung ke WhatsApp penjualan." 
         : "Engineering lightweight, instant-loading mobile business websites optimized for search intent and direct WhatsApp client acquisition.",
-      badge: lang === "id" ? "Cepat di Ponsel, Bebas Downtime & Ramah SEO" : "Mobile Speed, High Uptime & High-Intent SEO",
+      badge: true ? "Cepat di Ponsel, Bebas Downtime & Ramah SEO" : "Mobile Speed, High Uptime & High-Intent SEO",
       link: "/layanan/solusi-web-performa"
     },
     {
       id: "career",
-      label: lang === "id" ? "CV Eksekutif & Karir" : "Executive CV & Career",
+      label: true ? "CV Eksekutif & Karir" : "Executive CV & Career",
       icon: FileCheck2,
-      headline: lang === "id" 
+      headline: true 
         ? "Menata portofolio profesional dan resume berstandar ATS internasional untuk meyakinkan rekruter korporat, seleksi BUMN, maupun beasiswa luar negeri." 
         : "Architecting ATS-compliant executive resumes and verified career portfolios that clear initial screening and convince leadership.",
-      badge: lang === "id" ? "Standar Format ATS & Rekam Jejak Terverifikasi" : "ATS Compliance & Verified Credentials",
+      badge: true ? "Standar Format ATS & Rekam Jejak Terverifikasi" : "ATS Compliance & Verified Credentials",
       link: "/cv"
     }
   ];
@@ -90,7 +88,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 border border-teal-300 max-w-full">
             <span className="w-2.5 h-2.5 rounded-full bg-teal-700 animate-pulse"></span>
             <span className="font-mono text-xs tracking-wider uppercase font-bold text-teal-900">
-              {lang === "id"
+              {true
                 ? "Kesiapan: Terbuka untuk Konsultasi & Kemitraan"
                 : "Availability: Open for Strategic Advisory"}
             </span>
@@ -113,7 +111,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
             </div>
 
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight text-slate-900 leading-[1.2] break-words">
-              {lang === "id" ? (
+              {true ? (
                 <>
                   Solusi Praktis & Presisi untuk <br />
                   <span className="text-teal-800">Dokumen Bisnis, Riset Akademik, & Aset Digital.</span>
@@ -136,7 +134,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
             {/* 4 Pillar Tabs (Pills) */}
             <div className="flex flex-wrap items-center gap-1.5 pb-2 border-b border-slate-100">
               <span className="text-[11px] font-mono text-slate-600 font-bold uppercase tracking-wider mr-1">
-                {lang === "id" ? "Fokus Masalah:" : "Problem Focus:"}
+                {true ? "Fokus Masalah:" : "Problem Focus:"}
               </span>
               {pillars.map((p, idx) => {
                 const isActive = activePillarIndex === idx;
@@ -180,7 +178,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-teal-800 hover:bg-teal-900 text-white px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
               >
-                <span>{lang === "id" ? "Konsultasikan Kebutuhan" : "Discuss Your Project"}</span>
+                <span>{true ? "Konsultasikan Kebutuhan" : "Discuss Your Project"}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -188,14 +186,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 href="/audit"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 hover:text-teal-800 px-4 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors border border-slate-200 shadow-xs cursor-pointer"
               >
-                <span>{lang === "id" ? "Audit Kesiapan Proyek" : "Readiness Audit"}</span>
+                <span>{true ? "Audit Kesiapan Proyek" : "Readiness Audit"}</span>
               </Link>
 
               <Link
                 href="/cv"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 hover:text-teal-800 px-4 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors border border-slate-200 shadow-xs cursor-pointer"
               >
-                <span>{lang === "id" ? "Pratinjau CV" : "View CV"}</span>
+                <span>{true ? "Pratinjau CV" : "View CV"}</span>
               </Link>
 
               <button
@@ -204,12 +202,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 className="inline-flex items-center justify-center gap-2 bg-teal-50 hover:bg-teal-100 text-teal-900 px-4 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors border border-teal-200 cursor-pointer"
                 aria-label="Buka Asisten AI Interaktif"
               >
-                <span>{lang === "id" ? "Tanya AI" : "Ask AI"}</span>
+                <span>{true ? "Tanya AI" : "Ask AI"}</span>
               </button>
             </div>
             
             <p className="text-[11px] font-mono text-slate-600 font-medium">
-              {lang === "id" 
+              {true 
                 ? "Respon dalam hitungan jam · Diskusi tanpa komitmen · Kerahasiaan data terjamin"
                 : "Responses within hours · Zero obligation discussion · Strict data confidentiality"}
             </p>
@@ -219,15 +217,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
           <div className="pt-1 flex flex-wrap items-center gap-4 sm:gap-5 text-xs text-slate-700 font-sans font-medium">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-              <span>{lang === "id" ? "Transparan & Tanpa Janji Bombastis" : "Rigorous Pragmatic Craft"}</span>
+              <span>{true ? "Transparan & Tanpa Janji Bombastis" : "Rigorous Pragmatic Craft"}</span>
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-              <span>{lang === "id" ? "Kerahasiaan Data Riset & Bisnis" : "Strict NDA & Data Privacy"}</span>
+              <span>{true ? "Kerahasiaan Data Riset & Bisnis" : "Strict NDA & Data Privacy"}</span>
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-              <span>{lang === "id" ? "Transaksi Resmi Sribu (Escrow)" : "Official Escrow Platform"}</span>
+              <span>{true ? "Transaksi Resmi Sribu (Escrow)" : "Official Escrow Platform"}</span>
             </span>
           </div>
         </div>
@@ -258,7 +256,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 truncate mt-0.5 font-medium">
-                  {lang === "id" ? "Konsultan Pertumbuhan & Riset" : "Growth & Research Consultant"}
+                  {true ? "Konsultan Pertumbuhan & Riset" : "Growth & Research Consultant"}
                 </p>
                 <div className="flex items-center gap-1.5 mt-1 text-[11px] text-teal-800 font-semibold font-mono">
                   <span>★ 5.0 Rating Sribulancer</span>
@@ -276,10 +274,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {lang === "id" ? "Proposal Bisnis & SOP Operasional" : "Business Proposals & SOP"}
+                    {true ? "Proposal Bisnis & SOP Operasional" : "Business Proposals & SOP"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {lang === "id" ? "Studi kelayakan, proyeksi BEP, dan pedoman kerja terstandar" : "Feasibility, financial cash flows, investor decks"}
+                    {true ? "Studi kelayakan, proyeksi BEP, dan pedoman kerja terstandar" : "Feasibility, financial cash flows, investor decks"}
                   </p>
                 </div>
               </div>
@@ -290,10 +288,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {lang === "id" ? "Riset Akademik & Olah Data Statistik" : "Academic Research & Data"}
+                    {true ? "Riset Akademik & Olah Data Statistik" : "Academic Research & Data"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {lang === "id" ? "Bimbingan skripsi/tesis, uji hipotesis SPSS, dan jurnal SINTA" : "Quantitative analysis (SPSS, SEM) & journal publishing"}
+                    {true ? "Bimbingan skripsi/tesis, uji hipotesis SPSS, dan jurnal SINTA" : "Quantitative analysis (SPSS, SEM) & journal publishing"}
                   </p>
                 </div>
               </div>
@@ -304,10 +302,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {lang === "id" ? "Website Bisnis & Konversi" : "Business Web & Conversion"}
+                    {true ? "Website Bisnis & Konversi" : "Business Web & Conversion"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {lang === "id" ? "Situs cepat ramah ponsel, SEO on-page, dan integrasi WhatsApp" : "Fast mobile business sites, SEO, and WhatsApp integration"}
+                    {true ? "Situs cepat ramah ponsel, SEO on-page, dan integrasi WhatsApp" : "Fast mobile business sites, SEO, and WhatsApp integration"}
                   </p>
                 </div>
               </div>
@@ -318,10 +316,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {lang === "id" ? "CV Eksekutif & Kredensial Karir" : "Executive CV & Career Assets"}
+                    {true ? "CV Eksekutif & Kredensial Karir" : "Executive CV & Career Assets"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {lang === "id" ? "Resume standar ATS, portofolio digital, dan verifikasi profil" : "ATS-compliant resumes and verified career portfolios"}
+                    {true ? "Resume standar ATS, portofolio digital, dan verifikasi profil" : "ATS-compliant resumes and verified career portfolios"}
                   </p>
                 </div>
               </div>
@@ -335,7 +333,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 rel="noopener noreferrer"
                 className="text-xs font-mono text-teal-800 hover:text-teal-950 font-bold flex items-center justify-between"
               >
-                <span>{lang === "id" ? "Lihat Reputasi & Ulasan Klien di Sribu" : "View Verified Sribu Reviews"}</span>
+                <span>{true ? "Lihat Reputasi & Ulasan Klien di Sribu" : "View Verified Sribu Reviews"}</span>
                 <span className="text-sm font-heading font-bold">→</span>
               </a>
             </div>
@@ -345,7 +343,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
 
       {/* Interactive Audience & Problem Qualifier */}
       <div className="mt-14 pt-10 border-t border-slate-200/80">
-        <AudienceQualifier lang={lang} />
+        <AudienceQualifier />
       </div>
 
       {/* Metrics Counter Bar with WCAG AAA Contrast */}

@@ -14,7 +14,6 @@ import {
   Globe,
   MessageCircle
 } from 'lucide-react';
-import { useLanguage } from '@/lib/LanguageContext';
 
 const ENC_EMAIL = 'bXVoemFkaXRAZ21haWwuY29t';
 const ENC_WA_BASE = 'aHR0cHM6Ly93YS5tZS82MjgyMzE2MzYzMTc3';
@@ -31,8 +30,7 @@ function safeDecode(b64: string): string {
 }
 
 export const ConsultationBuilder: React.FC = () => {
-  const { lang } = useLanguage();
-
+  
   const categories = [
     {
       id: 'proposal',
@@ -67,11 +65,11 @@ export const ConsultationBuilder: React.FC = () => {
   const [notes, setNotes] = useState<string>('');
 
   const activeCategoryObj = categories.find((c) => c.id === selectedCategory) || categories[0];
-  const activeCategoryLabel = activeCategoryObj.label[lang];
+  const activeCategoryLabel = activeCategoryObj.label.id;
 
   // Dynamic message builders
   const buildTextMessage = () => {
-    if (lang === 'id') {
+    if (true) {
       let msg = `Halo Zadit, perkenalkan saya ${clientName.trim() || '[Nama Saya]'}`;
       if (organization.trim()) {
         msg += ` dari ${organization.trim()}`;
@@ -107,7 +105,7 @@ export const ConsultationBuilder: React.FC = () => {
     e.preventDefault();
     const email = safeDecode(ENC_EMAIL);
     const subject = encodeURIComponent(
-      lang === 'id'
+      true
         ? `Diskusi Kebutuhan: ${activeCategoryLabel} (${clientName.trim() || 'Mitra'})`
         : `Consultation Inquiry: ${activeCategoryLabel} (${clientName.trim() || 'Partner'})`
     );
@@ -122,18 +120,18 @@ export const ConsultationBuilder: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-900 text-xs font-mono uppercase tracking-wider font-bold">
             <Sparkles className="w-3.5 h-3.5 text-teal-700" />
             <span>
-              {lang === 'id' ? 'Formulir Diskusi Kebutuhan' : 'Structured Project Inquiry'}
+              {true ? 'Formulir Diskusi Kebutuhan' : 'Structured Project Inquiry'}
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
-            {lang === 'id'
+            {true
               ? 'Mulai Konsultasi Langsung dengan Zadit'
               : 'Initiate a Direct Consultation with Zadit'}
           </h2>
 
           <p className="text-slate-700 text-xs sm:text-base max-w-2xl leading-relaxed font-sans">
-            {lang === 'id'
+            {true
               ? 'Pilih bidang kebutuhan Anda untuk menyusun pesan yang terarah. Langsung terhubung ke WhatsApp atau Email resmi tanpa hambatan birokrasi.'
               : 'Select your requirements below to generate a clear, structured consultation message. Connect directly via WhatsApp or Email without friction.'}
           </p>
@@ -143,7 +141,7 @@ export const ConsultationBuilder: React.FC = () => {
           {/* Step 1: Category Selection with Executive Lucide Icons */}
           <div className="space-y-2.5">
             <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
-              {lang === 'id' ? '1. Pilih Bidang Kebutuhan Anda' : '1. Select Your Area of Need'}
+              {true ? '1. Pilih Bidang Kebutuhan Anda' : '1. Select Your Area of Need'}
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
               {categories.map((cat) => {
@@ -165,7 +163,7 @@ export const ConsultationBuilder: React.FC = () => {
                     }`}>
                       <IconComponent className="w-4 h-4" />
                     </span>
-                    <span className="flex-1 leading-snug">{cat.label[lang]}</span>
+                    <span className="flex-1 leading-snug">{cat.label.id}</span>
                   </button>
                 );
               })}
@@ -176,14 +174,14 @@ export const ConsultationBuilder: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <label htmlFor="consultation-client-name" className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
-                {lang === 'id' ? '2. Nama Lengkap Anda' : '2. Your Full Name'}
+                {true ? '2. Nama Lengkap Anda' : '2. Your Full Name'}
               </label>
               <input
                 id="consultation-client-name"
                 name="clientName"
                 autoComplete="name"
                 type="text"
-                placeholder={lang === 'id' ? 'Contoh: Budi Santoso' : 'e.g. John Doe'}
+                placeholder={true ? 'Contoh: Budi Santoso' : 'e.g. John Doe'}
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 text-xs sm:text-sm font-medium focus:outline-none focus:border-teal-700 focus:bg-white transition-all placeholder:text-slate-500"
@@ -192,14 +190,14 @@ export const ConsultationBuilder: React.FC = () => {
 
             <div className="space-y-1.5">
               <label htmlFor="consultation-org-name" className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
-                {lang === 'id' ? 'Nama Usaha / Lembaga / Kampus' : 'Organization / University / Business'}
+                {true ? 'Nama Usaha / Lembaga / Kampus' : 'Organization / University / Business'}
               </label>
               <input
                 id="consultation-org-name"
                 name="organization"
                 autoComplete="organization"
                 type="text"
-                placeholder={lang === 'id' ? 'Contoh: PT Maju Bersama / Univ. Gadjah Mada' : 'e.g. Acme Corp / Stanford Univ'}
+                placeholder={true ? 'Contoh: PT Maju Bersama / Univ. Gadjah Mada' : 'e.g. Acme Corp / Stanford Univ'}
                 value={organization}
                 onChange={(e) => setOrganization(e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 text-xs sm:text-sm font-medium focus:outline-none focus:border-teal-700 focus:bg-white transition-all placeholder:text-slate-500"
@@ -211,10 +209,10 @@ export const ConsultationBuilder: React.FC = () => {
           <div className="space-y-1.5">
             <div className="flex justify-between items-center">
               <label htmlFor="consultation-notes" className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
-                {lang === 'id' ? '3. Ringkasan Kebutuhan / Deadline' : '3. Context / Questions / Deadline'}
+                {true ? '3. Ringkasan Kebutuhan / Deadline' : '3. Context / Questions / Deadline'}
               </label>
               <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold">
-                {lang === 'id' ? '(Opsional)' : '(Optional)'}
+                {true ? '(Opsional)' : '(Optional)'}
               </span>
             </div>
             <textarea
@@ -222,7 +220,7 @@ export const ConsultationBuilder: React.FC = () => {
               name="notes"
               rows={3}
               placeholder={
-                lang === 'id'
+                true
                   ? 'Ceritakan secara singkat target, kendala yang dihadapi, atau deadline yang diinginkan...'
                   : 'Briefly share your target outcome, current challenges, or desired timeline...'
               }
@@ -241,7 +239,7 @@ export const ConsultationBuilder: React.FC = () => {
             >
               <MessageSquare className="w-4 h-4 text-white" />
               <span>
-                {lang === 'id' ? 'Kirim Ringkasan ke WhatsApp' : 'Open in WhatsApp'}
+                {true ? 'Kirim Ringkasan ke WhatsApp' : 'Open in WhatsApp'}
               </span>
               <Send className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -253,7 +251,7 @@ export const ConsultationBuilder: React.FC = () => {
             >
               <Mail className="w-4 h-4 text-teal-300" />
               <span>
-                {lang === 'id' ? 'Kirim via Email Resmi' : 'Send via Direct Email'}
+                {true ? 'Kirim via Email Resmi' : 'Send via Direct Email'}
               </span>
             </button>
           </div>
@@ -262,7 +260,7 @@ export const ConsultationBuilder: React.FC = () => {
           <p className="text-center sm:text-left text-xs text-slate-600 font-sans flex items-center gap-2 justify-center sm:justify-start">
             <ShieldCheck className="w-4 h-4 text-teal-700 shrink-0" />
             <span>
-              {lang === 'id'
+              {true
                 ? 'Diskusi awal tanpa komitmen. Kerahasiaan data riset dan bisnis Anda terjamin.'
                 : 'Initial discussions carry no obligation. Strict confidentiality guaranteed.'}
             </span>

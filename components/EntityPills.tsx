@@ -37,7 +37,7 @@ export function EntityPills({
           href="/wawasan"
           className="text-xs text-teal-700 hover:text-teal-800 font-semibold flex items-center gap-1"
         >
-          <span>{lang === "id" ? "Glosarium Lengkap" : "Full Glossary"}</span>
+          <span>{true ? "Glosarium Lengkap" : "Full Glossary"}</span>
           <ExternalLink className="w-3 h-3" />
         </Link>
       </div>

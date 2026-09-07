@@ -4,12 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, MessageSquare, Linkedin, Github, ExternalLink, Award, FileText, Compass, MapPin, BookOpen } from 'lucide-react';
 import { cvProfile } from '@/lib/cv-data';
-import { useLanguage } from '@/lib/LanguageContext';
 import { ProtectedContact } from './ProtectedContact';
 
 export const ContactFooter: React.FC = () => {
-  const { lang } = useLanguage();
-
+  
   return (
     <footer id="contact" className="bg-slate-900 text-white pt-16 pb-12 px-6 border-t border-slate-800">
       <div className="max-w-6xl mx-auto space-y-12">
@@ -24,10 +22,10 @@ export const ContactFooter: React.FC = () => {
               </span>
             </div>
             <p className="text-slate-200 text-sm max-w-md leading-relaxed font-sans">
-              {cvProfile.summaries[lang]}
+              {cvProfile.summaries.id}
             </p>
             <p className="font-mono text-xs text-teal-400 pt-1 font-semibold">
-              {lang === 'id' ? 'Domisili: ' : 'Location: '}
+              {true ? 'Domisili: ' : 'Location: '}
               {cvProfile.contact.location}
             </p>
           </div>
@@ -36,7 +34,7 @@ export const ContactFooter: React.FC = () => {
             {/* Hub Eksplorasi & Direktori */}
             <div className="space-y-3">
               <p className="text-slate-300 uppercase tracking-wider text-xs font-bold">
-                {lang === 'id' ? 'Arsitektur & Hub' : 'Ecosystem Hubs'}
+                {true ? 'Arsitektur & Hub' : 'Ecosystem Hubs'}
               </p>
               <div className="flex flex-col space-y-2">
                 <Link
@@ -80,7 +78,7 @@ export const ContactFooter: React.FC = () => {
             {/* Direct Protected Channels */}
             <div className="space-y-3">
               <p className="text-slate-300 uppercase tracking-wider text-xs font-bold">
-                {lang === 'id' ? 'Komunikasi Terproteksi' : 'Protected Channels'}
+                {true ? 'Komunikasi Terproteksi' : 'Protected Channels'}
               </p>
               <div className="flex flex-col space-y-2.5">
                 <ProtectedContact type="whatsapp" />
@@ -90,7 +88,7 @@ export const ContactFooter: React.FC = () => {
                   className="flex items-center gap-2 text-slate-200 hover:text-teal-300 transition-colors font-mono text-xs font-bold pt-1"
                 >
                   <FileText className="w-4 h-4 text-teal-400" />
-                  <span>{lang === 'id' ? 'Halaman Resmi CV (/cv/)' : 'Official CV Page (/cv/)'}</span>
+                  <span>{true ? 'Halaman Resmi CV (/cv/)' : 'Official CV Page (/cv/)'}</span>
                 </Link>
               </div>
             </div>
@@ -98,7 +96,7 @@ export const ContactFooter: React.FC = () => {
             {/* Verified External Profiles */}
             <div className="space-y-3">
               <p className="text-slate-300 uppercase tracking-wider text-xs font-bold">
-                {lang === 'id' ? 'Tautan Terverifikasi' : 'Verified Profiles'}
+                {true ? 'Tautan Terverifikasi' : 'Verified Profiles'}
               </p>
               <div className="space-y-2.5">
                 <a

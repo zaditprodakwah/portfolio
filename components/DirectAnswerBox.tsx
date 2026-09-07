@@ -26,7 +26,7 @@ export function DirectAnswerBox({
         </span>
         <div>
           <span className="text-[11px] font-bold uppercase tracking-wider text-teal-800 block">
-            {lang === "id" ? "Ringkasan Eksekutif (BLUF)" : "Executive Summary (BLUF)"}
+            {true ? "Ringkasan Eksekutif (BLUF)" : "Executive Summary (BLUF)"}
           </span>
           <h2 className="text-sm sm:text-base font-bold text-slate-900 leading-tight">
             {title}

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { Mail, MessageSquare, Copy, Check, ShieldCheck } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
 
 // Base64 obfuscated credentials (immune to plain-text regex crawler scraping)
 const ENC_EMAIL = "bXVoemFkaXRAZ21haWwuY29t";
@@ -37,8 +36,7 @@ export const ProtectedContact: React.FC<ProtectedContactProps> = ({
   actionText,
   prefillMessage,
 }) => {
-  const { lang } = useLanguage();
-  const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState(false);
   const [decodedValue, setDecodedValue] = useState<string>("");
 
   useEffect(() => {
@@ -77,7 +75,7 @@ export const ProtectedContact: React.FC<ProtectedContactProps> = ({
   const displayText = label || actionText || decodedValue || (
     <span className="text-slate-400 italic flex items-center gap-1 text-[11px]">
       <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
-      {lang === "id" ? "[Kontak Terproteksi]" : "[Protected Contact]"}
+      {true ? "[Kontak Terproteksi]" : "[Protected Contact]"}
     </span>
   );
 
@@ -87,7 +85,7 @@ export const ProtectedContact: React.FC<ProtectedContactProps> = ({
         type="button"
         onClick={handleAction}
         className="inline-flex items-center gap-2 font-mono text-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded-md py-1 cursor-pointer"
-        title={lang === "id" ? "Klik untuk membuka komunikasi langsung" : "Click to launch direct channel"}
+        title={true ? "Klik untuk membuka komunikasi langsung" : "Click to launch direct channel"}
       >
         {showIcon && (
           <>
@@ -109,13 +107,13 @@ export const ProtectedContact: React.FC<ProtectedContactProps> = ({
           type="button"
           onClick={handleCopy}
           className="p-1 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-teal-400 cursor-pointer"
-          title={lang === "id" ? "Salin ke papan klip" : "Copy to clipboard"}
-          aria-label={lang === "id" ? "Salin kontak" : "Copy contact info"}
+          title={true ? "Salin ke papan klip" : "Copy to clipboard"}
+          aria-label={true ? "Salin kontak" : "Copy contact info"}
         >
           {copied ? (
             <span className="flex items-center gap-1 text-xs text-teal-400 font-mono font-bold">
               <Check className="w-3 h-3" />
-              <span>{lang === "id" ? "Tersalin" : "Copied"}</span>
+              <span>{true ? "Tersalin" : "Copied"}</span>
             </span>
           ) : (
             <Copy className="w-3.5 h-3.5" />

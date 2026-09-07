@@ -610,41 +610,53 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
   }
 
   try {
-    const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(cleanUrl)}&category=PERFORMANCE&category=SEO&category=ACCESSIBILITY&strategy=MOBILE`;
+    const apiUrl = `/api/audit`;
     
-    // Timeout 12 detik agar tidak menggantung di koneksi lambat
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 12000);
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-    const res = await fetch(apiUrl, { signal: controller.signal });
+    const res = await fetch(apiUrl, { 
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url: cleanUrl }),
+      signal: controller.signal 
+    });
     clearTimeout(timeoutId);
 
     if (!res.ok) {
-      throw new Error(`Google PageSpeed API HTTP ${res.status}`);
+      let errMsg = `Audit API Error: HTTP ${res.status}`;
+      try {
+        const errData = await res.json();
+        if (errData.error) errMsg = errData.error;
+      } catch (e) {}
+      throw new Error(errMsg);
     }
 
     const data = await res.json();
-    const lighthouse = data.lighthouseResult;
-    const categories = lighthouse.categories;
-    const audits = lighthouse.audits;
 
-    const perfScore = Math.round((categories.performance?.score || 0) * 100);
-    const seoScore = Math.round((categories.seo?.score || 0) * 100);
-    const a11yScore = Math.round((categories.accessibility?.score || 0) * 100);
+    if (data.error) {
+       throw new Error(data.error);
+    }
 
-    const lcp = audits["largest-contentful-paint"]?.displayValue || "N/A";
-    const cls = audits["cumulative-layout-shift"]?.displayValue || "N/A";
-    const fcp = audits["first-contentful-paint"]?.displayValue || "N/A";
+    const perfScore = data.score || 0;
+    const seoScore = data.seo || 0;
+    const a11yScore = data.accessibility || 0;
+    const lcp = data.lcp || "N/A";
+    const cls = data.cls || "N/A";
+    const fcp = data.fcp || "N/A";
+    const latencyMs = data.latencyMs || 0;
 
     const overallScore = Math.round(perfScore * 0.5 + seoScore * 0.3 + a11yScore * 0.2);
 
-    const fatalVulnerabilities: string[] = [];
+    const fatalVulnerabilities: string[] = data.vulnerabilities || [];
     const remediationSteps: string[] = [];
 
     if (perfScore < 60) {
-      fatalVulnerabilities.push(
-        `Skor performa mobile tergolong lambat (${perfScore}/100, LCP: ${lcp}). Pengunjung mobile cenderung langsung meninggalkan halaman sebelum penawaran terbaca.`
-      );
+      if (!fatalVulnerabilities.some(v => v.includes("Skor performa mobile tergolong lambat"))) {
+        fatalVulnerabilities.push(
+          `Skor performa mobile tergolong lambat (${perfScore}/100, LCP: ${lcp}). Pengunjung mobile cenderung langsung meninggalkan halaman sebelum penawaran terbaca.`
+        );
+      }
       remediationSteps.push(
         "Kompresi aset visual ke format WebP/AVIF serta defer script analitik pihak ketiga yang membebani thread utama."
       );
@@ -660,9 +672,11 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
     }
 
     if (seoScore < 80) {
-      fatalVulnerabilities.push(
-        `Skor SEO on-page (${seoScore}/100) menunjukkan adanya kelemahan meta deskripsi, canonical URL, atau struktur heading mesin pencari.`
-      );
+      if (!fatalVulnerabilities.some(v => v.includes("Skor SEO on-page"))) {
+         fatalVulnerabilities.push(
+          `Skor SEO on-page (${seoScore}/100) menunjukkan adanya kelemahan meta deskripsi, canonical URL, atau struktur heading mesin pencari.`
+         );
+      }
       remediationSteps.push(
         "Lengkapi tag meta OpenGraph, Canonical URL, dan Schema.org JSON-LD agar tautan terindeks sempurna di Google dan rapi saat dibagikan ke WhatsApp."
       );
@@ -691,6 +705,11 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
       statusDescription = `Loading website ${cleanUrl} sangat lambat di perangkat ponsel, memicu tingginya bounce rate calon pembeli.`;
     }
 
+    if (data.fallback) {
+      statusTitle += " (Server Probe)";
+      statusDescription += ` (Skor Dihitung via Heuristik Probe: Latency ${latencyMs}ms)`;
+    }
+
     const waPrefill = [
       `Halo Mas Zadit, saya baru saja menguji website ${cleanUrl} di Tool Audit zadit.pages.dev/audit.`,
       ``,
@@ -705,7 +724,7 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
 
     return {
       pillar: "web",
-      pillarLabel: "Web & Core Web Vitals Live Audit",
+      pillarLabel: data.fallback ? "Web & Keamanan DNS Server Probe" : "Web & Core Web Vitals Live Audit",
       overallScore,
       grade,
       statusTitle,
@@ -744,49 +763,33 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
         isLiveAnalyzed: true
       }
     };
-  } catch (error) {
-    // Smart Heuristic Fallback bila API eksternal gagal atau kena rate-limit
-    console.warn("Falling back to local heuristic analyzer:", error);
+  } catch (error: any) {
+    console.error("Critical failure calling /api/audit:", error);
     
-    // Heuristic scoring berdasarkan format domain & protokol
-    const isHttps = cleanUrl.startsWith("https://");
-    const domainLength = cleanUrl.replace(/https?:\/\//, "").split("/")[0].length;
-    const baseScore = isHttps ? 68 : 45;
-    const finalScore = Math.min(82, Math.max(48, baseScore - (domainLength > 25 ? 10 : 0)));
-
     const waPrefill = [
-      `Halo Mas Zadit, saya menguji website ${cleanUrl} di zadit.pages.dev/audit.`,
-      `Estimasi skor awal: ${finalScore}/100.`,
-      `Saya ingin meminta audit menyeluruh untuk Core Web Vitals dan SEO performa website kami.`
+      `Halo Mas Zadit, saya menguji website ${cleanUrl} di zadit.pages.dev/audit namun terjadi kegagalan sistem.`,
+      `Saya ingin meminta audit manual dari Mas Zadit untuk Core Web Vitals website kami.`
     ].join("\n");
 
     return {
       pillar: "web",
-      pillarLabel: "Web & Core Web Vitals Heuristic Scan",
-      overallScore: finalScore,
-      grade: finalScore >= 70 ? "B" : "C",
-      statusTitle: isHttps ? "Pemeriksaan Heuristik: Terindikasi Hambatan Mobile" : "Keamanan & Performa Rentan (Tanpa HTTPS Aktif)",
-      statusDescription: `Analisis heuristik awal mendeteksi perlunya optimasi kecepatan aset visual dan penataan metadata pada domain ${cleanUrl}.`,
+      pillarLabel: "Web & Core Web Vitals (Error)",
+      overallScore: 0,
+      grade: "D",
+      statusTitle: "Pemeriksaan Gagal Dijalankan",
+      statusDescription: `Terjadi kendala teknis saat mengaudit ${cleanUrl}: ${error.message || "Unknown Error"}`,
       fatalVulnerabilities: [
-        "Potensi LCP lambat pada jaringan seluler 4G akibat ukuran aset gambar tanpa format generasi baru (WebP/AVIF).",
-        "Ketiadaan data terstruktur Schema.org yang menyebabkan mesin pencari tidak mengenali entitas bisnis Anda secara utuh."
+        "Sistem tidak dapat menghubungi layanan audit. Pastikan URL valid dan dapat diakses secara publik, serta bukan alamat IP internal."
       ],
       remediationSteps: [
-        "Jalankan kompresi aset gambar dan implementasikan caching CDN Cloudflare untuk respon instan < 50ms.",
-        "Pasang meta OpenGraph statis dan Schema JSON-LD untuk mempermudah perolehan traffic organik.",
-        "Integrasikan tombol chat WhatsApp responsif dengan pesan prefilled untuk mempermudah konversi pengunjung."
+        "Coba gunakan URL lain atau hubungi konsultan untuk audit manual."
       ],
       waPrefillText: waPrefill,
       metricsBreakdown: [
-        { label: "Protokol Keamanan (SSL/HTTPS)", score: isHttps ? 100 : 0, maxScore: 100, status: isHttps ? "good" : "danger" },
-        { label: "Struktur Domain & Indeks Dasar", score: 70, maxScore: 100, status: "warning" },
-        { label: "Estimasi Kesiapan Mobile", score: finalScore, maxScore: 100, status: finalScore >= 70 ? "good" : "warning" }
+        { label: "Ketersediaan Layanan", score: 0, maxScore: 100, status: "danger" }
       ],
       rawMetrics: {
         url: cleanUrl,
-        lcp: "~3.2s (Estimasi)",
-        cls: "~0.12 (Estimasi)",
-        fcp: "~1.8s (Estimasi)",
         isLiveAnalyzed: false
       }
     };

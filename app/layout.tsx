@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: "https://zadit.pages.dev/",
     languages: {
       "id-ID": "https://zadit.pages.dev/",
-      "en-US": "https://zadit.pages.dev/"
+      "x-default": "https://zadit.pages.dev/"
     },
     types: {
       "application/rss+xml": "https://zadit.pages.dev/feed.xml"
@@ -143,11 +143,17 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="id-ID"
+      lang="id"
       className={`scroll-smooth w-full max-w-full overflow-x-hidden ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <meta name="google-site-verification" content="I9y6U1bm8P_UhKve6EYvFENOlia-tQ0ZIvwnul81sxY" />
+        <meta httpEquiv="content-language" content="id-ID" />
+        <meta name="geo.region" content="ID" />
+        <meta name="geo.placename" content="Indonesia" />
+        <meta name="geo.position" content="-6.2088;106.8456" />
+        <meta name="ICBM" content="-6.2088, 106.8456" />
+        <meta name="language" content="Indonesian" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

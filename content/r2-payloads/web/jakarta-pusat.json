@@ -1,0 +1,52 @@
+{
+  "category": "web",
+  "slug": "jakarta-pusat",
+  "type": "local",
+  "isTier1": true,
+  "bpsCode": "3171",
+  "title": "Jasa Pembuatan Web Modern & Cepat di Jakarta Pusat",
+  "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Jakarta Pusat. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+  "targetKeyword": "jasa pembuatan web jakarta pusat",
+  "areaServed": "Jakarta Pusat",
+  "wikidataUri": "https://www.wikidata.org/wiki/Q10116",
+  "localOrIndustryContext": "Ekosistem bisnis di Jakarta Pusat menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+  "hybridComparison": {
+    "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+    "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+    "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+    "comparisonTable": [
+      {
+        "criterion": "Kecepatan Akses (TTFB)",
+        "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+        "freelancePlatform": "Tergantung shared hosting murah",
+        "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+      },
+      {
+        "criterion": "Biaya Hosting Bulanan",
+        "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+        "freelancePlatform": "Biaya tahunan hosting shared",
+        "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+      },
+      {
+        "criterion": "Ketahanan Lonjakan Trafik",
+        "traditionalAgency": "Sering tumbang jika visitor spike",
+        "freelancePlatform": "Batas resource hosting terbatas",
+        "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+      }
+    ]
+  },
+  "rootDomainLink": {
+    "anchorText": "layanan solusi web performa tinggi",
+    "targetUrl": "/layanan/solusi-web-performa"
+  },
+  "faq": [
+    {
+      "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Jakarta Pusat?",
+      "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Jakarta Pusat, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+    },
+    {
+      "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+      "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+    }
+  ]
+}

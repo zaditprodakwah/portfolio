@@ -1,0 +1,41 @@
+{
+  "category": "sinta",
+  "slug": "universitas-brawijaya",
+  "type": "industry",
+  "isTier1": true,
+  "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Brawijaya (UB)",
+  "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Brawijaya (UB). Bebas joki, 100% pembekalan metodologis beretika.",
+  "targetKeyword": "olah data statistik universitas brawijaya",
+  "areaServed": "Universitas Brawijaya (UB), Malang",
+  "wikidataUri": "https://www.wikidata.org/wiki/Q1188584",
+  "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Brawijaya (UB) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+  "hybridComparison": {
+    "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+    "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+    "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+    "comparisonTable": [
+      {
+        "criterion": "Legalitas & Integritas",
+        "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+        "freelancePlatform": "Kualitas tidak terstandarisasi",
+        "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+      },
+      {
+        "criterion": "Penguasaan Hasil",
+        "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+        "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+        "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+      }
+    ]
+  },
+  "rootDomainLink": {
+    "anchorText": "pendampingan riset sinta dan statistik",
+    "targetUrl": "/layanan/olah-data-statistik-sinta"
+  },
+  "faq": [
+    {
+      "question": "Apakah pendampingan riset untuk Universitas Brawijaya (UB) ini legal dan aman dari sanksi?",
+      "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+    }
+  ]
+}

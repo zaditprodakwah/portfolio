@@ -25,7 +25,7 @@ export const QuickAuditTeaser: React.FC = () => {
           <div className="max-w-xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-teal-50 text-teal-800 border border-teal-200/80">
               <Zap className="w-3.5 h-3.5 text-teal-700" />
-              <span>SCORECARD & ASSESSMENT SYSTEM</span>
+              <span>SISTEM PENILAIAN & ASESMEN</span>
             </div>
 
             <h2 className="text-xl sm:text-3xl font-extrabold font-heading text-slate-900 tracking-tight leading-snug">

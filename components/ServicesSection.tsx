@@ -4,11 +4,9 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, ChevronDown, Sparkles, Clock, Layers, ShieldCheck } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
-import { useLanguage } from "@/lib/LanguageContext";
 
 export const ServicesSection: React.FC = () => {
-  const { lang } = useLanguage();
-  // Single-Open Accordion state for mobile: default first service open
+    // Single-Open Accordion state for mobile: default first service open
   const [openServiceId, setOpenServiceId] = useState<string | null>(cvProfile.services[0].id);
   // Mobile package tab index: 0 = 1-2 Hari, 1 = 1-3 Minggu (Most popular), 2 = Bulanan
   const [activePackageTab, setActivePackageTab] = useState<number>(1);
@@ -35,15 +33,15 @@ export const ServicesSection: React.FC = () => {
       <div className="space-y-8 sm:space-y-12">
         <div className="space-y-3">
           <span className="font-mono text-xs text-teal-800 font-bold tracking-widest uppercase">
-            {lang === "id" ? "Layanan Terfokus" : "Core Practice Areas"}
+            {true ? "Layanan Terfokus" : "Core Practice Areas"}
           </span>
           <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
-            {lang === "id"
+            {true
               ? "Layanan Terfokus yang Kami Kerjakan Secara Mandiri"
               : "Specialized Services Delivered with Direct Accountability"}
           </h2>
           <p className="text-slate-700 text-xs sm:text-base max-w-2xl leading-relaxed font-sans">
-            {lang === "id"
+            {true
               ? "Setiap layanan dikerjakan secara langsung dengan pendekatan metodologis yang terstandar, transparan, dan dapat dipertanggungjawabkan tanpa pihak ketiga."
               : "Each capability is executed directly with established frameworks, full transparency, and verifiable deliverables without agency overhead."}
           </p>
@@ -93,11 +91,11 @@ export const ServicesSection: React.FC = () => {
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         <span className="font-mono text-xs text-teal-800 font-bold uppercase tracking-wider">
-                          {svc.deliverables[lang][0] ? svc.deliverables[lang][0].split(" ")[0] : "Layanan"}
+                          {svc.deliverables.id[0] ? svc.deliverables.id[0].split(" ")[0] : "Layanan"}
                         </span>
                       </div>
                       <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-900 leading-snug">
-                        {svc.title[lang]}
+                        {svc.title.id}
                       </h3>
                     </div>
                     <button
@@ -116,15 +114,15 @@ export const ServicesSection: React.FC = () => {
                   {/* Body Content: Collapsible on Mobile, Always Visible on Desktop */}
                   <div className={`mt-4 space-y-4 ${isOpen ? "block" : "hidden md:block"}`}>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans">
-                      {svc.shortDesc[lang]}
+                      {svc.shortDesc.id}
                     </p>
 
                     <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
                       <p className="font-mono text-xs font-bold uppercase tracking-wider text-slate-900">
-                        {lang === "id" ? "Spesifikasi Output Kerja:" : "Concrete Deliverables:"}
+                        {true ? "Spesifikasi Output Kerja:" : "Concrete Deliverables:"}
                       </p>
                       <ul className="space-y-2 text-xs sm:text-sm text-slate-800 font-sans">
-                        {svc.deliverables[lang].map((item, itemIdx) => (
+                        {svc.deliverables.id.map((item, itemIdx) => (
                           <li key={itemIdx} className="flex items-start gap-2.5">
                             <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
                             <span>{item}</span>
@@ -137,14 +135,14 @@ export const ServicesSection: React.FC = () => {
 
                 <div className="pt-4 mt-5 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-700 font-sans">
                   <span>
-                    <strong className="text-slate-900 font-bold">{lang === "id" ? "Relevan untuk: " : "Best for: "}</strong>
-                    {svc.audience[lang]}
+                    <strong className="text-slate-900 font-bold">{true ? "Relevan untuk: " : "Best for: "}</strong>
+                    {svc.audience.id}
                   </span>
                   <Link
                     href={targetRoute}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-teal-900 shrink-0"
                   >
-                    <span>{lang === "id" ? "Lihat Spesifikasi & Output" : "View Specifications"}</span>
+                    <span>{true ? "Lihat Spesifikasi & Output" : "View Specifications"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -158,15 +156,15 @@ export const ServicesSection: React.FC = () => {
       <div id="packages" className="space-y-6 sm:space-y-10 pt-4">
         <div className="space-y-3">
           <span className="font-mono text-xs text-teal-800 font-bold tracking-widest uppercase">
-            {lang === "id" ? "Pilihan Kerjasama Modular" : "Modular Engagement Packages"}
+            {true ? "Pilihan Kerjasama Modular" : "Modular Engagement Packages"}
           </span>
           <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
-            {lang === "id"
+            {true
               ? "Model Kolaborasi yang Menyesuaikan Kebutuhan Anda"
               : "Flexible Engagement Models to Match Your Timeline"}
           </h2>
           <p className="text-slate-700 text-xs sm:text-base max-w-2xl leading-relaxed font-sans">
-            {lang === "id"
+            {true
               ? "Mulai dari pemeriksaan singkat tanpa komitmen hingga pengerjaan tuntas dan pendampingan berkala."
               : "From a zero-commitment initial diagnosis to complete project delivery and ongoing advisory."}
           </p>
@@ -206,7 +204,7 @@ export const ServicesSection: React.FC = () => {
                 {idx === 1 && (
                   <span className="absolute -top-3.5 left-6 font-mono text-[11px] font-bold uppercase tracking-wider bg-teal-800 text-white px-3 py-1 rounded-full shadow-xs flex items-center gap-1">
                     <Sparkles className="w-3 h-3 text-teal-300" />
-                    {lang === "id" ? "Paling Sering Dipilih" : "Most Popular"}
+                    {true ? "Paling Sering Dipilih" : "Most Popular"}
                   </span>
                 )}
 
@@ -214,7 +212,7 @@ export const ServicesSection: React.FC = () => {
                   <div className="flex justify-between items-start gap-2">
                     <span className="font-mono text-xs text-slate-800 font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 flex items-center gap-1.5">
                       <Clock className="w-3 h-3 text-teal-700" />
-                      {pkg.duration[lang]}
+                      {pkg.duration.id}
                     </span>
                     <span className="font-mono text-xs text-teal-800 font-bold">
                       0{idx + 1}
@@ -223,24 +221,24 @@ export const ServicesSection: React.FC = () => {
 
                   <div>
                     <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-900">
-                      {pkg.name[lang]}
+                      {pkg.name.id}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans mt-1.5">
-                      {pkg.tagline[lang]}
+                      {pkg.tagline.id}
                     </p>
                   </div>
 
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-sans">
-                    <strong className="text-slate-900 font-bold">{lang === "id" ? "Cocok untuk: " : "Ideal for: "}</strong>
-                    {pkg.bestFor[lang]}
+                    <strong className="text-slate-900 font-bold">{true ? "Cocok untuk: " : "Ideal for: "}</strong>
+                    {pkg.bestFor.id}
                   </div>
 
                   <div className="space-y-2 pt-1">
                     <p className="font-mono text-xs font-bold uppercase tracking-wider text-slate-900">
-                      {lang === "id" ? "Cakupan Layanan:" : "What is Included:"}
+                      {true ? "Cakupan Layanan:" : "What is Included:"}
                     </p>
                     <ul className="space-y-1.5 text-xs text-slate-800 font-sans">
-                      {pkg.features[lang].map((ft, ftIdx) => (
+                      {pkg.features.id.map((ft, ftIdx) => (
                         <li key={ftIdx} className="flex items-start gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0 mt-0.5" />
                           <span>{ft}</span>
@@ -255,7 +253,7 @@ export const ServicesSection: React.FC = () => {
                     href="#consultation"
                     className="w-full inline-flex items-center justify-center gap-2 bg-slate-50 hover:bg-teal-700 hover:text-white text-slate-900 font-heading font-bold uppercase tracking-wider text-xs py-3 rounded-xl border border-slate-300 hover:border-teal-700 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
                   >
-                    <span>{lang === "id" ? "Diskusikan Paket Ini" : "Select Package"}</span>
+                    <span>{true ? "Diskusikan Paket Ini" : "Select Package"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -269,13 +267,13 @@ export const ServicesSection: React.FC = () => {
       <div className="space-y-6 pt-4">
         <div className="space-y-2">
           <span className="font-mono text-xs text-slate-700 font-bold tracking-widest uppercase">
-            {lang === "id" ? "Filosofi Kerja" : "Execution Philosophy"}
+            {true ? "Filosofi Kerja" : "Execution Philosophy"}
           </span>
           <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900 tracking-tight">
-            Tool Follows Goal: {lang === "id" ? "Metode Menyesuaikan Kebutuhan Nyata Klien" : "Tools Adapt to Client Goals"}
+            Tool Follows Goal: {true ? "Metode Menyesuaikan Kebutuhan Nyata Klien" : "Tools Adapt to Client Goals"}
           </h2>
           <p className="text-slate-700 text-xs sm:text-sm max-w-2xl leading-relaxed font-sans">
-            {lang === "id"
+            {true
               ? "Kami tidak mewajibkan perombakan sistem yang mahal. Kami siap mengoptimalkan alat atau platform yang sudah Anda miliki atau merancang solusi kustom yang paling efisien."
               : "We do not force expensive stack migrations. We adapt to your established systems or deploy lightweight, zero-maintenance custom solutions."}
           </p>
@@ -285,10 +283,10 @@ export const ServicesSection: React.FC = () => {
           {cvProfile.toolCategories.map((cat, idx) => (
             <div key={idx} className="bg-white border border-slate-200 p-5 rounded-2xl shadow-xs space-y-3">
               <h3 className="font-heading font-bold text-base text-slate-900">
-                {cat.category[lang]}
+                {cat.category.id}
               </h3>
               <p className="text-xs text-slate-700 leading-relaxed font-sans">
-                {cat.description[lang]}
+                {cat.description.id}
               </p>
               <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-200">
                 {cat.tools.map((tool, tIdx) => (

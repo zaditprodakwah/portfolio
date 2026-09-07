@@ -16,12 +16,12 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
       serviceKey: "academic-data",
       routeUrl: "/layanan/olah-data-statistik-sinta",
       icon: GraduationCap,
-      hook: lang === "id" ? "Tenggat Waktu & Revisi Menumpuk?" : "Facing Tight Deadlines & Revisions?",
-      title: lang === "id" ? "Akademisi, Dosen & Mahasiswa" : "Researchers & Academics",
-      desc: lang === "id"
+      hook: true ? "Tenggat Waktu & Revisi Menumpuk?" : "Facing Tight Deadlines & Revisions?",
+      title: true ? "Akademisi, Dosen & Mahasiswa" : "Researchers & Academics",
+      desc: true
         ? "Bimbingan metodologi skripsi/tesis/disertasi, olah data statistik (SPSS, SEM, Python), dan penyiapan naskah publikasi jurnal SINTA."
         : "Methodology guidance for thesis/dissertation, quantitative analysis (SPSS, SEM, Python), and SINTA journal manuscript preparation.",
-      badge: lang === "id" ? "Riset & Olah Data" : "Research & Statistics"
+      badge: true ? "Riset & Olah Data" : "Research & Statistics"
     },
     {
       id: "bisnis",
@@ -29,12 +29,12 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
       serviceKey: "business-docs",
       routeUrl: "/layanan/dokumen-administrasi-bisnis",
       icon: Briefcase,
-      hook: lang === "id" ? "Peluang Usaha Tertahan Dokumen?" : "Growth Delayed by Unstructured Docs?",
-      title: lang === "id" ? "Pelaku Usaha, UMKM & Lembaga" : "Business Founders & Institutions",
-      desc: lang === "id"
+      hook: true ? "Peluang Usaha Tertahan Dokumen?" : "Growth Delayed by Unstructured Docs?",
+      title: true ? "Pelaku Usaha, UMKM & Lembaga" : "Business Founders & Institutions",
+      desc: true
         ? "Proposal kemitraan investor, studi kelayakan (FS), proyeksi keuangan BEP realistis, dan standardisasi buku pedoman SOP operasional."
         : "Investor partnership proposals, commercial feasibility studies, BEP financial models, and operational SOP manuals.",
-      badge: lang === "id" ? "Proposal & SOP" : "Proposals & SOP"
+      badge: true ? "Proposal & SOP" : "Proposals & SOP"
     },
     {
       id: "web",
@@ -42,12 +42,12 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
       serviceKey: "web-solutions",
       routeUrl: "/layanan/solusi-web-performa",
       icon: Globe,
-      hook: lang === "id" ? "Website Lambat & Sepi Prospek?" : "Website Slow & Missing Conversions?",
-      title: lang === "id" ? "Bisnis Berkembang & UKM" : "Growing Businesses & Brands",
-      desc: lang === "id"
+      hook: true ? "Website Lambat & Sepi Prospek?" : "Website Slow & Missing Conversions?",
+      title: true ? "Bisnis Berkembang & UKM" : "Growing Businesses & Brands",
+      desc: true
         ? "Website profil dan landing page ringan yang terbuka instan di ponsel, ramah SEO pencarian berniat beli, dan langsung terhubung WhatsApp."
         : "Lightweight, instant-loading mobile business websites optimized for search intent and direct WhatsApp client acquisition.",
-      badge: lang === "id" ? "Web & Konversi" : "Web & Conversions"
+      badge: true ? "Web & Konversi" : "Web & Conversions"
     },
     {
       id: "karir",
@@ -55,12 +55,12 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
       serviceKey: "cv",
       routeUrl: "/cv",
       icon: UserCheck,
-      hook: lang === "id" ? "Gagal di Tahap Skrining Lamaran?" : "Filtered Out at CV Screening?",
-      title: lang === "id" ? "Profesional & Rekruter" : "Professionals & Recruiters",
-      desc: lang === "id"
+      hook: true ? "Gagal di Tahap Skrining Lamaran?" : "Filtered Out at CV Screening?",
+      title: true ? "Profesional & Rekruter" : "Professionals & Recruiters",
+      desc: true
         ? "Penyusunan CV eksekutif format ATS internasional, portofolio kredensial terverifikasi, dan rekam jejak resmi rating 5.0 Sribulancer."
         : "ATS-compliant international executive resume design, verified career credentials, and official 5.0 Sribu track record.",
-      badge: lang === "id" ? "CV ATS & Kredensial" : "ATS CV & Credential"
+      badge: true ? "CV ATS & Kredensial" : "ATS CV & Credential"
     }
   ];
 
@@ -96,13 +96,13 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
     <div className="w-full max-w-5xl mx-auto mb-12">
       <div className="text-center mb-6">
         <span className="text-xs font-mono font-bold uppercase tracking-wider text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-200/80 inline-block mb-2">
-          {lang === "id" ? "Pilih Kebutuhan Anda" : "Select Your Objective"}
+          {true ? "Pilih Kebutuhan Anda" : "Select Your Objective"}
         </span>
         <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-slate-900 tracking-tight">
-          {lang === "id" ? "Apa yang Sedang Menahan Kemajuan Anda Hari Ini?" : "What Friction Point Are We Resolving Today?"}
+          {true ? "Apa yang Sedang Menahan Kemajuan Anda Hari Ini?" : "What Friction Point Are We Resolving Today?"}
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mt-1">
-          {lang === "id"
+          {true
             ? "Pilih kendala utama Anda untuk melihat spesifikasi solusi dan standar pengerjaannya."
             : "Select your primary bottleneck to inspect tailored solutions and execution standards."}
         </p>
@@ -148,7 +148,7 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
 
               <div className="flex items-center justify-between gap-2 mt-4 pt-2.5 border-t border-slate-100">
                 <span className="inline-flex items-center gap-1 text-xs font-bold text-teal-700 group-hover:text-teal-900">
-                  <span>{lang === "id" ? "Jelajahi Solusi Ini" : "Explore Solution"}</span>
+                  <span>{true ? "Jelajahi Solusi Ini" : "Explore Solution"}</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">

@@ -1,101 +1,917 @@
 [
   {
     "category": "web",
-    "slug": "jakarta",
+    "slug": "jakarta-pusat",
     "type": "local",
-    "title": "Konsultan Web Performa & Edge Serverless Jakarta",
-    "metaDescription": "Rekayasa website berkecepatan tinggi LCP < 1.2s dengan arsitektur serverless Cloudflare Pages untuk founder dan bisnis di DKI Jakarta.",
-    "targetKeyword": "konsultan web jakarta performa tinggi",
-    "areaServed": "DKI Jakarta, Indonesia",
-    "wikidataUri": "https://www.wikidata.org/wiki/Q3586",
-    "localOrIndustryContext": "Sebagai pusat finansial dan korporasi terbesar di Indonesia, persaingan bisnis di Jakarta menuntut aset digital yang tidak hanya estetis, tetapi juga responsif seketika. Banyak perusahaan di kawasan Sudirman, Kuningan, dan TB Simatupang mengeluhkan lambatnya waktu pemuatan situs akibat server monolitik yang berlokasi jauh atau terbebani plugin berlebih.",
+    "isTier1": true,
+    "bpsCode": "3171",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Jakarta Pusat",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Jakarta Pusat. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web jakarta pusat",
+    "areaServed": "Jakarta Pusat",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10116",
+    "localOrIndustryContext": "Ekosistem bisnis di Jakarta Pusat menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
     "hybridComparison": {
-      "contextTradeOff": "Organisasi korporat besar di Jakarta sering membutuhkan agensi full-service untuk integrasi sistem warisan lama. Namun untuk peluncuran cepat dan kebebasan dari biaya server bulanan, pendekatan rekayasa edge mandiri memberikan efisiensi yang tak tertandingi.",
-      "alternativeStrengths": "Agensi web besar di Jakarta memiliki tim desainer visual grafis yang masif dan legalitas vendor multi-tier untuk tender BUMN. Platform freelance menyediakan pilihan pekerja lepas untuk pemeliharaan konten rutin.",
-      "zaditFitContext": "Zadit menangani langsung kebutuhan founder teknologi, konsultan independen, dan pimpinan bisnis di Jakarta yang menginginkan arsitektur web modern tanpa perantara sales, tanpa tagihan server VPS bulanan, dan skor Core Web Vitals 95+ hijau.",
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
       "comparisonTable": [
         {
-          "criterion": "Lokasi Komputasi & Latensi",
-          "traditionalAgency": "Server terpusat (latensi 100-300ms)",
-          "freelancePlatform": "Hosting murah dengan bandwidth terbatas",
-          "zaditEngineering": "Cloudflare Edge Data Center Jakarta (latensi < 25ms)"
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
         },
         {
-          "criterion": "Model Pembiayaan Infrastruktur",
-          "traditionalAgency": "Tagihan rutin bulanan/tahunan",
-          "freelancePlatform": "Biaya lisensi template & add-on",
-          "zaditEngineering": "$0 Serverless Edge Tier tanpa tagihan rutin"
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
         },
         {
-          "criterion": "Akses Tim Teknis",
-          "traditionalAgency": "Melalui Project Manager & Account Executive",
-          "freelancePlatform": "Komunikasi terputus-putus",
-          "zaditEngineering": "Konsultasi teknis langsung dengan rekayasawan utama"
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "konsultan teknologi bisnis eksekutif",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
     },
     "faq": [
       {
-        "question": "Apakah pertemuan diskusi proyek di Jakarta dapat dilakukan tatap muka?",
-        "answer": "Diskusi dapat diatur untuk sesi strategis di Jakarta Selatan/Pusat, atau secara daring via Google Meet terenkripsi demi efisiensi waktu kerja."
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Jakarta Pusat?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Jakarta Pusat, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
       },
       {
-        "question": "Berapa lama proses migrasi website lama ke arsitektur edge?",
-        "answer": "Proses migrasi struktur statis dan optimasi aset umumnya memakan waktu 3 hingga 7 hari kerja."
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "jakarta-selatan",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3174",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Jakarta Selatan",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Jakarta Selatan. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web jakarta selatan",
+    "areaServed": "Jakarta Selatan",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10119",
+    "localOrIndustryContext": "Ekosistem bisnis di Jakarta Selatan menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Jakarta Selatan?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Jakarta Selatan, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "surabaya",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3578",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Surabaya",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Surabaya. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web surabaya",
+    "areaServed": "Surabaya",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11462",
+    "localOrIndustryContext": "Ekosistem bisnis di Surabaya menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Surabaya?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Surabaya, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "bandung",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3273",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Bandung",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Bandung. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web bandung",
+    "areaServed": "Bandung",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10389",
+    "localOrIndustryContext": "Ekosistem bisnis di Bandung menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Bandung?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Bandung, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "semarang",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3374",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Semarang",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Semarang. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web semarang",
+    "areaServed": "Semarang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11468",
+    "localOrIndustryContext": "Ekosistem bisnis di Semarang menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Semarang?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Semarang, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "yogyakarta",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3471",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Yogyakarta",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Yogyakarta. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web yogyakarta",
+    "areaServed": "Yogyakarta",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q42735",
+    "localOrIndustryContext": "Ekosistem bisnis di Yogyakarta menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Yogyakarta?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Yogyakarta, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "malang",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3573",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Malang",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Malang. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web malang",
+    "areaServed": "Malang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11449",
+    "localOrIndustryContext": "Ekosistem bisnis di Malang menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Malang?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Malang, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "surakarta",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3372",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Surakarta (Solo)",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Surakarta (Solo). TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web surakarta (solo)",
+    "areaServed": "Surakarta (Solo)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11457",
+    "localOrIndustryContext": "Ekosistem bisnis di Surakarta (Solo) menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Surakarta (Solo)?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Surakarta (Solo), memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "medan",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "1271",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Medan",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Medan. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web medan",
+    "areaServed": "Medan",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q5972",
+    "localOrIndustryContext": "Ekosistem bisnis di Medan menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Medan?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Medan, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "palembang",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "1671",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Palembang",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Palembang. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web palembang",
+    "areaServed": "Palembang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q8412",
+    "localOrIndustryContext": "Ekosistem bisnis di Palembang menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Palembang?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Palembang, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "batam",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "2171",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Batam",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Batam. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web batam",
+    "areaServed": "Batam",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10114",
+    "localOrIndustryContext": "Ekosistem bisnis di Batam menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Batam?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Batam, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "pekanbaru",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "1471",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Pekanbaru",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Pekanbaru. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web pekanbaru",
+    "areaServed": "Pekanbaru",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q7433",
+    "localOrIndustryContext": "Ekosistem bisnis di Pekanbaru menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Pekanbaru?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Pekanbaru, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "pontianak",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "6171",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Pontianak",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Pontianak. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web pontianak",
+    "areaServed": "Pontianak",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q14168",
+    "localOrIndustryContext": "Ekosistem bisnis di Pontianak menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Pontianak?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Pontianak, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "balikpapan",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "6471",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Balikpapan",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Balikpapan. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web balikpapan",
+    "areaServed": "Balikpapan",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q14175",
+    "localOrIndustryContext": "Ekosistem bisnis di Balikpapan menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Balikpapan?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Balikpapan, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "makassar",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "7371",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Makassar",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Makassar. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web makassar",
+    "areaServed": "Makassar",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q14188",
+    "localOrIndustryContext": "Ekosistem bisnis di Makassar menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Makassar?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Makassar, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
+      }
+    ]
+  },
+  {
+    "category": "web",
+    "slug": "denpasar",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "5171",
+    "title": "Jasa Pembuatan Web Modern & Cepat di Denpasar",
+    "metaDescription": "Spesialis web modern berbasis Cloudflare Edge Serverless di Denpasar. TTFB < 50ms, skor Core Web Vitals 95+, tanpa biaya bulanan cPanel/VPS.",
+    "targetKeyword": "jasa pembuatan web denpasar",
+    "areaServed": "Denpasar",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11505",
+    "localOrIndustryContext": "Ekosistem bisnis di Denpasar menuntut web yang memuat instan di jaringan seluler. Website lambat berbasis cPanel konvensional mengakibatkan 53% calon klien berpindah ke kompetitor sebelum halaman terbuka sempurna.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara WordPress instan berbiaya langganan tinggi vs arsitektur web modern tanpa beban maintenance.",
+      "alternativeStrengths": "Agensi web konvensional unggul dalam template visual massal, namun rentan bloated plugin dan biaya sewa hosting tahunan yang mahal.",
+      "zaditFitContext": "Zadit merancang web native jamstack/serverless di Cloudflare Pages yang bebas biaya server selamanya ($0 USD) dengan performa ekstrem.",
+      "comparisonTable": [
+        {
+          "criterion": "Kecepatan Akses (TTFB)",
+          "traditionalAgency": "500ms – 1.8s (Server Terpusat)",
+          "freelancePlatform": "Tergantung shared hosting murah",
+          "zaditEngineering": "< 50ms via Cloudflare Global Edge"
+        },
+        {
+          "criterion": "Biaya Hosting Bulanan",
+          "traditionalAgency": "Rp 300rb – 1.5jt / bulan (cPanel/VPS)",
+          "freelancePlatform": "Biaya tahunan hosting shared",
+          "zaditEngineering": "Rp 0,- (Free Edge Tier, Zero Cost)"
+        },
+        {
+          "criterion": "Ketahanan Lonjakan Trafik",
+          "traditionalAgency": "Sering tumbang jika visitor spike",
+          "freelancePlatform": "Batas resource hosting terbatas",
+          "zaditEngineering": "Skalabilitas otomatis tak terbatas"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan solusi web performa tinggi",
+      "targetUrl": "/layanan/solusi-web-performa"
+    },
+    "faq": [
+      {
+        "question": "Mengapa memilih website arsitektur edge serverless untuk bisnis di Denpasar?",
+        "answer": "Arsitektur edge serverless menyajikan halaman web dari data center terdekat dengan pengguna di Denpasar, memangkas waktu pemuatan hingga di bawah 1 detik tanpa perlu membayar sewa server bulanan yang membebani operasional."
+      },
+      {
+        "question": "Apakah website ini mudah dikelola dan aman dari peretasan?",
+        "answer": "Sangat aman. Tanpa database SQL yang terekspos publik atau plugin rentan seperti pada CMS konvensional, risiko peretasan berkurang drastis sekaligus terproteksi proteksi DDoS Cloudflare Enterprise Tier."
       }
     ]
   },
   {
     "category": "seo",
-    "slug": "jakarta",
+    "slug": "jakarta-pusat",
     "type": "local",
-    "title": "Jasa SEO Teknis & Optimasi AEO Google Jakarta",
-    "metaDescription": "Optimasi arsitektur entitas, data terstruktur JSON-LD, dan kesiapan perayapan AI Overviews untuk entitas bisnis di Jakarta.",
-    "targetKeyword": "jasa seo teknis jakarta",
-    "areaServed": "DKI Jakarta, Indonesia",
-    "wikidataUri": "https://www.wikidata.org/wiki/Q3586",
-    "localOrIndustryContext": "Kompetisi kata kunci komersial di Jakarta adalah yang terpadat di Indonesia. Mengandalkan taktik lama seperti link spam PBN atau pengulangan kata kunci kini mudah diidentifikasi dan ditolak oleh algoritma Google AI Overviews dan SearchGPT.",
+    "isTier1": true,
+    "bpsCode": "3171",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Jakarta Pusat",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Jakarta Pusat. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo jakarta pusat",
+    "areaServed": "Jakarta Pusat",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10116",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Jakarta Pusat telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
     "hybridComparison": {
-      "contextTradeOff": "Strategi pencarian di ibu kota membutuhkan dekonstruksi entitas semantik yang diakui oleh Knowledge Graph global.",
-      "alternativeStrengths": "Agensi digital media buyer di Jakarta unggul dalam mengelola anggaran iklan berbayar (Google Ads/Meta Ads) berskala miliaran rupiah.",
-      "zaditFitContext": "Zadit fokus 100% pada rekayasa organik murni: membangun graf entitas, skema multi-entity stacking, dan struktur konten otoritatif yang bertahan jangka panjang.",
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
       "comparisonTable": [
         {
-          "criterion": "Pendekatan Algoritma",
-          "traditionalAgency": "Fokus pada kuantitas backlink generik",
-          "freelancePlatform": "Penulisan artikel SEO konvensional",
-          "zaditEngineering": "Penyelarasan entitas Wikidata & arsitektur AEO"
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
         },
         {
-          "criterion": "Transparansi Hasil",
-          "traditionalAgency": "Laporan ranking bulanan PDF",
-          "freelancePlatform": "Serah terima artikel teks tanpa integrasi web",
-          "zaditEngineering": "Injeksi skema live & verifikasi Rich Results Google"
-        },
-        {
-          "criterion": "Keterikatan Kontrak",
-          "traditionalAgency": "Kontrak retainer minimum 6-12 bulan",
-          "freelancePlatform": "Per artikel lepasan",
-          "zaditEngineering": "Pondasi modular selesai dalam satu siklus kerja"
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "layanan seo teknis konversi",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
     },
     "faq": [
       {
-        "question": "Mengapa optimasi AEO (AI Engine Optimization) penting di Jakarta?",
-        "answer": "Pengambil keputusan di Jakarta semakin sering menggunakan AI Search (SearchGPT, Perplexity, Gemini). Tanpa format jawaban langsung (BLUF) dan skema entitas, bisnis Anda tidak akan dirujuk oleh mesin AI."
-      },
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Jakarta Pusat?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "jakarta-selatan",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3174",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Jakarta Selatan",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Jakarta Selatan. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo jakarta selatan",
+    "areaServed": "Jakarta Selatan",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10119",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Jakarta Selatan telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
       {
-        "question": "Apakah layanan ini menjamin ranking nomor 1?",
-        "answer": "Kami tidak menjual janji manipulatif. Kami merekayasa kepatuhan teknis dan otoritas semantik tertinggi yang secara konsisten diutamakan oleh mesin pencari."
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Jakarta Selatan?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
       }
     ]
   },
@@ -103,299 +919,1284 @@
     "category": "seo",
     "slug": "surabaya",
     "type": "local",
-    "title": "Jasa SEO Berbasis Entitas & Konversi Surabaya",
-    "metaDescription": "Layanan optimasi mesin pencari berstandar enterprise untuk bisnis manufaktur, perdagangan, dan eksekutif di Surabaya & Jawa Timur.",
-    "targetKeyword": "jasa seo surabaya profesional",
-    "areaServed": "Surabaya, Jawa Timur, Indonesia",
-    "wikidataUri": "https://www.wikidata.org/wiki/Q11448",
-    "localOrIndustryContext": "Surabaya adalah episentrum perdagangan dan industri Jawa Timur. Karakter pembeli B2B di Surabaya sangat mengutamakan kejelasan rekam jejak dan kredibilitas operasional nyata.",
+    "isTier1": true,
+    "bpsCode": "3578",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Surabaya",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Surabaya. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo surabaya",
+    "areaServed": "Surabaya",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11462",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Surabaya telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
     "hybridComparison": {
-      "contextTradeOff": "Pasar industri Surabaya memerlukan konten teknis yang lugas tanpa hiperbola pemasaran yang klise.",
-      "alternativeStrengths": "Penyedia jasa lokal di Surabaya sangat kompeten dalam pembuatan brosur cetak dan materi pameran dagang offline.",
-      "zaditFitContext": "Zadit membantu perusahaan keluarga, distributor, dan industri manufaktur di Surabaya mentransformasikan situs web statis mereka menjadi magnet akuisisi klien bernilai tinggi.",
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
       "comparisonTable": [
         {
-          "criterion": "Target Audiens",
-          "traditionalAgency": "Pengunjung umum massal",
-          "freelancePlatform": "Trafik non-spesifik",
-          "zaditEngineering": "Pengambil keputusan B2B & calon mitra strategis"
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
         },
         {
-          "criterion": "Kesesuaian Industri",
-          "traditionalAgency": "Template konten gaya hidup/konsumer",
-          "freelancePlatform": "Deskripsi umum produk",
-          "zaditEngineering": "Diksi profesional berbasis terminologi industri riil"
-        },
-        {
-          "criterion": "Struktur Teknis",
-          "traditionalAgency": "Tema WordPress berat",
-          "freelancePlatform": "Tanpa audit Core Web Vitals",
-          "zaditEngineering": "Static HTML murni berkecepatan tinggi"
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "rekayasa visibilitas mesin pencari",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
     },
     "faq": [
       {
-        "question": "Apakah optimasi ini cocok untuk industri ekspor-impor di Surabaya?",
-        "answer": "Sangat cocok. Kami menyusun struktur metadata multisumber yang memudahkan perayap internasional memetakan entitas pelabuhan dan kawasan industri Anda."
-      },
-      {
-        "question": "Berapa lama waktu yang dibutuhkan untuk melihat pergerakan impresi?",
-        "answer": "Setelah pengindeksan sitemap dan graf entitas tuntas, pergerakan impresi query biasanya mulai terdeteksi di Search Console dalam 2 hingga 4 minggu."
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Surabaya?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
       }
     ]
   },
   {
-    "category": "sinta",
+    "category": "seo",
     "slug": "bandung",
     "type": "local",
-    "title": "Pendampingan Olah Data Statistik Tesis & Jurnal SINTA Bandung",
-    "metaDescription": "Konsultasi olah data SPSS, SEM-PLS, dan penguatan metodologi penelitian ilmiah untuk sivitas akademika perguruan tinggi di Bandung.",
-    "targetKeyword": "jasa olah data spss bandung sinta",
-    "areaServed": "Kota Bandung, Jawa Barat, Indonesia",
+    "isTier1": true,
+    "bpsCode": "3273",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Bandung",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Bandung. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo bandung",
+    "areaServed": "Bandung",
     "wikidataUri": "https://www.wikidata.org/wiki/Q10389",
-    "localOrIndustryContext": "Bandung merupakan salah satu kota pendidikan riset terkemuka di Indonesia dengan konsentrasi perguruan tinggi negeri dan swasta bereputasi tinggi. Standar dewan penguji dan reviewer jurnal di Bandung menuntut ketepatan uji instrumen dan pemenuhan asumsi klasik tanpa manipulasi.",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Bandung telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
     "hybridComparison": {
-      "contextTradeOff": "Mahasiswa tingkat akhir dan dosen peneliti membutuhkan rekan diskusi metodologi yang memahami logika di balik angka, bukan sekadar pengetik angka yang menghasilkan output tanpa interpretasi.",
-      "alternativeStrengths": "Rental pengetikan di sekitar kampus sangat membantu untuk percetakan cepat dan jilid skripsi. Laboratorium statistik kampus menyediakan perangkat lunak legal untuk praktikum dasar.",
-      "zaditFitContext": "Zadit menyediakan pendampingan ilmiah satu pintu: kami mendiagnosis normalitas, multikolinearitas, dan heteroskedastisitas data Anda, serta melatih Anda menguasai setiap baris tabel output di hadapan penguji.",
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
       "comparisonTable": [
         {
-          "criterion": "Etika & Integritas",
-          "traditionalAgency": "Praktik joki gelap berisiko sanksi pembatalan gelar",
-          "freelancePlatform": "Hasil komputasi tanpa garansi transfer ilmu",
-          "zaditEngineering": "100% Edukasi Ilmiah: Membimbing penalaran mandiri peneliti"
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
         },
         {
-          "criterion": "Metode Komputasi",
-          "traditionalAgency": "Manipulasi manual angka agar lolos uji",
-          "freelancePlatform": "Olah data mekanis tanpa cek residual",
-          "zaditEngineering": "Solusi metodologis resmi (Bootstrapping, Transformasi, Non-Parametrik)"
-        },
-        {
-          "criterion": "Kerahasiaan Kuesioner/Data",
-          "traditionalAgency": "Data rentan bocor ke mahasiswa lain",
-          "freelancePlatform": "Tanpa kepastian privasi responden",
-          "zaditEngineering": "Kerahasiaan data dilindungi NDA ketat"
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "pendampingan olah data statistik sinta",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
     },
     "faq": [
       {
-        "question": "Apakah saya akan diajari cara membaca tabel output?",
-        "answer": "Pasti. Sesi pendampingan dirancang agar Anda mampu menjelaskan hipotesis, nilai t-hitung, F-hitung, dan R-square dengan percaya diri saat sidang."
-      },
-      {
-        "question": "Software statistik apa saja yang didukung?",
-        "answer": "Kami mendampingi komputasi menggunakan IBM SPSS Statistics, SmartPLS, AMOS, dan program R Studio."
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Bandung?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
       }
     ]
   },
   {
-    "category": "bisnis",
+    "category": "seo",
+    "slug": "semarang",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3374",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Semarang",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Semarang. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo semarang",
+    "areaServed": "Semarang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11468",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Semarang telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Semarang?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "yogyakarta",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3471",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Yogyakarta",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Yogyakarta. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo yogyakarta",
+    "areaServed": "Yogyakarta",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q42735",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Yogyakarta telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Yogyakarta?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "malang",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3573",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Malang",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Malang. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo malang",
+    "areaServed": "Malang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11449",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Malang telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Malang?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "surakarta",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "3372",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Surakarta (Solo)",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Surakarta (Solo). Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo surakarta (solo)",
+    "areaServed": "Surakarta (Solo)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11457",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Surakarta (Solo) telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Surakarta (Solo)?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
     "slug": "medan",
     "type": "local",
-    "title": "Penyusunan Proposal Bisnis & Kelayakan Investor Medan",
-    "metaDescription": "Jasa perumusan proposal bisnis kelayakan bank dan investor institusional untuk pengusaha di Medan & Sumatera Utara.",
-    "targetKeyword": "konsultan proposal bisnis medan",
-    "areaServed": "Kota Medan, Sumatera Utara, Indonesia",
+    "isTier1": true,
+    "bpsCode": "1271",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Medan",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Medan. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo medan",
+    "areaServed": "Medan",
     "wikidataUri": "https://www.wikidata.org/wiki/Q5972",
-    "localOrIndustryContext": "Perekonomian Medan ditopang oleh agribisnis perkebunan, logistik maritim, dan perdagangan grosir. Pengajuan permodalan atau kemitraan strategis di kawasan ini membutuhkan laporan kelayakan yang membuktikan ketahanan modal kerja dan sensitivitas rantai pasok komoditas.",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Medan telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
     "hybridComparison": {
-      "contextTradeOff": "Dokumen bisnis di Medan harus mampu meyakinkan analis risiko perbankan dengan data unit economics yang konservatif dan dapat dipertanggungjawabkan.",
-      "alternativeStrengths": "Biro jasa administrasi umum sangat efisien untuk pengurusan izin operasional daerah dan notaris. Kantor akuntan publik lokal tepat untuk audit laporan pajak tahunan.",
-      "zaditFitContext": "Zadit merumuskan narasi investasi strategis dan proyeksi arus kas dinamis yang membedah keunggulan operasional Anda di hadapan komite kredit atau investor ventura.",
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
       "comparisonTable": [
         {
-          "criterion": "Pemodelan Keuangan",
-          "traditionalAgency": "Template umum tanpa uji stres komoditas",
-          "freelancePlatform": "Tabel excel sederhana tanpa analisis sensitivitas",
-          "zaditEngineering": "Model keuangan dinamis dengan proyeksi multi-skenario"
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
         },
         {
-          "criterion": "Kedalaman Dokumen",
-          "traditionalAgency": "Fokus pada pengisian form standar",
-          "freelancePlatform": "Hanya desain layout visual slide",
-          "zaditEngineering": "Penyelarasan strategi bisnis, rantai pasok, dan tata kelola"
-        },
-        {
-          "criterion": "Kesiapan Presentasi",
-          "traditionalAgency": "Serah terima dokumen tanpa briefing",
-          "freelancePlatform": "Penulis lepas tanpa wawasan bisnis riil",
-          "zaditEngineering": "Simulasi telaah kritis sebelum dokumen diajukan"
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "konsultan tata kelola bisnis eksekutif",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
     },
     "faq": [
       {
-        "question": "Apakah proposal ini memenuhi kriteria kelayakan bank (Bankable)?",
-        "answer": "Ya. Kami menyusun dokumen dengan metodologi analisis Debt Service Coverage Ratio (DSCR), Payback Period, Net Present Value (NPV), dan Internal Rate of Return (IRR) standar perbankan."
-      },
-      {
-        "question": "Berapa lama proses penyusunan proposal bisnis komprehensif?",
-        "answer": "Waktu pengerjaan berkisar antara 5 hingga 10 hari kerja tergantung ketersediaan data historis operasional Anda."
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Medan?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
       }
     ]
   },
   {
-    "category": "web",
-    "slug": "fintech",
-    "type": "industry",
-    "title": "Arsitektur Web Keamanan Tinggi & LCP Hijau Sektor Fintech",
-    "metaDescription": "Rekayasa portal web performa tinggi untuk startup Fintech dan SaaS B2B dengan kepatuhan zero-vulnerability dan komputasi edge serverless.",
-    "targetKeyword": "jasa pembuatan web fintech b2b",
-    "areaServed": "Nasional & Global",
-    "wikidataUri": "https://www.wikidata.org/wiki/Q2567297",
-    "localOrIndustryContext": "Sektor teknologi finansial (Fintech) dan SaaS menuntut dua hal yang sering bertentangan: kecepatan konversi front-end yang instan dan keamanan data tingkat enterprise. Menggunakan arsitektur monolitik yang rentan terhadap kebocoran database atau serangan DDoS di lapisan aplikasi dapat merusak reputasi regulasi OJK/BI secara fatal.",
+    "category": "seo",
+    "slug": "palembang",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "1671",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Palembang",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Palembang. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo palembang",
+    "areaServed": "Palembang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q8412",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Palembang telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
     "hybridComparison": {
-      "contextTradeOff": "Perusahaan fintech membutuhkan front-end yang sepenuhnya terpisah (decoupled) dari core banking backend demi membatasi permukaan serangan (attack surface).",
-      "alternativeStrengths": "Vendor software house enterprise tepat untuk membangun core ledger database perbankan internal. Agensi branding konvensional sangat bagus untuk pembuatan video promosi komersial.",
-      "zaditFitContext": "Zadit merekayasa front-end publik dan portal landing page yang diisolasi secara statis pada Cloudflare Edge: zero database attack surface di sisi klien, kepatuhan CSP ketat, dan LCP < 0.8s.",
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
       "comparisonTable": [
         {
-          "criterion": "Permukaan Serangan Keamanan",
-          "traditionalAgency": "Database SQL terhubung langsung ke front-end",
-          "freelancePlatform": "Penggunaan plugin pihak ketiga yang tidak diaudit",
-          "zaditEngineering": "Static Edge Jamstack murni (kebal SQLi & XSS sisi server)"
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
         },
         {
-          "criterion": "Skor Core Web Vitals (CWV)",
-          "traditionalAgency": "Sering gagal pada metrik LCP & INP (banyak script berat)",
-          "freelancePlatform": "Tidak dioptimalkan untuk Google CrUX",
-          "zaditEngineering": "LCP < 1.0s, CLS 0, INP < 50ms di seluruh dunia"
-        },
-        {
-          "criterion": "Biaya Hosting Saat Lonjakan Trafik",
-          "traditionalAgency": "Biaya auto-scaling server yang membengkak",
-          "freelancePlatform": "Situs down saat trafik membludak",
-          "zaditEngineering": "Bandwidth tak terbatas $0 pada Cloudflare Global CDN"
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "solusi web performa tinggi edge",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
     },
     "faq": [
       {
-        "question": "Bagaimana integrasi API finansial dilakukan pada web statis?",
-        "answer": "Integrasi dilakukan melalui Cloudflare Workers yang aman dengan enkripsi TLS 1.3 dan penyimpanan kredensial rahasia di environment edge, tanpa mengekspos API key ke browser pengguna."
-      },
-      {
-        "question": "Apakah arsitektur ini mematuhi standar keamanan ISO 27001?",
-        "answer": "Pemisahan lapisan statis publik dari core internal adalah praktik terbaik yang sangat direkomendasikan dalam audit kontrol keamanan sistem informasi ISO 27001."
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Palembang?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
       }
     ]
   },
   {
-    "category": "bisnis",
-    "slug": "manufaktur",
-    "type": "industry",
-    "title": "Restrukturisasi SOP Rantai Pasok & Tata Kelola Manufaktur",
-    "metaDescription": "Penyusunan Standard Operating Procedure (SOP) operasional pabrik, audit logistik rantai pasok, dan mitigasi risiko pemborosan produksi.",
-    "targetKeyword": "konsultan sop pabrik manufaktur",
-    "areaServed": "Nasional",
-    "wikidataUri": "https://www.wikidata.org/wiki/Q187931",
-    "localOrIndustryContext": "Operasional manufaktur dan perakitan sering kali mengalami inefisiensi tersembunyi (hidden scrap and downtime) akibat instruksi kerja yang ambigu dan pencatatan inventori yang terfragmentasi. Ketika terjadi pergantian personel shift, kesalahan prosedural berulang dan menimbulkan biaya komplain pelanggan yang mahal.",
+    "category": "seo",
+    "slug": "batam",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "2171",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Batam",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Batam. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo batam",
+    "areaServed": "Batam",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q10114",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Batam telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
     "hybridComparison": {
-      "contextTradeOff": "Pabrik membutuhkan SOP yang ringkas dan dapat dipahami oleh operator lini terdepan, bukan dokumen tebal yang hanya tersimpan rapi di lemari manajemen.",
-      "alternativeStrengths": "Lembaga sertifikasi ISO resmi sangat tepat untuk menerbitkan sertifikat kepatuhan audit tahunan. Konsultan strategi multinasional cocok untuk keputusan pembangunan pabrik baru.",
-      "zaditFitContext": "Zadit menyusun SOP operasional lapangan yang pragmatis dan teruji: memetakan alur serah terima bahan baku, kontrol mutu di setiap stasiun kerja, dan integrasi pelaporan berbasis checklist presisi.",
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
       "comparisonTable": [
         {
-          "criterion": "Tingkat Keterbacaan Operator",
-          "traditionalAgency": "Dokumen birokratis tebal penuh bahasa hukum",
-          "freelancePlatform": "Template SOP umum hasil terjemahan mesin",
-          "zaditEngineering": "Matriks visual instruksi kerja langsung (SOP Visual Alabaster)"
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
         },
         {
-          "criterion": "Penyelarasan Rantai Pasok",
-          "traditionalAgency": "Terpisah dari realitas pergudangan harian",
-          "freelancePlatform": "Tidak menguasai alur buffer stock",
-          "zaditEngineering": "Integrasi waktu tunggu (lead time), reorder point, dan inspeksi QC"
-        },
-        {
-          "criterion": "Pendekatan Eksekusi",
-          "traditionalAgency": "Workshop teoritis berlarut-larut",
-          "freelancePlatform": "Penulisan teks dari jauh tanpa pemahaman alur",
-          "zaditEngineering": "Wawancara terarah dengan penanggung jawab lini produksi"
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "dokumen tata kelola administrasi bisnis",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
     },
     "faq": [
       {
-        "question": "Apakah SOP ini dapat diselaraskan dengan standar ISO 9001:2015?",
-        "answer": "Tentu. Seluruh struktur klausul manajemen mutu, identifikasi risiko proses, dan formulir verifikasi disusun agar kompatibel penuh dengan audit ISO 9001."
-      },
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Batam?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "pekanbaru",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "1471",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Pekanbaru",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Pekanbaru. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo pekanbaru",
+    "areaServed": "Pekanbaru",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q7433",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Pekanbaru telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
       {
-        "question": "Berapa lama waktu penyusunan SOP untuk satu lini fasilitas produksi?",
-        "answer": "Secara rata-rata, pemetaan alur proses hingga finalisasi draf dokumen siap pakai membutuhkan waktu 7 sampai 14 hari kerja."
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Pekanbaru?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "pontianak",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "6171",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Pontianak",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Pontianak. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo pontianak",
+    "areaServed": "Pontianak",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q14168",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Pontianak telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Pontianak?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "balikpapan",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "6471",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Balikpapan",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Balikpapan. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo balikpapan",
+    "areaServed": "Balikpapan",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q14175",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Balikpapan telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Balikpapan?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "makassar",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "7371",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Makassar",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Makassar. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo makassar",
+    "areaServed": "Makassar",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q14188",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Makassar telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Makassar?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
+      }
+    ]
+  },
+  {
+    "category": "seo",
+    "slug": "denpasar",
+    "type": "local",
+    "isTier1": true,
+    "bpsCode": "5171",
+    "title": "Konsultan Technical SEO & Strategi Konversi di Denpasar",
+    "metaDescription": "Pendampingan SEO teknis dan SearchGPT/AEO di Denpasar. Fokus eliminasi teknis Core Web Vitals dan penangkapan intent komersial bervolume tinggi.",
+    "targetKeyword": "konsultan seo denpasar",
+    "areaServed": "Denpasar",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q11505",
+    "localOrIndustryContext": "Persaingan visibilitas pencarian di Denpasar telah beralih ke pencarian berbasis AI (Google AI Overviews & SearchGPT). Strategi SEO artikel generik berbasis AI slop kini mengalami devaluasi drastis.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara model langganan retainer agensi yang mahal tanpa komitmen konversi vs audit teknis terarah berorientasi pendapatan.",
+      "alternativeStrengths": "Agensi SEO retainer cocok jika Anda memerlukan produksi konten massal tanpa memperhatikan aspek arsitektur kode web.",
+      "zaditFitContext": "Zadit menyelesaikan akar penyebab teknis: crawling error, kanibalisasi kata kunci, serta penataan schema data entity yang diakui mesin pencari AI.",
+      "comparisonTable": [
+        {
+          "criterion": "Fokus Pekerjaan",
+          "traditionalAgency": "Artikel blog bulanan & backlink massal",
+          "freelancePlatform": "Ganti meta tag standar CMS",
+          "zaditEngineering": "Audit teknis, Core Web Vitals & Intent AEO"
+        },
+        {
+          "criterion": "Model Kerjasama",
+          "traditionalAgency": "Kontrak kunci 6-12 bulan tanpa garansi",
+          "freelancePlatform": "Tugas per jam lepas",
+          "zaditEngineering": "Sistem proyek terukur berbasis milestone"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan audit technical seo dan konversi",
+      "targetUrl": "/layanan/seo-konten-konversi"
+    },
+    "faq": [
+      {
+        "question": "Bagaimana strategi SEO menghadapi AI Overviews di Denpasar?",
+        "answer": "Kami menerapkan metodologi Answer-First (BLUF) dan Princeton-style citation stacking agar konten bisnis Anda dikutip langsung sebagai rujukan primer oleh mesin pencari AI."
       }
     ]
   },
   {
     "category": "sinta",
-    "slug": "pendidikan-tinggi",
+    "slug": "universitas-indonesia",
     "type": "industry",
-    "title": "Bimbingan Metodologi & Olah Data Sivitas Akademika Pascasarjana",
-    "metaDescription": "Pendampingan statistika kuantitatif, telaah kritis naskah jurnal bereputasi, dan kepatuhan etik penelitian bagi mahasiswa magister & doktoral.",
-    "targetKeyword": "konsultan statistik disertasi tesis pascasarjana",
-    "areaServed": "Nasional",
-    "wikidataUri": "https://www.wikidata.org/wiki/Q38723",
-    "localOrIndustryContext": "Penyusunan tesis magister dan disertasi doktoral membutuhkan kedalaman justifikasi epistemologis yang jauh lebih tinggi daripada skripsi sarjana. Penggunaan pemodelan persamaan struktural tingkat lanjut (Second-Order SEM, Mediated-Moderation) sering kali menghadapi penolakan jika peneliti gagal menjelaskan signifikansi teoritis di balik hubungan antar-variabel.",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Indonesia (UI)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Indonesia (UI). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas indonesia",
+    "areaServed": "Universitas Indonesia (UI), Depok / Jakarta",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q848524",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Indonesia (UI) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
     "hybridComparison": {
-      "contextTradeOff": "Karya ilmiah pascasarjana menuntut keahlian analitis yang dapat dipertahankan secara lisan di hadapan guru besar dewan penguji.",
-      "alternativeStrengths": "Dosen pembimbing utama adalah rujukan tertinggi untuk arah konseptual dan kontribusi teori keilmuan Anda.",
-      "zaditFitContext": "Zadit berperan sebagai mitra diskusi teknis komputasi: membantu Anda menavigasi rumitnya evaluasi outer model dan inner model, serta meluruskan interpretasi output statistik agar naskah Anda siap tembus jurnal bereputasi tinggi.",
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
       "comparisonTable": [
         {
-          "criterion": "Kedalaman Diskusi Metodologi",
-          "traditionalAgency": "Penulisan mekanis tanpa justifikasi filosofis",
-          "freelancePlatform": "Terbatas pada perintah olah SPSS sederhana",
-          "zaditEngineering": "Eksplorasi mendalam teori pengukuran & goodness-of-fit"
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
         },
         {
-          "criterion": "Penanganan Masalah Data Nyata",
-          "traditionalAgency": "Rekayasa data palsu yang mudah terdeteksi",
-          "freelancePlatform": "Menyerah saat data mengalami common method bias",
-          "zaditEngineering": "Penerapan uji Harman, marker variable, atau pendekatan non-parametrik resmi"
-        },
-        {
-          "criterion": "Standar Output",
-          "traditionalAgency": "Tabel cetak mentah",
-          "freelancePlatform": "Format tidak rapi sesuai gaya selingkung jurnal",
-          "zaditEngineering": "Tabel format APA Style ke-7 siap disematkan ke naskah"
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
         }
       ]
     },
     "rootDomainLink": {
-      "anchorText": "pendampingan publikasi ilmiah sinta scopus",
-      "targetUrl": "https://zadit.pages.dev/"
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
     },
     "faq": [
       {
-        "question": "Kapan waktu terbaik untuk memulai konsultasi metodologi?",
-        "answer": "Waktu paling ideal adalah sebelum kuesioner disebarkan (tahap proposal), agar definisi operasional variabel dan skala instrumen dapat divalidasi sejak awal."
-      },
+        "question": "Apakah pendampingan riset untuk Universitas Indonesia (UI) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "institut-teknologi-bandung",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Institut Teknologi Bandung (ITB)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Institut Teknologi Bandung (ITB). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik institut teknologi bandung",
+    "areaServed": "Institut Teknologi Bandung (ITB), Bandung",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1321456",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Institut Teknologi Bandung (ITB) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
       {
-        "question": "Apakah bimbingan mencakup respon terhadap review jurnal (rebuttal letter)?",
-        "answer": "Ya, kami membantu menyusun argumen teknis statistik untuk menjawab catatan kritis reviewer jurnal ilmiah."
+        "question": "Apakah pendampingan riset untuk Institut Teknologi Bandung (ITB) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-gadjah-mada",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Gadjah Mada (UGM)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Gadjah Mada (UGM). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas gadjah mada",
+    "areaServed": "Universitas Gadjah Mada (UGM), Yogyakarta",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1145265",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Gadjah Mada (UGM) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Gadjah Mada (UGM) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-airlangga",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Airlangga (UNAIR)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Airlangga (UNAIR). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas airlangga",
+    "areaServed": "Universitas Airlangga (UNAIR), Surabaya",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1151608",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Airlangga (UNAIR) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Airlangga (UNAIR) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "institut-teknologi-sepuluh-nopember",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Institut Teknologi Sepuluh Nopember (ITS)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Institut Teknologi Sepuluh Nopember (ITS). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik institut teknologi sepuluh nopember",
+    "areaServed": "Institut Teknologi Sepuluh Nopember (ITS), Surabaya",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1653846",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Institut Teknologi Sepuluh Nopember (ITS) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Institut Teknologi Sepuluh Nopember (ITS) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-brawijaya",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Brawijaya (UB)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Brawijaya (UB). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas brawijaya",
+    "areaServed": "Universitas Brawijaya (UB), Malang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1188584",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Brawijaya (UB) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Brawijaya (UB) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-diponegoro",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Diponegoro (UNDIP)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Diponegoro (UNDIP). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas diponegoro",
+    "areaServed": "Universitas Diponegoro (UNDIP), Semarang",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1271167",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Diponegoro (UNDIP) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Diponegoro (UNDIP) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-padjadjaran",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Padjadjaran (UNPAD)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Padjadjaran (UNPAD). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas padjadjaran",
+    "areaServed": "Universitas Padjadjaran (UNPAD), Bandung",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1187498",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Padjadjaran (UNPAD) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Padjadjaran (UNPAD) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-sebelas-maret",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Sebelas Maret (UNS)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Sebelas Maret (UNS). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas sebelas maret",
+    "areaServed": "Universitas Sebelas Maret (UNS), Surakarta",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1187499",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Sebelas Maret (UNS) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Sebelas Maret (UNS) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-sumatera-utara",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Sumatera Utara (USU)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Sumatera Utara (USU). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas sumatera utara",
+    "areaServed": "Universitas Sumatera Utara (USU), Medan",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q4115167",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Sumatera Utara (USU) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Sumatera Utara (USU) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-hasanuddin",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Hasanuddin (UNHAS)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Hasanuddin (UNHAS). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas hasanuddin",
+    "areaServed": "Universitas Hasanuddin (UNHAS), Makassar",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1145455",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Hasanuddin (UNHAS) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Hasanuddin (UNHAS) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "sinta",
+    "slug": "universitas-tanjungpura",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Pendampingan Publikasi Jurnal SINTA & Olah Data Statistik - Universitas Tanjungpura (UNTAN)",
+    "metaDescription": "Pendampingan resmi metodologi riset IMRaD & olah data SPSS/SmartPLS/AMOS untuk sivitas akademika Universitas Tanjungpura (UNTAN). Bebas joki, 100% pembekalan metodologis beretika.",
+    "targetKeyword": "olah data statistik universitas tanjungpura",
+    "areaServed": "Universitas Tanjungpura (UNTAN), Pontianak",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q7901047",
+    "localOrIndustryContext": "Standar publikasi jurnal terakreditasi di lingkungan Universitas Tanjungpura (UNTAN) mewajibkan ketelitian data empiris, pengujian instrumen yang valid, dan bebas dari plagiasi atau manipulasi data yang berisiko pelanggaran integritas akademik.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara sindikat joki ilegal (berisiko sanksi akademik/pembatalan ijazah) vs pendampingan metodologis etis berbasis transfer ilmu.",
+      "alternativeStrengths": "Joki ilegal menawarkan pengerjaan pasif instan, namun meninggalkan kelemahan fatal saat penulis diuji pada sidang atau peer-review reviewer.",
+      "zaditFitContext": "Zadit mendampingi pengolahan data statistik (SmartPLS/SPSS) dan penyusunan naskah IMRaD dengan penjelasan komprehensif sehingga penulis menguasai 100% hasil risetnya.",
+      "comparisonTable": [
+        {
+          "criterion": "Legalitas & Integritas",
+          "traditionalAgency": "Joki skripsi ilegal (ancaman pidana UU Dikti)",
+          "freelancePlatform": "Kualitas tidak terstandarisasi",
+          "zaditEngineering": "100% Etis & Pendampingan Metodologi Resmi"
+        },
+        {
+          "criterion": "Penguasaan Hasil",
+          "traditionalAgency": "Klien bingung saat sidang diuji reviewer",
+          "freelancePlatform": "Hanya menyerahkan output tabel mentah",
+          "zaditEngineering": "Disediakan sesi penjelasan interpretasi data"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "pendampingan riset sinta dan statistik",
+      "targetUrl": "/layanan/olah-data-statistik-sinta"
+    },
+    "faq": [
+      {
+        "question": "Apakah pendampingan riset untuk Universitas Tanjungpura (UNTAN) ini legal dan aman dari sanksi?",
+        "answer": "Sangat legal dan aman. Kami bukan sindikat joki skripsi. Peran kami adalah konsultan dan mentor pengolahan statistik serta reviewer format naskah IMRaD, membantu Anda memahami metodologi tanpa mengambil alih kepenulisan Anda."
+      }
+    ]
+  },
+  {
+    "category": "bisnis",
+    "slug": "agribisnis-perkebunan",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Penyusunan Proposal Bisnis, Pitch Deck & SOP Sektor Agribisnis & Perkebunan (KBLI 01)",
+    "metaDescription": "Jasa perancangan proposal investasi, studi kelayakan (FS), dan SOP operasional untuk industri Agribisnis & Perkebunan. Analisis unit economics tajam dan terstandarisasi.",
+    "targetKeyword": "proposal bisnis agribisnis & perkebunan",
+    "areaServed": "Nasional Indonesia (Sektor Agribisnis & Perkebunan)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q7411",
+    "localOrIndustryContext": "Pelaku usaha dan pimpinan organisasi di sektor Agribisnis & Perkebunan (KBLI 01) sering mengalami kebuntuan pendanaan atau inefisiensi operasional akibat proposal yang hanya berisi template visual tanpa kedalaman perhitungan unit economics atau SOP yang jelas.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara template desain pitch deck Canva yang dangkal vs dokumen studi kelayakan komprehensif berbasis parameter finansial nyata.",
+      "alternativeStrengths": "Desainer grafis freelance unggul dalam estetika slide, namun tidak menguasai perhitungan DCF, NPV, IRR, dan tata kelola rantai pasok.",
+      "zaditFitContext": "Zadit memadukan pengalaman eksekutif 10+ tahun dalam merumuskan model bisnis rantai pasok, proyeksi BEP konservatif, dan SOP mitigasi SPOF.",
+      "comparisonTable": [
+        {
+          "criterion": "Dasar Perhitungan",
+          "traditionalAgency": "Slide Canva cantik tanpa justifikasi data",
+          "freelancePlatform": "Template copy-paste umum",
+          "zaditEngineering": "Financial model, Break-Even & Supply Chain nyata"
+        },
+        {
+          "criterion": "Akuntabilitas SOP",
+          "traditionalAgency": "Tidak menyediakan standarisasi sistem",
+          "freelancePlatform": "Format teks kaku tanpa alur RACI",
+          "zaditEngineering": "SOP aplikatif dengan matriks wewenang terukur"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan dokumen bisnis dan proposal",
+      "targetUrl": "/layanan/dokumen-administrasi-bisnis"
+    },
+    "faq": [
+      {
+        "question": "Apa perbedaan proposal bisnis sektor Agribisnis & Perkebunan buatan Zadit dengan template agensi desain?",
+        "answer": "Dokumen kami dirancang untuk meyakinkan komite investasi dan perbankan: mencakup analisis rantai pasok, mitigasi risiko operasional, audit legalitas, serta proyeksi arus kas teruji secara matematis."
+      }
+    ]
+  },
+  {
+    "category": "bisnis",
+    "slug": "yayasan-filantropi",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Penyusunan Proposal Bisnis, Pitch Deck & SOP Sektor Yayasan & Filantropi Sosial (KBLI 94)",
+    "metaDescription": "Jasa perancangan proposal investasi, studi kelayakan (FS), dan SOP operasional untuk industri Yayasan & Filantropi Sosial. Analisis unit economics tajam dan terstandarisasi.",
+    "targetKeyword": "proposal bisnis yayasan & filantropi sosial",
+    "areaServed": "Nasional Indonesia (Sektor Yayasan & Filantropi Sosial)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q157031",
+    "localOrIndustryContext": "Pelaku usaha dan pimpinan organisasi di sektor Yayasan & Filantropi Sosial (KBLI 94) sering mengalami kebuntuan pendanaan atau inefisiensi operasional akibat proposal yang hanya berisi template visual tanpa kedalaman perhitungan unit economics atau SOP yang jelas.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara template desain pitch deck Canva yang dangkal vs dokumen studi kelayakan komprehensif berbasis parameter finansial nyata.",
+      "alternativeStrengths": "Desainer grafis freelance unggul dalam estetika slide, namun tidak menguasai perhitungan DCF, NPV, IRR, dan tata kelola rantai pasok.",
+      "zaditFitContext": "Zadit memadukan pengalaman eksekutif 10+ tahun dalam merumuskan model bisnis rantai pasok, proyeksi BEP konservatif, dan SOP mitigasi SPOF.",
+      "comparisonTable": [
+        {
+          "criterion": "Dasar Perhitungan",
+          "traditionalAgency": "Slide Canva cantik tanpa justifikasi data",
+          "freelancePlatform": "Template copy-paste umum",
+          "zaditEngineering": "Financial model, Break-Even & Supply Chain nyata"
+        },
+        {
+          "criterion": "Akuntabilitas SOP",
+          "traditionalAgency": "Tidak menyediakan standarisasi sistem",
+          "freelancePlatform": "Format teks kaku tanpa alur RACI",
+          "zaditEngineering": "SOP aplikatif dengan matriks wewenang terukur"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan dokumen bisnis dan proposal",
+      "targetUrl": "/layanan/dokumen-administrasi-bisnis"
+    },
+    "faq": [
+      {
+        "question": "Apa perbedaan proposal bisnis sektor Yayasan & Filantropi Sosial buatan Zadit dengan template agensi desain?",
+        "answer": "Dokumen kami dirancang untuk meyakinkan komite investasi dan perbankan: mencakup analisis rantai pasok, mitigasi risiko operasional, audit legalitas, serta proyeksi arus kas teruji secara matematis."
+      }
+    ]
+  },
+  {
+    "category": "bisnis",
+    "slug": "fintech-keuangan",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Penyusunan Proposal Bisnis, Pitch Deck & SOP Sektor Fintech & Jasa Keuangan (KBLI 64)",
+    "metaDescription": "Jasa perancangan proposal investasi, studi kelayakan (FS), dan SOP operasional untuk industri Fintech & Jasa Keuangan. Analisis unit economics tajam dan terstandarisasi.",
+    "targetKeyword": "proposal bisnis fintech & jasa keuangan",
+    "areaServed": "Nasional Indonesia (Sektor Fintech & Jasa Keuangan)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q1358919",
+    "localOrIndustryContext": "Pelaku usaha dan pimpinan organisasi di sektor Fintech & Jasa Keuangan (KBLI 64) sering mengalami kebuntuan pendanaan atau inefisiensi operasional akibat proposal yang hanya berisi template visual tanpa kedalaman perhitungan unit economics atau SOP yang jelas.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara template desain pitch deck Canva yang dangkal vs dokumen studi kelayakan komprehensif berbasis parameter finansial nyata.",
+      "alternativeStrengths": "Desainer grafis freelance unggul dalam estetika slide, namun tidak menguasai perhitungan DCF, NPV, IRR, dan tata kelola rantai pasok.",
+      "zaditFitContext": "Zadit memadukan pengalaman eksekutif 10+ tahun dalam merumuskan model bisnis rantai pasok, proyeksi BEP konservatif, dan SOP mitigasi SPOF.",
+      "comparisonTable": [
+        {
+          "criterion": "Dasar Perhitungan",
+          "traditionalAgency": "Slide Canva cantik tanpa justifikasi data",
+          "freelancePlatform": "Template copy-paste umum",
+          "zaditEngineering": "Financial model, Break-Even & Supply Chain nyata"
+        },
+        {
+          "criterion": "Akuntabilitas SOP",
+          "traditionalAgency": "Tidak menyediakan standarisasi sistem",
+          "freelancePlatform": "Format teks kaku tanpa alur RACI",
+          "zaditEngineering": "SOP aplikatif dengan matriks wewenang terukur"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan dokumen bisnis dan proposal",
+      "targetUrl": "/layanan/dokumen-administrasi-bisnis"
+    },
+    "faq": [
+      {
+        "question": "Apa perbedaan proposal bisnis sektor Fintech & Jasa Keuangan buatan Zadit dengan template agensi desain?",
+        "answer": "Dokumen kami dirancang untuk meyakinkan komite investasi dan perbankan: mencakup analisis rantai pasok, mitigasi risiko operasional, audit legalitas, serta proyeksi arus kas teruji secara matematis."
+      }
+    ]
+  },
+  {
+    "category": "bisnis",
+    "slug": "manufaktur-industri",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Penyusunan Proposal Bisnis, Pitch Deck & SOP Sektor Manufaktur & Pengolahan (KBLI 10)",
+    "metaDescription": "Jasa perancangan proposal investasi, studi kelayakan (FS), dan SOP operasional untuk industri Manufaktur & Pengolahan. Analisis unit economics tajam dan terstandarisasi.",
+    "targetKeyword": "proposal bisnis manufaktur & pengolahan",
+    "areaServed": "Nasional Indonesia (Sektor Manufaktur & Pengolahan)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q187931",
+    "localOrIndustryContext": "Pelaku usaha dan pimpinan organisasi di sektor Manufaktur & Pengolahan (KBLI 10) sering mengalami kebuntuan pendanaan atau inefisiensi operasional akibat proposal yang hanya berisi template visual tanpa kedalaman perhitungan unit economics atau SOP yang jelas.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara template desain pitch deck Canva yang dangkal vs dokumen studi kelayakan komprehensif berbasis parameter finansial nyata.",
+      "alternativeStrengths": "Desainer grafis freelance unggul dalam estetika slide, namun tidak menguasai perhitungan DCF, NPV, IRR, dan tata kelola rantai pasok.",
+      "zaditFitContext": "Zadit memadukan pengalaman eksekutif 10+ tahun dalam merumuskan model bisnis rantai pasok, proyeksi BEP konservatif, dan SOP mitigasi SPOF.",
+      "comparisonTable": [
+        {
+          "criterion": "Dasar Perhitungan",
+          "traditionalAgency": "Slide Canva cantik tanpa justifikasi data",
+          "freelancePlatform": "Template copy-paste umum",
+          "zaditEngineering": "Financial model, Break-Even & Supply Chain nyata"
+        },
+        {
+          "criterion": "Akuntabilitas SOP",
+          "traditionalAgency": "Tidak menyediakan standarisasi sistem",
+          "freelancePlatform": "Format teks kaku tanpa alur RACI",
+          "zaditEngineering": "SOP aplikatif dengan matriks wewenang terukur"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan dokumen bisnis dan proposal",
+      "targetUrl": "/layanan/dokumen-administrasi-bisnis"
+    },
+    "faq": [
+      {
+        "question": "Apa perbedaan proposal bisnis sektor Manufaktur & Pengolahan buatan Zadit dengan template agensi desain?",
+        "answer": "Dokumen kami dirancang untuk meyakinkan komite investasi dan perbankan: mencakup analisis rantai pasok, mitigasi risiko operasional, audit legalitas, serta proyeksi arus kas teruji secara matematis."
+      }
+    ]
+  },
+  {
+    "category": "bisnis",
+    "slug": "pendidikan-tinggi",
+    "type": "industry",
+    "isTier1": true,
+    "title": "Penyusunan Proposal Bisnis, Pitch Deck & SOP Sektor Pendidikan Tinggi & Riset (KBLI 85)",
+    "metaDescription": "Jasa perancangan proposal investasi, studi kelayakan (FS), dan SOP operasional untuk industri Pendidikan Tinggi & Riset. Analisis unit economics tajam dan terstandarisasi.",
+    "targetKeyword": "proposal bisnis pendidikan tinggi & riset",
+    "areaServed": "Nasional Indonesia (Sektor Pendidikan Tinggi & Riset)",
+    "wikidataUri": "https://www.wikidata.org/wiki/Q136558",
+    "localOrIndustryContext": "Pelaku usaha dan pimpinan organisasi di sektor Pendidikan Tinggi & Riset (KBLI 85) sering mengalami kebuntuan pendanaan atau inefisiensi operasional akibat proposal yang hanya berisi template visual tanpa kedalaman perhitungan unit economics atau SOP yang jelas.",
+    "hybridComparison": {
+      "contextTradeOff": "Memilih antara template desain pitch deck Canva yang dangkal vs dokumen studi kelayakan komprehensif berbasis parameter finansial nyata.",
+      "alternativeStrengths": "Desainer grafis freelance unggul dalam estetika slide, namun tidak menguasai perhitungan DCF, NPV, IRR, dan tata kelola rantai pasok.",
+      "zaditFitContext": "Zadit memadukan pengalaman eksekutif 10+ tahun dalam merumuskan model bisnis rantai pasok, proyeksi BEP konservatif, dan SOP mitigasi SPOF.",
+      "comparisonTable": [
+        {
+          "criterion": "Dasar Perhitungan",
+          "traditionalAgency": "Slide Canva cantik tanpa justifikasi data",
+          "freelancePlatform": "Template copy-paste umum",
+          "zaditEngineering": "Financial model, Break-Even & Supply Chain nyata"
+        },
+        {
+          "criterion": "Akuntabilitas SOP",
+          "traditionalAgency": "Tidak menyediakan standarisasi sistem",
+          "freelancePlatform": "Format teks kaku tanpa alur RACI",
+          "zaditEngineering": "SOP aplikatif dengan matriks wewenang terukur"
+        }
+      ]
+    },
+    "rootDomainLink": {
+      "anchorText": "layanan dokumen bisnis dan proposal",
+      "targetUrl": "/layanan/dokumen-administrasi-bisnis"
+    },
+    "faq": [
+      {
+        "question": "Apa perbedaan proposal bisnis sektor Pendidikan Tinggi & Riset buatan Zadit dengan template agensi desain?",
+        "answer": "Dokumen kami dirancang untuk meyakinkan komite investasi dan perbankan: mencakup analisis rantai pasok, mitigasi risiko operasional, audit legalitas, serta proyeksi arus kas teruji secara matematis."
       }
     ]
   }

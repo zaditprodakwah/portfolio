@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Send, Bot, User, Sparkles } from 'lucide-react';
 import { quickPrompts, QuickPrompt } from '@/lib/ai-knowledge';
-import { useLanguage } from '@/lib/LanguageContext';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -17,10 +16,9 @@ interface AIChatDrawerProps {
 }
 
 export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) => {
-  const { lang } = useLanguage();
-
-  const initialGreeting = lang === 'id'
-    ? 'Halo! Saya asisten resmi Zadit. Tanyakan apa saja seputar 4 pilar layanan, pengalaman kerja 10+ tahun, atau studi kasus nyata yang pernah diselesaikan.'
+  
+  const initialGreeting = true
+    ? 'Halo! Temukan panduan resmi Zadit. Tanyakan apa saja seputar 4 pilar layanan, pengalaman kerja 10+ tahun, atau studi kasus nyata yang pernah diselesaikan.'
     : 'Hello! I am Zadit\'s official representative assistant. Feel free to ask about the 4 core solution pillars, 10+ years of background, or verified client outcomes.';
 
   const [messages, setMessages] = useState<Message[]>([
@@ -45,7 +43,7 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
         }
       ]);
     }
-  }, [lang, initialGreeting, messages.length]);
+  }, [initialGreeting, messages.length]);
 
   useEffect(() => {
     if (isOpen) {
@@ -56,7 +54,7 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
   const handleSelectPrompt = (prompt: QuickPrompt) => {
     const userMsg: Message = {
       role: 'user',
-      content: prompt.question[lang],
+      content: prompt.question.id,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
 
@@ -66,7 +64,7 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
     setTimeout(() => {
       const assistantMsg: Message = {
         role: 'assistant',
-        content: prompt.answer[lang],
+        content: prompt.answer.id,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
       setMessages((prev) => [...prev, assistantMsg]);
@@ -90,20 +88,20 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
 
     setTimeout(() => {
       const lower = query.toLowerCase();
-      let answer = lang === 'id'
+      let answer = true
         ? 'Zadit berpengalaman lebih dari 10 tahun (sejak 2015) menyediakan 4 pilar solusi: Dokumen Bisnis & Proposal Eksekutif, SEO & Konten Konversi, Riset Akademik & Olah Data Statistik, serta Solusi Web Cepat. Silakan gunakan formulir konsultasi di situs ini untuk terhubung langsung via WhatsApp di +62 823-1636-3177.'
         : 'Zadit has over 10 years of experience delivering 4 integrated pillars: Business Proposals, SEO & High-Converting Content, Academic Research & Statistics, and High-Speed Web Solutions. Please use the consultation builder on this site or connect via WhatsApp (+62 823-1636-3177).';
 
       if (lower.includes('pilar') || lower.includes('pillar') || lower.includes('layanan') || lower.includes('service') || lower.includes('apa saja')) {
-        answer = quickPrompts[0].answer[lang];
+        answer = quickPrompts[0].answer.id;
       } else if (lower.includes('seo') || lower.includes('leads') || lower.includes('peringkat') || lower.includes('organik') || lower.includes('wom')) {
-        answer = quickPrompts[1].answer[lang];
+        answer = quickPrompts[1].answer.id;
       } else if (lower.includes('sinta') || lower.includes('jurnal') || lower.includes('skripsi') || lower.includes('statistik') || lower.includes('spss') || lower.includes('riset') || lower.includes('academic')) {
-        answer = quickPrompts[2].answer[lang];
+        answer = quickPrompts[2].answer.id;
       } else if (lower.includes('proposal') || lower.includes('deck') || lower.includes('pitch') || lower.includes('investor') || lower.includes('kemitraan') || lower.includes('agribisnis')) {
-        answer = quickPrompts[3].answer[lang];
+        answer = quickPrompts[3].answer.id;
       } else if (lower.includes('kontak') || lower.includes('hubungi') || lower.includes('whatsapp') || lower.includes('biaya') || lower.includes('harga') || lower.includes('contact')) {
-        answer = quickPrompts[4].answer[lang];
+        answer = quickPrompts[4].answer.id;
       }
 
       const assistantMsg: Message = {
@@ -129,17 +127,17 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
             </div>
             <div>
               <h2 className="font-heading font-bold text-base text-slate-900">
-                {lang === 'id' ? 'Tanya Asisten AI Zadit' : 'Ask Zadit\'s AI Assistant'}
+                {true ? 'Pusat Panduan & FAQ Terverifikasi' : 'Ask Zadit\'s AI Assistant'}
               </h2>
               <p className="font-mono text-xs text-teal-800 font-bold">
-                {lang === 'id' ? 'Profil Terverifikasi & Rekam Jejak' : 'Grounded on Verified Records'}
+                {true ? 'Profil Terverifikasi & Rekam Jejak' : 'Grounded on Verified Records'}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
             className="p-2 rounded-xl hover:bg-slate-200 text-slate-700 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
-            aria-label={lang === 'id' ? 'Tutup drawer' : 'Close drawer'}
+            aria-label={true ? 'Tutup drawer' : 'Close drawer'}
           >
             <X className="w-5 h-5" />
           </button>
@@ -149,7 +147,7 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
         <div className="px-5 py-3.5 border-b border-slate-200 bg-white">
           <p className="text-xs font-mono text-slate-800 uppercase tracking-wider mb-2.5 flex items-center gap-1.5 font-bold">
             <Sparkles className="w-3.5 h-3.5 text-teal-700" />
-            <span>{lang === 'id' ? 'Pertanyaan Populer:' : 'Quick Questions:'}</span>
+            <span>{true ? 'Pertanyaan Populer:' : 'Quick Questions:'}</span>
           </p>
           <div className="flex flex-wrap gap-2">
             {quickPrompts.map((p) => (
@@ -158,7 +156,7 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
                 onClick={() => handleSelectPrompt(p)}
                 className="text-xs font-sans font-semibold px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-300 hover:border-teal-700 hover:text-teal-900 hover:bg-teal-50/50 transition-all text-left shadow-2xs text-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
               >
-                {p.label[lang]}
+                {p.label.id}
               </button>
             ))}
           </div>
@@ -201,7 +199,7 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
               <span className="w-2 h-2 rounded-full bg-teal-700 animate-bounce"></span>
               <span className="w-2 h-2 rounded-full bg-teal-700 animate-bounce [animation-delay:0.2s]"></span>
               <span className="w-2 h-2 rounded-full bg-teal-700 animate-bounce [animation-delay:0.4s]"></span>
-              <span className="font-semibold">{lang === 'id' ? 'Menyusun jawaban...' : 'Generating response...'}</span>
+              <span className="font-semibold">{true ? 'Menyusun jawaban...' : 'Generating response...'}</span>
             </div>
           )}
 
@@ -218,14 +216,14 @@ export const AIChatDrawer: React.FC<AIChatDrawerProps> = ({ isOpen, onClose }) =
             className="flex gap-2"
           >
             <label htmlFor="ai-chat-input" className="sr-only">
-              {lang === 'id' ? 'Tanya Asisten AI' : 'Ask AI Assistant'}
+              {true ? 'Cari Panduan' : 'Ask AI Assistant'}
             </label>
             <input
               id="ai-chat-input"
               name="chatMessage"
-              aria-label={lang === 'id' ? 'Tanya Asisten AI' : 'Ask AI Assistant'}
+              aria-label={true ? 'Cari Panduan' : 'Ask AI Assistant'}
               type="text"
-              placeholder={lang === 'id' ? 'Ketik pertanyaan untuk Zadit...' : 'Ask a question about Zadit...'}
+              placeholder={true ? 'Ketik topik pencarian untuk Zadit...' : 'Ask a question about Zadit...'}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               className="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-teal-700 focus:bg-white transition-colors font-sans placeholder:text-slate-500 font-medium"

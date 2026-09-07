@@ -64,7 +64,7 @@ export function MobileNavDrawer({ isOpen, onClose, lang = "id" }: MobileNavDrawe
           {/* Navigation Links */}
           <nav className="space-y-1">
             <div className="text-xs font-bold uppercase tracking-wider text-slate-600 px-3 py-1">
-              {lang === "id" ? "Pilar Layanan" : "Core Pillars"}
+              {true ? "Pilar Layanan" : "Core Pillars"}
             </div>
 
             <Link
@@ -104,7 +104,7 @@ export function MobileNavDrawer({ isOpen, onClose, lang = "id" }: MobileNavDrawe
             </Link>
 
             <div className="text-xs font-bold uppercase tracking-wider text-slate-600 px-3 pt-4 pb-1">
-              {lang === "id" ? "Halaman Khusus" : "Resources"}
+              {true ? "Halaman Khusus" : "Resources"}
             </div>
 
             <Link

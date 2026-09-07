@@ -1,0 +1,41 @@
+{
+  "category": "bisnis",
+  "slug": "fintech-keuangan",
+  "type": "industry",
+  "isTier1": true,
+  "title": "Penyusunan Proposal Bisnis, Pitch Deck & SOP Sektor Fintech & Jasa Keuangan (KBLI 64)",
+  "metaDescription": "Jasa perancangan proposal investasi, studi kelayakan (FS), dan SOP operasional untuk industri Fintech & Jasa Keuangan. Analisis unit economics tajam dan terstandarisasi.",
+  "targetKeyword": "proposal bisnis fintech & jasa keuangan",
+  "areaServed": "Nasional Indonesia (Sektor Fintech & Jasa Keuangan)",
+  "wikidataUri": "https://www.wikidata.org/wiki/Q1358919",
+  "localOrIndustryContext": "Pelaku usaha dan pimpinan organisasi di sektor Fintech & Jasa Keuangan (KBLI 64) sering mengalami kebuntuan pendanaan atau inefisiensi operasional akibat proposal yang hanya berisi template visual tanpa kedalaman perhitungan unit economics atau SOP yang jelas.",
+  "hybridComparison": {
+    "contextTradeOff": "Memilih antara template desain pitch deck Canva yang dangkal vs dokumen studi kelayakan komprehensif berbasis parameter finansial nyata.",
+    "alternativeStrengths": "Desainer grafis freelance unggul dalam estetika slide, namun tidak menguasai perhitungan DCF, NPV, IRR, dan tata kelola rantai pasok.",
+    "zaditFitContext": "Zadit memadukan pengalaman eksekutif 10+ tahun dalam merumuskan model bisnis rantai pasok, proyeksi BEP konservatif, dan SOP mitigasi SPOF.",
+    "comparisonTable": [
+      {
+        "criterion": "Dasar Perhitungan",
+        "traditionalAgency": "Slide Canva cantik tanpa justifikasi data",
+        "freelancePlatform": "Template copy-paste umum",
+        "zaditEngineering": "Financial model, Break-Even & Supply Chain nyata"
+      },
+      {
+        "criterion": "Akuntabilitas SOP",
+        "traditionalAgency": "Tidak menyediakan standarisasi sistem",
+        "freelancePlatform": "Format teks kaku tanpa alur RACI",
+        "zaditEngineering": "SOP aplikatif dengan matriks wewenang terukur"
+      }
+    ]
+  },
+  "rootDomainLink": {
+    "anchorText": "layanan dokumen bisnis dan proposal",
+    "targetUrl": "/layanan/dokumen-administrasi-bisnis"
+  },
+  "faq": [
+    {
+      "question": "Apa perbedaan proposal bisnis sektor Fintech & Jasa Keuangan buatan Zadit dengan template agensi desain?",
+      "answer": "Dokumen kami dirancang untuk meyakinkan komite investasi dan perbankan: mencakup analisis rantai pasok, mitigasi risiko operasional, audit legalitas, serta proyeksi arus kas teruji secara matematis."
+    }
+  ]
+}

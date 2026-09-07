@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { LanguageProvider } from "@/lib/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAuditTeaser } from "@/components/QuickAuditTeaser";
@@ -20,7 +19,7 @@ export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <LanguageProvider>
+    
       <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-alabaster pb-32 sm:pb-12 scroll-smooth">
         <Navbar
           onOpenChat={() => setIsChatOpen(true)}
@@ -57,6 +56,6 @@ export default function HomePage() {
 
         <FloatingToCWidget />
       </main>
-    </LanguageProvider>
+    
   );
 }

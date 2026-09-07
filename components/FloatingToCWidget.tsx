@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { ListOrdered, X, ChevronRight, Bookmark } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
 
 interface ToCItem {
   id: string;
@@ -21,8 +20,7 @@ const TOC_ITEMS: ToCItem[] = [
 ];
 
 export const FloatingToCWidget: React.FC = () => {
-  const { lang } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
 
   useEffect(() => {
@@ -66,13 +64,13 @@ export const FloatingToCWidget: React.FC = () => {
           aria-expanded={isOpen}
           aria-controls="floating-toc-popover"
           className="flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-300/90 shadow-md text-slate-800 hover:text-teal-900 hover:border-teal-600 transition-all active:scale-95 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
-          title={lang === "id" ? "Daftar Isi Halaman (ToC)" : "Table of Contents"}
+          title={true ? "Daftar Isi Halaman (ToC)" : "Table of Contents"}
         >
           <span className="w-6 h-6 rounded-full bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-800 group-hover:bg-teal-700 group-hover:text-white transition-colors shrink-0">
             {isOpen ? <X className="w-3.5 h-3.5" /> : <ListOrdered className="w-3.5 h-3.5" />}
           </span>
           <span className="text-xs font-heading font-bold tracking-tight hidden sm:inline">
-            {lang === "id" ? "Daftar Isi" : "ToC"}
+            {true ? "Daftar Isi" : "ToC"}
           </span>
         </button>
 
@@ -85,7 +83,7 @@ export const FloatingToCWidget: React.FC = () => {
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
               <div className="flex items-center gap-1.5 text-xs font-bold text-slate-900">
                 <Bookmark className="w-3.5 h-3.5 text-teal-700" />
-                <span>{lang === "id" ? "Navigasi Halaman" : "Page Contents"}</span>
+                <span>{true ? "Navigasi Halaman" : "Page Contents"}</span>
               </div>
               <button
                 type="button"
@@ -114,7 +112,7 @@ export const FloatingToCWidget: React.FC = () => {
                       <span className="font-mono text-[10px] text-teal-800/80 font-bold">
                         {item.num}
                       </span>
-                      <span className="truncate">{item.title[lang]}</span>
+                      <span className="truncate">{item.title.id}</span>
                     </div>
                     <ChevronRight className={`w-3.5 h-3.5 shrink-0 ${isActive ? "text-teal-700" : "text-slate-400"}`} />
                   </button>

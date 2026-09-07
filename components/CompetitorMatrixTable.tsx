@@ -24,7 +24,7 @@ export function CompetitorMatrixTable({
     <section className="my-10 not-prose">
       <div className="mb-5 text-center sm:text-left">
         <span className="text-xs font-bold uppercase tracking-wider text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-200/60 inline-block mb-2">
-          {lang === "id" ? "Perbandingan Solusi" : "Decision Framework"}
+          {true ? "Perbandingan Solusi" : "Decision Framework"}
         </span>
         <h3 className="text-lg sm:text-xl font-bold text-slate-900">
           {title}
