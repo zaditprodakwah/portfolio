@@ -73,14 +73,14 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      <div className="flex sm:grid sm:grid-cols-2 overflow-x-auto sm:overflow-x-visible snap-x snap-mandatory gap-3 sm:gap-4 pb-3 sm:pb-0 w-full scroll-pl-0 scrollbar-none">
         {roles.map((role) => {
           const Icon = role.icon;
           return (
             <button
               key={role.id}
               onClick={() => handleSelectRole(role.targetId)}
-              className="group text-left p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-teal-500 transition-all cursor-pointer flex flex-col justify-between min-h-[120px] active:scale-[0.99]"
+              className="group text-left p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-teal-500 transition-all cursor-pointer flex flex-col justify-between min-h-[120px] active:scale-[0.99] snap-start shrink-0 w-[82vw] max-w-[320px] sm:w-auto sm:max-w-none"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2">
@@ -108,6 +108,13 @@ export function AudienceQualifier({ lang = "id" }: AudienceQualifierProps) {
             </button>
           );
         })}
+      </div>
+      {/* Mobile Swipe Indicator Dots */}
+      <div className="flex sm:hidden items-center justify-center gap-1.5 mt-2">
+        {roles.map((_, idx) => (
+          <span key={idx} className="w-1.5 h-1.5 rounded-full bg-slate-300" />
+        ))}
+        <span className="text-[10px] text-slate-500 font-mono ml-1">Geser &rarr;</span>
       </div>
     </div>
   );

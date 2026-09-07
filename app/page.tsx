@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
+import { QuickAuditTeaser } from "@/components/QuickAuditTeaser";
 import { ServicesSection } from "@/components/ServicesSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { ConsultationBuilder } from "@/components/ConsultationBuilder";
@@ -12,6 +13,7 @@ import { ContactFooter } from "@/components/ContactFooter";
 import { AIChatDrawer } from "@/components/AIChatDrawer";
 import { MobileNavDrawer } from "@/components/MobileNavDrawer";
 import { MobileActionDock } from "@/components/MobileActionDock";
+import { PersonalGreetingCapsule } from "@/components/PersonalGreetingCapsule";
 import { ENTITY_NODES } from "@/lib/entity-graph";
 
 export default function HomePage() {
@@ -61,13 +63,15 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
-      <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-alabaster pb-20 sm:pb-0 scroll-smooth">
+      <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-alabaster pb-32 sm:pb-12 scroll-smooth">
         <Navbar
           onOpenChat={() => setIsChatOpen(true)}
           onOpenMenu={() => setIsMenuOpen(true)}
         />
         
         <HeroSection onOpenChat={() => setIsChatOpen(true)} />
+
+        <QuickAuditTeaser />
 
         <ServicesSection />
 
@@ -92,6 +96,8 @@ export default function HomePage() {
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
         />
+
+        <PersonalGreetingCapsule onOpenChat={() => setIsChatOpen(true)} />
       </main>
     </LanguageProvider>
   );

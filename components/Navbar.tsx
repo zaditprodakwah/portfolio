@@ -15,6 +15,7 @@ import {
   Layers, 
   BookOpen, 
   Sparkles,
+  Globe,
   ExternalLink
 } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
@@ -61,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
     <>
       <ReadingProgressBar />
       <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 h-20 flex items-center transition-all shadow-xs">
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+        <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 flex justify-between items-center">
           <div className="flex items-center gap-3">
             {onOpenMenu && (
               <button
@@ -79,11 +80,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                 Z
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-bold text-sm text-slate-900 tracking-tight">
-                  {cvProfile.nickname} Growth
+                <span className="font-heading font-bold text-xs sm:text-sm text-slate-900 tracking-tight truncate">
+                  {cvProfile.nickname} <span className="hidden xs:inline">Growth</span>
                 </span>
-                <span className="font-mono text-xs tracking-wider text-teal-800 uppercase font-bold">
-                  {lang === "id" ? "Portofolio Solusi" : "Client Solutions Hub"}
+                <span className="font-mono text-[10px] sm:text-xs tracking-wider text-teal-800 uppercase font-bold truncate">
+                  {lang === "id" ? "Portofolio" : "Solutions"}
                 </span>
               </div>
             </Link>
@@ -178,6 +179,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                         </div>
                       </div>
                     </Link>
+                    <Link 
+                      href="/layanan/solusi-web-performa" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <Globe className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-heading font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                          Solusi Digital & Web Cepat
+                        </p>
+                        <p className="text-[11px] text-slate-500 line-clamp-1">
+                          Next.js 15, edge caching, dan rekayasa konversi.
+                        </p>
+                      </div>
+                    </Link>
                   </div>
 
                   {/* Column 2: Solusi & Matriks pSEO */}
@@ -219,7 +237,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                     </Link>
 
                     <Link 
-                      href="/#konsultasi" 
+                      href="/#consultation" 
                       onClick={() => setIsMegaOpen(false)}
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
@@ -280,6 +298,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
             </div>
 
             {/* Direct Quick Links */}
+            <Link href="/audit" className="hover:text-teal-700 transition-colors text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200 font-extrabold flex items-center gap-1">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+              <span>{lang === "id" ? "Audit Gratis" : "Free Audit"}</span>
+            </Link>
             <Link href="/solusi" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
               <Compass className="w-3.5 h-3.5" />
               <span>{lang === "id" ? "Matriks" : "Matrix"}</span>

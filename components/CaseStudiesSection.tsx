@@ -27,11 +27,11 @@ export const CaseStudiesSection: React.FC = () => {
       </div>
 
       {/* Responsive Horizontal Snap Carousel on Mobile, 2-Column Grid on Desktop */}
-      <div className="flex md:grid md:grid-cols-2 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-4 sm:gap-8 pb-4 md:pb-0 scrollbar-thin">
+      <div className="flex md:grid md:grid-cols-2 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory gap-4 sm:gap-8 pb-4 md:pb-0 w-full scroll-pl-0 scrollbar-none">
         {cvProfile.caseStudies.map((cs) => (
           <div
             key={cs.id}
-            className="min-w-[85vw] sm:min-w-[420px] md:min-w-0 snap-center bg-white border border-slate-200/90 hover:border-teal-700 rounded-2xl p-5 sm:p-7 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-5 sm:space-y-6 group shrink-0 md:shrink"
+            className="w-[85vw] max-w-[360px] sm:w-[420px] md:w-auto md:max-w-none snap-start bg-white border border-slate-200/90 hover:border-teal-700 rounded-2xl p-5 sm:p-7 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-5 sm:space-y-6 group shrink-0 md:shrink"
           >
             <div className="space-y-4">
               <div className="flex justify-between items-start gap-2">
@@ -86,6 +86,14 @@ export const CaseStudiesSection: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Mobile Swipe Indicator */}
+      <div className="flex md:hidden items-center justify-center gap-1.5 -mt-2">
+        {cvProfile.caseStudies.map((_, idx) => (
+          <span key={idx} className="w-1.5 h-1.5 rounded-full bg-slate-300" />
+        ))}
+        <span className="text-[10px] text-slate-500 font-mono ml-1">Geser studi kasus &rarr;</span>
       </div>
 
       <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-sans">

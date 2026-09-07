@@ -108,6 +108,15 @@ export function MobileNavDrawer({ isOpen, onClose, lang = "id" }: MobileNavDrawe
             </div>
 
             <Link
+              href="/audit"
+              onClick={onClose}
+              className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold bg-teal-50 text-teal-900 border border-teal-200/80 transition-colors"
+            >
+              <Compass className="w-4.5 h-4.5 text-teal-600" />
+              Alat Audit Kesiapan (Gratis)
+            </Link>
+
+            <Link
               href="/solusi"
               onClick={onClose}
               className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 transition-colors"

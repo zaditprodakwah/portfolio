@@ -45,11 +45,11 @@ export const ServicesSection: React.FC = () => {
                 ? "/layanan/seo-konten-konversi"
                 : svc.id === "academic-stats"
                 ? "/layanan/olah-data-statistik-sinta"
-                : "/layanan/web-solutions-performance";
+                : "/layanan/solusi-web-performa";
 
             return (
               <div
-                key={svc.id}
+                key={svc.id} id={svc.id === "admin-docs" ? "layanan-dokumen" : svc.id === "academic-stats" ? "layanan-riset" : svc.id === "web-performance" ? "layanan-web" : "layanan-seo"}
                 className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-7 shadow-xs hover:border-teal-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>

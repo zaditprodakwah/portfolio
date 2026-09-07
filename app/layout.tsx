@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Zadit Solutions Hub",
     images: [
       {
-        url: "/api/og?title=Muhammad+Khoiruzzadittaqwa&description=Strategic+Growth,+Business+%26+Research+Consultant",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Muhammad Khoiruzzadittaqwa - Executive Portfolio",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Muhammad Khoiruzzadittaqwa | Konsultan Pertumbuhan",
     description: "10+ tahun pengalaman memadukan dokumen bisnis eksekutif, SEO & konten konversi, riset data kuantitatif, dan performa web cepat.",
-    images: ["/api/og?title=Muhammad+Khoiruzzadittaqwa&description=Strategic+Growth,+Business+%26+Research+Consultant"],
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -104,6 +104,7 @@ export default function RootLayout({
       className={`scroll-smooth w-full max-w-full overflow-x-hidden ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

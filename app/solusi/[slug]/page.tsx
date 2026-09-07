@@ -29,7 +29,29 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
     description: solution.metaDescription,
     alternates: {
       canonical: `https://zadit.pages.dev/solusi/${solution.slug}`
-    }
+    },
+    openGraph: {
+      title: `${solution.title} | Zadit Growth`,
+      description: solution.metaDescription,
+      url: `https://zadit.pages.dev/solusi/${solution.slug}`,
+      siteName: "Zadit Solutions Hub",
+      images: [
+        {
+          url: "https://zadit.pages.dev/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: solution.title,
+        },
+      ],
+      locale: "id_ID",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${solution.title} | Zadit Growth`,
+      description: solution.metaDescription,
+      images: ["https://zadit.pages.dev/og-image.jpg"],
+    },
   };
 }
 

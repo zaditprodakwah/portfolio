@@ -27,3 +27,14 @@ if (fs.existsSync(masterPhotoPath)) {
 } else {
   console.warn("[sync-cv] Master photo not found at", masterPhotoPath);
 }
+
+import { execSync } from "node:child_process";
+const ogScript = path.join(rootDir, "scripts", "generate-og-image.py");
+if (fs.existsSync(ogScript)) {
+  console.log("[sync-cv] Generating static OpenGraph social card...");
+  try {
+    execSync(`python3 "${ogScript}"`, { stdio: "inherit" });
+  } catch (e) {
+    console.warn("[sync-cv] Failed to run generate-og-image.py", e.message);
+  }
+}
