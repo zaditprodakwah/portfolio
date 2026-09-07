@@ -45,6 +45,19 @@ export default async function SolutionDetailPage({ params }: SolutionPageProps) 
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Product",
+        "name": solution.title,
+        "description": solution.metaDescription,
+        "brand": {
+          "@type": "Organization",
+          "name": "Zadit Solutions Hub"
+        },
+        "offers": {
+          "@type": "OfferCatalog",
+          "name": "Layanan Konsultasi " + solution.pillarName
+        }
+      },
+      {
         "@type": "Service",
         "name": solution.title,
         "description": solution.metaDescription,

@@ -61,7 +61,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
-      <main className="min-h-screen flex flex-col bg-alabaster pb-16 sm:pb-0">
+      <main className="min-h-screen flex flex-col bg-alabaster pb-16 sm:pb-0 scroll-smooth">
         <Navbar
           onOpenChat={() => setIsChatOpen(true)}
           onOpenMenu={() => setIsMenuOpen(true)}

@@ -1,18 +1,61 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { ShieldCheck, MessageSquare } from "lucide-react";
+import { ShieldCheck, MessageSquareCode, X, Sparkles } from "lucide-react";
+import { cvProfile } from "@/lib/cv-data";
 
 interface PersonalGreetingCapsuleProps {
   lang?: "id" | "en";
+  onOpenChat?: () => void;
 }
 
-export function PersonalGreetingCapsule({ lang = "id" }: PersonalGreetingCapsuleProps) {
+export function PersonalGreetingCapsule({ lang = "id", onOpenChat }: PersonalGreetingCapsuleProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(true);
+
+  useEffect(() => {
+    // Check sessionStorage so it does not disturb returning navigations
+    const seen = sessionStorage.getItem("has_seen_greeting_capsule_v1");
+    if (!seen) {
+      // Gentle delay of 800ms before floating in
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        setIsDismissed(false);
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    setTimeout(() => setIsDismissed(true), 300);
+    sessionStorage.setItem("has_seen_greeting_capsule_v1", "true");
+  };
+
+  if (isDismissed) return null;
+
   return (
-    <div className="w-full max-w-4xl mx-auto mb-8 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-teal-300 transition-all">
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5 text-center sm:text-left">
-        <div className="relative shrink-0">
-          <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden ring-3 ring-teal-600/10 shadow-sm relative bg-slate-100">
+    <aside
+      aria-label={lang === "id" ? "Sapaan Personal Zadit" : "Personal Greeting from Zadit"}
+      className={`fixed bottom-5 right-5 z-40 max-w-sm sm:max-w-md w-[calc(100%-2.5rem)] bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-2xl p-4 sm:p-5 transition-all duration-300 transform ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0 pointer-events-none"
+      }`}
+    >
+      {/* Close button */}
+      <button
+        onClick={handleDismiss}
+        type="button"
+        aria-label={lang === "id" ? "Tutup sapaan" : "Dismiss greeting"}
+        className="absolute top-3 right-3 w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-colors cursor-pointer"
+      >
+        <X className="w-3.5 h-3.5" />
+      </button>
+
+      <div className="flex items-start gap-3.5 sm:gap-4 pr-6">
+        {/* Photo with Online Dot */}
+        <div className="relative shrink-0 mt-0.5">
+          <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-xl overflow-hidden ring-2 ring-teal-600/20 shadow-sm relative bg-slate-100">
             <Image
               src="/foto-zadit.jpg"
               alt="Muhammad Khoiruzzadittaqwa"
@@ -22,35 +65,50 @@ export function PersonalGreetingCapsule({ lang = "id" }: PersonalGreetingCapsule
             />
           </div>
           <span
-            className="absolute -bottom-1 -right-1 w-4.5 h-4.5 bg-emerald-500 border-2 border-white rounded-full"
-            title="Online & Tersedia"
+            className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full shadow-xs"
+            title="Online & Siap Berdiskusi"
           />
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1.5">
-            <h2 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+          <div className="flex items-center gap-1.5 mb-1">
+            <h3 className="text-xs sm:text-sm font-heading font-bold text-slate-900 truncate">
               Muhammad Khoiruzzadittaqwa
-            </h2>
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-800 border border-teal-200/60">
-              <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
-              {lang === "id" ? "Tersedia untuk Kolaborasi" : "Available for Projects"}
-            </span>
+            </h3>
           </div>
 
-          <p className="text-xs sm:text-sm leading-relaxed text-slate-700">
-            {lang === "id" ? (
-              <>
-                Selamat datang. Saya mendampingi pelaku usaha, pengurus yayasan, dosen, dan rekruter menyelesaikan kebutuhan dokumen kemitraan, analisis data riset, serta web performa tinggi dengan tenang, rapi, dan dapat dipertanggungjawabkan.
-              </>
-            ) : (
-              <>
-                Welcome. I partner with business founders, non-profit trustees, researchers, and hiring teams to deliver executive documents, statistical research, and high-performance web systems with calm precision and rigorous accountability.
-              </>
-            )}
+          <p className="text-xs text-slate-600 leading-snug line-clamp-3 mb-3">
+            {lang === "id"
+              ? "Halo! Sedang mempersiapkan naskah jurnal SINTA, olah data statistik rumit, atau butuh web cepat performa tinggi? Mari kita bahas solusinya."
+              : "Hello! Finalizing a research manuscript, statistical modeling, or building a high-speed web platform? Feel free to discuss your requirements directly."}
           </p>
+
+          <div className="flex items-center gap-2">
+            {onOpenChat && (
+              <button
+                type="button"
+                onClick={() => {
+                  handleDismiss();
+                  onOpenChat();
+                }}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white text-[11px] font-heading font-bold tracking-wide uppercase transition-colors shadow-xs cursor-pointer"
+              >
+                <MessageSquareCode className="w-3.5 h-3.5" />
+                <span>{lang === "id" ? "Mulai Tanya AI" : "Chat with AI"}</span>
+              </button>
+            )}
+
+            <a
+              href="https://wa.me/6281351859871?text=Halo%20Mas%20Zadit,%20saya%20tertarik%20berkonsultasi%20mengenai%20kebutuhan%20proyek."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-heading font-semibold transition-colors"
+            >
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

@@ -16,3 +16,14 @@ if (fs.existsSync(masterPdfPath)) {
 } else {
   console.warn('[sync-cv] Master PDF not found at', masterPdfPath);
 }
+
+const masterPhotoPath = path.join(careerEngineDir, "muh-zadit-photo.jpg");
+const publicPhotoPath = path.join(rootDir, "public", "foto-zadit.jpg");
+
+console.log("[sync-cv] Syncing Profile Photo...");
+if (fs.existsSync(masterPhotoPath)) {
+  fs.copyFileSync(masterPhotoPath, publicPhotoPath);
+  console.log("[sync-cv] Copied master photo to public/foto-zadit.jpg");
+} else {
+  console.warn("[sync-cv] Master photo not found at", masterPhotoPath);
+}

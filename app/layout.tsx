@@ -32,8 +32,22 @@ export const metadata: Metadata = {
     description: '10+ tahun pengalaman memadukan dokumen bisnis eksekutif, SEO & konten konversi, riset data kuantitatif, dan performa web cepat.',
     url: 'https://zadit.pages.dev',
     siteName: 'Zadit Solutions Hub',
+    images: [
+      {
+        url: '/api/og?title=Muhammad+Khoiruzzadittaqwa&description=Strategic+Growth,+Business+%26+Research+Consultant',
+        width: 1200,
+        height: 630,
+        alt: 'Muhammad Khoiruzzadittaqwa - Executive Portfolio',
+      },
+    ],
     locale: 'id_ID',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Muhammad Khoiruzzadittaqwa | Konsultan Pertumbuhan',
+    description: '10+ tahun pengalaman memadukan dokumen bisnis eksekutif, SEO & konten konversi, riset data kuantitatif, dan performa web cepat.',
+    images: ['/api/og?title=Muhammad+Khoiruzzadittaqwa&description=Strategic+Growth,+Business+%26+Research+Consultant'],
   },
 };
 
@@ -74,7 +88,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="id"
+      lang="id-ID"
       className={`scroll-smooth ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>

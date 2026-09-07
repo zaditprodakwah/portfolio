@@ -1,8 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { MessageSquareCode, Download, FileText, Menu, Compass } from "lucide-react";
+import { 
+  MessageSquareCode, 
+  Download, 
+  FileText, 
+  Menu, 
+  Compass, 
+  ChevronDown, 
+  FileCheck2, 
+  TrendingUp, 
+  BarChart3, 
+  Layers, 
+  BookOpen, 
+  Sparkles,
+  ExternalLink
+} from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
 import { useLanguage } from "@/lib/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -15,6 +29,33 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
   const { lang } = useLanguage();
+  const [isMegaOpen, setIsMegaOpen] = useState(false);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const megaMenuRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsMegaOpen(true);
+    }, 150); // 150ms hover intent
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsMegaOpen(false);
+    }, 200);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMegaOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <>
@@ -48,26 +89,204 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
             </Link>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-6 text-xs font-mono tracking-wider uppercase text-slate-700 font-bold">
-            <Link href="/layanan/dokumen-administrasi-bisnis" className="hover:text-teal-700 transition-colors">
-              {lang === "id" ? "Dokumen & SOP" : "Governance & SOP"}
-            </Link>
-            <Link href="/layanan/seo-konten-konversi" className="hover:text-teal-700 transition-colors">
-              {lang === "id" ? "SEO & Konversi" : "SEO & Growth"}
-            </Link>
-            <Link href="/layanan/olah-data-statistik-sinta" className="hover:text-teal-700 transition-colors">
-              {lang === "id" ? "Riset SINTA" : "Research & SINTA"}
-            </Link>
+          {/* Desktop Navigation with Mega Menu */}
+          <nav 
+            className="hidden lg:flex items-center gap-6 text-xs font-mono tracking-wider uppercase text-slate-700 font-bold relative"
+            aria-label="Navigasi Utama"
+          >
+            {/* Mega Menu Dropdown Trigger */}
+            <div 
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                type="button"
+                onClick={() => setIsMegaOpen(!isMegaOpen)}
+                aria-expanded={isMegaOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-1.5 py-2 px-1 hover:text-teal-700 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 rounded-lg"
+              >
+                <span>{lang === "id" ? "Eksplorasi Solusi" : "Explore Solutions"}</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaOpen ? "rotate-180 text-teal-700" : "text-slate-400"}`} />
+              </button>
+
+              {/* Mega Menu Flyout Panel */}
+              {isMegaOpen && (
+                <div 
+                  ref={megaMenuRef}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[720px] bg-white border border-slate-200/90 rounded-2xl shadow-xl p-6 grid grid-cols-3 gap-6 animate-in fade-in slide-in-from-top-2 duration-200 z-50 text-left normal-case"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {/* Column 1: Layanan Inti */}
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-100 text-teal-800 font-mono text-xs uppercase tracking-wider font-bold">
+                      <Sparkles className="w-4 h-4 text-teal-600" />
+                      <span>{lang === "id" ? "Layanan Utama" : "Core Services"}</span>
+                    </div>
+                    <Link 
+                      href="/layanan/dokumen-administrasi-bisnis" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <FileCheck2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                            {lang === "id" ? "Dokumen Legal & SOP" : "Governance & SOP"}
+                          </p>
+                          <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                            {lang === "id" ? "Standardisasi SOP, legalitas, akta yayasan & perjanjian." : "Executive SOPs, contracts, and governance docs."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link 
+                      href="/layanan/seo-konten-konversi" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <TrendingUp className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                            {lang === "id" ? "SEO & Pertumbuhan Web" : "SEO & Web Growth"}
+                          </p>
+                          <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                            {lang === "id" ? "Programmatic SEO, AEO & web super cepat 0ms TTFB." : "High-speed Next.js platforms, pSEO & AEO."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link 
+                      href="/layanan/olah-data-statistik-sinta" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <BarChart3 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                            {lang === "id" ? "Riset & Olah Data SINTA" : "Research & SINTA"}
+                          </p>
+                          <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                            {lang === "id" ? "SPSS, SmartPLS 4, AMOS, format IMRaD & Mendeley." : "Statistical models, Mendeley, and IMRaD review."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* Column 2: Solusi & Matriks pSEO */}
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-100 text-teal-800 font-mono text-xs uppercase tracking-wider font-bold">
+                      <Compass className="w-4 h-4 text-teal-600" />
+                      <span>{lang === "id" ? "Matriks & Solusi" : "Solutions & Matrix"}</span>
+                    </div>
+
+                    <Link 
+                      href="/solusi" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-teal-50/60 transition-colors border border-teal-100/60"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <Layers className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-teal-900 group-hover:text-teal-700 flex items-center gap-1">
+                            {lang === "id" ? "Direktori Solusi pSEO" : "pSEO Solution Matrix"}
+                          </p>
+                          <p className="text-[11px] text-slate-600 leading-snug mt-0.5">
+                            {lang === "id" ? "Katalog studi komparasi & analisis alternatif kebutuhan." : "Multi-angle comparative analysis matrix."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link 
+                      href="/#studi-kasus" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                        {lang === "id" ? "Studi Kasus Klien" : "Client Case Studies"}
+                      </p>
+                      <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                        {lang === "id" ? "Studi kasus riil efisiensi operasional dan pertumbuhan." : "Verified track record and measurable client results."}
+                      </p>
+                    </Link>
+
+                    <Link 
+                      href="/#konsultasi" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                        {lang === "id" ? "Kalkulator Estimasi" : "Consultation Builder"}
+                      </p>
+                      <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                        {lang === "id" ? "Simulasikan kebutuhan spesifik dan rincian kerja." : "Estimate turnaround time and project milestones."}
+                      </p>
+                    </Link>
+                  </div>
+
+                  {/* Column 3: Kredensial & Kualifikasi */}
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2 pb-2 border-b border-slate-100 text-teal-800 font-mono text-xs uppercase tracking-wider font-bold">
+                      <FileText className="w-4 h-4 text-teal-600" />
+                      <span>{lang === "id" ? "Kredensial" : "Credentials"}</span>
+                    </div>
+
+                    <Link 
+                      href="/cv" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700 flex items-center justify-between">
+                        <span>{lang === "id" ? "Curriculum Vitae" : "Executive CV"}</span>
+                        <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-teal-700" />
+                      </p>
+                      <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                        {lang === "id" ? "Rekam jejak, sertifikasi, dan kompetensi terverifikasi." : "Full ATS-aligned career and engineering credentials."}
+                      </p>
+                    </Link>
+
+                    <Link 
+                      href="/wawasan" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                        {lang === "id" ? "Wawasan & Artikel" : "Insights & Articles"}
+                      </p>
+                      <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                        {lang === "id" ? "Publikasi metodologi riset dan arsitektur sistem." : "Technical guides, methodologies, and benchmarks."}
+                      </p>
+                    </Link>
+
+                    <a 
+                      href="/cv.pdf"
+                      download="Muhammad_Khoiruzzadittaqwa_CV.pdf"
+                      className="p-2.5 rounded-xl bg-slate-900 text-white hover:bg-teal-800 transition-colors flex items-center justify-between mt-auto"
+                    >
+                      <span className="text-xs font-heading font-bold">{lang === "id" ? "Unduh CV Resmi" : "Download Official PDF"}</span>
+                      <Download className="w-3.5 h-3.5 text-teal-300" />
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Direct Quick Links */}
             <Link href="/solusi" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
               <Compass className="w-3.5 h-3.5" />
-              <span>{lang === "id" ? "Matriks Solusi" : "Solutions"}</span>
+              <span>{lang === "id" ? "Matriks" : "Matrix"}</span>
             </Link>
-            <Link href="/wawasan" className="hover:text-teal-700 transition-colors">
-              {lang === "id" ? "Wawasan" : "Insights"}
-            </Link>
-            <Link href="/cv" className="text-teal-800 hover:text-teal-950 transition-colors flex items-center gap-1 font-bold">
+            <Link href="/cv" className="hover:text-teal-700 transition-colors flex items-center gap-1">
               <FileText className="w-3.5 h-3.5" />
-              <span>{lang === "id" ? "Lihat CV" : "View CV"}</span>
+              <span>CV</span>
             </Link>
           </nav>
 
