@@ -9,7 +9,27 @@ export const metadata: Metadata = {
   title: "Dokumen, Tata Kelola & Administrasi Bisnis | Zadit Growth",
   description: "Penyusunan dokumen kemitraan usaha, tata kelola administrasi yayasan, manual SOP operasional, dan studi kelayakan bisnis berstandar perbankan.",
   alternates: {
-    canonical: "https://zadit.pages.dev/layanan/dokumen-administrasi-bisnis"
+    canonical: "https://zadit.pages.dev/layanan/dokumen-administrasi-bisnis/"
+  },
+  openGraph: {
+    title: "Dokumen, Tata Kelola & Administrasi Bisnis | Zadit Growth",
+    description: "Penyusunan dokumen kemitraan usaha, tata kelola administrasi yayasan, manual SOP operasional, dan studi kelayakan bisnis berstandar perbankan.",
+    url: "https://zadit.pages.dev/layanan/dokumen-administrasi-bisnis/",
+    images: [
+      {
+        url: "https://zadit.pages.dev/og-dokumen-bisnis.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dokumen, Tata Kelola & Administrasi Bisnis | Zadit Growth",
+        type: "image/jpeg"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dokumen, Tata Kelola & Administrasi Bisnis | Zadit Growth",
+    description: "Penyusunan dokumen kemitraan usaha, tata kelola administrasi yayasan, manual SOP operasional, dan studi kelayakan bisnis berstandar perbankan.",
+    images: ["https://zadit.pages.dev/og-dokumen-bisnis.jpg"]
   }
 };
 
@@ -21,7 +41,7 @@ export default function BusinessDocsPage() {
     "provider": {
       "@type": "Person",
       "name": "Muhammad Khoiruzzadittaqwa",
-      "url": "https://zadit.pages.dev"
+      "url": "https://zadit.pages.dev/"
     },
     "description": "Layanan penyusunan dokumen kemitraan usaha, tata kelola administrasi lembaga & yayasan, manual SOP operasional, serta studi kelayakan bisnis berstandar perbankan.",
     "areaServed": "ID",

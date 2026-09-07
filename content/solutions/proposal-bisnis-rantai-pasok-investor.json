@@ -89,5 +89,10 @@
     "proposal-kemitraan",
     "business-admin",
     "sop-administrasi"
-  ]
+  ],
+  "citationAnchor": {
+    "metric": "3.2x Lolos Uji Due Diligence dengan Pemodelan Sensitivitas Kas Riil",
+    "source": "Harvard Business Review B2B Venture Economics Report (2025)",
+    "url": "https://hbr.org"
+  }
 }

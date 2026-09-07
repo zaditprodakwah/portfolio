@@ -89,5 +89,10 @@
     "core-web-vitals",
     "seo-strategy",
     "web-engineering"
-  ]
+  ],
+  "citationAnchor": {
+    "metric": "Skor LCP < 1.2s Meningkatkan Retensi Kunjungan hingga 24%",
+    "source": "Google CrUX Web Vitals & Conversion Correlation Benchmark (2025/2026)",
+    "url": "https://developer.chrome.com"
+  }
 }

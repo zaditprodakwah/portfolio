@@ -6,10 +6,30 @@ import { EntityPills } from "@/components/EntityPills";
 import { ProtectedContact } from "@/components/ProtectedContact";
 
 export const metadata: Metadata = {
-  title: "Solusi Web Performa & Edge Engineering | Zadit Growth",
-  description: "Layanan rekayasa website cepat, ramah aksesibilitas, skor Core Web Vitals 99-100, dan arsitektur edge $0 biaya server bulanan.",
+  title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
+  description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
   alternates: {
-    canonical: "https://zadit.pages.dev/layanan/solusi-web-performa"
+    canonical: "https://zadit.pages.dev/layanan/solusi-web-performa/"
+  },
+  openGraph: {
+    title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
+    description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
+    url: "https://zadit.pages.dev/layanan/solusi-web-performa/",
+    images: [
+      {
+        url: "https://zadit.pages.dev/og-web-performa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
+        type: "image/jpeg"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
+    description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
+    images: ["https://zadit.pages.dev/og-web-performa.jpg"]
   }
 };
 
@@ -21,7 +41,7 @@ export default function DigitalSolutionsPage() {
     "provider": {
       "@type": "Person",
       "name": "Muhammad Khoiruzzadittaqwa",
-      "url": "https://zadit.pages.dev"
+      "url": "https://zadit.pages.dev/"
     },
     "description": "Layanan optimasi performa web, komputasi tepi Cloudflare, perbaikan LCP dan INP, serta arsitektur web modern tanpa biaya langganan server bulanan.",
     "areaServed": "ID"

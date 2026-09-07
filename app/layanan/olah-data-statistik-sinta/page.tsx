@@ -6,10 +6,30 @@ import { EntityPills } from "@/components/EntityPills";
 import { ProtectedContact } from "@/components/ProtectedContact";
 
 export const metadata: Metadata = {
-  title: "Olah Data Statistik & Riset Jurnal SINTA | Zadit Growth",
-  description: "Layanan analisis data statistik SPSS, uji validitas instrumen kuesioner, uji asumsi klasik, dan pendampingan publikasi jurnal terakreditasi SINTA 2-4.",
+  title: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
+  description: "Uji validitas reliabilitas, analisis regresi, interpretasi SPSS/Python, dan bimbingan revisi naskah jurnal bereputasi SINTA 2-4.",
   alternates: {
-    canonical: "https://zadit.pages.dev/layanan/olah-data-statistik-sinta"
+    canonical: "https://zadit.pages.dev/layanan/olah-data-statistik-sinta/"
+  },
+  openGraph: {
+    title: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
+    description: "Uji validitas reliabilitas, analisis regresi, interpretasi SPSS/Python, dan bimbingan revisi naskah jurnal bereputasi SINTA 2-4.",
+    url: "https://zadit.pages.dev/layanan/olah-data-statistik-sinta/",
+    images: [
+      {
+        url: "https://zadit.pages.dev/og-olah-data.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
+        type: "image/jpeg"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
+    description: "Uji validitas reliabilitas, analisis regresi, interpretasi SPSS/Python, dan bimbingan revisi naskah jurnal bereputasi SINTA 2-4.",
+    images: ["https://zadit.pages.dev/og-olah-data.jpg"]
   }
 };
 
@@ -21,7 +41,7 @@ export default function AcademicResearchPage() {
     "provider": {
       "@type": "Person",
       "name": "Muhammad Khoiruzzadittaqwa",
-      "url": "https://zadit.pages.dev"
+      "url": "https://zadit.pages.dev/"
     },
     "description": "Layanan bimbingan metodologi kuantitatif, analisis regresi SPSS, uji instrumen penelitian, dan penyesuaian naskah jurnal ilmiah terakreditasi SINTA.",
     "areaServed": "ID"

@@ -24,31 +24,27 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
     switch (grade) {
       case "A":
         return {
-          badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
-          ring: "text-emerald-500",
-          bgGlow: "from-emerald-500/10 to-teal-500/5",
-          border: "border-emerald-500/30"
+          badge: "bg-emerald-50 text-emerald-900 border-emerald-300",
+          ring: "text-emerald-700",
+          border: "border-emerald-300"
         };
       case "B":
         return {
-          badge: "bg-teal-500/10 text-teal-400 border-teal-500/30",
-          ring: "text-teal-500",
-          bgGlow: "from-teal-500/10 to-cyan-500/5",
-          border: "border-teal-500/30"
+          badge: "bg-teal-50 text-teal-900 border-teal-300",
+          ring: "text-teal-700",
+          border: "border-teal-300"
         };
       case "C":
         return {
-          badge: "bg-amber-500/10 text-amber-400 border-amber-500/30",
-          ring: "text-amber-500",
-          bgGlow: "from-amber-500/10 to-orange-500/5",
-          border: "border-amber-500/30"
+          badge: "bg-amber-50 text-amber-900 border-amber-300",
+          ring: "text-amber-700",
+          border: "border-amber-300"
         };
       default:
         return {
-          badge: "bg-rose-500/10 text-rose-400 border-rose-500/30",
-          ring: "text-rose-500",
-          bgGlow: "from-rose-500/10 to-red-500/5",
-          border: "border-rose-500/30"
+          badge: "bg-rose-50 text-rose-900 border-rose-300",
+          ring: "text-rose-700",
+          border: "border-rose-300"
         };
     }
   };
@@ -63,21 +59,19 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto space-y-6 animate-in fade-in duration-500">
+    <div className="w-full max-w-3xl mx-auto space-y-6 animate-in fade-in duration-300">
       {/* Kartu Skor Utama */}
       <div 
-        className={`relative overflow-hidden rounded-3xl bg-slate-900 border ${theme.border} p-6 sm:p-8 shadow-2xl text-white`}
+        className={`relative overflow-hidden rounded-3xl bg-white border ${theme.border} p-6 sm:p-8 shadow-xs text-slate-900`}
       >
-        <div className={`absolute -right-20 -top-20 w-64 h-64 bg-gradient-to-br ${theme.bgGlow} rounded-full blur-3xl pointer-events-none`} />
-
         {/* Top Header */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-slate-800">
+        <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-slate-200">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
-              <Sparkles className="w-3.5 h-3.5 text-teal-400" />
+            <div className="flex items-center gap-2 text-xs font-mono text-teal-800 uppercase tracking-wider mb-1 font-bold">
+              <Sparkles className="w-3.5 h-3.5 text-teal-700" />
               <span>Hasil Evaluasi Diagnostik</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold font-heading text-white">
+            <h2 className="text-xl sm:text-2xl font-bold font-heading text-slate-900">
               {result.pillarLabel}
             </h2>
           </div>
@@ -89,14 +83,14 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
         {/* Skor & Status Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center py-6">
           {/* Gauge Meter */}
-          <div className="sm:col-span-5 flex flex-col items-center justify-center text-center p-4 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <div className="sm:col-span-5 flex flex-col items-center justify-center text-center p-4 rounded-2xl bg-slate-50 border border-slate-200">
             <div className="relative w-32 h-32 flex items-center justify-center">
               <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                 <circle
                   cx="50"
                   cy="50"
                   r="40"
-                  className="text-slate-800"
+                  className="text-slate-200"
                   strokeWidth="10"
                   stroke="currentColor"
                   fill="transparent"
@@ -115,37 +109,37 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
                 />
               </svg>
               <div className="absolute flex flex-col items-center">
-                <span className="text-3xl font-extrabold tracking-tight font-heading">
+                <span className="text-3xl font-extrabold tracking-tight font-heading text-slate-900">
                   {result.overallScore}
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono">/ 100 POIN</span>
+                <span className="text-[10px] text-slate-500 font-mono">/ 100 POIN</span>
               </div>
             </div>
-            <span className="mt-2 text-xs font-bold text-slate-300">
+            <span className="mt-2 text-xs font-bold text-slate-800">
               Skor Kesiapan Evaluasi
             </span>
           </div>
 
           {/* Deskripsi Status */}
           <div className="sm:col-span-7 space-y-3">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-slate-800/80 text-xs font-semibold text-slate-200">
-              <Zap className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-slate-100 text-xs font-semibold text-slate-800 border border-slate-200">
+              <Zap className="w-3.5 h-3.5 text-teal-700" />
               <span>Status: {result.statusTitle}</span>
             </div>
-            <p className="text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans">
               {result.statusDescription}
             </p>
 
             {/* Metrik Mentah Web jika ada */}
             {result.rawMetrics && result.rawMetrics.url && (
-              <div className="pt-2 text-xs font-mono text-slate-400 space-y-1">
-                <div className="text-teal-400 truncate">URL: {result.rawMetrics.url}</div>
+              <div className="pt-2 text-xs font-mono text-slate-600 space-y-1">
+                <div className="text-teal-800 font-bold truncate">URL: {result.rawMetrics.url}</div>
                 {result.rawMetrics.lcp && (
-                  <div className="flex gap-3 text-slate-300">
-                    <span>LCP: <strong className="text-white">{result.rawMetrics.lcp}</strong></span>
-                    <span>CLS: <strong className="text-white">{result.rawMetrics.cls}</strong></span>
+                  <div className="flex gap-3 text-slate-700">
+                    <span>LCP: <strong className="text-slate-900">{result.rawMetrics.lcp}</strong></span>
+                    <span>CLS: <strong className="text-slate-900">{result.rawMetrics.cls}</strong></span>
                     {result.rawMetrics.performanceScore !== undefined && (
-                      <span>Perf: <strong className="text-teal-400">{result.rawMetrics.performanceScore}/100</strong></span>
+                      <span>Perf: <strong className="text-teal-800">{result.rawMetrics.performanceScore}/100</strong></span>
                     )}
                   </div>
                 )}
@@ -156,24 +150,24 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
 
         {/* Breakdown Indikator */}
         {result.metricsBreakdown && result.metricsBreakdown.length > 0 && (
-          <div className="space-y-2.5 pt-4 border-t border-slate-800">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">
+          <div className="space-y-2.5 pt-4 border-t border-slate-200">
+            <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block font-mono">
               Komponen Pengujian
             </span>
             <div className="space-y-2">
               {result.metricsBreakdown.map((item, idx) => (
                 <div key={idx} className="space-y-1">
                   <div className="flex justify-between text-xs">
-                    <span className="text-slate-300">{item.label}</span>
-                    <span className="font-mono font-bold text-slate-200">
+                    <span className="text-slate-700 font-medium">{item.label}</span>
+                    <span className="font-mono font-bold text-slate-900">
                       {item.score}/{item.maxScore}
                     </span>
                   </div>
-                  <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
                     <div 
                       className={`h-full rounded-full ${
                         item.status === "good" 
-                          ? "bg-emerald-500" 
+                          ? "bg-emerald-600" 
                           : item.status === "warning" 
                           ? "bg-amber-500" 
                           : "bg-rose-500"
@@ -190,16 +184,16 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
 
       {/* Titik Lemah Kritis */}
       {result.fatalVulnerabilities.length > 0 && (
-        <div className="rounded-3xl bg-rose-950/20 border border-rose-900/40 p-6 sm:p-7">
-          <div className="flex items-center gap-2.5 text-rose-400 font-heading font-bold text-base mb-3">
-            <ShieldAlert className="w-5 h-5 shrink-0" />
+        <div className="rounded-3xl bg-rose-50/70 border border-rose-200 p-6 sm:p-7">
+          <div className="flex items-center gap-2.5 text-rose-800 font-heading font-bold text-base mb-3">
+            <ShieldAlert className="w-5 h-5 shrink-0 text-rose-700" />
             <h3>Titik Lemah Kritis yang Terdeteksi</h3>
           </div>
           <div className="space-y-2.5">
             {result.fatalVulnerabilities.map((vuln, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-rose-900/30">
-                <AlertTriangle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+              <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white border border-rose-200">
+                <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-sans">
                   {vuln}
                 </p>
               </div>
@@ -210,18 +204,18 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
 
       {/* 3 Rekomendasi Remediasi Cepat */}
       {result.remediationSteps.length > 0 && (
-        <div className="rounded-3xl bg-emerald-950/20 border border-emerald-900/40 p-6 sm:p-7">
-          <div className="flex items-center gap-2.5 text-emerald-400 font-heading font-bold text-base mb-3">
-            <CheckCircle2 className="w-5 h-5 shrink-0" />
+        <div className="rounded-3xl bg-teal-50/70 border border-teal-200 p-6 sm:p-7">
+          <div className="flex items-center gap-2.5 text-teal-900 font-heading font-bold text-base mb-3">
+            <CheckCircle2 className="w-5 h-5 shrink-0 text-teal-700" />
             <h3>Rekomendasi Remediasi Cepat</h3>
           </div>
           <div className="space-y-2.5">
             {result.remediationSteps.map((step, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-emerald-900/30">
-                <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-teal-200">
+                <span className="w-5 h-5 rounded-full bg-teal-100 text-teal-800 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {idx + 1}
                 </span>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-sans">
                   {step}
                 </p>
               </div>
@@ -236,43 +230,29 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({ result, onReset })
           href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-sm sm:text-base shadow-lg shadow-emerald-900/30 transition-all active:scale-98"
+          className="flex-1 inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-heading font-bold text-xs uppercase tracking-wider shadow-xs transition-all active:scale-98"
         >
-          <MessageCircle className="w-5 h-5" />
-          <span>Klaim Roadmap Perbaikan via WhatsApp</span>
-          <ExternalLink className="w-4 h-4 opacity-80" />
+          <MessageCircle className="w-4 h-4" />
+          <span>Diskusikan Hasil Ini via WhatsApp</span>
         </a>
 
         <button
           type="button"
           onClick={handlePrint}
-          className="inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 font-medium text-sm transition-colors cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-heading font-bold text-xs uppercase tracking-wider border border-slate-300 transition-colors"
         >
           <Printer className="w-4 h-4" />
-          <span>Cetak / Simpan PDF</span>
+          <span>Cetak PDF</span>
         </button>
 
         <button
           type="button"
           onClick={onReset}
-          className="inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 font-medium text-sm transition-colors cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl bg-white hover:bg-slate-50 text-slate-600 hover:text-slate-900 font-heading font-bold text-xs uppercase tracking-wider border border-slate-300 transition-colors"
         >
           <RotateCcw className="w-4 h-4" />
-          <span>Ulangi Asesmen</span>
+          <span>Uji Ulang</span>
         </button>
-      </div>
-
-      {/* Profil Konsultan Pendamping */}
-      <div className="p-4 rounded-2xl bg-slate-900/40 border border-slate-800 flex items-center gap-3.5">
-        <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold font-heading shrink-0">
-          Z
-        </div>
-        <div className="text-xs text-slate-400">
-          <strong className="text-slate-200 block font-heading">
-            Ditinjau Berdasarkan Standar Eksekutif Zadit
-          </strong>
-          Konsultasi tindak lanjut langsung didampingi oleh Muhammad Khoiruzzadittaqwa (Rating 5.0 Sribulancer).
-        </div>
       </div>
     </div>
   );

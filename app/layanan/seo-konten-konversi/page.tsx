@@ -6,10 +6,30 @@ import { EntityPills } from "@/components/EntityPills";
 import { ProtectedContact } from "@/components/ProtectedContact";
 
 export const metadata: Metadata = {
-  title: "SEO, Konten & Konversi Digital | Zadit Growth",
-  description: "Layanan strategi SEO organik, riset kata kunci komersial berniat tinggi, penataan arsitektur silo, dan konten edukatif yang melipatgandakan qualified inbound leads.",
+  title: "SEO, Riset Kata Kunci & Copywriting Konversi | Zadit Growth",
+  description: "Optimasi mesin pencari berbasis niat beli komersial (commercial intent), struktur halaman ramah konversi, dan penulisan artikel berbobot.",
   alternates: {
-    canonical: "https://zadit.pages.dev/layanan/seo-konten-konversi"
+    canonical: "https://zadit.pages.dev/layanan/seo-konten-konversi/"
+  },
+  openGraph: {
+    title: "SEO, Riset Kata Kunci & Copywriting Konversi | Zadit Growth",
+    description: "Optimasi mesin pencari berbasis niat beli komersial (commercial intent), struktur halaman ramah konversi, dan penulisan artikel berbobot.",
+    url: "https://zadit.pages.dev/layanan/seo-konten-konversi/",
+    images: [
+      {
+        url: "https://zadit.pages.dev/og-seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SEO, Riset Kata Kunci & Copywriting Konversi | Zadit Growth",
+        type: "image/jpeg"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO, Riset Kata Kunci & Copywriting Konversi | Zadit Growth",
+    description: "Optimasi mesin pencari berbasis niat beli komersial (commercial intent), struktur halaman ramah konversi, dan penulisan artikel berbobot.",
+    images: ["https://zadit.pages.dev/og-seo.jpg"]
   }
 };
 
@@ -21,7 +41,7 @@ export default function MarketingSeoPage() {
     "provider": {
       "@type": "Person",
       "name": "Muhammad Khoiruzzadittaqwa",
-      "url": "https://zadit.pages.dev"
+      "url": "https://zadit.pages.dev/"
     },
     "description": "Layanan strategi SEO on-page, riset kata kunci berniat komersial tinggi, penataan arsitektur tautan internal silo, dan optimasi konversi leads.",
     "areaServed": "ID"

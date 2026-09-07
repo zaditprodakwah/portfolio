@@ -13,56 +13,14 @@ import { ContactFooter } from "@/components/ContactFooter";
 import { AIChatDrawer } from "@/components/AIChatDrawer";
 import { MobileNavDrawer } from "@/components/MobileNavDrawer";
 import { MobileActionDock } from "@/components/MobileActionDock";
-import { PersonalGreetingCapsule } from "@/components/PersonalGreetingCapsule";
-import { ENTITY_NODES } from "@/lib/entity-graph";
+import { FloatingToCWidget } from "@/components/FloatingToCWidget";
 
 export default function HomePage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Schema.org Linked Data JSON-LD dengan Otoritas Graf Entitas Wikidata
-  const jsonLdData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://zadit.pages.dev/#person",
-        "name": "Muhammad Khoiruzzadittaqwa",
-        "alternateName": ["Zadit", "muhzadit"],
-        "url": "https://zadit.pages.dev",
-        "jobTitle": "Strategic Growth, Business Proposal & Research Consultant",
-        "image": "https://zadit.pages.dev/foto-zadit.jpg",
-        "sameAs": [
-          "https://www.sribu.com/id/users/muhzadit",
-          "https://linkedin.com/in/muhzadit",
-          "https://github.com/muhzadit",
-          "https://kontak.link/muhzadit"
-        ],
-        "knowsAbout": Object.values(ENTITY_NODES).map((node) => ({
-          "@type": "Thing",
-          "name": node.name,
-          "sameAs": node.wikidataUri
-        }))
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://zadit.pages.dev/#website",
-        "url": "https://zadit.pages.dev",
-        "name": "Zadit Growth OS & Executive Portfolio",
-        "description": "Portfolio eksekutif, dokumen bisnis, pengolahan data statistik SINTA, dan solusi performa web berorientasi konversi nyata.",
-        "publisher": {
-          "@id": "https://zadit.pages.dev/#person"
-        }
-      }
-    ]
-  };
-
   return (
     <LanguageProvider>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
-      />
       <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-alabaster pb-32 sm:pb-12 scroll-smooth">
         <Navbar
           onOpenChat={() => setIsChatOpen(true)}
@@ -97,7 +55,7 @@ export default function HomePage() {
           onClose={() => setIsChatOpen(false)}
         />
 
-        <PersonalGreetingCapsule onOpenChat={() => setIsChatOpen(true)} />
+        <FloatingToCWidget />
       </main>
     </LanguageProvider>
   );

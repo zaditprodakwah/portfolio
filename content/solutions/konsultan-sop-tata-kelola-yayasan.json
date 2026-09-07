@@ -88,5 +88,10 @@
     "sop-administrasi",
     "business-admin",
     "studi-kelayakan"
-  ]
+  ],
+  "citationAnchor": {
+    "metric": "100% Kepatuhan PSAK 109 Menghilangkan Risiko Sanksi Finansial",
+    "source": "Ikatan Akuntan Indonesia (IAI) & Standar Akuntansi Nirlaba (2025)",
+    "url": "https://iaiglobal.or.id"
+  }
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, MessageSquare, Linkedin, Github, ExternalLink, Award, FileText } from 'lucide-react';
+import { Mail, MessageSquare, Linkedin, Github, ExternalLink, Award, FileText, Compass, MapPin, BookOpen } from 'lucide-react';
 import { cvProfile } from '@/lib/cv-data';
 import { useLanguage } from '@/lib/LanguageContext';
 import { ProtectedContact } from './ProtectedContact';
@@ -14,7 +14,7 @@ export const ContactFooter: React.FC = () => {
     <footer id="contact" className="bg-slate-900 text-white pt-16 pb-12 px-6 border-t border-slate-800">
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center font-heading font-extrabold text-lg shadow-sm">
                 Z
@@ -32,7 +32,51 @@ export const ContactFooter: React.FC = () => {
             </p>
           </div>
 
-          <div className="lg:col-span-6 flex flex-col sm:flex-row gap-8 lg:justify-end text-xs font-mono">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-xs font-mono">
+            {/* Hub Eksplorasi & Direktori */}
+            <div className="space-y-3">
+              <p className="text-slate-300 uppercase tracking-wider text-xs font-bold">
+                {lang === 'id' ? 'Arsitektur & Hub' : 'Ecosystem Hubs'}
+              </p>
+              <div className="flex flex-col space-y-2">
+                <Link
+                  href="/layanan/"
+                  className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
+                >
+                  <Compass className="w-3.5 h-3.5 text-teal-400" />
+                  <span>Katalog Layanan (/layanan/)</span>
+                </Link>
+                <Link
+                  href="/solusi/"
+                  className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
+                >
+                  <Compass className="w-3.5 h-3.5 text-teal-400" />
+                  <span>Matriks Solusi (/solusi/)</span>
+                </Link>
+                <Link
+                  href="/wawasan/"
+                  className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-teal-400" />
+                  <span>Wawasan & Teardown (/wawasan/)</span>
+                </Link>
+                <Link
+                  href="/direktori/"
+                  className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-teal-400" />
+                  <span>Direktori Wilayah (/direktori/)</span>
+                </Link>
+                <Link
+                  href="/audit/"
+                  className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5 text-teal-400" />
+                  <span>Audit Performa Web (/audit/)</span>
+                </Link>
+              </div>
+            </div>
+
             {/* Direct Protected Channels */}
             <div className="space-y-3">
               <p className="text-slate-300 uppercase tracking-wider text-xs font-bold">
@@ -42,11 +86,11 @@ export const ContactFooter: React.FC = () => {
                 <ProtectedContact type="whatsapp" />
                 <ProtectedContact type="email" />
                 <Link
-                  href="/cv"
+                  href="/cv/"
                   className="flex items-center gap-2 text-slate-200 hover:text-teal-300 transition-colors font-mono text-xs font-bold pt-1"
                 >
                   <FileText className="w-4 h-4 text-teal-400" />
-                  <span>{lang === 'id' ? 'Halaman Resmi CV (/cv)' : 'Official CV Page (/cv)'}</span>
+                  <span>{lang === 'id' ? 'Halaman Resmi CV (/cv/)' : 'Official CV Page (/cv/)'}</span>
                 </Link>
               </div>
             </div>
