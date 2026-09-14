@@ -1,0 +1,88 @@
+{
+  "slug": "qa-erp",
+  "pillarId": "teknologi-sistem",
+  "pillarName": "Teknologi, ERP & Otomasi Sistem",
+  "title": "Portofolio QA Tester ERP: Retail, Manufaktur & Akuntansi Otomatis",
+  "metaDescription": "Layanan dan portofolio Quality Assurance ERP profesional: pengujian end-to-end P2P, O2C, Multi-Gudang/BOM, jurnal akuntansi otomatis, dan validasi pajak PPN/PPh.",
+  "focusKeyword": "qa tester erp indonesia",
+  "secondaryKeywords": [
+    "jasa testing aplikasi erp",
+    "software qa odoo indonesia",
+    "testing akuntansi jurnal otomatis erp"
+  ],
+  "directAnswer": {
+    "summary": "Pengujian sistem ERP memerlukan pemahaman mendalam tentang logika bisnis rantai pasok dan pembukuan akuntansi nyata, bukan sekadar pengetesan tombol antarmuka. Inti dari pengujian ERP kami meliputi validasi 3-Way Matching pengadaan barang, isolasi stok multi-gudang untuk mencegah stok minus, kalkulasi HPP Finished Goods pada BOM manufaktur, serta kepatuhan jurnal akuntansi dan kalkulasi pajak PPN 11% / PPh 23 tanpa selisih pembulatan (zero rounding error).",
+    "takeaways": [
+      "Pengujian end-to-end alur Procure-to-Pay (P2P) dan Order-to-Cash (O2C).",
+      "Pencegahan race condition stok minus pada integrasi kasir POS multi-lokasi.",
+      "Validasi jurnal otomatis general ledger saat penerimaan barang (Accrued Liabilities / GRNI).",
+      "Kepatuhan format impor faktur pajak Ditjen Pajak (e-Faktur PPN 11% dan bukti potong PPh 23)."
+    ]
+  },
+  "triadFramework": {
+    "stakeholderDilemma": "Manajemen perusahaan sering menghadapi kebocoran stok fisik dan laporan keuangan yang tidak balance setelah go-live ERP, akibat pengujian perangkat lunak yang hanya fokus pada tampilan kosmetik tanpa memvalidasi integritas jurnal akuntansi dan multi-user race conditions.",
+    "diplomaticNavigation": "Kami menjembatani tim pengembang teknis dengan staf operasional gudang dan akunting: menyusun skenario uji terukur (Test Case Matrix) berstandar ISO/IEEE 29119 dan pelaporan bug dengan Root Cause Analysis yang presisi.",
+    "executionDeliverable": "Test Case Matrix lengkap (P2P, O2C, BOM, Finance), log pelacakan bug kritis, simulasi alur transaksi multi-gudang, serta verifikasi balance neraca/laba-rugi."
+  },
+  "impactDashboard": {
+    "businessRoi": [
+      {
+        "label": "Akurasi Jurnal Akuntansi",
+        "value": "100% Balance Real-time"
+      },
+      {
+        "label": "Pencegahan Stok Minus",
+        "value": "Zero Negative Stock"
+      },
+      {
+        "label": "Kepatuhan Pajak (PPN/PPh)",
+        "value": "0 Rupiah Rounding Diff"
+      }
+    ],
+    "technicalRigor": [
+      {
+        "label": "Standar Pengujian",
+        "value": "ISO/IEEE 29119 QA"
+      },
+      {
+        "label": "Cakupan Modul",
+        "value": "4 Modul Inti ERP"
+      },
+      {
+        "label": "Kanal Koordinasi",
+        "value": "Discord, GitHub, Jira"
+      }
+    ]
+  },
+  "competitorMatrix": [
+    {
+      "dimension": "Cakupan Pengujian",
+      "ourSolution": "End-to-End fungsional, integritas jurnal buku besar, perpajakan, dan multi-warehouse race conditions.",
+      "legacyAgency": "Hanya manual clicking tanpa pemahaman alur debit/kredit akuntansi.",
+      "cheapFreelance": "Testing permukaan tombol tanpa verifikasi database dan kartu stok."
+    },
+    {
+      "dimension": "Dokumentasi & Laporan",
+      "ourSolution": "Test Case Matrix terstruktur (.xlsx), Steps to Reproduce detail, dan Root Cause Analysis.",
+      "legacyAgency": "Screenshot acak tanpa kejelasan skenario atau test data input.",
+      "cheapFreelance": "Laporan chat kasual tanpa matriks terstandarisasi."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apakah QA memahami alur akuntansi dan jurnal otomatis?",
+      "answer": "Ya, kami memahami alur penjurnalan otomatis transaksi pengadaan (Accrued Liabilities / GRNI), pengakuan piutang/hutang, HPP manufaktur, hingga perlakuan pajak PPN 11% dan PPh 23."
+    },
+    {
+      "question": "Apakah tersedia di jam kantor weekdays dan standby akhir pekan?",
+      "answer": "Ya, status freelance penuh memungkinkan kehadiran aktif di office hour weekdays serta standby di akhir pekan untuk pengujian rilis mendesak."
+    }
+  ],
+  "relatedEntities": [
+    "Odoo 16/17 ERP",
+    "ISO/IEEE 29119 Software Testing",
+    "Chart of Accounts (COA)",
+    "Faktur Pajak PPN 11%",
+    "Bill of Materials (BOM)"
+  ]
+}
