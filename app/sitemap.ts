@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solusi/",
     "/wawasan/",
     "/direktori/",
+    "/web3/",
   ];
 
   const staticRoutes: MetadataRoute.Sitemap = staticPaths.map((path) => ({

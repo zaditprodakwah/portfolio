@@ -22,8 +22,28 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Khoiruzzadittaqwa | Konsultan Pertumbuhan, Dokumen Bisnis & Riset",
-  description: "Portofolio eksekutif & solusi strategis Muhammad Khoiruzzadittaqwa (Zadit). Membantu bisnis, lembaga, dan akademisi lewat proposal bisnis, SEO konversi, riset data statistik SINTA, dan solusi web modern.",
+  title: {
+    default: "Muhammad Khoiruzzadittaqwa (muhzadit) | Konsultan Pertumbuhan, Bisnis & Riset",
+    template: "%s | muhzadit"
+  },
+  description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Konsultan dokumen bisnis eksekutif, audit SEO & GEO, riset data statistik SINTA, dan rekayasa web modern.",
+  keywords: [
+    "Muhammad Khoiruzzadittaqwa",
+    "muhzadit",
+    "Zadit",
+    "Muh Zadit",
+    "Aditt",
+    "PRADIKTIF",
+    "PT PRISMA DIGITAL KREATIF",
+    "jasa konsultan seo b2b",
+    "jasa pembuatan website nextjs",
+    "jasa audit technical seo core web vitals",
+    "biaya jasa seo terpercaya",
+    "konsultan google ads roi terukur",
+    "jasa olah data sinta spss smartpls",
+    "jasa publikasi jurnal sinta",
+    "konsultan bisnis cirebon"
+  ],
   metadataBase: new URL("https://zadit.pages.dev/"),
   alternates: {
     canonical: "https://zadit.pages.dev/",
@@ -65,17 +85,17 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Muhammad Khoiruzzadittaqwa | Strategic Growth, Business & Research Consultant",
-    description: "10+ tahun pengalaman memadukan dokumen bisnis eksekutif, SEO & konten konversi, riset data kuantitatif, dan performa web cepat.",
+    title: "Muhammad Khoiruzzadittaqwa (muhzadit) | Strategic Growth, SEO & Web Practice",
+    description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Memadukan dokumen bisnis eksekutif, SEO konversi, riset data kuantitatif SINTA, dan solusi web modern ultra-cepat.",
     url: "https://zadit.pages.dev/",
-    siteName: "Zadit Solutions Hub",
+    siteName: "muhzadit",
     images: [
       {
         url: "https://zadit.pages.dev/og-image.jpg",
         secureUrl: "https://zadit.pages.dev/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Khoiruzzadittaqwa - Executive Advisory & Digital Practice",
+        alt: "Muhammad Khoiruzzadittaqwa (muhzadit) - Executive Advisory & Digital Practice",
         type: "image/jpeg",
       },
     ],
@@ -84,8 +104,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Khoiruzzadittaqwa | Konsultan Pertumbuhan",
-    description: "10+ tahun pengalaman memadukan dokumen bisnis eksekutif, SEO & konten konversi, riset data kuantitatif, dan performa web cepat.",
+    title: "Muhammad Khoiruzzadittaqwa (muhzadit) | Konsultan Pertumbuhan",
+    description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Konsultan dokumen bisnis, audit SEO & GEO, riset data kuantitatif SINTA, dan rekayasa web performa tinggi.",
     images: ["https://zadit.pages.dev/og-image.jpg"],
   },
 };
@@ -97,17 +117,79 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://zadit.pages.dev/#person",
       name: "Muhammad Khoiruzzadittaqwa",
-      alternateName: ["Zadit", "Muhzadit", "muhzadit"],
-      jobTitle: "Strategic Growth, Business Proposal & Research Consultant",
-      description: "Konsultan profesional dengan 10+ tahun pengalaman memadukan dokumen bisnis eksekutif, SEO konversi, analisis data statistik kuantitatif, dan optimasi web modern.",
-      image: "https://zadit.pages.dev/foto-zadit.jpg",
+      alternateName: ["muhzadit", "Zadit", "Muh Zadit", "Aditt", "Zadit Dev"],
+      jobTitle: "Strategic Growth Consultant, Technical SEO Specialist & Research Consultant",
+      description: "Konsultan profesional dan pengembang web memadukan dokumen bisnis eksekutif, SEO konversi berbasis riset, analisis data statistik kuantitatif, dan optimasi web modern.",
+      image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zadit-foto.png",
       url: "https://zadit.pages.dev/",
-      sameAs: [
-        "https://www.sribu.com/id/users/muhzadit",
-        "https://linkedin.com/in/muhzadit",
-        "https://github.com/muhzadit",
-        "https://kontak.link/muhzadit"
+      email: "muhzadit@gmail.com",
+      telephone: "+6282316363177",
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Certified Branding & Digital Marketing 360",
+          credentialCategory: "Professional Certification",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "MySkill Indonesia"
+          },
+          url: "https://storage.googleapis.com/myskill-v2-certificates/bootcamp-lZg7BkHghqBwpMqQMa42/4XFrHMqKE9fQdZAoYMP8Vgh9niV2-wfmeamWBoi8Kt1zhduPb.pdf"
+        }
       ],
+      sameAs: [
+        "https://www.wikidata.org/wiki/Q141474900",
+        "https://orcid.org/0000-0002-1594-9548",
+        "https://scholar.google.com/citations?user=CbR250MAAAAJ",
+        "https://independent.academia.edu/muhzadit",
+        "https://id.wikipedia.org/wiki/Pengguna:Muhammad_Khoiruzzadittaqwa",
+        "https://commons.wikimedia.org/wiki/File:Zadit-foto.png",
+        "https://www.cake.me/resumes/muh-zadit",
+        "https://kontak.link/muhzadit",
+        "https://github.com/zaditprodakwah",
+        "https://www.sribu.com/id/users/muhzadit",
+        "https://projects.co.id/public/browse_users/view/a29c17/muhzadit",
+        "https://www.linkedin.com/in/muhzadit",
+        "https://x.com/muhzadit",
+        "https://www.facebook.com/profilzadit",
+        "https://www.instagram.com/muhzadit",
+        "https://www.threads.net/@muhzadit"
+      ],
+      worksFor: {
+        "@id": "https://zadit.pages.dev/#organization"
+      },
+      knowsAbout: Object.values(ENTITY_NODES).map((node) => ({
+        "@type": "Thing",
+        name: node.name,
+        sameAs: node.wikidataUri
+      }))
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zadit.pages.dev/#organization",
+      legalName: "PT PRISMA DIGITAL KREATIF",
+      name: "PRADIKTIF",
+      url: "https://zadit.pages.dev/",
+      logo: "https://zadit.pages.dev/foto-zadit.jpg",
+      taxID: "1801250039976",
+      sameAs: [
+        "https://www.wikidata.org/wiki/Q141474927"
+      ],
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          name: "NIB",
+          value: "1801250039976"
+        },
+        {
+          "@type": "PropertyValue",
+          name: "TDPSE Kominfo",
+          value: "017014.01/DJAI.PSE/01/2025"
+        }
+      ],
+      founder: {
+        "@id": "https://zadit.pages.dev/#person"
+      },
+      areaServed: ["ID", "Global"],
       knowsAbout: Object.values(ENTITY_NODES).map((node) => ({
         "@type": "Thing",
         name: node.name,
@@ -117,21 +199,68 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://zadit.pages.dev/#service",
-      name: "Zadit Strategic Advisory & Growth OS",
+      name: "PRADIKTIF — PT PRISMA DIGITAL KREATIF",
       url: "https://zadit.pages.dev/",
+      parentOrganization: { "@id": "https://zadit.pages.dev/#organization" },
       founder: { "@id": "https://zadit.pages.dev/#person" },
       areaServed: ["ID", "Global"],
-      description: "Layanan konsultasi proposal bisnis, pitch deck kemitraan, SEO & konten konversi, riset data statistik SPSS/Python, dan optimasi performa web."
+      description: "Layanan konsultasi proposal bisnis, audit SEO & GEO AI visibility, riset data statistik SINTA, dan optimasi performa web berizin resmi."
     },
     {
       "@type": "WebSite",
       "@id": "https://zadit.pages.dev/#website",
       url: "https://zadit.pages.dev/",
-      name: "Zadit Growth OS & Executive Portfolio",
-      description: "Portfolio eksekutif, dokumen bisnis, pengolahan data statistik SINTA, dan solusi performa web berorientasi konversi nyata.",
+      name: "muhzadit",
+      alternateName: [
+        "Muhammad Khoiruzzadittaqwa",
+        "Zadit",
+        "Muh Zadit",
+        "Aditt",
+        "PRADIKTIF",
+        "Zadit Dev"
+      ],
+      description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Konsultan dokumen bisnis, pengolahan data statistik SINTA, dan solusi performa web berorientasi konversi nyata.",
       publisher: {
-        "@id": "https://zadit.pages.dev/#person"
+        "@id": "https://zadit.pages.dev/#organization"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://zadit.pages.dev/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Metode dan software apa saja yang didukung untuk bimbingan olah data statistik & riset SINTA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mendukung analisis regresi dan uji asumsi klasik (SPSS), Structural Equation Modeling (SEM-PLS / AMOS), pemodelan psikometri Rasch Model PCM, skrip komputasi R, serta pengujian validitas instrumen (Aiken's V & CFA) dengan garansi pendampingan metodologi hingga tuntas sidang atau telaah jurnal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah dokumen proposal bisnis, studi kelayakan BEP, dan SOP dikerjakan berpayung hukum resmi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya, seluruh dokumen bisnis eksekutif dan SOP disusun secara profesional di bawah legalitas resmi PT PRISMA DIGITAL KREATIF (Brand: PRADIKTIF, NIB 1801250039976, TDPSE Kominfo 017014.01/DJAI.PSE/01/2025) dengan kalkulasi finansial presisi dan standar tata kelola organisasi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana jaminan kerahasiaan data riset dan rahasia bisnis klien?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seluruh data mentah responden, model bisnis, dan dokumen internal klien dijamin kerahasiaannya (NDA). Penyerahan hasil kerja menerapkan protokol peninjauan bertahap untuk memastikan kesesuaian konsep sebelum berkas master final diserahkan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Berapa lama estimasi pengerjaan dokumen proposal atau olah data statistik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estimasi pengerjaan berkisar antara 2 hingga 7 hari kerja tergantung kompleksitas instrumen riset atau kelengkapan data finansial usaha. Konsultasi dan telaah brief awal dapat dilakukan langsung via WhatsApp resmi."
+          }
+        }
+      ]
     }
   ]
 };
@@ -152,7 +281,8 @@ export default function RootLayout({
         <meta name="geo.region" content="ID" />
         <meta name="geo.placename" content="Indonesia" />
         <meta name="geo.position" content="-6.2088;106.8456" />
-        <meta name="ICBM" content="-6.2088, 106.8456" />
+        <meta name="application-name" content="muhzadit" />
+        <meta name="apple-mobile-web-app-title" content="muhzadit" />
         <meta name="language" content="Indonesian" />
         <script
           type="application/ld+json"

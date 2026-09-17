@@ -99,7 +99,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
             {/* Non-redundant Executive Name Bar (Single authoritative photo lives on the right card) */}
             <div className="flex flex-wrap items-center gap-2">
               <span className="font-mono text-xs sm:text-sm text-slate-800 uppercase tracking-widest font-extrabold">
-                Muhammad Khoiruzzadittaqwa ({cvProfile.nickname})
+                Muhammad Khoiruzzadittaqwa ({cvProfile.shortName} / {cvProfile.nickname})
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="text-[11px] font-mono font-bold text-teal-800 bg-teal-50 px-2 py-0.5 rounded-md border border-teal-200">

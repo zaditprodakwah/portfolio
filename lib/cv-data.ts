@@ -45,7 +45,9 @@ export interface ToolCategory {
 
 export const cvProfile = {
   name: "Muhammad Khoiruzzadittaqwa",
+  shortName: "muhzadit",
   nickname: "Zadit",
+  aliases: ["Zadit", "Muh Zadit", "Aditt", "muhzadit", "Zadit Dev"],
   titles: {
     id: "Konsultan Pertumbuhan, Dokumen Bisnis & Riset Terpadu",
     en: "Strategic Growth, Business & Research Consultant"
@@ -64,8 +66,9 @@ export const cvProfile = {
     whatsappUrl: "https://wa.me/6282316363177",
     location: "Cirebon & Jakarta, Indonesia",
     sribuProfile: "https://www.sribu.com/id/users/muhzadit",
+    projectsCoId: "https://projects.co.id/public/browse_users/view/a29c17/muhzadit",
     linkedin: "https://linkedin.com/in/muhzadit",
-    github: "https://github.com/muhzadit",
+    github: "https://github.com/zaditprodakwah",
     kontakLink: "https://kontak.link/muhzadit",
     portfolioWeb: "https://zadit.pages.dev"
   },

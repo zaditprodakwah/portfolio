@@ -1,13 +1,13 @@
-name = "zadit"
+name = "muhzadit"
 compatibility_date = "2024-09-01"
 pages_build_output_dir = "out"
 
-[[d1_databases]]
-binding = "DB"
-database_name = "zadit-pseo"
-database_id = "32d1590b-46d1-4eba-ba59-e133251165b0"
-migrations_dir = "migrations"
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "zadit-pseo"
+# database_id = "32d1590b-46d1-4eba-ba59-e133251165b0"
+# migrations_dir = "migrations"
 
-[[r2_buckets]]
-binding = "MEDIA_BUCKET"
-bucket_name = "gworky-media-us"
+# [[r2_buckets]]
+# binding = "MEDIA_BUCKET"
+# bucket_name = "gworky-media-us"
