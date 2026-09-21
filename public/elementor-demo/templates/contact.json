@@ -1,5 +1,5 @@
 {
-  "title": "Contact - PT Prisma Digital Kreatif",
+  "title": "Kontak - PRADIKTIF | PT Prisma Digital Kreatif",
   "type": "page",
   "version": "0.4",
   "page_settings": [],
@@ -20,6 +20,16 @@
       },
       "elements": [
         {
+          "id": "contact-eyebrow",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"color:#CDB46D;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin:0;\">Mulai proyek, tanpa panggilan wajib</p>",
+            "align": "center"
+          },
+          "elements": []
+        },
+        {
           "id": "contact-heading",
           "elType": "widget",
           "widgetType": "heading",
@@ -39,7 +49,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-            "editor": "<p>Ceritakan kebutuhan halaman Anda. Kami balas dengan rincian lingkup pekerjaan, tarif per halaman, dan tenggat dalam satu hari kerja.</p>",
+            "editor": "<p>Ceritakan kebutuhan halaman Anda lewat email. Kami kirimkan rincian lingkup pekerjaan, tarif per halaman, dan tenggat dalam satu hari kerja.</p>",
             "align": "center",
             "text_color": "#D9CAB3",
             "typography_typography": "custom",
@@ -91,7 +101,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p><strong>Email:</strong> muhzadit@gmail.com<br><strong>Perusahaan:</strong> PT Prisma Digital Kreatif<br><strong>Respons:</strong> dalam 1-2 hari kerja</p>"
+                "editor": "<p><strong>Email:</strong> muhzadit@gmail.com<br><strong>Perusahaan:</strong> PT Prisma Digital Kreatif<br><strong>Domisili:</strong> Cirebon, Indonesia<br><strong>Registrasi:</strong> NIB 1801250039976 &middot; PSE Kominfo terdaftar<br><strong>Respons:</strong> dalam 1 hari kerja</p>"
               },
               "elements": []
             }

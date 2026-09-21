@@ -1,5 +1,5 @@
 {
-  "title": "Services - PT Prisma Digital Kreatif",
+  "title": "Layanan - PRADIKTIF | PT Prisma Digital Kreatif",
   "type": "page",
   "version": "0.4",
   "page_settings": [],
@@ -20,6 +20,16 @@
       },
       "elements": [
         {
+          "id": "services-eyebrow",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"color:#CDB46D;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin:0;\">Pilar layanan PRADIKTIF</p>",
+            "align": "center"
+          },
+          "elements": []
+        },
+        {
           "id": "services-heading",
           "elType": "widget",
           "widgetType": "heading",
@@ -39,7 +49,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-            "editor": "<p>Tiga pilar yang kami jaga di setiap kiriman JSON: struktur bersih, responsif penuh, dan bebas revisi struktural.</p>",
+            "editor": "<p>Tiga pilar yang kami jaga di setiap deliverable: struktur bersih yang bisa disunting penuh, tampilan responsif, dan bebas revisi struktural di kemudian hari.</p>",
             "align": "center",
             "text_color": "#D9CAB3",
             "typography_typography": "custom",
@@ -61,7 +71,7 @@
       },
       "elements": [
         {
-          "id": "service-landing",
+          "id": "service-web",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -75,11 +85,11 @@
           },
           "elements": [
             {
-              "id": "service-landing-heading",
+              "id": "service-web-heading",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "title": "Landing Page",
+                "title": "Web &amp; Performa",
                 "header_size": "h3",
                 "align": "left",
                 "title_color": "#231627"
@@ -87,18 +97,18 @@
               "elements": []
             },
             {
-              "id": "service-landing-text",
+              "id": "service-web-text",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Halaman tunggal fokus konversi: pesan jelas, satu tujuan, dan call to action yang tidak bisa dilewatkan.</p>"
+                "editor": "<p>Pengembangan web responsif, optimasi Core Web Vitals, integrasi API, perbaikan bug, dan pemeliharaan pada stack yang sudah Anda gunakan.</p>"
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "service-company",
+          "id": "service-docs",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -112,11 +122,11 @@
           },
           "elements": [
             {
-              "id": "service-company-heading",
+              "id": "service-docs-heading",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "title": "Company Profile",
+                "title": "Dokumen &amp; Presentasi",
                 "header_size": "h3",
                 "align": "left",
                 "title_color": "#231627"
@@ -124,18 +134,18 @@
               "elements": []
             },
             {
-              "id": "service-company-text",
+              "id": "service-docs-text",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Profil perusahaan yang membangun kepercayaan: tentang, layanan, keunggulan, dan testimoni dalam satu alur rapi.</p>"
+                "editor": "<p>Pitch deck eksekutif 16:9, slide yang bisa disunting penuh, proposal bisnis, dan memorandum teknis dengan tata kelola tipografi yang konsisten.</p>"
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "service-kehadiran",
+          "id": "service-data",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -149,11 +159,11 @@
           },
           "elements": [
             {
-              "id": "service-kehadiran-heading",
+              "id": "service-data-heading",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "title": "Redesign & Upgrade",
+                "title": "Data &amp; Otomasi",
                 "header_size": "h3",
                 "align": "left",
                 "title_color": "#231627"
@@ -161,11 +171,11 @@
               "elements": []
             },
             {
-              "id": "service-kehadiran-text",
+              "id": "service-data-text",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Menyegarkan situs lama ke standar visual baru tanpa mengubah konten, struktur, atau SEO yang sudah berjalan.</p>"
+                "editor": "<p>Web scraping yang tahan terhadap perubahan struktur, otomasi lewat Chrome DevTools Protocol, pembersihan data, dan pipeline Python yang dapat dijalankan ulang.</p>"
               },
               "elements": []
             }

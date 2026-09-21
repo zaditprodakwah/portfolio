@@ -1,5 +1,5 @@
 {
-  "title": "Home - PT Prisma Digital Kreatif",
+  "title": "Home - PRADIKTIF | PT Prisma Digital Kreatif",
   "type": "page",
   "version": "0.4",
   "page_settings": [],
@@ -21,11 +21,21 @@
       },
       "elements": [
         {
+          "id": "hero-eyebrow",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"color:#CDB46D;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin:0;\">PRADIKTIF &mdash; PT Prisma Digital Kreatif</p>",
+            "align": "center"
+          },
+          "elements": []
+        },
+        {
           "id": "hero-heading",
           "elType": "widget",
           "widgetType": "heading",
           "settings": {
-            "title": "Website React yang Dibangun Sepenuhnya di Elementor",
+            "title": "Halaman WordPress, Dikirim sebagai File JSON",
             "header_size": "h1",
             "align": "center",
             "title_color": "#FFFFFF",
@@ -40,7 +50,7 @@
           "elType": "widget",
           "widgetType": "text-editor",
           "settings": {
-            "editor": "<p>Halaman ini adalah bukti kerja nyata: tiga halaman Elementor dikirim sebagai file JSON, lalu di-impor dalam satu klik. Setiap elemen tetap utuh dan bisa disunting langsung.</p>",
+            "editor": "<p>Bukti kerja nyata PRADIKTIF: halaman Elementor yang disusun sebagai file JSON versi 0.4, siap diimpor di instalasi WordPress klien. Setiap elemen tetap utuh dan bisa disunting penuh lewat Editor Elementor.</p>",
             "align": "center",
             "text_color": "#D9CAB3",
             "typography_typography": "custom",
@@ -55,11 +65,74 @@
           "settings": {
             "text": "Lihat Halaman Layanan",
             "align": "center",
-            "link": { "url": "https://wp.prisma.web.id/services", "is_external": "", "nofollow": "" },
+            "link": { "url": "/services/", "is_external": "", "nofollow": "" },
             "background_color": "#8F652E",
             "button_text_color": "#FFFFFF",
             "border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
             "padding": { "unit": "px", "top": "16", "right": "40", "bottom": "16", "left": "40", "isLinked": false }
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "stats-container",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "flex_direction": "row",
+        "gap": { "unit": "px", "size": 24, "sizes": [] },
+        "padding": { "unit": "px", "top": "64", "right": "40", "bottom": "64", "left": "40", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#1B1532"
+      },
+      "elements": [
+        {
+          "id": "stat-json",
+          "elType": "widget",
+          "widgetType": "counter",
+          "settings": {
+            "starting_number": 0,
+            "ending_number": 4,
+            "title": "versi format template Elementor (0.4)",
+            "number_color": "#CDB46D",
+            "title_color": "#D9CAB3",
+            "typography_number_typography": "custom",
+            "typography_number_font_size": { "unit": "px", "size": 48, "sizes": [] },
+            "align": "center"
+          },
+          "elements": []
+        },
+        {
+          "id": "stat-widgets",
+          "elType": "widget",
+          "widgetType": "counter",
+          "settings": {
+            "starting_number": 0,
+            "ending_number": 13,
+            "title": "widget di halaman ini, seluruhnya gratis",
+            "number_color": "#CDB46D",
+            "title_color": "#D9CAB3",
+            "typography_number_typography": "custom",
+            "typography_number_font_size": { "unit": "px", "size": 48, "sizes": [] },
+            "align": "center"
+          },
+          "elements": []
+        },
+        {
+          "id": "stat-pages",
+          "elType": "widget",
+          "widgetType": "counter",
+          "settings": {
+            "starting_number": 0,
+            "ending_number": 3,
+            "title": "halaman Elementor per paket, siap impor",
+            "number_color": "#CDB46D",
+            "title_color": "#D9CAB3",
+            "typography_number_typography": "custom",
+            "typography_number_font_size": { "unit": "px", "size": 48, "sizes": [] },
+            "align": "center"
           },
           "elements": []
         }
@@ -95,7 +168,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "title": "Output JSON",
+                "title": "Output JSON Siap Impor",
                 "header_size": "h3",
                 "align": "left",
                 "title_color": "#231627"
@@ -107,7 +180,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Setiap halaman diserahkan sebagai file JSON yang siap di-impor langsung ke Elementor. Tanpa konflik versi, tanpa salin tempel manual.</p>"
+                "editor": "<p>Setiap halaman diserahkan sebagai file JSON yang bisa diimpor langsung lewat panel Elementor atau drag-and-drop. Tanpa konflik versi, tanpa salin tempel manual.</p>"
               },
               "elements": []
             }
@@ -132,7 +205,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "title": "Sepenuhnya Reaktif",
+                "title": "Sepenuhnya Responsif",
                 "header_size": "h3",
                 "align": "left",
                 "title_color": "#231627"
@@ -144,7 +217,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Layout menyesuaikan dari ponsel sampai layar lebar. Semua ukuran, spasi, dan kolom memakai kontrol responsif native Elementor.</p>"
+                "editor": "<p>Layout menyesuaikan dari ponsel sampai layar lebar memakai kontrol responsif native Elementor: ukuran, spasi, dan arah flex diatur per breakpoint.</p>"
               },
               "elements": []
             }
@@ -169,7 +242,7 @@
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
-                "title": "Gaya Menyatu dengan Brand",
+                "title": "Tanpa Satu pun Widget Pro",
                 "header_size": "h3",
                 "align": "left",
                 "title_color": "#231627"
@@ -181,7 +254,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Palet, tipografi, dan token desain konsisten di seluruh halaman. Anda tinggal memoles konten, bukan memperbaiki tata letak.</p>"
+                "editor": "<p>Palet, tipografi, dan token desain konsisten di seluruh halaman, bebas ketergantungan lisensi Pro. Anda tinggal memoles konten, bukan memperbaiki tata letak.</p>"
               },
               "elements": []
             }

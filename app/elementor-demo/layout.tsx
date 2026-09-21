@@ -4,7 +4,7 @@ import React from 'react';
 export const metadata: Metadata = {
   title: 'Demo: Landing Elementor dari File JSON | Muhammad Khoiruzzadittaqwa (Zadit) - PRADIKTIF',
   description:
-    'Demo WordPress Playground: menginstall Elementor dan tema Hello Elementor, lalu memuat landing brand conference berbahasa Inggris dengan 83 widget gratis ditambah halaman service dan contact. Setiap halaman 100% bisa disunting lewat Editor Elementor.',
+    'Demo WordPress Playground: menginstall Elementor dan tema Hello Elementor, lalu memuat tiga halaman PRADIKTIF berbahasa Indonesia (home, layanan, kontak) dengan 30 widget gratis. Setiap halaman 100% bisa disunting lewat Editor Elementor.',
   keywords: [
     'Elementor JSON',
     'WordPress Playground',

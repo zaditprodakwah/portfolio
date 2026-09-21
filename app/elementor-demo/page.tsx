@@ -109,9 +109,11 @@ export default function ElementorDemoPage() {
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
             WordPress asli dijalankan di dalam browser tanpa server. Demo ini menginstall
-            Elementor dan tema Hello Elementor, lalu memuat landing brand conference berbahasa
-            Inggris dengan 83 widget gratis serta halaman service dan contact. Setiap halaman
-            disunting langsung lewat Editor Elementor dari file JSON format version 0.4.
+            Elementor dan tema Hello Elementor, lalu memuat tiga halaman milik PRADIKTIF
+            (PT Prisma Digital Kreatif): home, layanan, dan kontak dalam bahasa Indonesia,
+            seluruhnya dibangun dari 30 widget gratis Elementor. Setiap halaman disusun
+            sebagai file JSON format version 0.4 yang tetap bisa disunting penuh lewat
+            Editor Elementor.
           </p>
         </div>
       </section>
@@ -171,7 +173,7 @@ export default function ElementorDemoPage() {
               persis seperti ekspor template asli Elementor.
             </p>
             <ul className="text-sm text-slate-300 space-y-2 list-disc list-inside">
-              <li>Landing home memakai 83 widget, seluruhnya dari library gratis Elementor (heading, teks, tombol, counter, accordion, galeri, peta, ikon media sosial, dsb.). Garansi tanpa widget Pro ini diverifikasi dari source code resmi <code className="font-mono text-xs text-teal-300">elementor/elementor</code> di GitHub.</li>
+              <li>Tiga halaman PRADIKTIF berbahasa Indonesia memakai total 30 widget, seluruhnya dari library gratis Elementor (heading, teks, tombol, counter). Garansi tanpa widget Pro ini diverifikasi dari source code resmi <code className="font-mono text-xs text-teal-300">elementor/elementor</code> di GitHub.</li>
               <li>Plugin Elementor 4.2.4 dan tema Hello disimpan sebagai arsip di domain ini, lalu dirujuk lewat <code className="font-mono text-xs text-teal-300">UrlReference</code> pada schema blueprint WordPress Playground. Idempoten dan tidak bergantung pada meta refresh downloads.wordpress.org yang gagal diproses browser.</li>
               <li>Halaman tetap 100% bisa disunting lewat Editor Elementor setelah impor.</li>
             </ul>
