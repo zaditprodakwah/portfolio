@@ -44,7 +44,7 @@ articles = [
     },
     "rootDomainLink": {
       "anchorText": "konsultan teknologi bisnis eksekutif",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -97,7 +97,7 @@ articles = [
     },
     "rootDomainLink": {
       "anchorText": "pendampingan olah data statistik sinta",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -150,7 +150,7 @@ articles = [
     },
     "rootDomainLink": {
       "anchorText": "penyusunan dokumen tata kelola bisnis",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -203,7 +203,7 @@ articles = [
     },
     "rootDomainLink": {
       "anchorText": "arsitektur web performa tinggi edge",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {

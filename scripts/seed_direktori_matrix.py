@@ -42,7 +42,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "konsultan teknologi bisnis eksekutif",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -93,7 +93,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "layanan seo teknis konversi",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -144,7 +144,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "rekayasa visibilitas mesin pencari",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -195,7 +195,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "pendampingan olah data statistik sinta",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -246,7 +246,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "konsultan tata kelola bisnis eksekutif",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -297,7 +297,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "solusi web performa tinggi edge",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -348,7 +348,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "dokumen tata kelola administrasi bisnis",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {
@@ -399,7 +399,7 @@ matrix = [
     },
     "rootDomainLink": {
       "anchorText": "pendampingan publikasi ilmiah sinta scopus",
-      "targetUrl": "https://zadit.pages.dev/"
+      "targetUrl": "https://muhzadit.pages.dev/"
     },
     "faq": [
       {

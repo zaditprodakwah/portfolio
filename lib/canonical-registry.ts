@@ -1,7 +1,7 @@
 // lib/canonical-registry.ts
 // Single Source of Truth (SSOT) for Site-Wide Canonicalization & Trailing-Slash Standards
 
-export const BASE_URL = "https://zadit.pages.dev";
+export const BASE_URL = "https://muhzadit.pages.dev";
 
 /**
  * Ensures any pathname is formatted into a clean, canonical URL with a strict trailing slash.

@@ -1,7 +1,7 @@
-# PRODUCT-MARKETING-CONTEXT.md — Zadit Executive Hub (`zadit.pages.dev`)
+# PRODUCT-MARKETING-CONTEXT.md — Zadit Executive Hub (`muhzadit.pages.dev`)
 
 **Entitas:** Muhammad Khoiruzzadittaqwa (Zadit)  
-**Domain Otoritatif:** `https://zadit.pages.dev/`  
+**Domain Otoritatif:** `https://muhzadit.pages.dev/`  
 **Posisi Brand:** Strategic Advisory, Technology Engineering & Growth OS  
 **Persona Komunikasi:** "The Quiet Expert" (Tenang, Berwibawa, Objektif, Tanpa Hard-Selling)
 

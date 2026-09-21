@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
   description: "Uji validitas reliabilitas, analisis regresi, interpretasi SPSS/Python, dan bimbingan revisi naskah jurnal bereputasi SINTA 2-4.",
   alternates: {
-    canonical: "https://zadit.pages.dev/layanan/olah-data-statistik-sinta/"
+    canonical: "https://muhzadit.pages.dev/layanan/olah-data-statistik-sinta/"
   },
   openGraph: {
     title: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
     description: "Uji validitas reliabilitas, analisis regresi, interpretasi SPSS/Python, dan bimbingan revisi naskah jurnal bereputasi SINTA 2-4.",
-    url: "https://zadit.pages.dev/layanan/olah-data-statistik-sinta/",
+    url: "https://muhzadit.pages.dev/layanan/olah-data-statistik-sinta/",
     images: [
       {
-        url: "https://zadit.pages.dev/og-olah-data.jpg",
+        url: "https://muhzadit.pages.dev/og-olah-data.jpg",
         width: 1200,
         height: 630,
         alt: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pengolahan Data Statistik & Pendampingan Publikasi SINTA | Zadit Growth",
     description: "Uji validitas reliabilitas, analisis regresi, interpretasi SPSS/Python, dan bimbingan revisi naskah jurnal bereputasi SINTA 2-4.",
-    images: ["https://zadit.pages.dev/og-olah-data.jpg"]
+    images: ["https://muhzadit.pages.dev/og-olah-data.jpg"]
   }
 };
 
@@ -41,7 +41,7 @@ export default function AcademicResearchPage() {
     "provider": {
       "@type": "Person",
       "name": "Muhammad Khoiruzzadittaqwa",
-      "url": "https://zadit.pages.dev/"
+      "url": "https://muhzadit.pages.dev/"
     },
     "description": "Layanan bimbingan metodologi kuantitatif, analisis regresi SPSS, uji instrumen penelitian, dan penyesuaian naskah jurnal ilmiah terakreditasi SINTA.",
     "areaServed": "ID"
@@ -162,7 +162,7 @@ export default function AcademicResearchPage() {
           <ProtectedContact
             type="whatsapp"
             label="Konsultasi Riset via WhatsApp"
-            prefillMessage="Halo Mas Zadit, saya membaca halaman Riset & Olah Data Statistik di zadit.pages.dev dan ingin berdiskusi mengenai analisis data / publikasi jurnal kami."
+            prefillMessage="Halo Mas Zadit, saya membaca halaman Riset & Olah Data Statistik di muhzadit.pages.dev dan ingin berdiskusi mengenai analisis data / publikasi jurnal kami."
             className="shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-bold py-3 px-5 rounded-xl shadow-xs transition-all"
           />
         </div>

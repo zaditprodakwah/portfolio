@@ -579,7 +579,7 @@ export function calculateQuestionnaireScore(
   const pillarLabel = pillarInfo ? pillarInfo.title : pillar;
 
   const waPrefill = [
-    `Halo Mas Zadit, saya baru saja menjalankan Asesmen Diagnostik di zadit.pages.dev/audit.`,
+    `Halo Mas Zadit, saya baru saja menjalankan Asesmen Diagnostik di muhzadit.pages.dev/audit.`,
     ``,
     `*Hasil Ringkasan Audit:*`,
     `• Kategori: ${pillarLabel}`,
@@ -711,7 +711,7 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
     }
 
     const waPrefill = [
-      `Halo Mas Zadit, saya baru saja menguji website ${cleanUrl} di Tool Audit zadit.pages.dev/audit.`,
+      `Halo Mas Zadit, saya baru saja menguji website ${cleanUrl} di Tool Audit muhzadit.pages.dev/audit.`,
       ``,
       `*Hasil Pengujian Google PageSpeed Mobile:*`,
       `• Skor Performa: ${perfScore}/100 (LCP: ${lcp}, CLS: ${cls})`,
@@ -767,7 +767,7 @@ export async function runLiveWebSpeedAudit(targetUrl: string): Promise<Diagnosti
     console.error("Critical failure calling /api/audit:", error);
     
     const waPrefill = [
-      `Halo Mas Zadit, saya menguji website ${cleanUrl} di zadit.pages.dev/audit namun terjadi kegagalan sistem.`,
+      `Halo Mas Zadit, saya menguji website ${cleanUrl} di muhzadit.pages.dev/audit namun terjadi kegagalan sistem.`,
       `Saya ingin meminta audit manual dari Mas Zadit untuk Core Web Vitals website kami.`
     ].join("\n");
 

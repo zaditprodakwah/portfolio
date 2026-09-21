@@ -38,8 +38,8 @@ export function MobileActionDock({ onOpenMenu, activeTopic }: MobileActionDockPr
   if (!isVisible) return null;
 
   const prefillMessage = activeTopic
-    ? `Halo Mas Zadit, saya membaca topik ${activeTopic} di zadit.pages.dev dan ingin berdiskusi mengenai kebutuhan proyek kami.`
-    : "Halo Mas Zadit, saya melihat portofolio Anda di zadit.pages.dev dan ingin berdiskusi mengenai konsultasi layanan.";
+    ? `Halo Mas Zadit, saya membaca topik ${activeTopic} di muhzadit.pages.dev dan ingin berdiskusi mengenai kebutuhan proyek kami.`
+    : "Halo Mas Zadit, saya melihat portofolio Anda di muhzadit.pages.dev dan ingin berdiskusi mengenai konsultasi layanan.";
 
   return (
     <aside

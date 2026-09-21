@@ -1,6 +1,6 @@
 # zadit-pages — Next.js 15 Executive Showcase & Career OS
 
-Portofolio web modern, pSEO Programmatic Solutions, dan antarmuka interaktif **Muhammad Khoiruzzadittaqwa (Zadit)**, di-hosting di **Cloudflare Pages (`https://zadit.pages.dev`)**.
+Portofolio web modern, pSEO Programmatic Solutions, dan antarmuka interaktif **Muhammad Khoiruzzadittaqwa (Zadit)**, di-hosting di **Cloudflare Pages (`https://muhzadit.pages.dev`)**.
 
 ---
 

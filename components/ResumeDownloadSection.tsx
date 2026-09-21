@@ -90,7 +90,7 @@ export const ResumeDownloadSection: React.FC = () => {
 
           <div className="space-y-2 text-xs text-slate-800 font-mono leading-relaxed bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 overflow-x-auto">
             <p><span className="text-teal-800 font-bold">name:</span> {cvProfile.name}</p>
-            <p><span className="text-teal-800 font-bold">website:</span> https://zadit.pages.dev</p>
+            <p><span className="text-teal-800 font-bold">website:</span> https://muhzadit.pages.dev</p>
             <p><span className="text-teal-800 font-bold">role:</span> {cvProfile.titles.id}</p>
             <p><span className="text-teal-800 font-bold">engine:</span> RenderCV v2.3 (Typst)</p>
             <p><span className="text-teal-800 font-bold">experience:</span> 10+ Years (Since 2015)</p>

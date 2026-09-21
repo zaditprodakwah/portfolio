@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     'PRADIKTIF',
   ],
   alternates: {
-    canonical: 'https://zadit.pages.dev/web3/',
+    canonical: 'https://muhzadit.pages.dev/web3/',
   },
   openGraph: {
     title: 'Web3 Engineering & Procurement OS | PRADIKTIF',
     description:
       'Turn Web3 visions into tender-ready 2-page briefs, candidate scorecards, and yield-bearing milestone contracts with Aave float monetization.',
-    url: 'https://zadit.pages.dev/web3/',
+    url: 'https://muhzadit.pages.dev/web3/',
     siteName: 'Muhammad Khoiruzzadittaqwa (Zadit) - PRADIKTIF',
     type: 'website',
   },
@@ -42,7 +42,7 @@ export default function Web3Layout({ children }: { children: React.ReactNode }) 
       '@type': 'Person',
       name: 'Muhammad Khoiruzzadittaqwa',
       jobTitle: 'Principal Web3 Architect & Lead Systems Consultant',
-      url: 'https://zadit.pages.dev',
+      url: 'https://muhzadit.pages.dev',
     },
     offers: {
       '@type': 'Offer',

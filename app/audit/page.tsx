@@ -16,15 +16,15 @@ export const metadata: Metadata = {
   title: "Alat Audit Kesiapan Bisnis, Riset SINTA & Web SEO | Zadit Diagnostic OS",
   description: "Evaluasi naskah jurnal, pitch deck, SOP, dan kecepatan web Anda dalam 90 detik. Dapatkan skor kelayakan dan 3 rekomendasi perbaikan instan.",
   alternates: {
-    canonical: "https://zadit.pages.dev/audit/"
+    canonical: "https://muhzadit.pages.dev/audit/"
   },
   openGraph: {
     title: "Alat Audit Kesiapan Bisnis, Riset SINTA & Web SEO | Zadit Diagnostic OS",
     description: "Evaluasi naskah jurnal, pitch deck, SOP, dan kecepatan web Anda dalam 90 detik. Dapatkan skor kelayakan dan 3 rekomendasi perbaikan instan.",
-    url: "https://zadit.pages.dev/audit/",
+    url: "https://muhzadit.pages.dev/audit/",
     images: [
       {
-        url: "https://zadit.pages.dev/og-audit.jpg",
+        url: "https://muhzadit.pages.dev/og-audit.jpg",
         width: 1200,
         height: 630,
         alt: "Zadit Diagnostic OS - Alat Audit Bisnis, Riset & Web",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alat Audit Kesiapan Bisnis, Riset SINTA & Web SEO | Zadit Diagnostic OS",
     description: "Evaluasi naskah jurnal, pitch deck, SOP, dan kecepatan web Anda dalam 90 detik.",
-    images: ["https://zadit.pages.dev/og-audit.jpg"]
+    images: ["https://muhzadit.pages.dev/og-audit.jpg"]
   }
 };
 
@@ -47,7 +47,7 @@ export default function AuditPage() {
       {
         "@type": "WebApplication",
         "name": "Zadit Readiness Diagnostic & Web Auditor",
-        "url": "https://zadit.pages.dev/audit/",
+        "url": "https://muhzadit.pages.dev/audit/",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "All",
         "offers": {
@@ -58,7 +58,7 @@ export default function AuditPage() {
         "creator": {
           "@type": "Person",
           "name": "Muhammad Khoiruzzadittaqwa",
-          "url": "https://zadit.pages.dev/"
+          "url": "https://muhzadit.pages.dev/"
         }
       },
       {
@@ -68,13 +68,13 @@ export default function AuditPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Beranda",
-            "item": "https://zadit.pages.dev/"
+            "item": "https://muhzadit.pages.dev/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Alat Audit Kesiapan",
-            "item": "https://zadit.pages.dev/audit/"
+            "item": "https://muhzadit.pages.dev/audit/"
           }
         ]
       }

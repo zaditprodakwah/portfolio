@@ -13,7 +13,7 @@ export async function GET() {
   const teardowns = getAllWawasan();
   const directory = getAllDirectoryItems();
 
-  const text = `# Zadit Executive Hub (https://zadit.pages.dev/)
+  const text = `# Zadit Executive Hub (https://muhzadit.pages.dev/)
 
 > Strategic Advisory, Technology Engineering & Growth OS oleh Muhammad Khoiruzzadittaqwa (Zadit).
 > Sistem rekayasa terarah untuk efisiensi bisnis, integritas data ilmiah, dan performa web serverless edge.

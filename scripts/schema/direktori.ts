@@ -25,7 +25,7 @@ export const PSEODirectoryItemSchema = z.object({
   }),
   rootDomainLink: z.object({
     anchorText: z.string().min(10), // Multi-word entity anchor invariant
-    targetUrl: z.literal("https://zadit.pages.dev/"),
+    targetUrl: z.literal("https://muhzadit.pages.dev/"),
   }),
   faq: z.array(
     z.object({

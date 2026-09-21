@@ -284,7 +284,7 @@ export default async function SolutionDetailPage({ params }: PageProps) {
           <ProtectedContact
             type="whatsapp"
             label="Konsultasi Cepat via WhatsApp"
-            prefillMessage={`Halo Mas Zadit, saya membaca solusi ${solution.title} di zadit.pages.dev dan ingin berdiskusi mengenai proyek kami.`}
+            prefillMessage={`Halo Mas Zadit, saya membaca solusi ${solution.title} di muhzadit.pages.dev dan ingin berdiskusi mengenai proyek kami.`}
             className="shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-semibold py-3 px-5 rounded-lg shadow-xs transition-all"
           />
         </div>

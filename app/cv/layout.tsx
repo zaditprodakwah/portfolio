@@ -4,12 +4,12 @@ export const metadata: Metadata = {
   title: "Curriculum Vitae (CV) Eksekutif | Muhammad Khoiruzzadittaqwa",
   description: "Pratinjau CV profesional, riwayat pencapaian, rekam jejak freelance Sribulancer rating 5.0, dan unduh format PDF RenderCV resmi.",
   alternates: {
-    canonical: "https://zadit.pages.dev/cv/"
+    canonical: "https://muhzadit.pages.dev/cv/"
   },
   openGraph: {
     title: "Curriculum Vitae (CV) Eksekutif | Muhammad Khoiruzzadittaqwa",
     description: "Pratinjau CV profesional, riwayat pencapaian, rekam jejak terverifikasi, dan unduh format PDF RenderCV resmi.",
-    url: "https://zadit.pages.dev/cv/",
+    url: "https://muhzadit.pages.dev/cv/",
     images: [
       {
         url: "/og-image.jpg",

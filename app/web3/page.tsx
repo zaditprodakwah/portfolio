@@ -150,7 +150,7 @@ export default function Web3Page() {
               GitHub
             </a>
             <span>&bull;</span>
-            <a href="https://zadit.pages.dev" className="hover:text-teal-400">
+            <a href="https://muhzadit.pages.dev" className="hover:text-teal-400">
               Personal Portal
             </a>
             <span>&bull;</span>

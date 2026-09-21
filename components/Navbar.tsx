@@ -16,7 +16,8 @@ import {
   BookOpen, 
   Sparkles,
   Globe,
-  ExternalLink
+  ExternalLink,
+  Archive
 } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
 import { ReadingProgressBar } from "./ReadingProgressBar";
@@ -234,6 +235,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                     </Link>
 
                     <Link 
+                      href="/portfolio" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
+                        {true ? "Portfolio Interaktif" : "Interactive Portfolio"}
+                      </p>
+                      <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                        {true ? "Demo deliverable berjalan langsung di browser." : "Live demos and hands-on deliverables."}
+                      </p>
+                    </Link>
+
+                    <Link 
                       href="/#consultation" 
                       onClick={() => setIsMegaOpen(false)}
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
@@ -302,6 +316,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
             <Link href="/solusi" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
               <Compass className="w-3.5 h-3.5" />
               <span>{true ? "Matriks" : "Matrix"}</span>
+            </Link>
+            <Link href="/portfolio" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
+              <Archive className="w-3.5 h-3.5" />
+              <span>{true ? "Portfolio" : "Portfolio"}</span>
             </Link>
             <Link href="/cv" className="hover:text-teal-700 transition-colors flex items-center gap-1">
               <FileText className="w-3.5 h-3.5" />

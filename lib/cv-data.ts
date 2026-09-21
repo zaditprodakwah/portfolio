@@ -70,7 +70,7 @@ export const cvProfile = {
     linkedin: "https://linkedin.com/in/muhzadit",
     github: "https://github.com/zaditprodakwah",
     kontakLink: "https://kontak.link/muhzadit",
-    portfolioWeb: "https://zadit.pages.dev"
+    portfolioWeb: "https://muhzadit.pages.dev"
   },
   stats: {
     id: [

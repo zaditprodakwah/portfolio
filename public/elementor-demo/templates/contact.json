@@ -1,0 +1,157 @@
+{
+  "title": "Contact - PT Prisma Digital Kreatif",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "contact-hero-container",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "justify_content": "center",
+        "align_items": "center",
+        "gap": { "unit": "px", "size": 16, "sizes": [] },
+        "padding": { "unit": "px", "top": "96", "right": "40", "bottom": "96", "left": "40", "isLinked": false },
+        "background_background": "classic",
+        "background_color": "#231627"
+      },
+      "elements": [
+        {
+          "id": "contact-heading",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Mulai Proyek Anda",
+            "header_size": "h1",
+            "align": "center",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_size": { "unit": "px", "size": 44, "sizes": [] },
+            "typography_font_weight": "600"
+          },
+          "elements": []
+        },
+        {
+          "id": "contact-text",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>Ceritakan kebutuhan halaman Anda. Kami balas dengan rincian lingkup pekerjaan, tarif per halaman, dan tenggat dalam satu hari kerja.</p>",
+            "align": "center",
+            "text_color": "#D9CAB3",
+            "typography_typography": "custom",
+            "typography_font_size": { "unit": "px", "size": 18, "sizes": [] }
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "contact-body-container",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "flex_direction": "row",
+        "gap": { "unit": "px", "size": 24, "sizes": [] },
+        "padding": { "unit": "px", "top": "80", "right": "40", "bottom": "80", "left": "40", "isLinked": false }
+      },
+      "elements": [
+        {
+          "id": "contact-info-card",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "gap": { "unit": "px", "size": 16, "sizes": [] },
+            "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+            "background_background": "classic",
+            "background_color": "#F5F0E6"
+          },
+          "elements": [
+            {
+              "id": "contact-info-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Kontak Langsung",
+                "header_size": "h3",
+                "align": "left",
+                "title_color": "#231627"
+              },
+              "elements": []
+            },
+            {
+              "id": "contact-info-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p><strong>Email:</strong> muhzadit@gmail.com<br><strong>Perusahaan:</strong> PT Prisma Digital Kreatif<br><strong>Respons:</strong> dalam 1-2 hari kerja</p>"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "contact-cta-card",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "justify_content": "center",
+            "align_items": "flex-start",
+            "gap": { "unit": "px", "size": 16, "sizes": [] },
+            "padding": { "unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true },
+            "border_radius": { "unit": "px", "top": "12", "right": "12", "bottom": "12", "left": "12", "isLinked": true },
+            "background_background": "classic",
+            "background_color": "#F5F0E6"
+          },
+          "elements": [
+            {
+              "id": "contact-cta-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Coba Satu Halaman Dulu",
+                "header_size": "h3",
+                "align": "left",
+                "title_color": "#231627"
+              },
+              "elements": []
+            },
+            {
+              "id": "contact-cta-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Kirim satu brief halaman. Kami kembalikan file JSON dalam 24 jam. Jika hasilnya belum sesuai, revisi hingga pas tanpa biaya tambahan.</p>"
+              },
+              "elements": []
+            },
+            {
+              "id": "contact-cta-button",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Kirim Email Sekarang",
+                "align": "left",
+                "link": { "url": "mailto:muhzadit@gmail.com", "is_external": "", "nofollow": "" },
+                "background_color": "#8F652E",
+                "button_text_color": "#FFFFFF",
+                "border_radius": { "unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true },
+                "padding": { "unit": "px", "top": "16", "right": "40", "bottom": "16", "left": "40", "isLinked": false }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

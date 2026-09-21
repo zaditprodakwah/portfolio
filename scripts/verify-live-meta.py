@@ -3,14 +3,14 @@ import re
 import json
 
 urls = [
-    "https://zadit.pages.dev/",
-    "https://zadit.pages.dev/audit",
-    "https://zadit.pages.dev/layanan/dokumen-administrasi-bisnis",
-    "https://zadit.pages.dev/layanan/olah-data-statistik-sinta",
-    "https://zadit.pages.dev/layanan/seo-konten-konversi",
-    "https://zadit.pages.dev/layanan/solusi-web-performa",
-    "https://zadit.pages.dev/solusi/proposal-bisnis-rantai-pasok-investor",
-    "https://zadit.pages.dev/cv"
+    "https://muhzadit.pages.dev/",
+    "https://muhzadit.pages.dev/audit",
+    "https://muhzadit.pages.dev/layanan/dokumen-administrasi-bisnis",
+    "https://muhzadit.pages.dev/layanan/olah-data-statistik-sinta",
+    "https://muhzadit.pages.dev/layanan/seo-konten-konversi",
+    "https://muhzadit.pages.dev/layanan/solusi-web-performa",
+    "https://muhzadit.pages.dev/solusi/proposal-bisnis-rantai-pasok-investor",
+    "https://muhzadit.pages.dev/cv"
 ]
 
 report = []

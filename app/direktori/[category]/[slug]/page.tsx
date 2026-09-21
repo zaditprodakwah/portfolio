@@ -255,7 +255,7 @@ export default async function DirectoryDetailPage({ params }: PageProps) {
           <ProtectedContact
             type="whatsapp"
             label="Konsultasi Langsung via WhatsApp"
-            prefillMessage={`Halo Mas Zadit, saya melihat panduan ${item.title} di direktori zadit.pages.dev dan ingin mendiskusikan kebutuhan kami.`}
+            prefillMessage={`Halo Mas Zadit, saya melihat panduan ${item.title} di direktori muhzadit.pages.dev dan ingin mendiskusikan kebutuhan kami.`}
             className="shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold py-2.5 px-4 rounded-lg transition-all"
           />
         </div>

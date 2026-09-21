@@ -42,6 +42,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://zadit.pages.dev/sitemap.xml",
+    sitemap: "https://muhzadit.pages.dev/sitemap.xml",
   };
 }

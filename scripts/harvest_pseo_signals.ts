@@ -49,7 +49,7 @@ export async function resolveWikidataEntity(term: string): Promise<SearchSignal[
   try {
     const response = await fetch(url, {
       headers: {
-        "User-Agent": "ZaditPagesHarvester/1.0 (https://zadit.pages.dev)",
+        "User-Agent": "ZaditPagesHarvester/1.0 (https://muhzadit.pages.dev)",
       },
     });
 

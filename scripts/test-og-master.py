@@ -153,7 +153,7 @@ for row_idx, row in enumerate(pills_data):
 draw.line([(left_x, 520), (1120, 520)], fill=(226, 232, 240), width=1)
 
 # Footer bar
-draw.text((left_x, 548), "Reputasi Resmi Terverifikasi  |  Kerahasiaan Terjamin  |  zadit.pages.dev", font=font_footer, fill=(100, 116, 139))
+draw.text((left_x, 548), "Reputasi Resmi Terverifikasi  |  Kerahasiaan Terjamin  |  muhzadit.pages.dev", font=font_footer, fill=(100, 116, 139))
 
 # Save
 out_path = "/Users/mac/.gemini/antigravity-ide/brain/8ae908f9-66f7-4afe-95ba-b396baf843ff/mobile_audit/test_og_alabaster.jpg"

@@ -144,7 +144,7 @@ async function toolSearchKnowledge(params: Record<string, unknown>): Promise<unk
       tags: kb.tags,
       content: kb.content,
     })),
-    source: "zadit.pages.dev/knowledge",
+    source: "muhzadit.pages.dev/knowledge",
   };
 }
 
@@ -171,7 +171,7 @@ async function toolCheckReadinessAudit(params: Record<string, unknown>): Promise
   try {
     const res = await fetch(urlObj.href, {
       method: "HEAD",
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; ZaditAuditMCP/1.0; +https://zadit.pages.dev)" },
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; ZaditAuditMCP/1.0; +https://muhzadit.pages.dev)" },
       signal: AbortSignal.timeout(8000),
     });
     latencyMs = Date.now() - start;
@@ -223,8 +223,8 @@ async function toolCheckReadinessAudit(params: Record<string, unknown>): Promise
       : score >= 60
       ? "Terdapat celah keamanan dan/atau performa yang perlu segera diperbaiki."
       : "Website memerlukan perbaikan signifikan. Konsultasi teknikal mendesak.",
-    audit_endpoint: "https://zadit.pages.dev/audit",
-    mcp_source: "zadit.pages.dev/mcp",
+    audit_endpoint: "https://muhzadit.pages.dev/audit",
+    mcp_source: "muhzadit.pages.dev/mcp",
   };
 }
 
@@ -280,8 +280,8 @@ async function toolGetDirectoryEntity(
     wikidata_uri: entity.wikidata_uri,
     bps_code: entity.bps_code,
     is_tier1_anchor: entity.is_anchor === 1,
-    directory_url: "https://zadit.pages.dev/direktori/" + entity.category + "/" + entity.slug,
-    mcp_source: "zadit.pages.dev/mcp",
+    directory_url: "https://muhzadit.pages.dev/direktori/" + entity.category + "/" + entity.slug,
+    mcp_source: "muhzadit.pages.dev/mcp",
   };
 }
 
@@ -306,7 +306,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       name: "zadit-mcp-server",
       version: "1.0.0",
       description: "Zadit Engineering public MCP server. Provides knowledge search, website audit, and Indonesia directory entity lookup tools.",
-      homepage: "https://zadit.pages.dev",
+      homepage: "https://muhzadit.pages.dev",
       protocol: "MCP-2025-06-18",
       tools: TOOL_DEFINITIONS,
     };

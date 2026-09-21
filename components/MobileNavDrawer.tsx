@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { X, FileText, Compass, BookOpen, Layers, PhoneCall, ExternalLink } from "lucide-react";
+import { X, FileText, Compass, BookOpen, Layers, PhoneCall, ExternalLink, Archive } from "lucide-react";
 import { ProtectedContact } from "./ProtectedContact";
 
 interface MobileNavDrawerProps {
@@ -50,7 +50,7 @@ export function MobileNavDrawer({ isOpen, onClose, lang = "id" }: MobileNavDrawe
           <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
             <div>
               <span className="font-bold text-base text-slate-900">Menu Navigasi</span>
-              <span className="text-xs text-slate-500 block">zadit.pages.dev</span>
+              <span className="text-xs text-slate-500 block">muhzadit.pages.dev</span>
             </div>
             <button
               onClick={onClose}
@@ -132,6 +132,15 @@ export function MobileNavDrawer({ isOpen, onClose, lang = "id" }: MobileNavDrawe
             >
               <BookOpen className="w-4.5 h-4.5 text-teal-600" />
               Wawasan & Glosarium
+            </Link>
+
+            <Link
+              href="/portfolio"
+              onClick={onClose}
+              className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+            >
+              <Archive className="w-4.5 h-4.5 text-teal-600" />
+              Portfolio Interaktif
             </Link>
 
             <Link

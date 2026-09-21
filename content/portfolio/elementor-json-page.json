@@ -1,0 +1,21 @@
+{
+  "slug": "elementor-json-page",
+  "title": "Impor Halaman Elementor dari File JSON (WordPress Playground)",
+  "metaDescription": "Demo interaktif WordPress Playground: blueprint menginstall Elementor 4.2.4 dan tema Hello Elementor dari zip yang disimpan sendiri, lalu mengimpor tiga halaman dari file JSON template versi 0.4 yang tetap bisa disunting penuh lewat Editor Elementor.",
+  "badge": "LIVE DEMO",
+  "category": "Web & Design Systems",
+  "year": "2026",
+  "kind": "embed",
+  "demoUrl": "/elementor-demo/",
+  "tags": ["Elementor", "WordPress", "JSON", "WordPress Playground", "Zero Server"],
+  "summary": "WordPress asli dijalankan di dalam browser tanpa server. Saya menyusun blueprint yang menginstall Elementor 4.2.4 dan tema Hello Elementor dari arsip zip yang disimpan di domain sendiri, lalu mengimpor tiga halaman: home dengan 83 widget free-core, serta halaman services dan contact milik PRADIKTIF. Semua halaman dibangun dari file JSON template versi 0.4 sehingga tetap bisa disunting penuh lewat Editor Elementor.",
+  "highlights": [
+    "83 widget di halaman home seluruhnya dari library gratis Elementor tanpa satu pun widget Pro. Klasifikasi widget free versus Pro saya cocokkan langsung terhadap source code resmi elementor/elementor di GitHub.",
+    "Zip Elementor dan tema Hello disimpan di domain sendiri lalu dirujuk lewat UrlReference pada schema blueprint, supaya instalasi tidak bergantung pada redirect downloads.wordpress.org yang rentan gagal di dalam browser.",
+    "Halaman tetap bisa disunting penuh lewat Editor Elementor setelah impor."
+  ],
+  "deliverables": [
+    "Satu file .json per halaman, siap diimpor di instalasi WordPress klien.",
+    "Blueprint WordPress Playground yang divalidasi terhadap schema resmi, dan demo live deployable tanpa server."
+  ]
+}

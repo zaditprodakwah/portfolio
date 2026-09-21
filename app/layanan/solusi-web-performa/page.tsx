@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
   description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
   alternates: {
-    canonical: "https://zadit.pages.dev/layanan/solusi-web-performa/"
+    canonical: "https://muhzadit.pages.dev/layanan/solusi-web-performa/"
   },
   openGraph: {
     title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
     description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
-    url: "https://zadit.pages.dev/layanan/solusi-web-performa/",
+    url: "https://muhzadit.pages.dev/layanan/solusi-web-performa/",
     images: [
       {
-        url: "https://zadit.pages.dev/og-web-performa.jpg",
+        url: "https://muhzadit.pages.dev/og-web-performa.jpg",
         width: 1200,
         height: 630,
         alt: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
     description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
-    images: ["https://zadit.pages.dev/og-web-performa.jpg"]
+    images: ["https://muhzadit.pages.dev/og-web-performa.jpg"]
   }
 };
 
@@ -41,7 +41,7 @@ export default function DigitalSolutionsPage() {
     "provider": {
       "@type": "Person",
       "name": "Muhammad Khoiruzzadittaqwa",
-      "url": "https://zadit.pages.dev/"
+      "url": "https://muhzadit.pages.dev/"
     },
     "description": "Layanan optimasi performa web, komputasi tepi Cloudflare, perbaikan LCP dan INP, serta arsitektur web modern tanpa biaya langganan server bulanan.",
     "areaServed": "ID"
@@ -162,7 +162,7 @@ export default function DigitalSolutionsPage() {
           <ProtectedContact
             type="whatsapp"
             label="Konsultasi Web via WhatsApp"
-            prefillMessage="Halo Mas Zadit, saya membaca halaman Solusi Web Performa di zadit.pages.dev dan ingin berdiskusi mengenai optimasi kecepatan website kami."
+            prefillMessage="Halo Mas Zadit, saya membaca halaman Solusi Web Performa di muhzadit.pages.dev dan ingin berdiskusi mengenai optimasi kecepatan website kami."
             className="shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-bold py-3 px-5 rounded-xl shadow-xs transition-all"
           />
         </div>

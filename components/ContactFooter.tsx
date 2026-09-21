@@ -142,7 +142,7 @@ export const ContactFooter: React.FC = () => {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-400">
           <p>© 2026 Muhammad Khoiruzzadittaqwa. All rights reserved.</p>
-          <p>zadit.pages.dev · Strategic Advisory &amp; Growth OS</p>
+          <p>muhzadit.pages.dev · Strategic Advisory &amp; Growth OS</p>
         </div>
       </div>
     </footer>

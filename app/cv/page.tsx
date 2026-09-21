@@ -64,7 +64,7 @@ function CVViewerContent() {
             </span>
           </div>
           <span className="font-mono text-[11px] text-teal-400 bg-teal-950/60 border border-teal-800/60 px-2.5 py-1 rounded-md font-semibold">
-            zadit.pages.dev/cv.pdf
+            muhzadit.pages.dev/cv.pdf
           </span>
         </div>
 

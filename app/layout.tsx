@@ -44,15 +44,15 @@ export const metadata: Metadata = {
     "jasa publikasi jurnal sinta",
     "konsultan bisnis cirebon"
   ],
-  metadataBase: new URL("https://zadit.pages.dev/"),
+  metadataBase: new URL("https://muhzadit.pages.dev/"),
   alternates: {
-    canonical: "https://zadit.pages.dev/",
+    canonical: "https://muhzadit.pages.dev/",
     languages: {
-      "id-ID": "https://zadit.pages.dev/",
-      "x-default": "https://zadit.pages.dev/"
+      "id-ID": "https://muhzadit.pages.dev/",
+      "x-default": "https://muhzadit.pages.dev/"
     },
     types: {
-      "application/rss+xml": "https://zadit.pages.dev/feed.xml"
+      "application/rss+xml": "https://muhzadit.pages.dev/feed.xml"
     }
   },
   verification: {
@@ -87,12 +87,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Muhammad Khoiruzzadittaqwa (muhzadit) | Strategic Growth, SEO & Web Practice",
     description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Memadukan dokumen bisnis eksekutif, SEO konversi, riset data kuantitatif SINTA, dan solusi web modern ultra-cepat.",
-    url: "https://zadit.pages.dev/",
+    url: "https://muhzadit.pages.dev/",
     siteName: "muhzadit",
     images: [
       {
-        url: "https://zadit.pages.dev/og-image.jpg",
-        secureUrl: "https://zadit.pages.dev/og-image.jpg",
+        url: "https://muhzadit.pages.dev/og-image.jpg",
+        secureUrl: "https://muhzadit.pages.dev/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Muhammad Khoiruzzadittaqwa (muhzadit) - Executive Advisory & Digital Practice",
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Muhammad Khoiruzzadittaqwa (muhzadit) | Konsultan Pertumbuhan",
     description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Konsultan dokumen bisnis, audit SEO & GEO, riset data kuantitatif SINTA, dan rekayasa web performa tinggi.",
-    images: ["https://zadit.pages.dev/og-image.jpg"],
+    images: ["https://muhzadit.pages.dev/og-image.jpg"],
   },
 };
 
@@ -115,13 +115,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://zadit.pages.dev/#person",
+      "@id": "https://muhzadit.pages.dev/#person",
       name: "Muhammad Khoiruzzadittaqwa",
       alternateName: ["muhzadit", "Zadit", "Muh Zadit", "Aditt", "Zadit Dev"],
       jobTitle: "Strategic Growth Consultant, Technical SEO Specialist & Research Consultant",
       description: "Konsultan profesional dan pengembang web memadukan dokumen bisnis eksekutif, SEO konversi berbasis riset, analisis data statistik kuantitatif, dan optimasi web modern.",
       image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zadit-foto.png",
-      url: "https://zadit.pages.dev/",
+      url: "https://muhzadit.pages.dev/",
       email: "muhzadit@gmail.com",
       telephone: "+6282316363177",
       hasCredential: [
@@ -155,7 +155,7 @@ const jsonLd = {
         "https://www.threads.net/@muhzadit"
       ],
       worksFor: {
-        "@id": "https://zadit.pages.dev/#organization"
+        "@id": "https://muhzadit.pages.dev/#organization"
       },
       knowsAbout: Object.values(ENTITY_NODES).map((node) => ({
         "@type": "Thing",
@@ -165,11 +165,11 @@ const jsonLd = {
     },
     {
       "@type": "Organization",
-      "@id": "https://zadit.pages.dev/#organization",
+      "@id": "https://muhzadit.pages.dev/#organization",
       legalName: "PT PRISMA DIGITAL KREATIF",
       name: "PRADIKTIF",
-      url: "https://zadit.pages.dev/",
-      logo: "https://zadit.pages.dev/foto-zadit.jpg",
+      url: "https://muhzadit.pages.dev/",
+      logo: "https://muhzadit.pages.dev/foto-zadit.jpg",
       taxID: "1801250039976",
       sameAs: [
         "https://www.wikidata.org/wiki/Q141474927"
@@ -187,7 +187,7 @@ const jsonLd = {
         }
       ],
       founder: {
-        "@id": "https://zadit.pages.dev/#person"
+        "@id": "https://muhzadit.pages.dev/#person"
       },
       areaServed: ["ID", "Global"],
       knowsAbout: Object.values(ENTITY_NODES).map((node) => ({
@@ -198,18 +198,18 @@ const jsonLd = {
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://zadit.pages.dev/#service",
+      "@id": "https://muhzadit.pages.dev/#service",
       name: "PRADIKTIF — PT PRISMA DIGITAL KREATIF",
-      url: "https://zadit.pages.dev/",
-      parentOrganization: { "@id": "https://zadit.pages.dev/#organization" },
-      founder: { "@id": "https://zadit.pages.dev/#person" },
+      url: "https://muhzadit.pages.dev/",
+      parentOrganization: { "@id": "https://muhzadit.pages.dev/#organization" },
+      founder: { "@id": "https://muhzadit.pages.dev/#person" },
       areaServed: ["ID", "Global"],
       description: "Layanan konsultasi proposal bisnis, audit SEO & GEO AI visibility, riset data statistik SINTA, dan optimasi performa web berizin resmi."
     },
     {
       "@type": "WebSite",
-      "@id": "https://zadit.pages.dev/#website",
-      url: "https://zadit.pages.dev/",
+      "@id": "https://muhzadit.pages.dev/#website",
+      url: "https://muhzadit.pages.dev/",
       name: "muhzadit",
       alternateName: [
         "Muhammad Khoiruzzadittaqwa",
@@ -221,12 +221,12 @@ const jsonLd = {
       ],
       description: "Portofolio resmi Muhammad Khoiruzzadittaqwa (muhzadit / Zadit). Konsultan dokumen bisnis, pengolahan data statistik SINTA, dan solusi performa web berorientasi konversi nyata.",
       publisher: {
-        "@id": "https://zadit.pages.dev/#organization"
+        "@id": "https://muhzadit.pages.dev/#organization"
       }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://zadit.pages.dev/#faq",
+      "@id": "https://muhzadit.pages.dev/#faq",
       "mainEntity": [
         {
           "@type": "Question",

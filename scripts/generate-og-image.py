@@ -112,7 +112,7 @@ def render_left_column(draw, eyebrow, title_lines, sub_lines, pills_data, max_le
 
     # 5. Separator & Footer
     draw.line([(left_x, 525), (1125, 525)], fill=(226, 232, 240), width=1)
-    draw.text((left_x, 550), "Reputasi Resmi Terverifikasi  |  Kerahasiaan Terjamin  |  zadit.pages.dev", font=font_footer, fill=(100, 116, 139))
+    draw.text((left_x, 550), "Reputasi Resmi Terverifikasi  |  Kerahasiaan Terjamin  |  muhzadit.pages.dev", font=font_footer, fill=(100, 116, 139))
 
 def generate_master_card():
     img, draw = create_base_canvas()

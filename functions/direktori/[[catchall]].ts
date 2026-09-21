@@ -157,7 +157,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Step 4: Render semantic HTML
   const label = CATEGORY_LABELS[category];
   const svcLink = CATEGORY_SERVICE_LINKS[category] || "/layanan";
-  const canonical = "https://zadit.pages.dev/direktori/" + category + "/" + slug;
+  const canonical = "https://muhzadit.pages.dev/direktori/" + category + "/" + slug;
   const year = new Date().getFullYear();
 
   const rows = payload.hybridComparison.comparisonTable.map(r =>
@@ -171,12 +171,12 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "LocalBusiness", "@id": "https://zadit.pages.dev/#business", name: "Zadit Engineering", description: payload.metaDescription, url: "https://zadit.pages.dev", areaServed: { "@type": "City", name: entity.area_served, sameAs: entity.wikidata_uri } },
+      { "@type": "LocalBusiness", "@id": "https://muhzadit.pages.dev/#business", name: "Zadit Engineering", description: payload.metaDescription, url: "https://muhzadit.pages.dev", areaServed: { "@type": "City", name: entity.area_served, sameAs: entity.wikidata_uri } },
       { "@type": "FAQPage", mainEntity: payload.faq.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) },
       { "@type": "BreadcrumbList", itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Beranda", item: "https://zadit.pages.dev" },
-        { "@type": "ListItem", position: 2, name: "Direktori", item: "https://zadit.pages.dev/direktori/" },
-        { "@type": "ListItem", position: 3, name: label, item: "https://zadit.pages.dev/direktori/" + category },
+        { "@type": "ListItem", position: 1, name: "Beranda", item: "https://muhzadit.pages.dev" },
+        { "@type": "ListItem", position: 2, name: "Direktori", item: "https://muhzadit.pages.dev/direktori/" },
+        { "@type": "ListItem", position: 3, name: label, item: "https://muhzadit.pages.dev/direktori/" + category },
         { "@type": "ListItem", position: 4, name: entity.area_served, item: canonical },
       ]},
     ],
