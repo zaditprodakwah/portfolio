@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { ShieldCheck, FileCheck, Unlock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { triggerLeadModal } from "./LeadIntakeModal";
 
 export default function TwoStageDeliveryGuarantee() {
   return (
@@ -8,7 +11,7 @@ export default function TwoStageDeliveryGuarantee() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981] px-3 py-1 rounded-full bg-[#141820] border border-[#10b981]/30">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#10b981] px-3 py-1 rounded-full bg-[#141820] border border-[#10b981]/30">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>KEPASTIAN KUALITAS • PENGECEKAN TANPA RISIKO</span>
           </div>
@@ -27,10 +30,10 @@ export default function TwoStageDeliveryGuarantee() {
           <div className="p-6 sm:p-8 rounded-2xl bg-[#141820] border border-[#10b981]/30 flex flex-col justify-between space-y-6 hover:border-[#10b981]/50 transition-all shadow-xl">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono px-3 py-1 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/20 font-semibold">
+                <span className="text-xs px-3 py-1 rounded bg-[#10b981]/10 text-[#10b981] border border-[#10b981]/20 font-semibold">
                   TAHAP 1: VALIDASI AWAL
                 </span>
-                <span className="text-xs font-mono text-[#10b981] font-bold">TANPA BIAYA</span>
+                <span className="text-xs text-[#10b981] font-bold">TANPA BIAYA</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -47,8 +50,8 @@ export default function TwoStageDeliveryGuarantee() {
                 Kami mengekstraksi dan menyerahkan 50 baris pertama data target Anda dalam lembar kerja Excel bertanda air. Anda dan tim dapat langsung menguji kesesuaian kolom, tipe data, dan keakuratan isi tanpa kewajiban komitmen di awal.
               </p>
 
-              <div className="p-3.5 rounded-xl bg-[#0b0d11] border border-white/5 space-y-2 text-xs font-mono text-[#9ca3af]">
-                <div className="text-[#10b981] font-semibold">// Yang Anda Terima di Tahap 1:</div>
+              <div className="p-3.5 rounded-xl bg-[#0b0d11] border border-white/5 space-y-2 text-xs text-[#9ca3af]">
+                <div className="text-[#10b981] font-semibold">Yang Anda Terima di Tahap 1:</div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#10b981]" />
                   <span>50 baris data riil siap periksa</span>
@@ -64,7 +67,7 @@ export default function TwoStageDeliveryGuarantee() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/10 text-xs font-mono text-[#10b981]">
+            <div className="pt-4 border-t border-white/10 text-xs text-[#10b981]">
               Waktu penyiapan: Tersedia dalam 24 jam kerja
             </div>
           </div>
@@ -73,10 +76,10 @@ export default function TwoStageDeliveryGuarantee() {
           <div className="p-6 sm:p-8 rounded-2xl bg-[#141820] border border-white/10 flex flex-col justify-between space-y-6 hover:border-white/20 transition-all shadow-xl">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono px-3 py-1 rounded bg-[#8f652e]/20 text-[#8f652e] border border-[#8f652e]/30 font-semibold">
+                <span className="text-xs px-3 py-1 rounded bg-[#8f652e]/20 text-[#8f652e] border border-[#8f652e]/30 font-semibold">
                   TAHAP 2: SERAH TERIMA DATA PENUH
                 </span>
-                <span className="text-xs font-mono text-[#9ca3af]">AKSES LENGKAP</span>
+                <span className="text-xs text-[#9ca3af]">AKSES LENGKAP</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -93,8 +96,8 @@ export default function TwoStageDeliveryGuarantee() {
                 Setelah format pada Tahap 1 disetujui, kami memproses dan menyerahkan seluruh dataset lengkap tanpa tanda air. Dilengkapi opsi basis data SQLite, alur pembaruan berkala, atau endpoint API sesuai kebutuhan paket kerja sama.
               </p>
 
-              <div className="p-3.5 rounded-xl bg-[#0b0d11] border border-white/5 space-y-2 text-xs font-mono text-[#9ca3af]">
-                <div className="text-[#8f652e] font-semibold">// Yang Anda Terima di Tahap 2:</div>
+              <div className="p-3.5 rounded-xl bg-[#0b0d11] border border-white/5 space-y-2 text-xs text-[#9ca3af]">
+                <div className="text-[#8f652e] font-semibold">Yang Anda Terima di Tahap 2:</div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#10b981]" />
                   <span>Berkas data master bersih 100%</span>
@@ -110,7 +113,7 @@ export default function TwoStageDeliveryGuarantee() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-white/10 text-xs font-mono text-[#9ca3af]">
+            <div className="pt-4 border-t border-white/10 text-xs text-[#9ca3af]">
               Penyerahan resmi di bawah PT Prisma Digital Kreatif
             </div>
           </div>
@@ -128,15 +131,13 @@ export default function TwoStageDeliveryGuarantee() {
             </p>
           </div>
 
-          <a
-            href="https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20ingin%20meminta%20sampel%20pratinjau%2050%20baris%20Tahap%201%20untuk%20kebutuhan%20data%20kami."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-semibold text-xs font-mono transition-all shrink-0"
+          <button
+            onClick={() => triggerLeadModal({ plan: "Pratinjau Sampel 50 Baris (Tahap 1)" })}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-semibold text-xs transition-all shrink-0 cursor-pointer shadow-lg shadow-[#10b981]/20"
           >
             <span>Minta Pratinjau Sampel</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </button>
         </div>
 
       </div>

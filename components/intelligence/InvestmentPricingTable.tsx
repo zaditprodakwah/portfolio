@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { triggerLeadModal } from "./LeadIntakeModal";
 
 interface PricingTier {
   id: string;
@@ -10,7 +13,6 @@ interface PricingTier {
   isPopular?: boolean;
   features: string[];
   ctaText: string;
-  ctaLink: string;
   takeaway: string;
 }
 
@@ -29,8 +31,7 @@ const TIERS: PricingTier[] = [
       "Format lembar kerja Excel / CSV siap pakai",
       "Penyerahan dalam 24 hingga 48 jam kerja"
     ],
-    ctaText: "Pesan Uji Coba Awal",
-    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20tertarik%20dengan%20Paket%20Audit%20Awal%20Terfokus%20Rp%20750.000.",
+    ctaText: "Ajukan Uji Coba Awal",
     takeaway: "Langkah awal tepat untuk memvalidasi akurasi data sebelum memulai proyek skala penuh."
   },
   {
@@ -50,7 +51,6 @@ const TIERS: PricingTier[] = [
       "Konsultasi teknis langsung satu pintu dengan Zadit"
     ],
     ctaText: "Mulai Pemantauan Rutin",
-    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20ingin%20mengaktifkan%20Pemantauan%20Operasional%20Rutin%20Rp%202.500.000%2Fbulan.",
     takeaway: "Paling banyak dipilih untuk mencegah keterlambatan informasi lelang dan persaingan harga liar."
   },
   {
@@ -69,7 +69,6 @@ const TIERS: PricingTier[] = [
       "Dokumen invoice dan faktur pajak resmi PT"
     ],
     ctaText: "Diskusikan Kebutuhan Perusahaan",
-    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20kami%20ingin%20mendiskusikan%20kebutuhan%20data%20korporasi%20untuk%20perusahaan%20kami.",
     takeaway: "Dirancang untuk institusi keuangan, firma hukum, dan perusahaan logistik berskala besar."
   }
 ];
@@ -81,7 +80,7 @@ export default function InvestmentPricingTable() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#8f652e] px-3 py-1 rounded-full bg-[#141820] border border-[#8f652e]/30">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#8f652e] px-3 py-1 rounded-full bg-[#141820] border border-[#8f652e]/30">
             <Sparkles className="w-3.5 h-3.5" />
             <span>PILIHAN PAKET LAYANAN</span>
           </div>
@@ -106,7 +105,7 @@ export default function InvestmentPricingTable() {
             >
               {/* Popular Badge */}
               {tier.isPopular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#10b981] text-[#0b0d11] font-bold font-mono text-[11px] tracking-wide shadow-md">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#10b981] text-[#0b0d11] font-bold text-[11px] tracking-wide shadow-md">
                   PILIHAN UTAMA
                 </div>
               )}
@@ -126,14 +125,14 @@ export default function InvestmentPricingTable() {
                   <div className="text-2xl sm:text-3xl font-bold font-mono text-[#f3f4f6]">
                     {tier.price}
                   </div>
-                  <div className="text-xs text-[#9ca3af] font-mono mt-1">
+                  <div className="text-xs text-[#9ca3af] mt-1">
                     {tier.period}
                   </div>
                 </div>
 
                 {/* Features List */}
                 <div className="space-y-2.5">
-                  <div className="text-xs font-mono text-white/50 uppercase tracking-wider">
+                  <div className="text-xs text-white/50 uppercase tracking-wider font-semibold">
                     Cakupan Layanan:
                   </div>
                   {tier.features.map((feat, idx) => (
@@ -148,11 +147,10 @@ export default function InvestmentPricingTable() {
 
               {/* Bottom CTA & Takeaway */}
               <div className="pt-8 space-y-3">
-                <a
-                  href={tier.ctaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full py-3 rounded-lg font-semibold text-xs font-mono flex items-center justify-center gap-2 transition-all ${
+                <button
+                  type="button"
+                  onClick={() => triggerLeadModal({ plan: tier.name })}
+                  className={`w-full py-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer ${
                     tier.isPopular
                       ? "bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] shadow-lg shadow-[#10b981]/20"
                       : "bg-[#1a202c] hover:bg-[#2d3748] text-[#f3f4f6] border border-white/10"
@@ -160,10 +158,10 @@ export default function InvestmentPricingTable() {
                 >
                   <span>{tier.ctaText}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                </button>
 
                 {/* Clear takeaway footer */}
-                <div className="p-2.5 rounded bg-[#0b0d11] border border-white/5 text-[11px] font-mono text-[#9ca3af] text-center">
+                <div className="p-2.5 rounded-lg bg-[#0b0d11] border border-white/5 text-[11px] text-[#9ca3af] text-center">
                   {tier.takeaway}
                 </div>
               </div>
@@ -173,16 +171,16 @@ export default function InvestmentPricingTable() {
         </div>
 
         {/* Custom Scope Note */}
-        <div className="mt-12 text-center text-xs font-mono text-[#9ca3af]">
+        <div className="mt-12 text-center text-xs text-[#9ca3af]">
           Membutuhkan pemantauan volume besar atau penyesuaian parameter khusus?{" "}
-          <a
-            href="https://wa.me/6285864149673?text=Halo%20Zadit%2C%20kami%20ingin%20mendiskusikan%20kebutuhan%20data%20kustom."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#10b981] underline hover:text-[#059669]"
+          <button
+            type="button"
+            onClick={() => triggerLeadModal({ plan: "Infrastruktur Kustom Korporasi" })}
+            className="text-[#10b981] underline hover:text-[#059669] cursor-pointer font-semibold ml-1 inline-flex items-center gap-1"
           >
-            Konsultasikan langsung dengan Zadit
-          </a>
+            <span>Konsultasikan via Formulir Spesifikasi</span>
+            <ArrowRight className="w-3 h-3 inline" />
+          </button>
         </div>
 
       </div>

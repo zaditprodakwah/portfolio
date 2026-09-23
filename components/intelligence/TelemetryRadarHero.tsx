@@ -8,379 +8,437 @@ import {
   Download, 
   ArrowUpRight, 
   Activity, 
-  Cpu, 
-  Compass, 
   Layers, 
-  Radio, 
   Ship, 
   Store, 
   FileSpreadsheet, 
   CheckCircle2,
-  Sparkles,
-  Zap
+  TrendingUp,
+  Building2,
+  AlertTriangle,
+  ArrowRight,
+  Compass,
+  Clock,
+  Sparkles
 } from "lucide-react";
+import { triggerLeadModal } from "./LeadIntakeModal";
 
-interface RadarNode {
+interface SentinelFeed {
   id: string;
-  label: string;
-  feedType: string;
+  sector: string;
+  title: string;
   zone: string;
-  metric: string;
-  status: "Normal" | "Anomali" | "Peluang";
-  color: string;
-  x: number;
-  y: number;
-  actionImpact: string;
+  kpiNumber: string;
+  kpiLabel: string;
+  status: "Waspada" | "Stabil" | "Peluang Komersial";
+  statusColor: string;
+  statusBg: string;
+  financialImpact: string;
+  recommendedAction: string;
+  coordinates: { x: number; y: number };
+  dataSource: string;
 }
 
-const RADAR_NODES: RadarNode[] = [
+const SENTINEL_FEEDS: SentinelFeed[] = [
   { 
     id: "priok", 
-    label: "Tanjung Priok", 
-    feedType: "Telemetri Maritim AIS",
-    zone: "Area Labuh Luar Priok", 
-    metric: "35 Kapal (+72% Kepadatan)", 
-    status: "Anomali", 
-    color: "#ef4444", 
-    x: 70, 
-    y: 30,
-    actionImpact: "Sesuaikan jadwal sandar armada sebelum terkena denda demurrage."
+    sector: "Logistik Maritim",
+    title: "Tanjung Priok • Area Labuh Luar", 
+    zone: "Zona Labuh Luar Jakarta (~400m heksagonal)", 
+    kpiNumber: "35 Kapal", 
+    kpiLabel: "+72% di atas kapasitas rata-rata",
+    status: "Waspada", 
+    statusColor: "#ef4444", 
+    statusBg: "bg-red-500/10 text-red-400 border-red-500/30",
+    financialImpact: "Potensi denda demurrage Rp 45-80 Juta per hari per armada jika waktu sandar molor.",
+    recommendedAction: "Penyesuaian jadwal sandar tongkang ke slot labuh alternatif sebelum antrean mengunci.",
+    coordinates: { x: 72, y: 32 },
+    dataSource: "Telemetri Spasial Maritim Terbuka"
   },
   { 
     id: "berau", 
-    label: "Muara Berau", 
-    feedType: "Transshipment Batubara STS",
-    zone: "Titik Labuh Muara Berau", 
-    metric: "14 Tongkang STS Beroperasi", 
-    status: "Normal", 
-    color: "#10b981", 
-    x: 28, 
-    y: 42,
-    actionImpact: "Arus pemuatan komoditas lancar, kapasitas throughput optimal."
+    sector: "Komoditas Tambang",
+    title: "Muara Berau • Transshipment STS", 
+    zone: "Titik Labuh Muara Berau, Kalimantan Timur", 
+    kpiNumber: "14 Tongkang", 
+    kpiLabel: "Throughput normal (8.400 Ton/hari)",
+    status: "Stabil", 
+    statusColor: "#10b981", 
+    statusBg: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+    financialImpact: "Arus transfer komoditas ke kapal induk lancar, estimasi keberangkatan tepat jadwal.",
+    recommendedAction: "Pertahankan alur suplai batubara harian tanpa perlu biaya kontingensi tambahan.",
+    coordinates: { x: 26, y: 44 },
+    dataSource: "Sensor Spasial & Validasi Satelit"
   },
   { 
     id: "sku", 
-    label: "Katalog Ritel & Reseller", 
-    feedType: "Delta Mutasi E-Commerce",
-    zone: "Top 50 Reseller Nasional", 
-    metric: "3 SKU Habis • Stok Kompetitor 0", 
-    status: "Peluang", 
-    color: "#10b981", 
-    x: 76, 
-    y: 68,
-    actionImpact: "Naikkan alokasi kampanye untuk menangkap pembeli yang siap beralih."
+    sector: "Ritel E-Commerce",
+    title: "Katalog Kompetitor & Reseller", 
+    zone: "Pemantauan 50 Distributor Utama", 
+    kpiNumber: "3 SKU Habis", 
+    kpiLabel: "Stok kompetitor 0 (Total Rp 14.2M)",
+    status: "Peluang Komersial", 
+    statusColor: "#10b981", 
+    statusBg: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+    financialImpact: "Konsumen aktif mencari alternatif; peluang merebut transaksi dari kompetitor yang kehabisan barang.",
+    recommendedAction: "Naikkan alokasi kampanye dan pasang stok produk substitusi di etalase terdepan.",
+    coordinates: { x: 78, y: 68 },
+    dataSource: "Pencatatan Delta Stok Berkala Tiap 6 Jam"
   },
   { 
     id: "lpse", 
-    label: "LPSE Pengadaan Publik", 
-    feedType: "Pemantauan Tender Otomatis",
-    zone: "Paket Lelang Konstruksi", 
-    metric: "3 Pemenang Tunggal Teridentifikasi", 
-    status: "Peluang", 
-    color: "#f59e0b", 
-    x: 48, 
-    y: 72,
-    actionImpact: "Lacak penetapan tender 24 jam sebelum publikasi umum."
+    sector: "Pengadaan Pemerintah",
+    title: "LPSE & Lelang Tender Nasional", 
+    zone: "Agregasi 34 Wilayah Pengadaan Publik", 
+    kpiNumber: "3 Tender", 
+    kpiLabel: "Pemenang tunggal dengan rasio 98.4%",
+    status: "Peluang Komersial", 
+    statusColor: "#f59e0b", 
+    statusBg: "bg-amber-500/10 text-amber-400 border-amber-500/30",
+    financialImpact: "Deteksi paket tender bernilai miliaran rupiah sebelum masa pengumuman penetapan ditutup.",
+    recommendedAction: "Evaluasi persyaratan kualifikasi teknis dan siapkan dokumen sanggah jika terindikasi diskriminatif.",
+    coordinates: { x: 50, y: 72 },
+    dataSource: "Pemantauan Portal Pengadaan LKPP Terbuka"
   },
 ];
 
 export default function TelemetryRadarHero() {
-  const [selectedNode, setSelectedNode] = useState<RadarNode>(RADAR_NODES[0]);
+  const [selectedFeed, setSelectedFeed] = useState<SentinelFeed>(SENTINEL_FEEDS[0]);
 
   return (
     <section 
       id="cockpit"
-      className="relative overflow-hidden pt-8 pb-14 sm:pt-12 sm:pb-20 border-b border-white/10 bg-[#0b0d11] text-[#f3f4f6]"
+      className="relative overflow-hidden pt-8 pb-14 sm:pt-14 sm:pb-24 border-b border-white/10 bg-[#0b0d11] text-[#f3f4f6]"
     >
-      {/* Background Ambient Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-[#10b981]/15 via-transparent to-transparent pointer-events-none blur-3xl" />
+      {/* Background Subtle Executive Ambient Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[420px] bg-gradient-to-b from-[#10b981]/12 via-emerald-950/5 to-transparent pointer-events-none blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Top Operational Status Ribbon */}
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-3 border-b border-white/10 text-xs font-mono">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#141820] text-[#10b981] border border-[#10b981]/30">
+        {/* Executive Header Ribbon */}
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-8 pb-3.5 border-b border-white/10 text-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#141820] text-[#10b981] border border-[#10b981]/30 font-medium">
             <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
-            <span className="font-bold tracking-wider">COMMAND COCKPIT • PRADIKTIF DATA LAB</span>
+            <span>PRADIKTIF DATA LAB • INTELIJEN PASAR DAN KEPUTUSAN BISNIS</span>
           </div>
 
-          <div className="flex items-center gap-3 text-[11px] text-[#9ca3af]">
+          <div className="flex items-center gap-3 text-xs text-[#9ca3af]">
             <span className="flex items-center gap-1.5">
-              <Zap className="w-3.5 h-3.5 text-[#10b981]" />
-              <span className="text-white">Latensi: 18ms</span>
+              <Clock className="w-3.5 h-3.5 text-[#10b981]" />
+              <span className="text-[#f3f4f6]">Pembaruan: Tiap 6 Jam</span>
             </span>
             <span className="text-white/20">|</span>
-            <span className="text-[#10b981]">Siklus Pantau: Tiap 6 Jam</span>
+            <span className="text-[#10b981]">Status Sinyal: Aktif Terverifikasi</span>
             <span className="text-white/20 hidden sm:inline">|</span>
             <span className="hidden sm:inline text-white/70">PT Prisma Digital Kreatif</span>
           </div>
         </div>
 
-        {/* Command Cockpit: Side-by-side above the fold */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Hero Headline & Value Narrative */}
+        <div className="max-w-3xl mb-8 space-y-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-semibold tracking-tight text-[#f3f4f6] leading-[1.12]">
+            Ketahui Perubahan Pasar Sebelum Tercatat di Laporan Publik.
+          </h1>
+          <p className="text-base sm:text-lg text-[#9ca3af] leading-relaxed">
+            Kami mengolah data pergerakan maritim fisik, mutasi stok etalase pesaing, dan tender pengadaan publik menjadi sinyal keputusan terstruktur. Memberi Anda keunggulan negosiasi dan kalkulasi biaya riil tanpa mengandalkan tebakan.
+          </p>
+        </div>
+
+        {/* ============================================================== */}
+        {/* INTERACTIVE EXECUTIVE COCKPIT (Fully in-place & instant feedback) */}
+        {/* ============================================================== */}
+        <div className="rounded-2xl bg-[#141820] border border-[#10b981]/25 p-4 sm:p-7 shadow-2xl backdrop-blur-md space-y-6">
           
-          {/* Left Column: Direct Value Proposition */}
-          <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981]">
-              <Radio className="w-3.5 h-3.5 animate-pulse" />
-              <span>INTELIJEN TELEMETRI PASAR & DATA LAPANGAN</span>
+          {/* Cockpit Top Bar & Tab Buttons */}
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+              <span className="text-[#9ca3af] font-medium">
+                Pilih sektor pantau untuk melihat ringkasan sinyal dan estimasi dampak bisnis:
+              </span>
+              <span className="text-[#10b981] font-semibold flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#10b981] animate-ping" />
+                Live Sentinel Active
+              </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-[#f3f4f6] leading-[1.12]">
-              Deteksi Perubahan Lapangan Sebelum Menjadi Berita Publik.
-            </h1>
-
-            <p className="text-sm sm:text-base text-[#9ca3af] leading-relaxed max-w-xl">
-              Memantau pergerakan armada maritim fisik, mutasi katalog stok kompetitor, dan lelang pengadaan publik secara otomatis. Menghadirkan sinyal akurat untuk kalkulasi biaya dan keputusan strategis bisnis Anda.
-            </p>
-
-            {/* Quick Interactive Feed Pills */}
-            <div className="space-y-2 pt-1">
-              <div className="text-xs font-mono text-[#9ca3af]">Uji sinyal telemetri aktif di bawah:</div>
-              <div className="flex flex-wrap gap-2">
-                {RADAR_NODES.map((node) => {
-                  const isActive = selectedNode.id === node.id;
-                  return (
-                    <button
-                      key={node.id}
-                      onClick={() => setSelectedNode(node)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all flex items-center gap-2 border ${
-                        isActive
-                          ? "bg-[#10b981] text-[#0b0d11] font-bold border-[#10b981] shadow-md shadow-[#10b981]/20 scale-105"
-                          : "bg-[#141820] text-[#9ca3af] border-white/10 hover:border-white/20 hover:text-white"
-                      }`}
-                    >
+            {/* Selector Tabs (Smooth tactile pill selection) */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {SENTINEL_FEEDS.map((feed) => {
+                const isSelected = selectedFeed.id === feed.id;
+                return (
+                  <button
+                    key={feed.id}
+                    onClick={() => setSelectedFeed(feed)}
+                    className={`relative p-3 rounded-xl text-left transition-all border ${
+                      isSelected
+                        ? "bg-[#1a222e] border-[#10b981] shadow-lg shadow-[#10b981]/15 text-[#f3f4f6]"
+                        : "bg-[#0b0d11]/70 border-white/5 text-[#9ca3af] hover:border-white/20 hover:text-[#f3f4f6]"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-[#10b981]">
+                        {feed.sector}
+                      </span>
                       <span 
-                        className="w-2 h-2 rounded-full"
-                        style={{ backgroundColor: isActive ? "#0b0d11" : node.color }}
+                        className="w-2 h-2 rounded-full shrink-0" 
+                        style={{ backgroundColor: feed.statusColor }}
                       />
-                      <span>{node.label}</span>
-                    </button>
-                  );
-                })}
-              </div>
+                    </div>
+                    <div className="text-xs sm:text-sm font-semibold truncate text-[#f3f4f6]">
+                      {feed.id === "priok" ? "Tanjung Priok" : feed.id === "berau" ? "Muara Berau" : feed.id === "sku" ? "Mutasi Ritel" : "Tender LPSE"}
+                    </div>
+                    <div className="text-[11px] text-[#9ca3af] truncate mt-0.5">
+                      {feed.kpiNumber}
+                    </div>
+                  </button>
+                );
+              })}
             </div>
+          </div>
 
-            {/* Direct Action CTAs */}
-            <div className="flex flex-wrap items-center gap-3 pt-3">
+          {/* Dynamic Executive Cockpit Body (Directly visible in-place on Mobile & Desktop) */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedFeed.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.22 }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-2 items-center"
+            >
+              
+              {/* Left Column: Executive Map & Activity Canvas */}
+              <div className="lg:col-span-5 bg-[#0b0d11] border border-white/10 rounded-xl p-4 relative overflow-hidden flex flex-col justify-between min-h-[260px]">
+                
+                {/* Visual Map Grid Pattern */}
+                <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]" />
+                
+                {/* Visual Radar Rings & Coordinate Anchor */}
+                <div className="relative w-full h-[180px] flex items-center justify-center">
+                  <div className="absolute w-44 h-44 rounded-full border border-white/5" />
+                  <div className="absolute w-32 h-32 rounded-full border border-white/10" />
+                  <div className="absolute w-20 h-20 rounded-full border border-[#10b981]/20" />
+                  
+                  {/* Subtle rotating pulse beam */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
+                    className="absolute w-44 h-44 origin-center pointer-events-none"
+                    style={{
+                      background: "conic-gradient(from 0deg, rgba(16, 185, 129, 0.2) 0deg, transparent 50deg, transparent 360deg)"
+                    }}
+                  />
+
+                  {/* Dynamic Active Location Node */}
+                  <motion.div
+                    initial={{ scale: 0.7 }}
+                    animate={{ scale: [1, 1.15, 1] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10 flex flex-col items-center"
+                  >
+                    <div 
+                      className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl border-2"
+                      style={{ 
+                        backgroundColor: "#141820", 
+                        borderColor: selectedFeed.statusColor,
+                        boxShadow: `0 0 20px ${selectedFeed.statusColor}40`
+                      }}
+                    >
+                      {selectedFeed.id === "priok" && <Ship className="w-5 h-5 text-red-400" />}
+                      {selectedFeed.id === "berau" && <Activity className="w-5 h-5 text-emerald-400" />}
+                      {selectedFeed.id === "sku" && <Store className="w-5 h-5 text-emerald-400" />}
+                      {selectedFeed.id === "lpse" && <Building2 className="w-5 h-5 text-amber-400" />}
+                    </div>
+                    <span className="mt-2 text-xs font-semibold text-[#f3f4f6] bg-[#141820]/90 px-2.5 py-0.5 rounded-full border border-white/10 shadow">
+                      {selectedFeed.title.split("•")[0]}
+                    </span>
+                  </motion.div>
+                </div>
+
+                {/* Map Bottom Metadata */}
+                <div className="relative z-10 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-[#9ca3af]">
+                  <span>Sumber: {selectedFeed.dataSource}</span>
+                  <span className="text-[#10b981] font-medium">Terverifikasi</span>
+                </div>
+              </div>
+
+              {/* Right Column: Executive Decision Matrix & Financial Impact */}
+              <div className="lg:col-span-7 space-y-4">
+                
+                {/* Title and Status Badge */}
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div>
+                    <div className="text-xs text-[#9ca3af]">Lokasi & Wilayah Pantau:</div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-[#f3f4f6]">
+                      {selectedFeed.title}
+                    </h3>
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${selectedFeed.statusBg}`}>
+                    Status: {selectedFeed.status}
+                  </span>
+                </div>
+
+                {/* Key Metric Big Number Strip */}
+                <div className="p-3.5 rounded-xl bg-[#0b0d11] border border-white/10 flex items-center justify-between">
+                  <div>
+                    <div className="text-xs text-[#9ca3af]">Indikator Utama Saat Ini:</div>
+                    <div className="text-xl sm:text-2xl font-bold text-[#f3f4f6] tracking-tight">
+                      {selectedFeed.kpiNumber}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs text-[#9ca3af]">Keterangan:</div>
+                    <div className="text-xs sm:text-sm font-medium text-[#10b981]">
+                      {selectedFeed.kpiLabel}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Financial & Operational Takeaway Card */}
+                <div className="p-3.5 rounded-xl bg-[#1a222e] border border-white/5 space-y-2">
+                  <div className="text-xs font-semibold text-[#f3f4f6] flex items-center gap-1.5">
+                    <TrendingUp className="w-3.5 h-3.5 text-[#10b981]" />
+                    <span>Estimasi Dampak Operasional & Finansial:</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
+                    {selectedFeed.financialImpact}
+                  </p>
+                </div>
+
+                {/* Recommended Business Action */}
+                <div className="p-3.5 rounded-xl bg-[#0b0d11] border-l-2 border-[#10b981] space-y-1">
+                  <div className="text-xs font-semibold text-[#10b981]">
+                    Rekomendasi Langkah Bisnis:
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed">
+                    {selectedFeed.recommendedAction}
+                  </p>
+                </div>
+
+              </div>
+
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Action CTAs Strip */}
+          <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center gap-3">
               <a
                 href="#terminal"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-[#10b981]/20 hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-semibold text-xs sm:text-sm transition-all shadow-md shadow-[#10b981]/20"
               >
-                <Terminal className="w-4 h-4 text-[#0b0d11]" />
-                <span>Buka Terminal Simulasi</span>
+                <span>Buka Dasbor Simulasi</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
                 href="#alur"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#141820] hover:bg-[#1a202c] text-[#f3f4f6] font-medium text-xs sm:text-sm border border-white/10 hover:border-white/20 transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#0b0d11] hover:bg-[#1a202c] text-[#f3f4f6] font-medium text-xs sm:text-sm border border-white/10 transition-all"
               >
                 <Layers className="w-4 h-4 text-[#10b981]" />
-                <span>Lihat Alur Kerja</span>
-              </a>
-
-              <a
-                href="https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20tertarik%20melihat%20sampel%20telemetri%20data%20PRADIKTIF%20untuk%20kebutuhan%20bisnis%20kami."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#141820] hover:bg-[#1a202c] text-[#10b981] font-medium text-xs sm:text-sm border border-[#10b981]/30 hover:border-[#10b981] transition-all"
-              >
-                <Download className="w-4 h-4" />
-                <span>Minta Sampel Data</span>
+                <span>Alur Pengolahan Data</span>
               </a>
             </div>
 
-            {/* Verified Business Credential Strip */}
-            <div className="pt-3 border-t border-white/10 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs font-mono text-[#9ca3af]">
-              <div className="flex items-center gap-1.5 text-[#f3f4f6]">
-                <ShieldCheck className="w-4 h-4 text-[#10b981]" />
-                <span>PT Prisma Digital Kreatif (NIB 1801250039976)</span>
-              </div>
-              <span className="text-white/20 hidden sm:inline">•</span>
-              <div>PSE Kominfo Terdaftar</div>
-              <span className="text-white/20 hidden sm:inline">•</span>
-              <div className="text-[#10b981]">Data Publik Resmi & Terverifikasi</div>
-            </div>
-          </div>
-
-          {/* Right Column: INTERACTIVE COMMAND RADAR & TELEMETRY DISPLAY */}
-          <div className="lg:col-span-5">
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#141820] border border-[#10b981]/25 shadow-2xl relative overflow-hidden backdrop-blur-md">
-              
-              {/* Radar Header Bar */}
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs font-mono">
-                <div className="flex items-center gap-2">
-                  <Radio className="w-3.5 h-3.5 text-[#10b981] animate-pulse" />
-                  <span className="text-white font-medium">RADAR TELEMETRI SENTINEL</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-[11px] text-[#10b981]">
-                  <span className="w-2 h-2 rounded-full bg-[#10b981] animate-ping" />
-                  <span>ONLINE</span>
-                </div>
-              </div>
-
-              {/* Radar Graphic Canvas Simulation */}
-              <div className="relative w-full aspect-square max-h-[250px] mx-auto rounded-xl bg-[#0b0d11] border border-white/5 flex items-center justify-center overflow-hidden">
-                {/* Concentric Radar Rings */}
-                <div className="absolute w-[86%] h-[86%] rounded-full border border-white/5" />
-                <div className="absolute w-[62%] h-[62%] rounded-full border border-white/10" />
-                <div className="absolute w-[36%] h-[36%] rounded-full border border-[#10b981]/20" />
-                <div className="absolute w-full h-[1px] bg-white/5" />
-                <div className="absolute h-full w-[1px] bg-white/5" />
-
-                {/* Rotating Sweep Beam */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                  className="absolute w-full h-full origin-center pointer-events-none"
-                  style={{
-                    background: "conic-gradient(from 0deg, rgba(16, 185, 129, 0.28) 0deg, transparent 55deg, transparent 360deg)"
-                  }}
-                />
-
-                {/* Interactive Target Nodes on Radar */}
-                {RADAR_NODES.map((node) => {
-                  const isSelected = selectedNode.id === node.id;
-                  return (
-                    <motion.button
-                      key={node.id}
-                      onClick={() => setSelectedNode(node)}
-                      whileHover={{ scale: 1.25 }}
-                      whileTap={{ scale: 0.95 }}
-                      style={{ top: `${node.y}%`, left: `${node.x}%` }}
-                      className={`absolute -translate-x-1/2 -translate-y-1/2 p-1.5 rounded-full transition-all z-20 ${
-                        isSelected 
-                          ? "ring-4 ring-[#10b981]/30 bg-[#10b981] shadow-lg shadow-[#10b981]/50" 
-                          : "bg-[#1a202c] border border-white/30 hover:border-white"
-                      }`}
-                      title={node.label}
-                    >
-                      <span 
-                        className="block w-2.5 h-2.5 rounded-full" 
-                        style={{ backgroundColor: isSelected ? "#0b0d11" : node.color }} 
-                      />
-                    </motion.button>
-                  );
-                })}
-              </div>
-
-              {/* Node Detail Readout Box */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={selectedNode.id}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.2 }}
-                  className="mt-3 p-3 rounded-xl bg-[#0b0d11] border border-white/10 font-mono text-xs space-y-2"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-[10px] text-[#9ca3af]">{selectedNode.feedType}</div>
-                      <span className="text-[#f3f4f6] font-bold text-sm">{selectedNode.label}</span>
-                    </div>
-                    <span 
-                      className="px-2 py-0.5 rounded text-[10px] font-semibold"
-                      style={{ 
-                        backgroundColor: `${selectedNode.color}20`, 
-                        color: selectedNode.color,
-                        border: `1px solid ${selectedNode.color}40`
-                      }}
-                    >
-                      {selectedNode.status}
-                    </span>
-                  </div>
-
-                  <div className="text-[11px] flex justify-between border-t border-white/5 pt-1.5 text-[#9ca3af]">
-                    <span>Zona: {selectedNode.zone}</span>
-                    <span className="text-[#10b981] font-semibold">{selectedNode.metric}</span>
-                  </div>
-
-                  <div className="text-[10px] text-[#9ca3af] bg-[#141820] p-2 rounded-lg border border-white/5">
-                    <span className="text-[#10b981] font-semibold">Dampak Bisnis: </span>
-                    <span>{selectedNode.actionImpact}</span>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-            </div>
+            <button
+              onClick={() => triggerLeadModal({ 
+                sector: selectedFeed.sector, 
+                plan: "Pratinjau Sampel 50 Baris (" + selectedFeed.sector + ")" 
+              })}
+              className="inline-flex items-center gap-2 text-xs font-medium text-[#10b981] hover:text-[#34d399] transition-colors cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Minta Sampel Data Sektor Ini (Gratis 50 Baris)</span>
+            </button>
           </div>
 
         </div>
 
-        {/* 4 Core Pillars Grid */}
+        {/* Verified Business Credential Strip */}
+        <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-[#9ca3af]">
+          <div className="flex items-center gap-1.5 text-[#f3f4f6]">
+            <ShieldCheck className="w-4 h-4 text-[#10b981]" />
+            <span className="font-medium">PT Prisma Digital Kreatif (NIB 1801250039976)</span>
+          </div>
+          <span className="text-white/20 hidden sm:inline">•</span>
+          <div>Tanda Daftar PSE Kominfo Resmi</div>
+          <span className="text-white/20 hidden sm:inline">•</span>
+          <div>Faktur & Invoice Resmi PT</div>
+          <span className="text-white/20 hidden sm:inline">•</span>
+          <div className="text-[#10b981]">Kepatuhan UU Perlindungan Data Pribadi</div>
+        </div>
+
+        {/* 4 Core Value Pillars (Executive Bento Grid) */}
         <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Card 1 */}
+          
           <div className="p-5 rounded-xl bg-[#141820] border border-white/10 flex flex-col justify-between hover:border-[#10b981]/40 transition-all group">
             <div className="space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#10b981]">
+              <div className="w-9 h-9 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#10b981]">
                 <Compass className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#10b981]">ZONA SPASIAL PRESISI</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Pemetaan Wilayah Heksagonal</h2>
+              <div className="text-xs font-semibold text-[#10b981] tracking-wider uppercase">Wilayah Geospasial</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Kuantisasi Spasial Terstruktur</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Mengelompokkan titik koordinat geografis menjadi zona terstruktur. Mempercepat perhitungan jarak antrean armada dan kepadatan titik labuh fisik.
+                Mengelompokkan pergerakan fisik menjadi zona heksagonal terukur. Mempercepat perhitungan kepadatan labuh dan menjaga kerahasiaan lokasi aset Anda.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Format: Berkas Spasial Siap Analisis</span>
+            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] flex items-center justify-between">
+              <span>Format: Berkas Spasial Analitik</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#10b981] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
 
-          {/* Card 2 */}
           <div className="p-5 rounded-xl bg-[#141820] border border-white/10 flex flex-col justify-between hover:border-[#10b981]/40 transition-all group">
             <div className="space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#f59e0b]">
+              <div className="w-9 h-9 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#f59e0b]">
                 <Activity className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#f59e0b]">DETEKSI PERUBAHAN TAJAM</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Peringatan Anomali Statistik</h2>
+              <div className="text-xs font-semibold text-[#f59e0b] tracking-wider uppercase">Deteksi Lonjakan</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Peringatan Dini Anomali</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Membedakan fluktuasi normal mingguan dengan lonjakan kejadian luar biasa. Anda mendapatkan peringatan dini saat terjadi antrean janggal atau penurunan drastis.
+                Membedakan fluktuasi wajar dengan anomali luar biasa. Anda mendapatkan peringatan instan saat terjadi lonjakan antrean kapal atau perubahan drastis.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
+            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] flex items-center justify-between">
               <span>Format: Notifikasi Cepat Telegram</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#f59e0b] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
 
-          {/* Card 3 */}
           <div className="p-5 rounded-xl bg-[#141820] border border-white/10 flex flex-col justify-between hover:border-[#10b981]/40 transition-all group">
             <div className="space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#10b981]">
+              <div className="w-9 h-9 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#10b981]">
                 <Layers className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#10b981]">ANALISIS SELISIH STOK</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Pelacakan Mutasi Katalog</h2>
+              <div className="text-xs font-semibold text-[#10b981] tracking-wider uppercase">Analisis Pasar Ritel</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Pelacakan Mutasi Stok Berkala</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Memeriksa perubahan stok barang kompetitor tiap 6 jam. Mengetahui produk mana yang ludes terjual dan produk mana yang pasif menghabiskan ruang gudang.
+                Memeriksa perubahan stok barang kompetitor tiap 6 jam. Mengetahui produk mana yang ludes terjual dan reseller mana yang melanggar harga resmi (MAP).
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Format: Rekap Estimasi Transaksi</span>
+            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] flex items-center justify-between">
+              <span>Format: Rekap Nilai Transaksi</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#10b981] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
 
-          {/* Card 4 */}
           <div className="p-5 rounded-xl bg-[#141820] border border-white/10 flex flex-col justify-between hover:border-[#10b981]/40 transition-all group">
             <div className="space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#8f652e]">
-                <Cpu className="w-4 h-4" />
+              <div className="w-9 h-9 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#8f652e]">
+                <ShieldCheck className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#8f652e]">PIPELINE TERUJI</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Otomasi Validasi Berlapis</h2>
+              <div className="text-xs font-semibold text-[#8f652e] tracking-wider uppercase">Integritas Data</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Validasi Skema & Audit Berlapis</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Sistem pengumpulan data terstruktur yang memverifikasi skema secara otomatis, menyaring duplikasi, dan menjaga integritas data tetap bersih.
+                Pipeline data terstruktur yang memvalidasi tipe data secara otomatis, menyaring duplikasi, dan memastikan berkas akhir siap pakai tanpa kesalahan kolom.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Format: Basis Data Bersih dan Rapi</span>
+            <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] flex items-center justify-between">
+              <span>Format: Basis Data Excel / CSV Bersih</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#8f652e] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
+
         </div>
 
       </div>

@@ -15,6 +15,7 @@ import {
   FileSpreadsheet, 
   Send
 } from "lucide-react";
+import { triggerLeadModal } from "./LeadIntakeModal";
 
 interface VerticalData {
   id: string;
@@ -287,13 +288,17 @@ export default function VerticalHubsMatrix() {
                   <span>{activeVertical.valueTakeaway}</span>
                 </div>
 
-                <a
-                  href="#two-stage-guarantee"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] text-xs font-semibold font-mono transition-all shadow-md shadow-[#10b981]/10"
+                <button
+                  type="button"
+                  onClick={() => triggerLeadModal({ 
+                    sector: activeVertical.name, 
+                    plan: "Pratinjau Sampel " + activeVertical.shortName 
+                  })}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] text-xs font-semibold transition-all shadow-md shadow-[#10b981]/10 cursor-pointer"
                 >
                   <span>Minta Contoh Data Sektor Ini</span>
                   <Send className="w-3.5 h-3.5" />
-                </a>
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>
