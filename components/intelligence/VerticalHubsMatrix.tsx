@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { 
   Building2, 
   Car, 
@@ -166,12 +167,12 @@ export default function VerticalHubsMatrix() {
   const activeVertical = VERTICALS.find((v) => v.id === selectedId) || VERTICALS[0];
 
   return (
-    <section className="bg-[#0b0d11] text-[#f3f4f6] py-20 border-b border-white/10" id="vertical-hubs">
+    <section className="bg-[#0b0d11] text-[#f3f4f6] py-16 sm:py-24 border-b border-white/10" id="vertical-hubs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Header */}
-        <div className="max-w-3xl space-y-4 mb-10">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#8f652e] px-3 py-1 rounded bg-[#141820] border border-[#8f652e]/30">
+        <div className="max-w-3xl space-y-3 mb-10">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#8f652e] px-3 py-1 rounded-full bg-[#141820] border border-[#8f652e]/30">
             <span>SOLUSI BERDASARKAN SEKTOR USAHA</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-semibold text-[#f3f4f6] tracking-tight">
@@ -191,9 +192,9 @@ export default function VerticalHubsMatrix() {
               <button
                 key={vertical.id}
                 onClick={() => setSelectedId(vertical.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all border ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-medium whitespace-nowrap transition-all border ${
                   isSelected
-                    ? "bg-[#10b981] text-[#0b0d11] border-[#10b981] font-semibold shadow-lg shadow-[#10b981]/10"
+                    ? "bg-[#10b981] text-[#0b0d11] border-[#10b981] font-semibold shadow-lg shadow-[#10b981]/20 scale-[1.02]"
                     : "bg-[#141820] text-[#9ca3af] border-white/10 hover:border-white/20 hover:text-white"
                 }`}
               >
@@ -204,93 +205,98 @@ export default function VerticalHubsMatrix() {
           })}
         </div>
 
-        {/* Tab Content Display */}
+        {/* Tab Content Display with Motion Animation */}
         <div className="mt-8 rounded-2xl bg-[#141820] border border-white/10 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
-          
-          <div className="space-y-6">
-            
-            {/* Title & Target Client */}
-            <div className="flex flex-wrap items-start justify-between gap-4 pb-6 border-b border-white/10">
-              <div className="space-y-1">
-                <div className="text-xs font-mono text-[#10b981]">SEKTOR PILIHAN // {activeVertical.shortName.toUpperCase()}</div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-[#f3f4f6]">
-                  {activeVertical.name}
-                </h3>
-              </div>
-              <div className="p-3 rounded-lg bg-[#1a202c] border border-white/5 text-xs text-[#9ca3af] max-w-md">
-                <span className="text-[#f3f4f6] font-medium font-mono">Relevan untuk: </span>
-                {activeVertical.targetClient}
-              </div>
-            </div>
-
-            {/* Core Challenge Box */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#ef4444]/5 border border-[#ef4444]/20 space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono text-[#ef4444] font-semibold">
-                <AlertCircle className="w-4 h-4 text-[#ef4444]" />
-                <span>TANTANGAN UTAMA DI LAPANGAN:</span>
-              </div>
-              <p className="text-sm text-[#f3f4f6]/90 leading-relaxed">
-                {activeVertical.coreChallenge}
-              </p>
-            </div>
-
-            {/* 2-Column: Data Parameters & Operational Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-              
-              {/* Column 1: Exact Data Parameters */}
-              <div className="p-5 rounded-xl bg-[#0b0d11] border border-white/10 space-y-3">
-                <div className="flex items-center gap-2 text-xs font-mono text-[#10b981]">
-                  <FileSpreadsheet className="w-4 h-4 text-[#10b981]" />
-                  <span>PARAMETER DATA YANG ANDA TERIMA:</span>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeVertical.id}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-6"
+            >
+              {/* Title & Target Client */}
+              <div className="flex flex-wrap items-start justify-between gap-4 pb-6 border-b border-white/10">
+                <div className="space-y-1">
+                  <div className="text-xs font-mono text-[#10b981]">SEKTOR AKTIF // {activeVertical.shortName.toUpperCase()}</div>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-[#f3f4f6]">
+                    {activeVertical.name}
+                  </h3>
                 </div>
-                <div className="space-y-1.5 font-mono text-xs text-[#9ca3af]">
-                  {activeVertical.dataParameters.map((col, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="text-[#10b981] select-none">&bull;</span>
-                      <span className="text-[#f3f4f6]">{col}</span>
-                    </div>
-                  ))}
+                <div className="p-3 rounded-xl bg-[#1a202c] border border-white/5 text-xs text-[#9ca3af] max-w-md">
+                  <span className="text-[#f3f4f6] font-medium font-mono">Relevan untuk: </span>
+                  {activeVertical.targetClient}
                 </div>
               </div>
 
-              {/* Column 2: Operational Benefits & Delivery Format */}
-              <div className="space-y-4">
-                <div className="p-5 rounded-xl bg-[#1a202c] border border-white/5 space-y-2">
+              {/* Core Challenge Box */}
+              <div className="p-4 sm:p-5 rounded-xl bg-[#ef4444]/5 border border-[#ef4444]/20 space-y-2">
+                <div className="flex items-center gap-2 text-xs font-mono text-[#ef4444] font-semibold">
+                  <AlertCircle className="w-4 h-4 text-[#ef4444]" />
+                  <span>TANTANGAN UTAMA DI LAPANGAN:</span>
+                </div>
+                <p className="text-sm text-[#f3f4f6]/90 leading-relaxed">
+                  {activeVertical.coreChallenge}
+                </p>
+              </div>
+
+              {/* 2-Column: Data Parameters & Operational Benefits */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                
+                {/* Column 1: Exact Data Parameters */}
+                <div className="p-5 rounded-xl bg-[#0b0d11] border border-white/10 space-y-3">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#10b981]">
-                    <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                    <span>MANFAAT LANGSUNG UNTUK OPERASIONAL:</span>
+                    <FileSpreadsheet className="w-4 h-4 text-[#10b981]" />
+                    <span>PARAMETER DATA YANG ANDA TERIMA:</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed">
-                    {activeVertical.operationalBenefits}
-                  </p>
+                  <div className="space-y-1.5 font-mono text-xs text-[#9ca3af]">
+                    {activeVertical.dataParameters.map((col, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <span className="text-[#10b981] select-none">&bull;</span>
+                        <span className="text-[#f3f4f6]">{col}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#0b0d11] border border-white/10 text-xs font-mono space-y-1">
-                  <div className="text-[#8f652e]">FORMAT PENGIRIMAN:</div>
-                  <div className="text-[#f3f4f6]">{activeVertical.deliveryFormat}</div>
+                {/* Column 2: Operational Benefits & Delivery Format */}
+                <div className="space-y-4">
+                  <div className="p-5 rounded-xl bg-[#1a202c] border border-white/5 space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-mono text-[#10b981]">
+                      <CheckCircle className="w-4 h-4 text-[#10b981]" />
+                      <span>MANFAAT LANGSUNG UNTUK OPERASIONAL:</span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed">
+                      {activeVertical.operationalBenefits}
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-[#0b0d11] border border-white/10 text-xs font-mono space-y-1">
+                    <div className="text-[#8f652e]">FORMAT PENGIRIMAN:</div>
+                    <div className="text-[#f3f4f6]">{activeVertical.deliveryFormat}</div>
+                  </div>
                 </div>
+
               </div>
 
-            </div>
+              {/* Value Takeaway Footer */}
+              <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="text-xs font-mono text-[#10b981] flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#10b981]" />
+                  <span>{activeVertical.valueTakeaway}</span>
+                </div>
 
-            {/* Value Takeaway Footer */}
-            <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-              <div className="text-xs font-mono text-[#10b981] flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#10b981]" />
-                <span>{activeVertical.valueTakeaway}</span>
+                <a
+                  href="#two-stage-guarantee"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] text-xs font-semibold font-mono transition-all shadow-md shadow-[#10b981]/10"
+                >
+                  <span>Minta Contoh Data Sektor Ini</span>
+                  <Send className="w-3.5 h-3.5" />
+                </a>
               </div>
-
-              <a
-                href="#two-stage-guarantee"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] text-xs font-semibold font-mono transition-all"
-              >
-                <span>Minta Contoh Data Sektor Ini</span>
-                <Send className="w-3.5 h-3.5" />
-              </a>
-            </div>
-
-          </div>
-
+            </motion.div>
+          </AnimatePresence>
         </div>
 
       </div>

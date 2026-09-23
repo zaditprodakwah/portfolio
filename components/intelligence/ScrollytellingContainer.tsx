@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { 
   Radio, 
   TrendingUp, 
@@ -10,69 +11,88 @@ import {
   Terminal, 
   Clock, 
   Database,
-  ArrowRight
+  ArrowRight,
+  ChevronRight,
+  Play,
+  RotateCcw,
+  Sparkles,
+  SlidersHorizontal,
+  Download
 } from "lucide-react";
 
 interface BeatContent {
   id: number;
   tag: string;
-  headline: string;
-  subhead: string;
-  quote: string;
-  takeaway: string;
+  title: string;
+  problem: string;
+  solution: string;
+  impactMetric: string;
 }
 
 const BEATS: BeatContent[] = [
   {
     id: 1,
-    tag: "TANTANGAN KEPUTUSAN",
-    headline: "Tebakan yang salah di pasar berujung pada biaya tinggi.",
-    subhead: "Banyak keputusan penting diambil berdasarkan laporan bulanan yang sudah lewat masa berlakunya atau sekadar dugaan internal. Ketika pesaing Anda mengamati dinamika pasar setiap hari, bertindak lambat berarti membiarkan peluang berpindah tangan.",
-    quote: "Mengetahui perubahan pasar lebih awal memberikan ruang negosiasi yang jauh lebih kuat.",
-    takeaway: "Kendala umum: Terlambat mengetahui kehabisan stok lawan atau perubahan harga tender."
+    tag: "RISIKO INFORMASI",
+    title: "Keterlambatan Laporan Publik Membakar Margin Bisnis",
+    problem: "Laporan bulanan baru terbit saat dinamika pasar sudah berubah. Stok kompetitor habis atau harga lelang bergeser tanpa disadari.",
+    solution: "Sistem sentinel memantau perubahan lapangan secara otomatis tiap hari, memberi peringatan dini sebelum menjadi kabar umum.",
+    impactMetric: "Deteksi pergeseran 24-48 jam lebih awal"
   },
   {
     id: 2,
-    tag: "KECEPATAN INFORMASI",
-    headline: "Aktivitas fisik di lapangan memberikan sinyal lebih awal.",
-    subhead: "Laporan resmi membutuhkan waktu berminggu-minggu untuk disusun, tetapi pergerakan armada fisik terjadi saat ini juga. Kepadatan kapal di pelabuhan muara atau antrean tongkang di jalur sungai memperingatkan potensi keterlambatan kargo berhari-hari sebelum kendala tersebut menjadi berita.",
-    quote: "Peringatan anomali memisahkan variasi harian biasa dari lonjakan hambatan logistik yang nyata.",
-    takeaway: "Manfaat nyata: Memitigasi risiko biaya tunggu kapal dengan prediksi kepadatan zona labuh."
+    tag: "TELEMETRI FISIK",
+    title: "Sinyal Logistik Maritim Memberi Indikator Riil",
+    problem: "Data antrean kapal dan tongkang komoditas sering kali tidak tercermin akurat dalam komunikasi agen pengapalan lokal.",
+    solution: "Pelacakan koordinat AIS dan pengelompokan zona spasial menghitung kepadatan labuh armada secara objektif.",
+    impactMetric: "Akurasi estimasi waktu sandar hingga 92%"
   },
   {
     id: 3,
-    tag: "DINAMIKA PENJUALAN",
-    headline: "Membaca ritme pasar dari pergerakan persediaan barang.",
-    subhead: "Dengan memantau perubahan jumlah barang di etalase secara teratur, Anda dapat memetakan produk mana yang laris dan mana yang bergerak lambat. Ketika barang utama pesaing habis, tim Anda bisa segera memanfaatkan permintaan pembeli yang tidak terlayani.",
-    quote: "Momen terbaik memperkuat penawaran adalah saat calon pembeli mencari barang dan pesaing kehabisan stok.",
-    takeaway: "Manfaat nyata: Menangkap pembeli aktif dan menegakkan kepatuhan batas harga reseller resmi."
+    tag: "MUTASI KATALOG",
+    title: "Membaca Permintaan Pasar dari Perubahan Stok Etalase",
+    problem: "Ketiadaan visibilitas stok kompetitor menyebabkan hilangnya momentum saat pembeli beralih mencari alternatif.",
+    solution: "Pencatatan delta stok berkala per 6 jam mendeteksi produk yang ludes terjual dan reseller yang melanggar harga acuan.",
+    impactMetric: "Pemantauan 50+ SKU per siklus harian"
   },
   {
     id: 4,
-    tag: "KEANDALAN SISTEM",
-    headline: "Pengumpulan data yang stabil dan terverifikasi otomatis.",
-    subhead: "Mengambil data secara manual memakan waktu tim, sementara skrip sederhana sering rusak saat situs target berganti tampilan. Kami membangun alur kerja otomatis dengan validasi skema ganda, penyaringan anomali, dan pengecekan silang berkelanjutan.",
-    quote: "Sistem yang baik bekerja konsisten di latar belakang sehingga tim Anda fokus pada eksekusi bisnis.",
-    takeaway: "Manfaat nyata: Alur data bersih tanpa kekhawatiran skrip macet di tengah jalan."
+    tag: "VALIDASI OTOMATIS",
+    title: "Pipeline Data Terstruktur Tanpa Risiko Skrip Macet",
+    problem: "Pengambilan data manual membuang jam kerja tim, sementara scraping biasa rentan rusak saat layout situs target berubah.",
+    solution: "Arsitektur penanganan otomatis dengan validasi tipe data ganda, filter duplikasi, dan pencatatan log mandiri.",
+    impactMetric: "Zero missing columns & deduplikasi 100%"
   },
   {
     id: 5,
-    tag: "HASIL SIAP PAKAI",
-    headline: "Informasi ringkas yang langsung dapat ditindaklanjuti.",
-    subhead: "Kami tidak mengirimkan tumpukan berkas yang membingungkan. Setiap penyerahan sudah dirapikan ke dalam lembar kerja spreadsheet yang jelas, basis data yang mudah dicari, atau notifikasi pesan otomatis yang siap dijadikan dasar rapat direksi.",
-    quote: "Nilai data diukur dari seberapa cepat tim manajemen dapat mengambil tindakan nyata.",
-    takeaway: "Jaminan kerja: Anda memeriksa sampel 50 baris pertama terlebih dahulu sebelum membuka data lengkap."
+    tag: "HASIL AKSI",
+    title: "Penyerahan Siap Pakai Langsung ke Pengambil Keputusan",
+    problem: "Tumpukan data mentah tanpa struktur hanya menambah beban analisis dan memperlambat koordinasi direksi.",
+    solution: "Format akhir diserahkan dalam spreadsheet bersih, notifikasi harian bot Telegram, atau integrasi endpoint API.",
+    impactMetric: "Uji coba sampel 50 baris pertama tanpa biaya"
   }
 ];
 
 export default function ScrollytellingContainer() {
   const [activeBeat, setActiveBeat] = useState<number>(1);
+  const [isManualSelect, setIsManualSelect] = useState<boolean>(false);
   const beatRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  // Interactive local states for each beat inside the sticky widget
+  const [beat1Mode, setBeat1Mode] = useState<"legacy" | "sentinel">("sentinel");
+  const [beat2Zone, setBeat2Zone] = useState<"priok" | "berau">("priok");
+  const [beat4Running, setBeat4Running] = useState<boolean>(false);
+  const [beat4Progress, setBeat4Progress] = useState<number>(100);
+  const [downloadSuccess, setDownloadSuccess] = useState<boolean>(false);
+
+  // Sync scroll position
   useEffect(() => {
+    if (isManualSelect) {
+      const timer = setTimeout(() => setIsManualSelect(false), 800);
+      return () => clearTimeout(timer);
+    }
+
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight * 0.45;
-      
+      const scrollPosition = window.scrollY + window.innerHeight * 0.4;
       beatRefs.current.forEach((el, index) => {
         if (!el) return;
         const top = el.offsetTop;
@@ -86,298 +106,432 @@ export default function ScrollytellingContainer() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isManualSelect]);
+
+  const handleStepClick = (stepId: number) => {
+    setActiveBeat(stepId);
+    setIsManualSelect(true);
+    const targetElement = beatRefs.current[stepId - 1];
+    if (targetElement) {
+      const yOffset = -100;
+      const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
+  const runBeat4Pipeline = () => {
+    setBeat4Running(true);
+    setBeat4Progress(0);
+    const interval = setInterval(() => {
+      setBeat4Progress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          setBeat4Running(false);
+          return 100;
+        }
+        return prev + 25;
+      });
+    }, 150);
+  };
+
+  const handleSampleDownload = () => {
+    setDownloadSuccess(true);
+    setTimeout(() => setDownloadSuccess(false), 2500);
+  };
 
   return (
-    <section className="relative bg-[#0b0d11] text-[#f3f4f6] py-20 border-b border-white/10">
+    <section className="relative bg-[#0b0d11] text-[#f3f4f6] py-14 sm:py-20 border-b border-white/10" id="how-it-works">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="mb-12 max-w-2xl space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981] px-3 py-1 rounded bg-[#141820] border border-[#10b981]/20">
+        <div className="mb-8 max-w-2xl space-y-2">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981] px-3 py-1 rounded-full bg-[#141820] border border-[#10b981]/20">
             <Radio className="w-3.5 h-3.5 animate-pulse" />
-            <span>ALUR KERJA DAN TRANSFORMASI DATA</span>
+            <span>METODOLOGI & ALUR KERJA SENTINEL</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-semibold text-[#f3f4f6] tracking-tight">
-            Bagaimana Informasi Lapangan Membantu Bisnis Anda
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#f3f4f6] tracking-tight">
+            Transparansi Alur Pengolahan Data Lapangan
           </h2>
-          <p className="text-sm sm:text-base text-[#9ca3af]">
-            Gulir layar untuk melihat perbandingan antara keterlambatan informasi konvensional dan kecepatan pemantauan lapangan langsung.
+          <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed">
+            Klik nomor tahapan atau gulir layar untuk menguji simulasi respon telemetri data secara interaktif.
           </p>
+
+          {/* Step Selector Chips */}
+          <div className="flex items-center gap-1.5 pt-2 overflow-x-auto pb-1 scrollbar-none">
+            {BEATS.map((beat) => {
+              const isSelected = activeBeat === beat.id;
+              return (
+                <button
+                  key={beat.id}
+                  onClick={() => handleStepClick(beat.id)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all flex items-center gap-1.5 whitespace-nowrap border ${
+                    isSelected
+                      ? "bg-[#10b981] text-[#0b0d11] border-[#10b981] font-bold shadow-md shadow-[#10b981]/20"
+                      : "bg-[#141820] text-[#9ca3af] border-white/10 hover:border-white/20 hover:text-white"
+                  }`}
+                >
+                  <span className="font-semibold">0{beat.id}</span>
+                  <span className="hidden sm:inline">{beat.tag}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* 2-Column Scrollytelling Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative">
+        {/* 2-Column Responsive Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start relative">
           
-          {/* Left Column: STICKY DYNAMIC VISUAL TERMINAL */}
-          <div className="lg:col-span-6 lg:sticky lg:top-24 z-20 space-y-4">
-            <div className="rounded-xl bg-[#141820] border border-white/10 p-5 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+          {/* Left Column: STICKY VIEWPORT-SAFE SIMULATOR (Never Clips) */}
+          <div className="lg:col-span-6 lg:sticky lg:top-20 z-20 self-start">
+            <div className="rounded-2xl bg-[#141820] border border-white/10 p-4 sm:p-5 shadow-2xl relative overflow-hidden backdrop-blur-md max-h-[calc(100vh-95px)] overflow-y-auto">
               
-              {/* Terminal Window Chrome */}
-              <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-xs font-mono text-[#9ca3af]">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]/80" />
-                  <span className="ml-2 text-white/60">Simulasi Pemantauan Lapangan</span>
+              {/* Terminal Window Bar */}
+              <div className="flex items-center justify-between pb-2.5 mb-3 border-b border-white/10 text-xs font-mono text-[#9ca3af]">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]" />
+                  <span className="ml-2 text-white/70 text-[11px]">Simulasi Telemetri Aktif</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[#10b981] animate-pulse">● AKTIF</span>
-                  <span className="text-white/40">Bagian {activeBeat} dari 5</span>
+                <div className="flex items-center gap-1.5 text-[11px]">
+                  <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
+                  <span className="text-[#10b981] font-bold">Fase 0{activeBeat}/05</span>
                 </div>
               </div>
 
-              {/* Dynamic Visual States Based on activeBeat */}
-              <div className="min-h-[380px] flex flex-col justify-between">
-                
-                {/* STATE 1: KETERLAMBATAN INFORMASI */}
-                {activeBeat === 1 && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3.5 rounded-lg bg-[#ef4444]/10 border border-[#ef4444]/30 flex items-start gap-3">
-                      <AlertTriangle className="w-5 h-5 text-[#ef4444] shrink-0 mt-0.5" />
-                      <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#ef4444] font-mono">SITUASI UMUM: KETERLAMBATAN INFORMASI</div>
-                        <div className="text-[#9ca3af]">Keputusan bersandar pada laporan bulanan lama. Dampaknya: harga lelang tidak kompetitif dan stok habis tidak terpantau.</div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2 opacity-50 filter blur-[0.8px] select-none pointer-events-none">
-                      <div className="h-6 bg-white/5 rounded w-3/4 animate-pulse" />
-                      <div className="h-20 bg-white/5 rounded w-full" />
-                      <div className="h-12 bg-white/5 rounded w-5/6" />
-                    </div>
-
-                    <div className="p-4 rounded bg-[#1a202c] border border-white/5 text-xs font-mono space-y-2">
-                      <div className="text-[#9ca3af]">// Titik Buta yang Sering Terjadi:</div>
-                      <div className="text-[#ef4444] font-mono">&gt; Kehabisan stok barang di toko pesaing: Terlambat diketahui</div>
-                      <div className="text-[#ef4444] font-mono">&gt; Pelanggaran harga acuan oleh reseller: Tidak terdeteksi</div>
-                      <div className="text-[#ef4444] font-mono">&gt; Antrean kapal di pelabuhan: Menimbulkan denda tunggu</div>
-                    </div>
-                  </div>
-                )}
-
-                {/* STATE 2: PHYSICAL TELEMETRY (PRIOK H3) */}
-                {activeBeat === 2 && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3.5 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
-                      <Radio className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5 animate-pulse" />
-                      <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#10b981] font-mono">STUDI KASUS: PEMANTAUAN LOGISTIK PELABUHAN</div>
-                        <div className="text-[#9ca3af]">Area Labuh Luar Tanjung Priok (Radius pemantauan ~400 meter)</div>
-                      </div>
-                    </div>
-
-                    <div className="p-4 rounded-lg bg-[#0b0d11] border border-white/10 font-mono text-xs space-y-2">
-                      <div className="flex justify-between text-[#9ca3af]">
-                        <span>ZONA_PANTAU</span>
-                        <span className="text-[#10b981]">Area Labuh Luar Priok</span>
-                      </div>
-                      <div className="flex justify-between text-[#9ca3af]">
-                        <span>RATA-RATA KAPAL (14 HARI)</span>
-                        <span>17 - 18 Kapal</span>
-                      </div>
-                      <div className="flex justify-between text-[#9ca3af]">
-                        <span>ARMADA SAAT INI</span>
-                        <span className="text-[#f59e0b] font-bold">35 Kapal (Meningkat)</span>
-                      </div>
-                      <div className="pt-2 border-t border-white/10 flex justify-between items-center">
-                        <span className="text-[#f3f4f6]">STATUS KEPADATAN</span>
-                        <span className="px-2 py-0.5 rounded bg-[#ef4444]/20 text-[#ef4444] font-bold border border-[#ef4444]/40">
-                          LONJAKAN ANOMALI TERDETEKSI
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="text-[11px] text-[#9ca3af] font-mono bg-[#1a202c] p-2.5 rounded">
-                      &gt; Langkah: Waktu tunggu diperkirakan naik 3-4 jam. Rekomendasi penyesuaian jadwal armada langsung dikirimkan ke tim logistik.
-                    </div>
-                  </div>
-                )}
-
-                {/* STATE 3: MULTI-CYCLE VELOCITY (SKU DELTA) */}
-                {activeBeat === 3 && (
-                  <div className="space-y-3 animate-in fade-in duration-300">
-                    <div className="p-3.5 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
-                      <TrendingUp className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
-                      <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#10b981] font-mono">STUDI KASUS: PERGERAKAN STOK TOKO RITEL</div>
-                        <div className="text-[#9ca3af]">Membandingkan perubahan persediaan setiap 6 jam</div>
-                      </div>
-                    </div>
-
-                    <div className="p-3 rounded bg-[#0b0d11] border border-white/10 text-xs font-mono space-y-2 overflow-x-auto">
-                      <table className="w-full text-left border-collapse">
-                        <thead>
-                          <tr className="text-[#9ca3af] border-b border-white/10 pb-1">
-                            <th className="py-1">PRODUK</th>
-                            <th className="py-1">STOK</th>
-                            <th className="py-1">KETERANGAN</th>
-                            <th className="py-1 text-right">ESTIMASI NILAI</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-white/5">
-                          <tr>
-                            <td className="py-1 text-[#f3f4f6]">Serum Wajah 30ml</td>
-                            <td className="py-1 text-[#ef4444]">48 &rarr; 0</td>
-                            <td className="py-1 text-[#ef4444] font-semibold">Stok Habis</td>
-                            <td className="py-1 text-right text-[#10b981]">Rp 7.200.000</td>
-                          </tr>
-                          <tr>
-                            <td className="py-1 text-[#f3f4f6]">Krim Malam 50g</td>
-                            <td className="py-1 text-[#9ca3af]">12 &rarr; 8</td>
-                            <td className="py-1 text-[#10b981]">Terjual Aktif</td>
-                            <td className="py-1 text-right text-[#10b981]">Rp 840.000</td>
-                          </tr>
-                          <tr>
-                            <td className="py-1 text-[#f3f4f6]">Sabun Pembersih</td>
-                            <td className="py-1 text-[#9ca3af]">2 &rarr; 50</td>
-                            <td className="py-1 text-[#f59e0b]">Stok Masuk</td>
-                            <td className="py-1 text-right text-white/40">Restock</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div className="p-3 rounded bg-[#1a202c] border border-white/5 text-xs font-mono flex items-center justify-between">
-                      <span className="text-[#9ca3af]">Tindakan:</span>
-                      <span className="text-[#10b981] font-semibold">Peluang promosi aktif untuk produk pengganti</span>
-                    </div>
-                  </div>
-                )}
-
-                {/* STATE 4: SWARM INTELLIGENCE */}
-                {activeBeat === 4 && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3.5 rounded-lg bg-[#8f652e]/10 border border-[#8f652e]/30 flex items-start gap-3">
-                      <Bot className="w-5 h-5 text-[#8f652e] shrink-0 mt-0.5" />
-                      <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#8f652e] font-mono">ARSITEKTUR PENGECEKAN GANDA</div>
-                        <div className="text-[#9ca3af]">Tiga tahapan pengolahan data otomatis untuk akurasi maksimal</div>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono">
-                      <div className="p-3 rounded bg-[#0b0d11] border border-[#10b981]/30 space-y-1">
-                        <div className="text-[#10b981] font-bold">TAHAP 1</div>
-                        <div className="text-[#f3f4f6]">Pemindaian</div>
-                        <div className="text-[10px] text-[#9ca3af]">Pencarian sumber resmi</div>
-                      </div>
-                      <div className="p-3 rounded bg-[#0b0d11] border border-[#10b981]/30 space-y-1">
-                        <div className="text-[#10b981] font-bold">TAHAP 2</div>
-                        <div className="text-[#f3f4f6]">Validasi</div>
-                        <div className="text-[10px] text-[#9ca3af]">Pemeriksaan format kolom</div>
-                      </div>
-                      <div className="p-3 rounded bg-[#0b0d11] border border-[#10b981]/30 space-y-1">
-                        <div className="text-[#10b981] font-bold">TAHAP 3</div>
-                        <div className="text-[#f3f4f6]">Penyusunan</div>
-                        <div className="text-[10px] text-[#9ca3af]">Penyaringan data ganda</div>
-                      </div>
-                    </div>
-
-                    <div className="p-3 rounded bg-[#1a202c] border border-white/5 font-mono text-[11px] text-[#9ca3af] space-y-1">
-                      <div>&gt; Penanganan otomatis saat format halaman sumber berubah</div>
-                      <div>&gt; Perlindungan privasi dan kepatuhan aturan akses informasi publik</div>
-                    </div>
-                  </div>
-                )}
-
-                {/* STATE 5: DECISION READY VALUE */}
-                {activeBeat === 5 && (
-                  <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3.5 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
-                      <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#10b981] font-mono">FORMAT BERSIH SIAP PAKAI</div>
-                        <div className="text-[#9ca3af]">Dapat langsung dianalisis di Excel atau diintegrasikan ke sistem Anda</div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2 text-xs font-mono">
-                      <div className="p-2.5 rounded bg-[#0b0d11] border border-white/10 flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <Database className="w-4 h-4 text-[#10b981]" />
-                          <span>Lembar Kerja Excel / CSV Terstruktur</span>
+              {/* Dynamic Animated Body */}
+              <div className="min-h-[290px] flex flex-col justify-between">
+                <AnimatePresence mode="wait">
+                  
+                  {/* PHASE 1: RISIKO INFORMASI */}
+                  {activeBeat === 1 && (
+                    <motion.div
+                      key="beat-1"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="space-y-3"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono text-[#9ca3af]">// Perbandingan Waktu Respons:</span>
+                        <div className="flex items-center bg-[#0b0d11] p-0.5 rounded-lg border border-white/10 text-[10px] font-mono">
+                          <button
+                            onClick={() => setBeat1Mode("legacy")}
+                            className={`px-2 py-0.5 rounded ${beat1Mode === "legacy" ? "bg-[#ef4444] text-white font-bold" : "text-[#9ca3af]"}`}
+                          >
+                            Metode Lama
+                          </button>
+                          <button
+                            onClick={() => setBeat1Mode("sentinel")}
+                            className={`px-2 py-0.5 rounded ${beat1Mode === "sentinel" ? "bg-[#10b981] text-[#0b0d11] font-bold" : "text-[#9ca3af]"}`}
+                          >
+                            Sentinel Baru
+                          </button>
                         </div>
-                        <span className="text-[#10b981]">Lengkap</span>
                       </div>
-                      <div className="p-2.5 rounded bg-[#0b0d11] border border-white/10 flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-[#f59e0b]" />
-                          <span>Peringatan Pesan Telegram Harian</span>
-                        </div>
-                        <span className="text-[#10b981]">Otomatis</span>
-                      </div>
-                      <div className="p-2.5 rounded bg-[#0b0d11] border border-white/10 flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <Terminal className="w-4 h-4 text-[#8f652e]" />
-                          <span>Akses API Aman (Opsional Korporat)</span>
-                        </div>
-                        <span className="text-[#10b981]">Tersedia</span>
-                      </div>
-                    </div>
 
-                    <div className="pt-2">
-                      <a
-                        href="#two-stage-guarantee"
-                        className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-bold text-xs font-mono transition-all"
+                      {beat1Mode === "legacy" ? (
+                        <div className="p-3 rounded-xl bg-[#ef4444]/10 border border-[#ef4444]/30 space-y-2 text-xs font-mono">
+                          <div className="flex items-center gap-2 text-[#ef4444] font-bold">
+                            <AlertTriangle className="w-4 h-4" />
+                            <span>KONDISI: TERLAMBAT MENGETAHUI PERUBAHAN</span>
+                          </div>
+                          <div className="text-[#9ca3af] text-[11px] leading-relaxed">
+                            Pesaing kehabisan stok 3 hari lalu. Laporan internal baru masuk minggu depan. Anda kehilangan momen lonjakan penjualan senilai Rp 14.2M.
+                          </div>
+                          <div className="pt-1 text-[10px] text-[#ef4444] border-t border-[#ef4444]/20">
+                            Risiko: Hilang peluang transaksi & margin tergerus
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="p-3 rounded-xl bg-[#10b981]/10 border border-[#10b981]/30 space-y-2 text-xs font-mono">
+                          <div className="flex items-center gap-2 text-[#10b981] font-bold">
+                            <CheckCircle2 className="w-4 h-4" />
+                            <span>KONDISI: PERINGATAN ANOMALI 48 JAM LEBIH AWAL</span>
+                          </div>
+                          <div className="text-[#9ca3af] text-[11px] leading-relaxed">
+                            Bot mengirim alert: 3 produk utama kompetitor habis (stok 0). Tim Anda langsung menaikkan anggaran iklan dan memenangkan pembeli siap transaksi.
+                          </div>
+                          <div className="pt-1 text-[10px] text-[#10b981] border-t border-[#10b981]/20">
+                            Hasil: Konversi naik seketika tanpa tebakan
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="p-2.5 rounded-lg bg-[#0b0d11] border border-white/5 text-[11px] font-mono text-[#9ca3af] space-y-1">
+                        <div>&gt; Pelacakan otomatis: 24 jam nonstop</div>
+                        <div>&gt; Format alert: Pesan ringkas Telegram langsung ke direksi</div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* PHASE 2: TELEMETRI FISIK */}
+                  {activeBeat === 2 && (
+                    <motion.div
+                      key="beat-2"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="space-y-3"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono text-[#9ca3af]">// Pilih Zona Maritim:</span>
+                        <div className="flex items-center bg-[#0b0d11] p-0.5 rounded-lg border border-white/10 text-[10px] font-mono">
+                          <button
+                            onClick={() => setBeat2Zone("priok")}
+                            className={`px-2 py-0.5 rounded ${beat2Zone === "priok" ? "bg-[#10b981] text-[#0b0d11] font-bold" : "text-[#9ca3af]"}`}
+                          >
+                            Tanjung Priok
+                          </button>
+                          <button
+                            onClick={() => setBeat2Zone("berau")}
+                            className={`px-2 py-0.5 rounded ${beat2Zone === "berau" ? "bg-[#10b981] text-[#0b0d11] font-bold" : "text-[#9ca3af]"}`}
+                          >
+                            Muara Berau
+                          </button>
+                        </div>
+                      </div>
+
+                      {beat2Zone === "priok" ? (
+                        <div className="p-3 rounded-xl bg-[#0b0d11] border border-white/10 font-mono text-xs space-y-1.5">
+                          <div className="flex justify-between text-[#9ca3af]">
+                            <span>WILAYAH PANTAU</span>
+                            <span className="text-[#10b981]">Area Labuh Luar Priok</span>
+                          </div>
+                          <div className="flex justify-between text-[#9ca3af]">
+                            <span>RATA-RATA KAPAL</span>
+                            <span>17 - 18 Armada</span>
+                          </div>
+                          <div className="flex justify-between text-[#9ca3af]">
+                            <span>AKTUAL HARI INI</span>
+                            <span className="text-[#ef4444] font-bold">35 Armada (+72%)</span>
+                          </div>
+                          <div className="pt-2 border-t border-white/10 flex justify-between items-center text-[11px]">
+                            <span>STATUS LOGISTIK</span>
+                            <span className="px-2 py-0.5 rounded bg-[#ef4444]/20 text-[#ef4444] font-bold">
+                              Kepadatan Tinggi
+                            </span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="p-3 rounded-xl bg-[#0b0d11] border border-white/10 font-mono text-xs space-y-1.5">
+                          <div className="flex justify-between text-[#9ca3af]">
+                            <span>WILAYAH PANTAU</span>
+                            <span className="text-[#10b981]">Transshipment STS Muara Berau</span>
+                          </div>
+                          <div className="flex justify-between text-[#9ca3af]">
+                            <span>TONGKANG TERDETEKSI</span>
+                            <span>14 Unit Berlabuh</span>
+                          </div>
+                          <div className="flex justify-between text-[#9ca3af]">
+                            <span>STATUS ANTRIAN</span>
+                            <span className="text-[#10b981] font-bold">Lancar (Normal 12-16)</span>
+                          </div>
+                          <div className="pt-2 border-t border-white/10 flex justify-between items-center text-[11px]">
+                            <span>ESTIMASI BONGKAR</span>
+                            <span className="px-2 py-0.5 rounded bg-[#10b981]/20 text-[#10b981] font-bold">
+                              On Schedule
+                            </span>
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="text-[11px] text-[#9ca3af] font-mono bg-[#1a202c] p-2.5 rounded-lg border border-white/5">
+                        &gt; Nilai Keputusan: Menyesuaikan jadwal tongkang muara sebelum terkena denda waktu tunggu (demurrage).
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* PHASE 3: MUTASI KATALOG */}
+                  {activeBeat === 3 && (
+                    <motion.div
+                      key="beat-3"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="space-y-3"
+                    >
+                      <div className="text-xs font-mono text-[#9ca3af]">// Hasil Pengecekan Stok Reseller (Siklus 6 Jam):</div>
+                      
+                      <div className="p-2.5 rounded-xl bg-[#0b0d11] border border-white/10 text-xs font-mono space-y-1.5">
+                        <div className="grid grid-cols-12 text-[#9ca3af] text-[10px] pb-1 border-b border-white/10">
+                          <span className="col-span-5">SKU / PRODUK</span>
+                          <span className="col-span-3 text-center">MUTASI</span>
+                          <span className="col-span-4 text-right">STATUS</span>
+                        </div>
+                        <div className="grid grid-cols-12 text-[11px] items-center">
+                          <span className="col-span-5 text-[#f3f4f6] truncate">Serum 30ml Gold</span>
+                          <span className="col-span-3 text-center text-[#ef4444]">48 &rarr; 0</span>
+                          <span className="col-span-4 text-right text-[#ef4444] font-bold">Stok Habis</span>
+                        </div>
+                        <div className="grid grid-cols-12 text-[11px] items-center">
+                          <span className="col-span-5 text-[#f3f4f6] truncate">Krim Malam 50g</span>
+                          <span className="col-span-3 text-center text-[#10b981]">12 &rarr; 8</span>
+                          <span className="col-span-4 text-right text-[#10b981]">Aktif (4 Terjual)</span>
+                        </div>
+                        <div className="grid grid-cols-12 text-[11px] items-center">
+                          <span className="col-span-5 text-[#f3f4f6] truncate">Pembersih B2B</span>
+                          <span className="col-span-3 text-center text-[#f59e0b]">Rp 85K</span>
+                          <span className="col-span-4 text-right text-[#f59e0b]">Pelanggaran Acuan</span>
+                        </div>
+                      </div>
+
+                      <div className="p-2 rounded-lg bg-[#1a202c] border border-white/5 text-xs font-mono flex items-center justify-between text-[11px]">
+                        <span className="text-[#9ca3af]">Aksi Instan:</span>
+                        <span className="text-[#10b981] font-semibold">Tegakkan MAP / Rebut Pembeli</span>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* PHASE 4: VALIDASI OTOMATIS */}
+                  {activeBeat === 4 && (
+                    <motion.div
+                      key="beat-4"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="space-y-3"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono text-[#9ca3af]">// Mesin Validasi Integritas:</span>
+                        <button
+                          onClick={runBeat4Pipeline}
+                          disabled={beat4Running}
+                          className="px-2.5 py-1 rounded bg-[#10b981] text-[#0b0d11] font-mono text-[10px] font-bold flex items-center gap-1 hover:bg-[#059669] transition-all"
+                        >
+                          <Play className="w-3 h-3 fill-current" />
+                          <span>{beat4Running ? "Memvalidasi..." : "Tes Eksekusi"}</span>
+                        </button>
+                      </div>
+
+                      <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono">
+                        <div className={`p-2.5 rounded-xl bg-[#0b0d11] border ${beat4Progress >= 30 ? "border-[#10b981] text-[#10b981]" : "border-white/10 text-white/40"}`}>
+                          <div className="font-bold text-[11px]">1. PARSING</div>
+                          <div className="text-[10px] text-[#9ca3af]">Sumber Publik</div>
+                        </div>
+                        <div className={`p-2.5 rounded-xl bg-[#0b0d11] border ${beat4Progress >= 65 ? "border-[#10b981] text-[#10b981]" : "border-white/10 text-white/40"}`}>
+                          <div className="font-bold text-[11px]">2. SKEMA</div>
+                          <div className="text-[10px] text-[#9ca3af]">Cek Tipe Data</div>
+                        </div>
+                        <div className={`p-2.5 rounded-xl bg-[#0b0d11] border ${beat4Progress >= 100 ? "border-[#10b981] text-[#10b981]" : "border-white/10 text-white/40"}`}>
+                          <div className="font-bold text-[11px]">3. FILTER</div>
+                          <div className="text-[10px] text-[#9ca3af]">0 Duplikasi</div>
+                        </div>
+                      </div>
+
+                      <div className="p-2.5 rounded-lg bg-[#0b0d11] border border-white/5 font-mono text-[11px] text-[#9ca3af] space-y-1">
+                        <div className="text-[#10b981] font-semibold">STATUS: PIPELINE NORMAL (100% SUKSES)</div>
+                        <div>&gt; Tahan terhadap perubahan HTML situs sumber</div>
+                        <div>&gt; Kepatuhan UU PDP dan etika penarikan informasi publik</div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* PHASE 5: HASIL AKSI */}
+                  {activeBeat === 5 && (
+                    <motion.div
+                      key="beat-5"
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="space-y-3"
+                    >
+                      <div className="text-xs font-mono text-[#9ca3af]">// Deliverable Siap Pakai:</div>
+
+                      <div className="space-y-1.5 text-xs font-mono">
+                        <div className="p-2 rounded-lg bg-[#0b0d11] border border-white/10 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Database className="w-3.5 h-3.5 text-[#10b981]" />
+                            <span className="text-[11px]">Spreadsheet Excel / CSV Terstruktur</span>
+                          </div>
+                          <span className="text-[#10b981] text-[10px]">Tersedia</span>
+                        </div>
+                        <div className="p-2 rounded-lg bg-[#0b0d11] border border-white/10 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-3.5 h-3.5 text-[#f59e0b]" />
+                            <span className="text-[11px]">Ringkasan Pagi Bot Telegram</span>
+                          </div>
+                          <span className="text-[#10b981] text-[10px]">Harian</span>
+                        </div>
+                        <div className="p-2 rounded-lg bg-[#0b0d11] border border-white/10 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Terminal className="w-3.5 h-3.5 text-[#8f652e]" />
+                            <span className="text-[11px]">Private REST API & Webhook</span>
+                          </div>
+                          <span className="text-[#10b981] text-[10px]">Opsional</span>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={handleSampleDownload}
+                        className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-bold text-xs font-mono transition-all shadow-md shadow-[#10b981]/20"
                       >
-                        <span>Minta Sampel Data Target Anda</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                )}
+                        <Download className="w-3.5 h-3.5" />
+                        <span>{downloadSuccess ? "Sampel Berhasil Disiapkan!" : "Minta Sampel Data Target Anda"}</span>
+                      </button>
+                    </motion.div>
+                  )}
 
+                </AnimatePresence>
               </div>
 
-              {/* Bottom Card Footer */}
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#9ca3af]">
-                <span>Standar: Integritas Data Terverifikasi</span>
+              {/* Bottom Card Guarantee Readout */}
+              <div className="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-[#9ca3af]">
+                <span>Integritas Terverifikasi</span>
                 <span className="text-[#10b981]">PRADIKTIF DATA LAB</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: SCROLLING NARRATIVE TRACK */}
-          <div className="lg:col-span-6 space-y-24 py-12">
+          {/* Right Column: CRISP NARRATIVE BEATS (Zero Fluff, Impact First) */}
+          <div className="lg:col-span-6 space-y-6 sm:space-y-8 py-2">
             {BEATS.map((beat, index) => {
               const isActive = activeBeat === beat.id;
               return (
                 <div
                   key={beat.id}
                   ref={(el) => { beatRefs.current[index] = el; }}
-                  className={`p-6 sm:p-8 rounded-2xl border transition-all duration-300 ${
+                  onClick={() => handleStepClick(beat.id)}
+                  className={`p-5 rounded-xl border transition-all duration-200 cursor-pointer ${
                     isActive 
-                      ? "bg-[#141820] border-[#10b981]/40 shadow-xl shadow-[#10b981]/5 scale-[1.01]" 
-                      : "bg-[#0b0d11]/50 border-white/5 opacity-40 hover:opacity-75"
+                      ? "bg-[#141820] border-[#10b981]/50 shadow-lg shadow-[#10b981]/5 scale-[1.01]" 
+                      : "bg-[#0b0d11]/70 border-white/5 opacity-55 hover:opacity-85"
                   }`}
                 >
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono font-semibold tracking-wider text-[#10b981]">
-                        {beat.tag}
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-xs font-mono">
+                      <span className="text-[#10b981] font-bold">
+                        0{beat.id} // {beat.tag}
                       </span>
-                      <span className="text-xs font-mono text-[#9ca3af]">
-                        Poin {beat.id} dari 5
+                      <span className="text-[#9ca3af] text-[11px]">
+                        Langkah {beat.id} dari 5
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-semibold text-[#f3f4f6] leading-tight">
-                      {beat.headline}
+                    <h3 className="text-lg sm:text-xl font-semibold text-[#f3f4f6] leading-snug">
+                      {beat.title}
                     </h3>
 
-                    <p className="text-sm sm:text-base text-[#9ca3af] leading-relaxed">
-                      {beat.subhead}
+                    <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed">
+                      {beat.problem}
                     </p>
 
-                    <blockquote className="p-4 rounded-lg bg-[#1a202c]/60 border-l-2 border-[#10b981] text-xs sm:text-sm text-[#f3f4f6]/90 italic">
-                      &ldquo;{beat.quote}&rdquo;
-                    </blockquote>
+                    <div className="p-3 rounded-lg bg-[#1a202c]/70 border-l-2 border-[#10b981] text-xs text-[#f3f4f6]">
+                      <span className="font-semibold text-[#10b981]">Solusi: </span>
+                      <span>{beat.solution}</span>
+                    </div>
 
-                    {/* Measured Takeaway Box */}
-                    <div className="pt-3 border-t border-white/10 text-xs font-mono text-[#10b981] flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#10b981]" />
-                      <span>{beat.takeaway}</span>
+                    <div className="pt-2 border-t border-white/5 flex items-center justify-between text-xs font-mono text-[#10b981]">
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#10b981]" />
+                        <span>Dampak: {beat.impactMetric}</span>
+                      </div>
+                      <ChevronRight className={`w-3.5 h-3.5 transition-transform ${isActive ? "rotate-90 text-[#10b981]" : "text-white/30"}`} />
                     </div>
                   </div>
                 </div>

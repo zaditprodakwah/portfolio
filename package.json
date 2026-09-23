@@ -12,6 +12,7 @@
   "dependencies": {
     "@vercel/og": "^1.0.2",
     "lucide-react": "^0.469.0",
+    "motion": "^13.4.2",
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
