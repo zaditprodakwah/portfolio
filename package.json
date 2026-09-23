@@ -7,7 +7,7 @@
     "build": "node scripts/sync-cv.mjs && next build",
     "start": "next start",
     "sync:cv": "node scripts/sync-cv.mjs",
-    "deploy": "npm run build && wrangler pages deploy out --project-name=zadit"
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name=muhzadit"
   },
   "dependencies": {
     "@vercel/og": "^1.0.2",
