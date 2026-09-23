@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { 
-  EyeOff, 
   Radio, 
   TrendingUp, 
   Bot, 
@@ -26,43 +25,43 @@ interface BeatContent {
 const BEATS: BeatContent[] = [
   {
     id: 1,
-    tag: "BABAK 1 // KEBUTAAN DATA",
-    headline: "Tebakan yang salah di pasar harganya mahal.",
-    subhead: "Keputusan bernilai miliaran rupiah sering kali diambil dari klaim sepihak kompetitor atau data laporan bulanan yang sudah basi. Anda tidak bisa memenangkan persaingan hanya bermodal intuisi ketika lawan mengamati setiap langkah Anda.",
-    quote: "Ketiadaan visibilitas lapangan bukan sekadar hambatan operasional, melainkan kebocoran margin yang terus mengalir.",
-    takeaway: "Indikasi Masalah: Buta terhadap pergerakan stok lawan dan keterlambatan respon lelang pasar."
+    tag: "TANTANGAN KEPUTUSAN",
+    headline: "Tebakan yang salah di pasar berujung pada biaya tinggi.",
+    subhead: "Banyak keputusan penting diambil berdasarkan laporan bulanan yang sudah lewat masa berlakunya atau sekadar dugaan internal. Ketika pesaing Anda mengamati dinamika pasar setiap hari, bertindak lambat berarti membiarkan peluang berpindah tangan.",
+    quote: "Mengetahui perubahan pasar lebih awal memberikan ruang negosiasi yang jauh lebih kuat.",
+    takeaway: "Kendala umum: Terlambat mengetahui kehabisan stok lawan atau perubahan harga tender."
   },
   {
     id: 2,
-    tag: "BABAK 2 // TELEMETRI FISIK",
-    headline: "Pergerakan fisik di lapangan tidak bisa berbohong.",
-    subhead: "Ketika laporan keuangan baru terbit 3 bulan sekali, telemetri fisik terjadi setiap detik. Lonjakan kapal labuh jangkar di Tanjung Priok atau antrean tongkang di sungai Mahakam memberi sinyal kemacetan logistik dan kenaikan biaya demurrage 7 hari sebelum berita korporat beredar.",
-    quote: "Kontrol Proses Statistik (SPC) memisahkan fluktuasi normal dari anomali 3-Sigma yang nyata.",
-    takeaway: "Sinyal Nyata: H3 Hex Cell Resolusi 8 mencatat lonjakan dwell-time +220 menit dan Z-Score +3.53 Sigma."
+    tag: "KECEPATAN INFORMASI",
+    headline: "Aktivitas fisik di lapangan memberikan sinyal lebih awal.",
+    subhead: "Laporan resmi membutuhkan waktu berminggu-minggu untuk disusun, tetapi pergerakan armada fisik terjadi saat ini juga. Kepadatan kapal di pelabuhan muara atau antrean tongkang di jalur sungai memperingatkan potensi keterlambatan kargo berhari-hari sebelum kendala tersebut menjadi berita.",
+    quote: "Peringatan anomali memisahkan variasi harian biasa dari lonjakan hambatan logistik yang nyata.",
+    takeaway: "Manfaat nyata: Memitigasi risiko biaya tunggu kapal dengan prediksi kepadatan zona labuh."
   },
   {
     id: 3,
-    tag: "BABAK 3 // MULTI-CYCLE VELOCITY",
-    headline: "Membongkar omset lawan dari mutasi katalog.",
-    subhead: "Dengan melacak selisih persediaan katalog setiap siklus, engine kami memisahkan mana produk yang benar-benar laku terjual dari produk yang sekadar pajangan. Begitu stok kompetitor utama menyentuh angka nol, sinyal Out-of-Stock conquesting langsung aktif.",
-    quote: "Jangan bakar anggaran iklan saat lawan siap siaga. Lipatgandakan konversi saat rak mereka kosong.",
-    takeaway: "Metrik Terkunci: 50 SKU dipantau, Inferred GMV terhitung presisi, deteksi pelanggaran batas harga MAP."
+    tag: "DINAMIKA PENJUALAN",
+    headline: "Membaca ritme pasar dari pergerakan persediaan barang.",
+    subhead: "Dengan memantau perubahan jumlah barang di etalase secara teratur, Anda dapat memetakan produk mana yang laris dan mana yang bergerak lambat. Ketika barang utama pesaing habis, tim Anda bisa segera memanfaatkan permintaan pembeli yang tidak terlayani.",
+    quote: "Momen terbaik memperkuat penawaran adalah saat calon pembeli mencari barang dan pesaing kehabisan stok.",
+    takeaway: "Manfaat nyata: Menangkap pembeli aktif dan menegakkan kepatuhan batas harga reseller resmi."
   },
   {
     id: 4,
-    tag: "BABAK 4 // SWARM INTELLIGENCE",
-    headline: "Pasukan agen otonom, bukan bot scraping rapuh.",
-    subhead: "Scraping tradisional mudah tumbang saat struktur web berubah. Kami mengerahkan Swarm Orchestrator dengan 3 peran terspesialisasi: Scout menemukan sumber, Extractor memvalidasi skema, dan Synthesizer membersihkan anomali menjadi format terstruktur.",
-    quote: "Evolusi dari skrip rapuh menuju arsitektur multi-agen deterministik berkapasitas ribuan node.",
-    takeaway: "Keandalan Sistem: Pengecekan silang otomatis, validasi skema Zod, dan nol data palsu."
+    tag: "KEANDALAN SISTEM",
+    headline: "Pengumpulan data yang stabil dan terverifikasi otomatis.",
+    subhead: "Mengambil data secara manual memakan waktu tim, sementara skrip sederhana sering rusak saat situs target berganti tampilan. Kami membangun alur kerja otomatis dengan validasi skema ganda, penyaringan anomali, dan pengecekan silang berkelanjutan.",
+    quote: "Sistem yang baik bekerja konsisten di latar belakang sehingga tim Anda fokus pada eksekusi bisnis.",
+    takeaway: "Manfaat nyata: Alur data bersih tanpa kekhawatiran skrip macet di tengah jalan."
   },
   {
     id: 5,
-    tag: "BABAK 5 // KEPUTUSAN TERARAH",
-    headline: "50 baris data valid lebih berharga daripada 50 jam rapat.",
-    subhead: "Kami tidak menjual tumpukan data mentah yang membingungkan. Kami menyerahkan bukti siap pakai dalam format CSV bersih, database SQLite terenkripsi, atau alert instan Telegram yang langsung memicu aksi bisnis nyata.",
-    quote: "Data terbaik adalah data yang mempercepat eksekusi dan mengunci keuntungan sebelum pasar menyadarinya.",
-    takeaway: "Model Serah Terima: 50 baris sampel gratis ber-watermark sebelum pembukaan master data penuh."
+    tag: "HASIL SIAP PAKAI",
+    headline: "Informasi ringkas yang langsung dapat ditindaklanjuti.",
+    subhead: "Kami tidak mengirimkan tumpukan berkas yang membingungkan. Setiap penyerahan sudah dirapikan ke dalam lembar kerja spreadsheet yang jelas, basis data yang mudah dicari, atau notifikasi pesan otomatis yang siap dijadikan dasar rapat direksi.",
+    quote: "Nilai data diukur dari seberapa cepat tim manajemen dapat mengambil tindakan nyata.",
+    takeaway: "Jaminan kerja: Anda memeriksa sampel 50 baris pertama terlebih dahulu sebelum membuka data lengkap."
   }
 ];
 
@@ -97,13 +96,13 @@ export default function ScrollytellingContainer() {
         <div className="mb-12 max-w-2xl space-y-3">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981] px-3 py-1 rounded bg-[#141820] border border-[#10b981]/20">
             <Radio className="w-3.5 h-3.5 animate-pulse" />
-            <span>NARRATIVE FLIGHT LOG // BAGAIMANA INTELIJEN BEKERJA</span>
+            <span>ALUR KERJA DAN TRANSFORMASI DATA</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-semibold text-[#f3f4f6] tracking-tight">
-            Dari Titik Buta Menjadi Keunggulan Mutlak
+            Bagaimana Informasi Lapangan Membantu Bisnis Anda
           </h2>
           <p className="text-sm sm:text-base text-[#9ca3af]">
-            Gulir perlahan untuk melihat bagaimana telemetri mentah ditransformasikan menjadi sinyal keputusan deterministik.
+            Gulir layar untuk melihat perbandingan antara keterlambatan informasi konvensional dan kecepatan pemantauan lapangan langsung.
           </p>
         </div>
 
@@ -120,25 +119,25 @@ export default function ScrollytellingContainer() {
                   <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444]/80" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]/80" />
                   <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]/80" />
-                  <span className="ml-2 text-white/60">SPECTRE_TELEMETRY_ENGINE.sh</span>
+                  <span className="ml-2 text-white/60">Simulasi Pemantauan Lapangan</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#10b981] animate-pulse">● LIVE</span>
-                  <span className="text-white/40">BEAT 0{activeBeat}/05</span>
+                  <span className="text-[#10b981] animate-pulse">● AKTIF</span>
+                  <span className="text-white/40">Bagian {activeBeat} dari 5</span>
                 </div>
               </div>
 
               {/* Dynamic Visual States Based on activeBeat */}
               <div className="min-h-[380px] flex flex-col justify-between">
                 
-                {/* STATE 1: BLINDSPOT */}
+                {/* STATE 1: KETERLAMBATAN INFORMASI */}
                 {activeBeat === 1 && (
                   <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3 rounded-lg bg-[#ef4444]/10 border border-[#ef4444]/30 flex items-start gap-3">
+                    <div className="p-3.5 rounded-lg bg-[#ef4444]/10 border border-[#ef4444]/30 flex items-start gap-3">
                       <AlertTriangle className="w-5 h-5 text-[#ef4444] shrink-0 mt-0.5" />
                       <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#ef4444] font-mono">STATUS: HIGH LATENCY & DATA BLINDNESS</div>
-                        <div className="text-[#9ca3af]">Keputusan bersandar pada laporan bulanan. Estimasi kerugian akibat salah patokan harga dan keterlambatan info lelang.</div>
+                        <div className="font-semibold text-[#ef4444] font-mono">SITUASI UMUM: KETERLAMBATAN INFORMASI</div>
+                        <div className="text-[#9ca3af]">Keputusan bersandar pada laporan bulanan lama. Dampaknya: harga lelang tidak kompetitif dan stok habis tidak terpantau.</div>
                       </div>
                     </div>
 
@@ -149,10 +148,10 @@ export default function ScrollytellingContainer() {
                     </div>
 
                     <div className="p-4 rounded bg-[#1a202c] border border-white/5 text-xs font-mono space-y-2">
-                      <div className="text-[#9ca3af]">// DIAGNOSTIK KEBUTAAN PASAR:</div>
-                      <div className="text-[#ef4444] font-mono">&gt; Out-of-Stock Competitor: TIDAK TERDETEKSI</div>
-                      <div className="text-[#ef4444] font-mono">&gt; Pelanggaran Batas Harga MAP: TIDAK DIKETAHUI</div>
-                      <div className="text-[#ef4444] font-mono">&gt; Risiko Demurrage Pelabuhan: TINGGI (TANPA PREDIKSI)</div>
+                      <div className="text-[#9ca3af]">// Titik Buta yang Sering Terjadi:</div>
+                      <div className="text-[#ef4444] font-mono">&gt; Kehabisan stok barang di toko pesaing: Terlambat diketahui</div>
+                      <div className="text-[#ef4444] font-mono">&gt; Pelanggaran harga acuan oleh reseller: Tidak terdeteksi</div>
+                      <div className="text-[#ef4444] font-mono">&gt; Antrean kapal di pelabuhan: Menimbulkan denda tunggu</div>
                     </div>
                   </div>
                 )}
@@ -160,41 +159,37 @@ export default function ScrollytellingContainer() {
                 {/* STATE 2: PHYSICAL TELEMETRY (PRIOK H3) */}
                 {activeBeat === 2 && (
                   <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
+                    <div className="p-3.5 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
                       <Radio className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5 animate-pulse" />
                       <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#10b981] font-mono">ZONA MARITIM: PELABUHAN TANJUNG PRIOK</div>
-                        <div className="text-[#9ca3af]">Resolusi Grid Uber H3 Res-8 (~400m radius perimeter labuh luar)</div>
+                        <div className="font-semibold text-[#10b981] font-mono">STUDI KASUS: PEMANTAUAN LOGISTIK PELABUHAN</div>
+                        <div className="text-[#9ca3af]">Area Labuh Luar Tanjung Priok (Radius pemantauan ~400 meter)</div>
                       </div>
                     </div>
 
                     <div className="p-4 rounded-lg bg-[#0b0d11] border border-white/10 font-mono text-xs space-y-2">
                       <div className="flex justify-between text-[#9ca3af]">
-                        <span>H3_INDEX</span>
-                        <span className="text-[#10b981]">h3_08_+0000361_-0000023</span>
+                        <span>ZONA_PANTAU</span>
+                        <span className="text-[#10b981]">Area Labuh Luar Priok</span>
                       </div>
                       <div className="flex justify-between text-[#9ca3af]">
-                        <span>BASELINE_ARMADA (14D)</span>
-                        <span>17.6 KAPAL</span>
+                        <span>RATA-RATA KAPAL (14 HARI)</span>
+                        <span>17 - 18 Kapal</span>
                       </div>
                       <div className="flex justify-between text-[#9ca3af]">
-                        <span>DETEKSI_AKTUAL</span>
-                        <span className="text-[#f59e0b] font-bold">35 KAPAL KOMERSIAL</span>
-                      </div>
-                      <div className="flex justify-between text-[#9ca3af]">
-                        <span>STANDAR_DEVIASI</span>
-                        <span>4.93</span>
+                        <span>ARMADA SAAT INI</span>
+                        <span className="text-[#f59e0b] font-bold">35 Kapal (Meningkat)</span>
                       </div>
                       <div className="pt-2 border-t border-white/10 flex justify-between items-center">
-                        <span className="text-[#f3f4f6]">SKOR_Z-SCORE (SPC)</span>
+                        <span className="text-[#f3f4f6]">STATUS KEPADATAN</span>
                         <span className="px-2 py-0.5 rounded bg-[#ef4444]/20 text-[#ef4444] font-bold border border-[#ef4444]/40">
-                          +3.53 SIGMA [ANOMALI]
+                          LONJAKAN ANOMALI TERDETEKSI
                         </span>
                       </div>
                     </div>
 
                     <div className="text-[11px] text-[#9ca3af] font-mono bg-[#1a202c] p-2.5 rounded">
-                      &gt; PREDIKSI: Dwell time naik +220 menit. Rekomendasi mitigasi rute tongkang segera dikirim ke Telegram.
+                      &gt; Langkah: Waktu tunggu diperkirakan naik 3-4 jam. Rekomendasi penyesuaian jadwal armada langsung dikirimkan ke tim logistik.
                     </div>
                   </div>
                 )}
@@ -202,11 +197,11 @@ export default function ScrollytellingContainer() {
                 {/* STATE 3: MULTI-CYCLE VELOCITY (SKU DELTA) */}
                 {activeBeat === 3 && (
                   <div className="space-y-3 animate-in fade-in duration-300">
-                    <div className="p-3 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
+                    <div className="p-3.5 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
                       <TrendingUp className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
                       <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#10b981] font-mono">E-COMMERCE DELTA VELOCITY ENGINE</div>
-                        <div className="text-[#9ca3af]">Membandingkan Snapshot T-0 dan T-1 secara deterministik</div>
+                        <div className="font-semibold text-[#10b981] font-mono">STUDI KASUS: PERGERAKAN STOK TOKO RITEL</div>
+                        <div className="text-[#9ca3af]">Membandingkan perubahan persediaan setiap 6 jam</div>
                       </div>
                     </div>
 
@@ -214,38 +209,38 @@ export default function ScrollytellingContainer() {
                       <table className="w-full text-left border-collapse">
                         <thead>
                           <tr className="text-[#9ca3af] border-b border-white/10 pb-1">
-                            <th className="py-1">SKU_ID</th>
+                            <th className="py-1">PRODUK</th>
                             <th className="py-1">STOK</th>
-                            <th className="py-1">STATUS</th>
-                            <th className="py-1 text-right">INFERRED_GMV</th>
+                            <th className="py-1">KETERANGAN</th>
+                            <th className="py-1 text-right">ESTIMASI NILAI</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-white/5">
                           <tr>
-                            <td className="py-1 text-[#f3f4f6]">SKU-A01</td>
+                            <td className="py-1 text-[#f3f4f6]">Serum Wajah 30ml</td>
                             <td className="py-1 text-[#ef4444]">48 &rarr; 0</td>
-                            <td className="py-1 text-[#ef4444] font-semibold">[OUT_OF_STOCK]</td>
-                            <td className="py-1 text-right text-[#10b981]">£1,440</td>
+                            <td className="py-1 text-[#ef4444] font-semibold">Stok Habis</td>
+                            <td className="py-1 text-right text-[#10b981]">Rp 7.200.000</td>
                           </tr>
                           <tr>
-                            <td className="py-1 text-[#f3f4f6]">SKU-B14</td>
+                            <td className="py-1 text-[#f3f4f6]">Krim Malam 50g</td>
                             <td className="py-1 text-[#9ca3af]">12 &rarr; 8</td>
-                            <td className="py-1 text-[#10b981]">[SALE_EVENT]</td>
-                            <td className="py-1 text-right text-[#10b981]">£210</td>
+                            <td className="py-1 text-[#10b981]">Terjual Aktif</td>
+                            <td className="py-1 text-right text-[#10b981]">Rp 840.000</td>
                           </tr>
                           <tr>
-                            <td className="py-1 text-[#f3f4f6]">SKU-C89</td>
+                            <td className="py-1 text-[#f3f4f6]">Sabun Pembersih</td>
                             <td className="py-1 text-[#9ca3af]">2 &rarr; 50</td>
-                            <td className="py-1 text-[#f59e0b]">[RESTOCK]</td>
-                            <td className="py-1 text-right text-white/40">£0</td>
+                            <td className="py-1 text-[#f59e0b]">Stok Masuk</td>
+                            <td className="py-1 text-right text-white/40">Restock</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
 
                     <div className="p-3 rounded bg-[#1a202c] border border-white/5 text-xs font-mono flex items-center justify-between">
-                      <span className="text-[#9ca3af]">TOTAL INFERRED GMV:</span>
-                      <span className="text-[#10b981] font-bold font-mono">£2,194 (50 SKU AUDITED)</span>
+                      <span className="text-[#9ca3af]">Tindakan:</span>
+                      <span className="text-[#10b981] font-semibold">Peluang promosi aktif untuk produk pengganti</span>
                     </div>
                   </div>
                 )}
@@ -253,35 +248,35 @@ export default function ScrollytellingContainer() {
                 {/* STATE 4: SWARM INTELLIGENCE */}
                 {activeBeat === 4 && (
                   <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3 rounded-lg bg-[#8f652e]/10 border border-[#8f652e]/30 flex items-start gap-3">
+                    <div className="p-3.5 rounded-lg bg-[#8f652e]/10 border border-[#8f652e]/30 flex items-start gap-3">
                       <Bot className="w-5 h-5 text-[#8f652e] shrink-0 mt-0.5" />
                       <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#8f652e] font-mono">SWARM ORCHESTRATOR // 3 AGENT NODES</div>
-                        <div className="text-[#9ca3af]">Eksekusi terdesentralisasi tanpa beban marginal waktu manusia</div>
+                        <div className="font-semibold text-[#8f652e] font-mono">ARSITEKTUR PENGECEKAN GANDA</div>
+                        <div className="text-[#9ca3af]">Tiga tahapan pengolahan data otomatis untuk akurasi maksimal</div>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono">
                       <div className="p-3 rounded bg-[#0b0d11] border border-[#10b981]/30 space-y-1">
-                        <div className="text-[#10b981] font-bold">NODE 01</div>
-                        <div className="text-[#f3f4f6]">SCOUT</div>
-                        <div className="text-[10px] text-[#9ca3af]">URL & DOM Discovery</div>
+                        <div className="text-[#10b981] font-bold">TAHAP 1</div>
+                        <div className="text-[#f3f4f6]">Pemindaian</div>
+                        <div className="text-[10px] text-[#9ca3af]">Pencarian sumber resmi</div>
                       </div>
                       <div className="p-3 rounded bg-[#0b0d11] border border-[#10b981]/30 space-y-1">
-                        <div className="text-[#10b981] font-bold">NODE 02</div>
-                        <div className="text-[#f3f4f6]">EXTRACTOR</div>
-                        <div className="text-[10px] text-[#9ca3af]">Zod Schema Parsing</div>
+                        <div className="text-[#10b981] font-bold">TAHAP 2</div>
+                        <div className="text-[#f3f4f6]">Validasi</div>
+                        <div className="text-[10px] text-[#9ca3af]">Pemeriksaan format kolom</div>
                       </div>
                       <div className="p-3 rounded bg-[#0b0d11] border border-[#10b981]/30 space-y-1">
-                        <div className="text-[#10b981] font-bold">NODE 03</div>
-                        <div className="text-[#f3f4f6]">SYNTHESIZER</div>
-                        <div className="text-[10px] text-[#9ca3af]">Anomaly & Delta Risk</div>
+                        <div className="text-[#10b981] font-bold">TAHAP 3</div>
+                        <div className="text-[#f3f4f6]">Penyusunan</div>
+                        <div className="text-[10px] text-[#9ca3af]">Penyaringan data ganda</div>
                       </div>
                     </div>
 
                     <div className="p-3 rounded bg-[#1a202c] border border-white/5 font-mono text-[11px] text-[#9ca3af] space-y-1">
-                      <div>&gt; Pipeline Integrity: 100% Deterministic (Zero AI Slop)</div>
-                      <div>&gt; Anti-Fingerprint: Stealth CDP & Randomized Canvas TLS</div>
+                      <div>&gt; Penanganan otomatis saat format halaman sumber berubah</div>
+                      <div>&gt; Perlindungan privasi dan kepatuhan aturan akses informasi publik</div>
                     </div>
                   </div>
                 )}
@@ -289,11 +284,11 @@ export default function ScrollytellingContainer() {
                 {/* STATE 5: DECISION READY VALUE */}
                 {activeBeat === 5 && (
                   <div className="space-y-4 animate-in fade-in duration-300">
-                    <div className="p-3 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
+                    <div className="p-3.5 rounded-lg bg-[#10b981]/10 border border-[#10b981]/30 flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
                       <div className="text-xs space-y-1">
-                        <div className="font-semibold text-[#10b981] font-mono">DELIVERABLE TERVERIFIKASI // SIAP EKSEKUSI</div>
-                        <div className="text-[#9ca3af]">Output langsung masuk ke alur kerja manajemen Anda</div>
+                        <div className="font-semibold text-[#10b981] font-mono">FORMAT BERSIH SIAP PAKAI</div>
+                        <div className="text-[#9ca3af]">Dapat langsung dianalisis di Excel atau diintegrasikan ke sistem Anda</div>
                       </div>
                     </div>
 
@@ -301,23 +296,23 @@ export default function ScrollytellingContainer() {
                       <div className="p-2.5 rounded bg-[#0b0d11] border border-white/10 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Database className="w-4 h-4 text-[#10b981]" />
-                          <span>DATABASE SQLITE / PARQUET BERSIH</span>
+                          <span>Lembar Kerja Excel / CSV Terstruktur</span>
                         </div>
-                        <span className="text-[#10b981]">READY</span>
+                        <span className="text-[#10b981]">Lengkap</span>
                       </div>
                       <div className="p-2.5 rounded bg-[#0b0d11] border border-white/10 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4 text-[#f59e0b]" />
-                          <span>BOT TELEGRAM ALERT LAPANGAN</span>
+                          <span>Peringatan Pesan Telegram Harian</span>
                         </div>
-                        <span className="text-[#10b981]">ACTIVE</span>
+                        <span className="text-[#10b981]">Otomatis</span>
                       </div>
                       <div className="p-2.5 rounded bg-[#0b0d11] border border-white/10 flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <Terminal className="w-4 h-4 text-[#8f652e]" />
-                          <span>REST API ENDPOINT TERENKRIPSI</span>
+                          <span>Akses API Aman (Opsional Korporat)</span>
                         </div>
-                        <span className="text-[#10b981]">SECURE</span>
+                        <span className="text-[#10b981]">Tersedia</span>
                       </div>
                     </div>
 
@@ -326,7 +321,7 @@ export default function ScrollytellingContainer() {
                         href="#two-stage-guarantee"
                         className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-bold text-xs font-mono transition-all"
                       >
-                        <span>AMBIL SAMPEL 50 BARIS GRATIS TAHAP 1</span>
+                        <span>Minta Sampel Data Target Anda</span>
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>
@@ -337,8 +332,8 @@ export default function ScrollytellingContainer() {
 
               {/* Bottom Card Footer */}
               <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-[#9ca3af]">
-                <span>STANDAR: ISO 9001 DATA HYGIENE</span>
-                <span className="text-[#10b981]">PRADIKTIF ENGINE v2.4</span>
+                <span>Standar: Integritas Data Terverifikasi</span>
+                <span className="text-[#10b981]">PRADIKTIF DATA LAB</span>
               </div>
             </div>
           </div>
@@ -363,7 +358,7 @@ export default function ScrollytellingContainer() {
                         {beat.tag}
                       </span>
                       <span className="text-xs font-mono text-[#9ca3af]">
-                        FASE {beat.id} DARI 5
+                        Poin {beat.id} dari 5
                       </span>
                     </div>
 
@@ -379,7 +374,7 @@ export default function ScrollytellingContainer() {
                       &ldquo;{beat.quote}&rdquo;
                     </blockquote>
 
-                    {/* Measured Takeaway Box (Anti-empty card feet) */}
+                    {/* Measured Takeaway Box */}
                     <div className="pt-3 border-t border-white/10 text-xs font-mono text-[#10b981] flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#10b981]" />
                       <span>{beat.takeaway}</span>

@@ -21,153 +21,143 @@ interface VerticalData {
   shortName: string;
   icon: React.ElementType;
   targetClient: string;
-  bleedingNeckPain: string;
-  dataVectors: string[];
-  businessImpact: string;
-  deliverableFormat: string;
-  roiTakeaway: string;
+  coreChallenge: string;
+  dataParameters: string[];
+  operationalBenefits: string;
+  deliveryFormat: string;
+  valueTakeaway: string;
 }
 
 const VERTICALS: VerticalData[] = [
   {
     id: "lpse",
-    name: "Pengadaan Pemerintah & Tender (LPSE / LKPP)",
+    name: "Pengadaan Pemerintah & Lelang Tender (LPSE / LKPP)",
     shortName: "Pengadaan & Tender",
     icon: Building2,
-    targetClient: "Kontraktor Konstruksi, Vendor Pengadaan Barang/Jasa, Distributor Alkes.",
-    bleedingNeckPain: "Ketinggalan informasi lelang tender bernilai miliaran rupiah karena ratusan situs LPSE kementerian dan pemda terfragmentasi, sering mengalami gangguan server, dan tidak memiliki bot notifikasi terpusat.",
-    dataVectors: [
-      "Kode_Tender",
-      "Instansi_Pengada",
-      "Pagu_HPS_IDR",
-      "Syarat_KBLI_SBU",
-      "Batas_Akhir_Pendaftaran",
-      "Historical_Discount_Rate (Rata-rata diskon pemenang tender sebelumnya di dinas terkait)"
+    targetClient: "Kontraktor Konstruksi, Vendor Pengadaan Barang/Jasa, Distributor Alat Kesehatan.",
+    coreChallenge: "Banyak kontraktor kehilangan kesempatan lelang tender bernilai miliaran rupiah karena ratusan portal LPSE kementerian dan pemerintah daerah terpisah, sering mengalami gangguan server, dan tidak memiliki sistem notifikasi terpusat.",
+    dataParameters: [
+      "Kode dan Nama Paket Tender",
+      "Instansi dan Lokasi Pengadaan",
+      "Pagu Anggaran dan Nilai HPS",
+      "Persyaratan Kualifikasi KBLI / SBU",
+      "Batas Waktu Pendaftaran",
+      "Estimasi Pola Penawaran Pemenang Terdahulu di Dinas Terkait"
     ],
-    businessImpact: "Menerima notifikasi lelang baru di WhatsApp atau Telegram dalam 15 menit sejak tayang, lengkap dengan patokan harga tawar optimal untuk memenangkan lelang tanpa menebak.",
-    deliverableFormat: "Feed notifikasi bot Telegram harian dan rekap spreadsheet Excel terverifikasi setiap minggu.",
-    roiTakeaway: "ROI: Mengamankan 1 proyek lelang tender bernilai Rp 1 Miliar menutupi biaya pemantauan selama bertahun-tahun."
+    operationalBenefits: "Menerima pemberitahuan tender baru di Telegram atau WhatsApp dalam hitungan menit sejak penayangan, lengkap dengan perkiraan persentase penawaran harga optimal agar Anda tidak mengajukan penawaran secara asal menebak.",
+    deliveryFormat: "Pemberitahuan bot Telegram setiap kali ada tender baru dan rekap spreadsheet Excel terverifikasi setiap minggu.",
+    valueTakeaway: "Nilai Manfaat: Memenangkan satu paket tender bernilai ratusan juta rupiah sudah jauh melampaui investasi sistem pemantauan ini."
   },
   {
     id: "automotive",
-    name: "Otomotif, Multifinance & Leasing Gadai BPKB",
+    name: "Otomotif, Pembiayaan Multifinance & Gadai BPKB",
     shortName: "Otomotif & Leasing",
     icon: Car,
-    targetClient: "Perusahaan Pembiayaan (Multifinance), Balai Lelang Kendaraan, Dealer Mobil Bekas Skala Besar.",
-    bleedingNeckPain: "Salah menaksir harga pasar wajar kendaraan agunan BPKB. Saat nasabah gagal bayar, unit sitaan terpaksa dilelang rugi ratusan juta rupiah karena nilai pencairan pinjaman terlalu tinggi.",
-    dataVectors: [
-      "Brand",
-      "Model",
-      "Variant",
-      "Tahun_Pembuatan",
-      "Transmisi",
-      "Median_Price_IDR",
-      "Listing_Duration_Days",
-      "Depreciation_Curve_Monthly"
+    targetClient: "Perusahaan Pembiayaan (Multifinance), Balai Lelang Kendaraan, Dealer Mobil Bekas.",
+    coreChallenge: "Menaksir nilai pasar agunan BPKB kendaraan secara manual rawan keliru. Saat nasabah mengalami kredit macet, unit kendaraan sitaan terpaksa dilelang rugi karena batas pencairan awal ditetapkan terlalu tinggi.",
+    dataParameters: [
+      "Merek, Model, dan Varian Kendaraan",
+      "Tahun Pembuatan dan Jenis Transmisi",
+      "Harga Median Pasar Aktual",
+      "Lama Tayang Listing (Days on Market)",
+      "Tren Kurva Depresiasi Harga Bulanan"
     ],
-    businessImpact: "Menetapkan plafon pencairan kredit aman (Loan-to-Value 70%) secara presisi berdasarkan harga likuidasi riil di pasar, bukan asumsi taksiran manual.",
-    deliverableFormat: "Endpoint REST API taksiran nilai kendaraan atau master file CSV kurva depresiasi bulanan.",
-    roiTakeaway: "ROI: Mencegah kerugian kredit macet puluhan juta per unit kendaraan sitaan yang dilelang."
+    operationalBenefits: "Menetapkan plafon pencairan pinjaman aman (Loan-to-Value terukur) berdasarkan harga pasar transaksi riil, meminimalkan potensi kerugian saat kendaraan jaminan harus dilelang.",
+    deliveryFormat: "Akses endpoint API taksiran nilai pasar kendaraan atau berkas kurva depresiasi bulanan berformat CSV/Excel.",
+    valueTakeaway: "Nilai Manfaat: Menjaga batas aman pembiayaan dan mencegah kerugian lelang puluhan juta per unit kendaraan."
   },
   {
     id: "ecommerce",
-    name: "E-Commerce & Retail Marketplace Intelligence",
+    name: "E-Commerce & Intelijen Pasar Ritel Online",
     shortName: "E-Commerce & Retail",
     icon: ShoppingBag,
-    targetClient: "Brand Principal (FMCG, Skincare, Fashion, Gadget), Star Seller, E-Commerce Aggregator.",
-    bleedingNeckPain: "Perang harga akibat reseller tidak resmi menjual di bawah harga acuan resmi (MAP), serta ketidaktahuan kapan stok kompetitor utama habis di pasar.",
-    dataVectors: [
-      "SKU_ID",
-      "Product_Title",
-      "Seller_ID",
-      "Current_Price",
-      "MAP_Floor_Price",
-      "Violation_Flag",
-      "Units_Sold_24h",
-      "Estimated_GMV_IDR"
+    targetClient: "Pemilik Brand (FMCG, Skincare, Fashion, Elektronik), Star Seller, Distributor Resmi.",
+    coreChallenge: "Perang harga akibat reseller tidak resmi yang menjual di bawah harga acuan resmi (MAP) merusak margin distributor, sementara ketiadaan pemantauan stok pesaing membuat Anda melewatkan lonjakan permintaan saat barang pesaing habis.",
+    dataParameters: [
+      "ID dan Judul Produk Pesaing",
+      "Nama Toko dan Identitas Penjual",
+      "Harga Jual Saat Ini vs Batas Harga Resmi",
+      "Indikator Pelanggaran Harga Acuan",
+      "Perkiraan Unit Terjual per Siklus",
+      "Estimasi Nilai Transaksi per Kategori"
     ],
-    businessImpact: "Menertibkan reseller nakal dengan bukti screenshot otomatis, dan langsung melipatgandakan anggaran iklan saat stok kompetitor kosong untuk merebut pembeli aktif.",
-    deliverableFormat: "Dashboard mingguan CSV bersih dan alert pelanggaran harga secara real-time.",
-    roiTakeaway: "ROI: Menjaga integritas harga jaringan distributor dan menyedot transaksi saat kompetitor kehabisan stok."
+    operationalBenefits: "Mendapatkan bukti tangkapan layar otomatis untuk menertibkan reseller yang merusak harga pasar, serta langsung meningkatkan alokasi iklan promosi saat stok barang pesaing utama habis untuk merebut pembeli yang aktif mencari.",
+    deliveryFormat: "Laporan mingguan lembar kerja bersih dan notifikasi instan saat terdeteksi pelanggaran harga atau kehabisan stok.",
+    valueTakeaway: "Nilai Manfaat: Menjaga stabilitas harga jaringan distribusi dan menyerap transaksi saat kompetitor tidak siap stok."
   },
   {
     id: "property",
-    name: "Properti, Real Estate & Villa Sewa Harian (STR)",
-    shortName: "Properti & STR",
+    name: "Properti, Real Estate & Villa Sewa Harian",
+    shortName: "Properti & Villa",
     icon: Home,
-    targetClient: "Investor Properti Individu, Family Office, Operator Villa Bali/Jogja, Pengembang Perumahan.",
-    bleedingNeckPain: "Membeli unit apartemen atau villa dengan janji imbal hasil manis dari broker, padahal tingkat keterisian kamar aslinya sangat sepi dan pasar mengalami kelebihan pasokan.",
-    dataVectors: [
-      "Listing_ID",
-      "Cluster_Kecamatan",
-      "Days_on_Market (DOM > 180 Hari)",
-      "Price_Drop_History_Pct",
-      "Occupancy_Rate_90d",
-      "Average_Daily_Rate_IDR",
-      "Estimated_RevPAR"
+    targetClient: "Investor Properti, Pengelola Villa Wisata, Family Office, Pengembang Perumahan.",
+    coreChallenge: "Membeli unit apartemen atau villa sewa harian berdasarkan janji tingkat okupansi sepihak dari agen, padahal tingkat keterisian kamar aslinya rendah dan kawasan sekitar mengalami kelebihan pasokan.",
+    dataParameters: [
+      "Identitas dan Lokasi Listing Properti",
+      "Lama Tayang di Pasar (Days on Market > 180 Hari)",
+      "Riwayat Penurunan Harga yang Diajukan Penjual",
+      "Tingkat Okupansi Riil 90 Hari Terakhir",
+      "Rata-rata Tarif Harian (Average Daily Rate)",
+      "Estimasi Pendapatan Kamar Tersedia (RevPAR)"
     ],
-    businessImpact: "Menemukan penjual properti terdesak untuk ditawar diskon besar, serta memvalidasi okupansi dan estimasi pendapatan sewa harian riil sebelum mentransfer dana investasi.",
-    deliverableFormat: "Laporan analisis kelayakan yield area radius 2 km berformat PDF dan spreadsheet CSV queryable.",
-    roiTakeaway: "ROI: Menghemat ratusan juta rupiah saat negosiasi beli dan menghindari aset sewa berkinerja buruk."
+    operationalBenefits: "Menemukan penjual properti yang listing-nya sudah lama tidak terjual untuk dinegosiasi dengan diskon signifikan, serta memvalidasi potensi keuntungan sewa secara objektif sebelum menandatangani perjanjian pembelian.",
+    deliveryFormat: "Laporan kelayakan investasi properti radius 2 km berformat PDF ringkas dan lembar kerja data CSV.",
+    valueTakeaway: "Nilai Manfaat: Menghindarkan Anda dari investasi properti salah beli dan membuka ruang tawar harga lebih menguntungkan."
   },
   {
     id: "litigation",
-    name: "Hukum, Litigasi & Deteksi Kepailitan (PKPU / Pailit)",
-    shortName: "Hukum & PKPU",
+    name: "Hukum, Litigasi Niaga & Deteksi Dini Kepailitan",
+    shortName: "Hukum & Kepailitan",
     icon: Scale,
-    targetClient: "Bank Korporat, Konsorsium Kreditur, Kantor Hukum (Law Firm), Auditor Finansial.",
-    bleedingNeckPain: "Terlambat mengetahui debitur besar digugat PKPU atau pailit di Pengadilan Niaga, menyebabkan hilangnya hak suara voting restrukturisasi utang miliaran rupiah.",
-    dataVectors: [
-      "Nomor_Perkara",
-      "Pengadilan_Niaga",
-      "Nama_Termohon_PKPU",
-      "Nama_Pemohon",
-      "Tanggal_Daftar",
-      "Status_Perkara",
-      "Klasifikasi_Utang"
+    targetClient: "Bank Korporasi, Tim Kreditur, Kantor Hukum (Law Firm), Auditor Finansial.",
+    coreChallenge: "Terlambat mengetahui mitra bisnis atau debitur besar didaftarkan perkara PKPU atau Pailit di Pengadilan Niaga, yang dapat berakibat hilangnya hak suara resmi dalam rapat restrukturisasi piutang bernilai miliaran rupiah.",
+    dataParameters: [
+      "Nomor Registrasi Perkara",
+      "Pengadilan Niaga Terkait",
+      "Nama Termohon dan Pemohon PKPU/Pailit",
+      "Tanggal Pendaftaran Resmi",
+      "Klasifikasi dan Status Terkini Perkara"
     ],
-    businessImpact: "Menjadi pihak pertama yang mendaftarkan piutang resmi sebelum batas waktu verifikasi kurator ditutup oleh pengadilan niaga.",
-    deliverableFormat: "Feed alert kepailitan otomatis via email dan Telegram dalam 1 jam setelah perkara tercatat di SIPP.",
-    roiTakeaway: "ROI: Mengamankan hak tagih utang bernilai miliaran rupiah sebelum aset debitur disita pihak lain."
+    operationalBenefits: "Menjadi pihak pertama yang mendaftarkan tagihan piutang resmi sebelum tenggat waktu verifikasi kurator ditutup, sehingga hak hukum dan pengembalian dana perusahaan tetap terlindungi.",
+    deliveryFormat: "Pemberitahuan otomatis via email atau Telegram dalam beberapa jam setelah perkara terdaftar resmi di pengadilan.",
+    valueTakeaway: "Nilai Manfaat: Memastikan kepastian hak tagih piutang perusahaan sebelum aset debitur disita pihak lain."
   },
   {
     id: "commodities",
-    name: "Komoditas Tambang, Energi & Logistik Maritim",
+    name: "Komoditas Pertambangan, Energi & Logistik Maritim",
     shortName: "Komoditas & Maritim",
     icon: Ship,
-    targetClient: "Trader Batubara/Nikel, Pemilik Armada Tongkang (Tug & Barge), Broker Komoditas.",
-    bleedingNeckPain: "Terkena denda keterlambatan sandar kapal (demurrage) puluhan juta rupiah per hari akibat antrean liar di pelabuhan muara atau jalur keluar sungai tambang.",
-    dataVectors: [
-      "H3_Hex_Cell",
-      "Port_Zone_Name",
-      "Active_Vessel_Count",
-      "Avg_Dwell_Minutes",
-      "Rolling_Z_Score",
-      "Congestion_Status",
-      "MODI_Quota_Delta"
+    targetClient: "Trader Batubara dan Mineral, Pemilik Armada Tongkang, Perusahaan Ekspedisi Laut.",
+    coreChallenge: "Terkena beban denda keterlambatan sandar kapal (demurrage) puluhan juta rupiah per hari akibat antrean kapal yang menumpuk di pelabuhan muara atau jalur keluar sungai tambang tanpa peringatan dini.",
+    dataParameters: [
+      "Zona Area Labuh Heksagonal",
+      "Nama Area Pelabuhan atau Muara",
+      "Jumlah Armada Aktif Terpantau",
+      "Rata-rata Waktu Tunggu (Dwell-Time)",
+      "Status Kepadatan dibandingkan Kondisi Wajar",
+      "Pergerakan Perubahan Kuota Ekspor"
     ],
-    businessImpact: "Mengantisipasi hambatan jalur tongkang dari sungai Barito/Mahakam dan memitigasi risiko demurrage 5 hari sebelum kapal kargo tiba di titik labuh.",
-    deliverableFormat: "Indeks kepadatan pelabuhan harian berbasis H3 grid via CSV atau Parquet.",
-    roiTakeaway: "ROI: Mencegah denda demurrage puluhan juta per hari per kapal tongkang yang menunggu antrean."
+    operationalBenefits: "Mengantisipasi hambatan antrean kapal di muara sungai utama beberapa hari sebelum armada tiba, sehingga rute tongkang atau jadwal pengiriman dapat disesuaikan untuk memangkas risiko denda tunggu kapal.",
+    deliveryFormat: "Indeks kepadatan pelabuhan harian dalam lembar kerja spreadsheet atau feed notifikasi data otomatis.",
+    valueTakeaway: "Nilai Manfaat: Menghemat biaya denda tunggu puluhan juta per hari per kapal yang mengantre di pelabuhan."
   },
   {
     id: "seo",
-    name: "SEO & Digital Presence Intelligence",
-    shortName: "SEO & Digital Presence",
+    name: "SEO Teknis & Visibilitas Pencarian Digital",
+    shortName: "SEO & Kehadiran Web",
     icon: Globe,
-    targetClient: "Agensi Pemasaran Digital, Brand Korporat B2B, Publisher Berita, Pemilik Jaringan Media.",
-    bleedingNeckPain: "Kehilangan pangsa lalu lintas pencarian bernilai miliaran akibat buta terhadap pergeseran algoritma, tidak mengetahui celah kata kunci lawan, atau penurunan peringkat tiba-tiba.",
-    dataVectors: [
-      "Keyword_Cluster",
-      "Search_Volume_Intent",
-      "SERP_Competitor_Overlap",
-      "Backlink_Toxicity_Score",
-      "Core_Web_Vitals_Delta",
-      "Estimated_Traffic_Value"
+    targetClient: "Brand Korporat B2B, Agensi Pemasaran Digital, Pemilik Portal Berita dan Media.",
+    coreChallenge: "Kehilangan potensi calon klien bernilai besar karena tidak mengetahui kata kunci pencarian yang sedang direbut pesaing atau penurunan peringkat pencarian yang tidak segera disadari.",
+    dataParameters: [
+      "Klaster Kata Kunci Bernilai Konversi Tinggi",
+      "Volume dan Minat Pencarian Pengguna",
+      "Tingkat Persaingan Hasil Pencarian (SERP)",
+      "Skor Kesehatan Tautan Eksternal (Backlink)",
+      "Metrik Kecepatan Web (Core Web Vitals)"
     ],
-    businessImpact: "Merekayasa balik strategi SEO kompetitor secara algoritmik, menemukan celah pasar tersembunyi, dan mengoptimalkan aset digital berdasarkan data empiris.",
-    deliverableFormat: "Matriks Celah Kata Kunci Excel, Laporan Audit Teknis Situs (PDF), dan Dasbor Monitor Posisi Peringkat Waktu Nyata.",
-    roiTakeaway: "ROI: Memangkas biaya iklan berbayar dengan merebut peringkat pencarian organik bernilai tinggi."
+    operationalBenefits: "Menemukan celah kata kunci pencarian yang belum digarap pesaing dan merapikan struktur web berbasis data konkret untuk meningkatkan kunjungan calon pembeli tanpa terus bergantung pada iklan berbayar.",
+    deliveryFormat: "Matriks Celah Kata Kunci Excel, Laporan Rekomendasi Teknis, dan Dasbor Pemantau Peringkat Berkala.",
+    valueTakeaway: "Nilai Manfaat: Memangkas ketergantungan biaya iklan dengan membangun saluran pencarian organik yang menghasilkan prospek berkelanjutan."
   }
 ];
 
@@ -182,13 +172,13 @@ export default function VerticalHubsMatrix() {
         {/* Header */}
         <div className="max-w-3xl space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#8f652e] px-3 py-1 rounded bg-[#141820] border border-[#8f652e]/30">
-            <span>MATRIKS SEKTOR // SPESIALISASI INDUSTRI NYATA</span>
+            <span>SOLUSI BERDASARKAN SEKTOR USAHA</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-semibold text-[#f3f4f6] tracking-tight">
-            Kami Menyelesaikan Masalah Operasional Spesifik, Bukan Menjual Data Abstrak.
+            Solusi Terarah untuk Kebutuhan Spesifik Industri Anda
           </h2>
-          <p className="text-sm sm:text-base text-[#9ca3af]">
-            Klien membayar mahal karena menghadapi kebocoran laba bersih atau risiko lelang yang mendesak. Pilih sektor industri Anda untuk melihat spesifikasi data dan dampak finansialnya.
+          <p className="text-sm sm:text-base text-[#9ca3af] leading-relaxed">
+            Setiap industri menghadapi risiko operasional yang berbeda, mulai dari keterlambatan info tender lelang hingga persaingan harga yang menekan margin. Pilih sektor usaha Anda untuk melihat parameter data yang kami pantau dan manfaat langsungnya untuk bisnis Anda.
           </p>
         </div>
 
@@ -222,79 +212,79 @@ export default function VerticalHubsMatrix() {
             {/* Title & Target Client */}
             <div className="flex flex-wrap items-start justify-between gap-4 pb-6 border-b border-white/10">
               <div className="space-y-1">
-                <div className="text-xs font-mono text-[#10b981]">SEKTOR AKTIF // {activeVertical.id.toUpperCase()}</div>
+                <div className="text-xs font-mono text-[#10b981]">SEKTOR PILIHAN // {activeVertical.shortName.toUpperCase()}</div>
                 <h3 className="text-xl sm:text-2xl font-semibold text-[#f3f4f6]">
                   {activeVertical.name}
                 </h3>
               </div>
               <div className="p-3 rounded-lg bg-[#1a202c] border border-white/5 text-xs text-[#9ca3af] max-w-md">
-                <span className="text-[#f3f4f6] font-medium font-mono">TARGET KLIEN: </span>
+                <span className="text-[#f3f4f6] font-medium font-mono">Relevan untuk: </span>
                 {activeVertical.targetClient}
               </div>
             </div>
 
-            {/* Bleeding Neck Pain Box */}
+            {/* Core Challenge Box */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#ef4444]/5 border border-[#ef4444]/20 space-y-2">
               <div className="flex items-center gap-2 text-xs font-mono text-[#ef4444] font-semibold">
                 <AlertCircle className="w-4 h-4 text-[#ef4444]" />
-                <span>TITIK SAKIT FINANSIAL UTAMA (THE BLEEDING NECK PROBLEM)</span>
+                <span>TANTANGAN UTAMA DI LAPANGAN:</span>
               </div>
               <p className="text-sm text-[#f3f4f6]/90 leading-relaxed">
-                {activeVertical.bleedingNeckPain}
+                {activeVertical.coreChallenge}
               </p>
             </div>
 
-            {/* 2-Column: Data Vectors & Business Impact */}
+            {/* 2-Column: Data Parameters & Operational Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
               
-              {/* Column 1: Exact Data Vectors */}
+              {/* Column 1: Exact Data Parameters */}
               <div className="p-5 rounded-xl bg-[#0b0d11] border border-white/10 space-y-3">
                 <div className="flex items-center gap-2 text-xs font-mono text-[#10b981]">
                   <FileSpreadsheet className="w-4 h-4 text-[#10b981]" />
-                  <span>VEKTOR DATA YANG DISERAHKAN (KOLOM RIIL)</span>
+                  <span>PARAMETER DATA YANG ANDA TERIMA:</span>
                 </div>
                 <div className="space-y-1.5 font-mono text-xs text-[#9ca3af]">
-                  {activeVertical.dataVectors.map((col, idx) => (
+                  {activeVertical.dataParameters.map((col, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <span className="text-[#10b981] select-none">&gt;</span>
+                      <span className="text-[#10b981] select-none">&bull;</span>
                       <span className="text-[#f3f4f6]">{col}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Column 2: Business Impact & Deliverables */}
+              {/* Column 2: Operational Benefits & Delivery Format */}
               <div className="space-y-4">
                 <div className="p-5 rounded-xl bg-[#1a202c] border border-white/5 space-y-2">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#10b981]">
                     <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                    <span>DAMPAK BISNIS TERUKUR</span>
+                    <span>MANFAAT LANGSUNG UNTUK OPERASIONAL:</span>
                   </div>
                   <p className="text-xs sm:text-sm text-[#9ca3af] leading-relaxed">
-                    {activeVertical.businessImpact}
+                    {activeVertical.operationalBenefits}
                   </p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-[#0b0d11] border border-white/10 text-xs font-mono space-y-1">
-                  <div className="text-[#8f652e]">FORMAT DELIVERABLE RESMI:</div>
-                  <div className="text-[#f3f4f6]">{activeVertical.deliverableFormat}</div>
+                  <div className="text-[#8f652e]">FORMAT PENGIRIMAN:</div>
+                  <div className="text-[#f3f4f6]">{activeVertical.deliveryFormat}</div>
                 </div>
               </div>
 
             </div>
 
-            {/* Measured Takeaway Footer */}
+            {/* Value Takeaway Footer */}
             <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
               <div className="text-xs font-mono text-[#10b981] flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#10b981]" />
-                <span>{activeVertical.roiTakeaway}</span>
+                <span>{activeVertical.valueTakeaway}</span>
               </div>
 
               <a
                 href="#two-stage-guarantee"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] text-xs font-semibold font-mono transition-all"
               >
-                <span>Minta Draf Sampel Sektor Ini</span>
+                <span>Minta Contoh Data Sektor Ini</span>
                 <Send className="w-3.5 h-3.5" />
               </a>
             </div>

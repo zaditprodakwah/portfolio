@@ -14,7 +14,7 @@ export default function EnterpriseFounderFooter() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981] px-3 py-1 rounded-full bg-[#141820] border border-[#10b981]/30">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>LEGALITAS RESMI & ENTITAS BADAN USAHA</span>
+              <span>LEGALITAS RESMI DAN ENTITAS BADAN USAHA</span>
             </div>
 
             <div className="space-y-2">
@@ -30,7 +30,7 @@ export default function EnterpriseFounderFooter() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
               <div className="p-3.5 rounded-xl bg-[#141820] border border-white/5 space-y-1">
                 <div className="text-white/40">// NOMOR INDUK BERUSAHA</div>
-                <div className="text-[#f3f4f6] font-semibold">NIB 2024 RESMI</div>
+                <div className="text-[#f3f4f6] font-semibold">NIB: 1801250039976</div>
                 <div className="text-[#9ca3af] text-[11px]">KBLI: Konsultasi Manajemen & Pemrograman</div>
               </div>
 
@@ -44,10 +44,10 @@ export default function EnterpriseFounderFooter() {
             <div className="p-4 rounded-xl bg-[#141820] border border-white/5 space-y-2 text-xs text-[#9ca3af]">
               <div className="text-[#f3f4f6] font-semibold font-mono flex items-center gap-2">
                 <UserCheck className="w-4 h-4 text-[#10b981]" />
-                <span>Konsultan Utama & Rekayasawan Sistem:</span>
+                <span>Konsultan Utama & Penanggung Jawab Sistem:</span>
               </div>
               <p className="leading-relaxed">
-                <strong className="text-[#f3f4f6]">Muhammad Khoiruzzadittaqwa, S.Pd. (Zadit)</strong>. Klien berinteraksi langsung satu pintu dengan perancang dan rekayasawan sistem utama tanpa perantara sales junior yang tidak memahami arsitektur data.
+                <strong className="text-[#f3f4f6]">Muhammad Khoiruzzadittaqwa, S.Pd. (Zadit)</strong>. Anda berkomunikasi langsung satu pintu dengan perancang dan rekayasawan sistem utama tanpa perantara pihak ketiga yang tidak memahami kebutuhan teknis Anda.
               </p>
             </div>
           </div>
@@ -55,12 +55,12 @@ export default function EnterpriseFounderFooter() {
           {/* Column 2: DIRECT CONSULTATION CHANNELS (5 cols) */}
           <div className="lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-[#141820] border border-white/10 space-y-5">
             <div className="space-y-1">
-              <div className="text-xs font-mono text-[#8f652e]">KONSULTASI ASINKRON // SATU PINTU</div>
+              <div className="text-xs font-mono text-[#8f652e]">KONSULTASI LANGSUNG SATU PINTU</div>
               <h4 className="text-lg font-semibold text-[#f3f4f6]">
-                Mulai Pembicaraan Tanpa Birokratis
+                Mulai Diskusi Kebutuhan Anda
               </h4>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Kirimkan tautan target, pertanyaan spesifikasi, atau kebutuhan lelang Anda. Kami merespons dengan analisis kelayakan dalam 24 jam kerja.
+                Kirimkan tautan target, pertanyaan spesifikasi, atau kebutuhan lelang Anda. Kami merespons dengan analisis kelayakan awal dalam 24 jam kerja.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function EnterpriseFounderFooter() {
             </div>
 
             <div className="pt-2 text-[11px] font-mono text-[#9ca3af] text-center">
-              Waktu Respons: &lt; 2 Jam pada Hari Kerja (08.00 - 18.00 WIB)
+              Waktu Respon Cepat: Hari Kerja (08.00 - 18.00 WIB)
             </div>
           </div>
 
@@ -114,11 +114,11 @@ export default function EnterpriseFounderFooter() {
             &copy; {new Date().getFullYear()} PT Prisma Digital Kreatif. Seluruh hak cipta dilindungi undang-undang.
           </div>
           <div className="flex items-center gap-4 text-[11px]">
-            <span>WCAG 2.1 AA COMPLIANT</span>
+            <span>Kepatuhan Aksesibilitas WCAG 2.1 AA</span>
             <span className="text-white/20">•</span>
-            <span>ZERO MNPI PROTOCOL</span>
+            <span>Standar Perlindungan Data Pribadi</span>
             <span className="text-white/20">•</span>
-            <span className="text-[#10b981]">PRADIKTIF ENGINE v2.4</span>
+            <span className="text-[#10b981]">PRADIKTIF DATA LAB</span>
           </div>
         </div>
 

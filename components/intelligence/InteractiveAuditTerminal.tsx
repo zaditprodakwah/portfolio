@@ -17,8 +17,8 @@ export default function InteractiveAuditTerminal() {
 
   const handleCopy = () => {
     const textToCopy = activeFeed === "priok" 
-      ? "H3_INDEX: h3_08_+0000361_-0000023 | BASELINE: 17.6 | CURRENT: 35 | Z_SCORE: +3.53 | STATUS: ANOMALY_SPIKE"
-      : "CYCLE: T-0_vs_T-1 | AUDITED: 50_SKU | OOS_ITEMS: 3 | INFERRED_GMV: Rp14,250,000 | ACTION: CONQUESTING_ALERT";
+      ? "LOKASI: Area Labuh Luar Tanjung Priok | RATA-RATA: 17.6 Kapal | AKTUAL: 35 Kapal | STATUS: KEPADATAN MENINGKAT | WAKTU TUNGGU: +220 Menit"
+      : "INTERVAL: 6 Jam | TOTAL ITEM: 50 SKU | BARANG HABIS: 3 Produk | ESTIMASI NILAI TRANSAKSI: Rp 14.250.000";
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -32,13 +32,13 @@ export default function InteractiveAuditTerminal() {
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#10b981] px-3 py-1 rounded-full bg-[#141820] border border-[#10b981]/30">
             <Terminal className="w-3.5 h-3.5" />
-            <span>PEMBUKTIAN TEKNIS DETERMINISTIK</span>
+            <span>SIMULASI PEMANTAUAN DATA LANGSUNG</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-semibold text-[#f3f4f6] tracking-tight">
-            Terminal Intelijen Interaktif
+            Pratinjau Pengolahan Data Lapangan
           </h2>
-          <p className="text-sm text-[#9ca3af]">
-            Lihat langsung bagaimana engine lokal SPECTRE mengeksekusi perhitungan kuantisasi spasial H3, statistik Z-Score, dan inferensi delta stok tanpa mock terselubung.
+          <p className="text-sm text-[#9ca3af] leading-relaxed">
+            Lihat contoh bagaimana sistem kami mengolah data pergerakan logistik maritim dan perubahan stok etalase produk secara otomatis menjadi informasi yang siap Anda gunakan.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function InteractiveAuditTerminal() {
                       : "text-[#9ca3af] hover:text-white"
                   }`}
                 >
-                  FEED 1: MARITIM PRIOK
+                  Contoh 1: Kepadatan Maritim
                 </button>
                 <button
                   onClick={() => setActiveFeed("ecommerce")}
@@ -76,7 +76,7 @@ export default function InteractiveAuditTerminal() {
                       : "text-[#9ca3af] hover:text-white"
                   }`}
                 >
-                  FEED 2: E-COMMERCE DELTA
+                  Contoh 2: Perubahan Stok Ritel
                 </button>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function InteractiveAuditTerminal() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#0b0d11] hover:bg-[#1a202c] text-xs font-mono text-[#9ca3af] hover:text-white border border-white/10 transition-all"
               >
                 <RefreshCw className={`w-3.5 h-3.5 ${isSimulating ? "animate-spin text-[#10b981]" : ""}`} />
-                <span>{isSimulating ? "MEMINDAI..." : "JALANKAN ULANG"}</span>
+                <span>{isSimulating ? "Memperbarui..." : "Perbarui Data"}</span>
               </button>
 
               <button
@@ -97,7 +97,7 @@ export default function InteractiveAuditTerminal() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#0b0d11] hover:bg-[#1a202c] text-xs font-mono text-[#9ca3af] hover:text-white border border-white/10 transition-all"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-[#10b981]" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? "TERSALIN" : "SALIN DATA"}</span>
+                <span>{copied ? "Tersalin" : "Salin Ringkasan"}</span>
               </button>
             </div>
 
@@ -110,40 +110,40 @@ export default function InteractiveAuditTerminal() {
               /* PRIOK MARITIME TELEMETRY */
               <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="text-[#9ca3af] flex items-center justify-between border-b border-white/5 pb-2">
-                  <span>// TARGET TELEMETRI: PELABUHAN TANJUNG PRIOK (ZONA LABUH LUAR)</span>
+                  <span>// Pemantauan Area: Zona Labuh Luar Tanjung Priok</span>
                   <span className="text-[#10b981] flex items-center gap-1.5">
                     <Radio className="w-3.5 h-3.5 animate-pulse" />
-                    LIVE_SENSOR_ONLINE
+                    Sensor Aktif
                   </span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2 bg-[#141820] p-4 rounded-xl border border-white/5">
-                    <div className="text-white/40 text-xs">// KOORDINAT GRID H3</div>
-                    <div className="text-[#f3f4f6] text-sm">h3_08_+0000361_-0000023</div>
-                    <div className="text-xs text-[#9ca3af]">Resolusi 8 (Akurasi ~400 meter radius)</div>
+                    <div className="text-white/40 text-xs">// Radius Wilayah Pemantauan</div>
+                    <div className="text-[#f3f4f6] text-sm">Zona Heksagonal (~400 meter)</div>
+                    <div className="text-xs text-[#9ca3af]">Menyaring koordinat GPS menjadi klaster akurat</div>
                   </div>
 
                   <div className="space-y-2 bg-[#141820] p-4 rounded-xl border border-white/5">
-                    <div className="text-white/40 text-xs">// STATISTIK BASELINE 14 HARI</div>
-                    <div className="text-[#f3f4f6] text-sm">Rata-rata: 17.6 Kapal | Deviasi: 4.93</div>
-                    <div className="text-xs text-[#f59e0b]">Armada Aktual Terdeteksi: 35 Kapal (+72%)</div>
+                    <div className="text-white/40 text-xs">// Data Pembanding (Rata-rata 14 Hari)</div>
+                    <div className="text-[#f3f4f6] text-sm">Standar Normal: 17 - 18 Kapal</div>
+                    <div className="text-xs text-[#f59e0b]">Armada Terdeteksi Saat Ini: 35 Kapal (+72%)</div>
                   </div>
                 </div>
 
                 <div className="p-4 rounded-xl bg-[#141820] border border-white/10 space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="text-white/60">ANALISIS STATISTICAL PROCESS CONTROL (SPC):</span>
+                    <span className="text-white/60">Hasil Analisis Kepadatan:</span>
                     <span className="px-2.5 py-1 rounded bg-[#ef4444]/20 border border-[#ef4444]/40 text-[#ef4444] font-bold text-xs flex items-center gap-1.5">
                       <AlertOctagon className="w-3.5 h-3.5" />
-                      SKOR Z-SCORE: +3.53 SIGMA [ANOMALI TERTINGGI]
+                      Status: Peningkatan Kepadatan Tajam
                     </span>
                   </div>
 
                   <div className="text-xs text-[#9ca3af] space-y-1.5 pt-2 border-t border-white/5">
-                    <div>&gt; SWARM STATUS: 4 Node Agen Aktif melakukan validasi silang AIS maritim.</div>
-                    <div>&gt; ESTIMASI DAMPAK: Kenaikan waktu tunggu bongkar muat (dwell-time): +220 menit per kapal.</div>
-                    <div>&gt; KESIMPULAN REKOMENDASI: Risiko denda demurrage kargo tongkang batubara: TINGGI.</div>
+                    <div>&gt; Verifikasi Silang: Data sinyal armada dikonfirmasi dari berbagai penerima AIS maritim.</div>
+                    <div>&gt; Estimasi Dampak: Waktu tunggu sandar diperkirakan meningkat rata-rata 3,5 jam per kapal.</div>
+                    <div>&gt; Saran Tindakan: Sesuaikan jadwal kapal tongkang tujuan muara untuk menghindari denda tunggu.</div>
                   </div>
                 </div>
               </div>
@@ -151,40 +151,40 @@ export default function InteractiveAuditTerminal() {
               /* E-COMMERCE MULTI-CYCLE DELTA */
               <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="text-[#9ca3af] flex items-center justify-between border-b border-white/5 pb-2">
-                  <span>// TARGET DELTA: KATALOG RESELLER & KOMPETITOR UTAMA</span>
+                  <span>// Pemantauan Toko: Etalase Pesaing Utama & Jaringan Reseller</span>
                   <span className="text-[#10b981] flex items-center gap-1.5">
                     <TrendingUp className="w-3.5 h-3.5" />
-                    SNAPSHOT_INTERVAL_6H
+                    Pembaruan Berkala
                   </span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2 bg-[#141820] p-4 rounded-xl border border-white/5">
-                    <div className="text-white/40 text-xs">// CAKUPAN AUDIT KATALOG</div>
-                    <div className="text-[#f3f4f6] text-sm">50 SKU Terpantau Real-Time</div>
-                    <div className="text-xs text-[#10b981]">Total Inferred GMV: Rp 14.250.000 / Siklus</div>
+                    <div className="text-white/40 text-xs">// Jumlah Produk Terpantau</div>
+                    <div className="text-[#f3f4f6] text-sm">50 Produk Kategori Unggulan</div>
+                    <div className="text-xs text-[#10b981]">Estimasi Perputaran Nilai: Rp 14.250.000 / Siklus</div>
                   </div>
 
                   <div className="space-y-2 bg-[#141820] p-4 rounded-xl border border-white/5">
-                    <div className="text-white/40 text-xs">// PELANGGARAN HARGA ACUAN (MAP)</div>
-                    <div className="text-[#ef4444] text-sm">2 Toko Reseller Melanggar</div>
-                    <div className="text-xs text-[#ef4444]">Bantingan Harga: -Rp 45.000 dari HET Resmi</div>
+                    <div className="text-white/40 text-xs">// Pemantauan Kepatuhan Harga</div>
+                    <div className="text-[#ef4444] text-sm">2 Toko Menjual di Bawah Harga Acuan</div>
+                    <div className="text-xs text-[#ef4444]">Selisih: Rp 45.000 lebih murah dari batas resmi</div>
                   </div>
                 </div>
 
                 <div className="p-4 rounded-xl bg-[#141820] border border-white/10 space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="text-white/60">STATUS SINYAL OTONOM:</span>
+                    <span className="text-white/60">Peluang Penjualan yang Terbuka:</span>
                     <span className="px-2.5 py-1 rounded bg-[#10b981]/20 border border-[#10b981]/40 text-[#10b981] font-bold text-xs flex items-center gap-1.5">
                       <Cpu className="w-3.5 h-3.5" />
-                      ACTION_TRIGGER: OUT_OF_STOCK CONQUESTING
+                      Peringatan: Stok Barang Pesaing Habis
                     </span>
                   </div>
 
                   <div className="text-xs text-[#9ca3af] space-y-1.5 pt-2 border-t border-white/5">
-                    <div>&gt; SKU HERO KOMPETITOR: Stok 48 unit habis terjual (Stok = 0).</div>
-                    <div>&gt; REKOMENDASI OTOMASI: Lipatgandakan anggaran iklan produk substitusi klien sebesar 40%.</div>
-                    <div>&gt; ESTIMASI KEUNTUNGAN: Menyerap 70% pembeli aktif yang mencari produk tersebut hari ini.</div>
+                    <div>&gt; Situasi Lapangan: Produk utama kompetitor habis terjual (stok 0 unit).</div>
+                    <div>&gt; Saran Tindakan: Naikkan visibilitas iklan untuk produk serupa milik Anda selama persediaan kompetitor belum terisi.</div>
+                    <div>&gt; Potensi: Menjangkau calon pembeli yang siap bertransaksi namun mendapati toko sebelah kosong.</div>
                   </div>
                 </div>
               </div>
@@ -192,8 +192,8 @@ export default function InteractiveAuditTerminal() {
 
             {/* Bottom Terminal Footnote */}
             <div className="pt-3 border-t border-white/10 text-xs text-[#9ca3af] flex flex-wrap items-center justify-between gap-2">
-              <span>ALGORITMA: PRADIKTIF STATISTICAL INFERENCE ENGINE (ISO COMPLIANT)</span>
-              <span className="text-[#10b981]">ZERO MNPI // 100% REVERSIBLE AUDIT TRAIL</span>
+              <span>Sumber: Agregasi data publik terbuka dan terverifikasi</span>
+              <span className="text-[#10b981]">Kepatuhan Etika Akses Data dan Privasi</span>
             </div>
 
           </div>

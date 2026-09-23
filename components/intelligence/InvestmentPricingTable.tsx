@@ -1,5 +1,5 @@
 import React from "react";
-import { Check, ArrowRight, Zap, Shield, Sparkles } from "lucide-react";
+import { Check, ArrowRight, Sparkles } from "lucide-react";
 
 interface PricingTier {
   id: string;
@@ -17,60 +17,60 @@ interface PricingTier {
 const TIERS: PricingTier[] = [
   {
     id: "starter",
-    name: "Starter Intelligence Audit",
+    name: "Audit Awal Terfokus",
     price: "Rp 750.000",
-    period: "Sekali Bayar",
-    description: "Validasi 1 target toko, wilayah, atau perkara hukum untuk menguji keakuratan data sebelum ekspansi.",
+    period: "Satu Kali Pembayaran",
+    description: "Cocok untuk menguji kualitas dan kecocokan data pada 1 target toko, wilayah, atau sektor sebelum berlangganan.",
     features: [
-      "1 Target Toko / Wilayah / Sektor",
-      "50 hingga 100 baris data tervalidasi",
-      "Pemeriksaan draf bertanda air tahap 1 gratis",
-      "Laporan ringkasan analisis format PDF",
-      "Master file CSV dan kamus data kolom",
-      "Waktu serah terima 24 hingga 48 jam"
+      "1 Target Toko / Wilayah / Sektor lelang",
+      "50 hingga 100 baris data terverifikasi",
+      "Pemeriksaan sampel draf pratinjau terlebih dahulu",
+      "Ringkasan temuan dan kamus struktur kolom",
+      "Format lembar kerja Excel / CSV siap pakai",
+      "Penyerahan dalam 24 hingga 48 jam kerja"
     ],
-    ctaText: "Mulai Audit Ad-Hoc",
-    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20tertarik%20dengan%20Paket%20Starter%20Intelligence%20Audit%20Rp%20750.000.",
-    takeaway: "Ideal untuk pengujian hipotesis awal atau audit satu toko kompetitor."
+    ctaText: "Pesan Uji Coba Awal",
+    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20tertarik%20dengan%20Paket%20Audit%20Awal%20Terfokus%20Rp%20750.000.",
+    takeaway: "Langkah awal tepat untuk memvalidasi akurasi data sebelum memulai proyek skala penuh."
   },
   {
     id: "sentinel",
-    name: "Operational Sentinel",
+    name: "Pemantauan Operasional Rutin",
     price: "Rp 2.500.000",
     period: "per bulan",
     isPopular: true,
-    description: "Sistem pemantauan berkelanjutan untuk kontraktor lelang, brand marketplace, dan investor aset sewa.",
+    description: "Sistem pemantauan berkelanjutan untuk kontraktor tender, pemilik brand ritel, dan pengelola portofolio properti.",
     features: [
-      "Pemantauan aktif selama 30 hari kalender",
+      "Pemantauan harian aktif selama 30 hari kalender",
       "Pilihan sektor: LPSE, E-Commerce, atau Properti",
-      "Notifikasi instan bot Telegram ke ponsel Anda",
-      "Otomasi Daily Digest ringkasan setiap pagi",
-      "Deteksi anomali harga dan alert stok kosong",
-      "Rekap mingguan format Excel terverifikasi",
-      "Dukungan konsultasi teknis langsung dengan Zadit"
+      "Notifikasi instan bot Telegram langsung ke ponsel",
+      "Ringkasan rekapitulasi data setiap pagi",
+      "Peringatan dini saat terdeteksi anomali harga atau stok",
+      "Rekap spreadsheet mingguan yang sudah diverifikasi",
+      "Konsultasi teknis langsung satu pintu dengan Zadit"
     ],
-    ctaText: "Aktifkan Sentinel Rutin",
-    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20ingin%20mengaktifkan%20Paket%20Operational%20Sentinel%20Rp%202.500.000%2Fbulan.",
-    takeaway: "Pilihan paling populer untuk mencegah keterlambatan lelang dan kebocoran harga."
+    ctaText: "Mulai Pemantauan Rutin",
+    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20saya%20ingin%20mengaktifkan%20Pemantauan%20Operasional%20Rutin%20Rp%202.500.000%2Fbulan.",
+    takeaway: "Paling banyak dipilih untuk mencegah keterlambatan informasi lelang dan persaingan harga liar."
   },
   {
     id: "enterprise",
-    name: "Enterprise DaaS & Stream",
+    name: "Infrastruktur Data Korporasi",
     price: "Rp 7.500.000+",
-    period: "per bulan (kustom)",
-    description: "Infrastruktur data pipeline khusus untuk korporasi multifinance, firma hukum, dan logistik pertambangan.",
+    period: "per bulan (sesuai lingkup)",
+    description: "Solusi data pipeline terpadu untuk institusi pembiayaan multifinance, kantor hukum, dan logistik pertambangan.",
     features: [
-      "Pipeline kustom multi-sumber tanpa batas node",
-      "Akses endpoint REST API privat terenkripsi",
-      "Sinkronisasi database SQLite / Parquet harian",
-      "Kuantisasi spasial H3 dan analisis Z-Score SPC",
-      "SLA respons teknis prioritas di bawah 2 jam",
-      "Perjanjian Kerahasiaan (NDA) resmi korporat",
-      "Faktur pajak dan invoice legal PT Prisma Digital Kreatif"
+      "Pipeline kustom dari berbagai sumber data publik",
+      "Akses endpoint API privat yang aman dan terenkripsi",
+      "Sinkronisasi berkala ke basis data internal perusahaan",
+      "Pemetaan zona spasial dan analisis pergerakan armada",
+      "Dukungan teknis prioritas dengan waktu respon cepat",
+      "Perjanjian Kerahasiaan Informasi (NDA) resmi",
+      "Dokumen invoice dan faktur pajak resmi PT"
     ],
-    ctaText: "Konsultasi Kebutuhan Data",
-    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20kami%20ingin%20mendiskusikan%20kebutuhan%20Enterprise%20DaaS%20Data%20Stream%20untuk%20perusahaan%20kami.",
-    takeaway: "Cocok untuk institusi keuangan, law firm, dan armada maritim skala besar."
+    ctaText: "Diskusikan Kebutuhan Perusahaan",
+    ctaLink: "https://wa.me/6285864149673?text=Halo%20Zadit%2C%20kami%20ingin%20mendiskusikan%20kebutuhan%20data%20korporasi%20untuk%20perusahaan%20kami.",
+    takeaway: "Dirancang untuk institusi keuangan, firma hukum, dan perusahaan logistik berskala besar."
   }
 ];
 
@@ -83,13 +83,13 @@ export default function InvestmentPricingTable() {
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-[#8f652e] px-3 py-1 rounded-full bg-[#141820] border border-[#8f652e]/30">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>SKEMA INVESTASI TRANSPARAN</span>
+            <span>PILIHAN PAKET LAYANAN</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-semibold text-[#f3f4f6] tracking-tight">
-            Paket Investasi Tanpa Biaya Tersembunyi
+            Investasi Terencana Tanpa Biaya Tersembunyi
           </h2>
-          <p className="text-sm text-[#9ca3af]">
-            Pilih paket yang selaras dengan skala operasional Anda. Dari audit satu target hingga integrasi data pipeline berkelanjutan.
+          <p className="text-sm text-[#9ca3af] leading-relaxed">
+            Pilih paket yang sesuai dengan tahapan kebutuhan operasional Anda. Mulai dari pengujian sampel target hingga integrasi alur data harian.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export default function InvestmentPricingTable() {
               {/* Popular Badge */}
               {tier.isPopular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#10b981] text-[#0b0d11] font-bold font-mono text-[11px] tracking-wide shadow-md">
-                  REKOMENDASI OPERASIONAL
+                  PILIHAN UTAMA
                 </div>
               )}
 
@@ -162,7 +162,7 @@ export default function InvestmentPricingTable() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
 
-                {/* Anti-empty card foot takeaway */}
+                {/* Clear takeaway footer */}
                 <div className="p-2.5 rounded bg-[#0b0d11] border border-white/5 text-[11px] font-mono text-[#9ca3af] text-center">
                   {tier.takeaway}
                 </div>
@@ -174,14 +174,14 @@ export default function InvestmentPricingTable() {
 
         {/* Custom Scope Note */}
         <div className="mt-12 text-center text-xs font-mono text-[#9ca3af]">
-          Butuh cakupan khusus atau data ekstraksi dengan volume di atas 100.000 rekaman?{" "}
+          Membutuhkan pemantauan volume besar atau penyesuaian parameter khusus?{" "}
           <a
-            href="https://wa.me/6285864149673?text=Halo%20Zadit%2C%20kami%20memerlukan%20ekstraksi%20data%20kustom%20volume%20besar."
+            href="https://wa.me/6285864149673?text=Halo%20Zadit%2C%20kami%20ingin%20mendiskusikan%20kebutuhan%20data%20kustom."
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#10b981] underline hover:text-[#059669]"
           >
-            Diskusikan spesifikasi teknis langsung dengan Zadit
+            Konsultasikan langsung dengan Zadit
           </a>
         </div>
 

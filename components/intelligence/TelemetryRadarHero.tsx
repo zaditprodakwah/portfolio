@@ -13,26 +13,26 @@ export default function TelemetryRadarHero() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-wider bg-[#141820] text-[#10b981] border border-[#10b981]/30">
             <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
-            PRADIKTIF DATA LAB // REAL-WORLD TELEMETRY & ALTERNATIVE DATA ENGINE
+            PRADIKTIF DATA LAB • INTELIJEN PASAR DAN TELEMETRI BISNIS
           </div>
 
           <div className="text-xs font-mono text-[#9ca3af] hidden sm:flex items-center gap-2">
-            <span>SISTEM AKTIF: 34 NODE LPSE</span>
+            <span>34 Titik Pantau LPSE</span>
             <span className="text-white/20">|</span>
-            <span>12 ZONA MARITIM</span>
+            <span>12 Zona Maritim</span>
             <span className="text-white/20">|</span>
-            <span className="text-[#10b981]">NON-MNPI COMPLIANT</span>
+            <span className="text-[#10b981]">Kepatuhan UU PDP</span>
           </div>
         </div>
 
         {/* Main Headline & Value Prop */}
         <div className="max-w-4xl space-y-6">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#f3f4f6] leading-[1.15]">
-            Mengubah Telemetri Lapangan Menjadi Keunggulan Keputusan Sebelum Laporan Publik Terbit.
+            Mengubah Informasi Lapangan Menjadi Keunggulan Keputusan Sebelum Laporan Publik Terbit.
           </h1>
 
           <p className="text-lg sm:text-xl text-[#9ca3af] leading-relaxed max-w-3xl">
-            Kami memproses aliran data fisik maritim, geospasial industri, putusan niaga, dan mutasi pasar secara independen. Memberikan pemilik bisnis dan pengambil kebijakan gambaran faktual mengenai aktivitas lapangan tanpa bergantung pada klaim sepihak.
+            Kami mengolah data pergerakan maritim, aktivitas wilayah, putusan lelang, dan mutasi pasar secara independen. Memberikan pemilik bisnis dan pimpinan proyek gambaran faktual mengenai kondisi lapangan tanpa bergantung pada klaim sepihak.
           </p>
 
           {/* Action CTAs */}
@@ -42,7 +42,7 @@ export default function TelemetryRadarHero() {
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#10b981] hover:bg-[#059669] text-[#0b0d11] font-semibold text-sm transition-all shadow-lg shadow-[#10b981]/20 hover:scale-[1.02] active:scale-[0.98]"
             >
               <Terminal className="w-4 h-4 text-[#0b0d11]" />
-              <span>Uji Terminal Interaktif H3 & SPC</span>
+              <span>Coba Simulasi Data Lapangan</span>
             </a>
 
             <a
@@ -50,7 +50,7 @@ export default function TelemetryRadarHero() {
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#141820] hover:bg-[#1a202c] text-[#f3f4f6] font-medium text-sm border border-white/10 hover:border-white/20 transition-all"
             >
               <Download className="w-4 h-4 text-[#10b981]" />
-              <span>Unduh Sampel Draf (50 Baris Watermarked)</span>
+              <span>Lihat Contoh Data (50 Baris Gratis)</span>
             </a>
           </div>
 
@@ -61,9 +61,9 @@ export default function TelemetryRadarHero() {
               <span>PT Prisma Digital Kreatif (NIB 2024 Resmi)</span>
             </div>
             <span className="text-white/20 hidden sm:inline">•</span>
-            <div>Rekening Giro Mandiri Perusahaan</div>
+            <div>Rekening Giro Bank Mandiri Resmi</div>
             <span className="text-white/20 hidden sm:inline">•</span>
-            <div>Kepatuhan UU PDP & Sumber Publik Terverifikasi</div>
+            <div>Sumber Data Publik Terbuka dan Bebas Risiko Hukum</div>
           </div>
         </div>
 
@@ -75,14 +75,14 @@ export default function TelemetryRadarHero() {
               <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#10b981]">
                 <Compass className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#10b981]">UBER H3 RES-8 // ~400M</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Kuantisasi Spasial Heksagonal</h2>
+              <div className="text-xs font-mono text-[#10b981]">ZONA SPASIAL PRESISI</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Pemetaan Wilayah Heksagonal</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Mengonversi koordinat GPS mentah yang berisik menjadi indeks heksagonal 64-bit. Mengeliminasi komputasi jarak geodetik yang lambat dan menjaga privasi aset fisik.
+                Mengelompokkan titik koordinat geografis menjadi zona terstruktur. Mempercepat perhitungan jarak antrean dan menjaga kerahasiaan lokasi aset fisik.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Output: CSV/Parquet Spasial</span>
+              <span>Format: Berkas Spasial Siap Analisis</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#10b981] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
@@ -93,14 +93,14 @@ export default function TelemetryRadarHero() {
               <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#f59e0b]">
                 <Activity className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#f59e0b]">ROLLING Z-SCORE // 3-SIGMA</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Kontrol Proses Statistik (SPC)</h2>
+              <div className="text-xs font-mono text-[#f59e0b]">DETEKSI PERUBAHAN TAJAM</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Peringatan Anomali Statistik</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Memisahkan fluktuasi musiman alami dengan kejadian anomali fisik nyata. Memberi sinyal instan saat terjadi lonjakan kepadatan pelabuhan atau penurunan operasional.
+                Membedakan fluktuasi normal mingguan dengan lonjakan kejadian luar biasa. Anda mendapatkan peringatan dini saat terjadi antrean janggal atau penurunan drastis.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Output: Alert Notifikasi Telegram</span>
+              <span>Format: Notifikasi Cepat Telegram</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#f59e0b] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
@@ -111,14 +111,14 @@ export default function TelemetryRadarHero() {
               <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#10b981]">
                 <Layers className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#10b981]">MULTI-SNAPSHOT POLLING</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">SKU Delta & Inferred Velocity</h2>
+              <div className="text-xs font-mono text-[#10b981]">ANALISIS SELISIH STOK</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Pelacakan Mutasi Katalog</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Mengevaluasi mutasi persediaan katalog kompetitor secara berkala untuk memisahkan penurunan stok akibat transaksi pembelian konsumen dari restock gudang.
+                Memeriksa perubahan stok barang secara berkala. Mengetahui produk mana yang aktif dibeli konsumen dan produk mana yang sekadar menghabiskan ruang gudang.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Output: Laporan Estimasi Omset SKU</span>
+              <span>Format: Rekap Estimasi Transaksi</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#10b981] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
@@ -129,14 +129,14 @@ export default function TelemetryRadarHero() {
               <div className="w-8 h-8 rounded-lg bg-[#1a202c] flex items-center justify-center text-[#8f652e]">
                 <Cpu className="w-4 h-4" />
               </div>
-              <div className="text-xs font-mono text-[#8f652e]">SWARM PARALLEL AGENTS</div>
-              <h2 className="text-base font-semibold text-[#f3f4f6]">Swarm Intelligence Otonom</h2>
+              <div className="text-xs font-mono text-[#8f652e]">PIPELINE TERUJI</div>
+              <h2 className="text-base font-semibold text-[#f3f4f6]">Otomasi Validasi Berlapis</h2>
               <p className="text-xs text-[#9ca3af] leading-relaxed">
-                Mengerahkan kawanan agen otonom (Scout, Extractor, Synthesizer) yang bekerja serentak untuk mengekstraksi, memvalidasi, dan membersihkan ribuan data tidak terstruktur.
+                Menggunakan sistem pengumpulan terstruktur yang memverifikasi skema data secara otomatis, menyaring duplikasi, dan memastikan integritas data tetap bersih.
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-white/5 text-[11px] text-[#9ca3af] font-mono flex items-center justify-between">
-              <span>Output: Feed Terstruktur & Ringkasan</span>
+              <span>Format: Basis Data Bersih dan Rapi</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#8f652e] opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
