@@ -147,7 +147,7 @@ export default function EnterpriseFounderFooter() {
             &copy; {new Date().getFullYear()} PT Prisma Digital Kreatif. Seluruh hak cipta dilindungi undang-undang.
           </div>
           <div className="flex items-center gap-4 text-[11px]">
-            <span>Kepatuhan Aksesibilitas WCAG 2.1 AA</span>
+            <span>Kerahasiaan & Keamanan Data Bisnis</span>
             <span className="text-white/20">•</span>
             <span>Standar Perlindungan Data Pribadi</span>
             <span className="text-white/20">•</span>

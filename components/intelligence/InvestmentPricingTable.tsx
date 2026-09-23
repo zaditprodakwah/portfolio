@@ -76,7 +76,7 @@ const TIERS: PricingTier[] = [
 
 export default function InvestmentPricingTable() {
   return (
-    <section className="bg-[#0b0d11] text-[#f3f4f6] py-20 border-b border-white/10" id="pricing">
+    <section className="bg-[#0b0d11] text-[#f3f4f6] py-20 border-b border-white/10" id="investasi">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Header */}

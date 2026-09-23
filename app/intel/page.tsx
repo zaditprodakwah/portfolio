@@ -7,6 +7,7 @@ import InteractiveAuditTerminal from "@/components/intelligence/InteractiveAudit
 import TwoStageDeliveryGuarantee from "@/components/intelligence/TwoStageDeliveryGuarantee";
 import InvestmentPricingTable from "@/components/intelligence/InvestmentPricingTable";
 import EnterpriseFounderFooter from "@/components/intelligence/EnterpriseFounderFooter";
+import FloatingTelemetryDock from "@/components/intelligence/FloatingTelemetryDock";
 
 export const metadata: Metadata = {
   title: "Intelijen Data Lapangan & Sentinel Pasar | PRADIKTIF Data Lab",
@@ -108,6 +109,7 @@ export default function IntelShowcasePage() {
       <TwoStageDeliveryGuarantee />
       <InvestmentPricingTable />
       <EnterpriseFounderFooter />
+      <FloatingTelemetryDock />
     </main>
   );
 }

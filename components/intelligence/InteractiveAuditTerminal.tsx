@@ -204,7 +204,7 @@ export default function InteractiveAuditTerminal() {
   };
 
   return (
-    <section className="bg-[#0b0d11] text-[#f3f4f6] py-14 sm:py-20 border-b border-white/10" id="terminal-proof">
+    <section className="bg-[#0b0d11] text-[#f3f4f6] py-14 sm:py-20 border-b border-white/10" id="terminal">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Header */}

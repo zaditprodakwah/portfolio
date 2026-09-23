@@ -167,7 +167,7 @@ export default function VerticalHubsMatrix() {
   const activeVertical = VERTICALS.find((v) => v.id === selectedId) || VERTICALS[0];
 
   return (
-    <section className="bg-[#0b0d11] text-[#f3f4f6] py-16 sm:py-24 border-b border-white/10" id="vertical-hubs">
+    <section className="bg-[#0b0d11] text-[#f3f4f6] py-16 sm:py-24 border-b border-white/10" id="sektor">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Header */}

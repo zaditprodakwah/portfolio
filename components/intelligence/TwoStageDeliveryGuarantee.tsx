@@ -3,7 +3,7 @@ import { ShieldCheck, FileCheck, Unlock, ArrowRight, CheckCircle2 } from "lucide
 
 export default function TwoStageDeliveryGuarantee() {
   return (
-    <section className="bg-[#0b0d11] text-[#f3f4f6] py-20 border-b border-white/10" id="two-stage-guarantee">
+    <section className="bg-[#0b0d11] text-[#f3f4f6] py-20 border-b border-white/10" id="jaminan">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Header */}

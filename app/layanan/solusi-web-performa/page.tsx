@@ -7,13 +7,13 @@ import { ProtectedContact } from "@/components/ProtectedContact";
 
 export const metadata: Metadata = {
   title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
-  description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
+  description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, keterbacaan tinggi, responsif, dan integrasi WhatsApp instan.",
   alternates: {
     canonical: "https://muhzadit.pages.dev/layanan/solusi-web-performa/"
   },
   openGraph: {
     title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
-    description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
+    description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, keterbacaan tinggi, responsif, dan integrasi WhatsApp instan.",
     url: "https://muhzadit.pages.dev/layanan/solusi-web-performa/",
     images: [
       {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
-    description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, standar aksesibilitas WCAG AAA, dan integrasi WhatsApp instan.",
+    description: "Pengembangan situs web bisnis berkecepatan tinggi (LCP < 1s), bebas lag, keterbacaan tinggi, responsif, dan integrasi WhatsApp instan.",
     images: ["https://muhzadit.pages.dev/og-web-performa.jpg"]
   }
 };
