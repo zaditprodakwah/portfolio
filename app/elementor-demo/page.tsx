@@ -10,6 +10,8 @@ interface PlaygroundClient {
 
 export default function ElementorDemoPage() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const demoRef = useRef<HTMLDivElement>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const [status, setStatus] = useState('Menyalakan WordPress di browser...');
   const [ready, setReady] = useState(false);
   const [, setError] = useState<string | null>(null);
@@ -89,6 +91,22 @@ export default function ElementorDemoPage() {
 
   const go = (path: string) => clientRef.current?.goTo(path);
 
+  const toggleFullscreen = () => {
+    const el = demoRef.current;
+    if (!el) return;
+    if (document.fullscreenElement) {
+      void document.exitFullscreen();
+    } else {
+      void el.requestFullscreen?.();
+    }
+  };
+
+  useEffect(() => {
+    const onFsChange = () => setIsFullscreen(Boolean(document.fullscreenElement));
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => document.removeEventListener('fullscreenchange', onFsChange);
+  }, []);
+
   return (
     <main className="relative overflow-hidden">
       <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-teal-500/10 via-teal-900/5 to-transparent blur-3xl rounded-full" />
@@ -119,7 +137,10 @@ export default function ElementorDemoPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
-        <div className="rounded-xl border border-slate-800/80 bg-slate-950/60 overflow-hidden">
+        <div
+          ref={demoRef}
+          className="rounded-xl border border-slate-800/80 bg-slate-950/60 overflow-hidden flex flex-col"
+        >
           <div className="flex flex-wrap items-center gap-2 p-3 border-b border-slate-800/80 bg-slate-900/80">
             <button
               type="button"
@@ -147,6 +168,14 @@ export default function ElementorDemoPage() {
               className="rounded-lg border border-slate-700 bg-slate-900/80 hover:border-teal-500 text-slate-200 font-medium px-4 py-2 text-xs transition-all disabled:opacity-40 disabled:cursor-wait"
             >
               Editor Elementor
+            </button>
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              disabled={!ready}
+              className="rounded-lg border border-slate-700 bg-slate-900/80 hover:border-amber-400 text-amber-300 font-medium px-4 py-2 text-xs transition-all disabled:opacity-40 disabled:cursor-wait"
+            >
+              {isFullscreen ? 'Keluar Fullscreen (Esc)' : 'Layar Penuh'}
             </button>
             <span role="status" aria-live="polite" className="ml-auto text-xs font-mono text-slate-300">{status}</span>
           </div>

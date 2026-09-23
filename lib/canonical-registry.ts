@@ -118,4 +118,11 @@ export const SITE_CANONICAL_REGISTRY: Record<string, IntentMapping> = {
     pillar: "general",
     category: "direktori",
   },
+  "/intelligence/": {
+    canonicalPath: "/intelligence/",
+    primaryKeyword: "intelijen data telemetri bisnis dan sentinel pasar",
+    secondaryKeywords: ["alternative data daas indonesia", "deteksi anomali spc h3", "delta katalog e-commerce", "monitoring tender lpse"],
+    pillar: "bisnis",
+    category: "solusi",
+  },
 };
