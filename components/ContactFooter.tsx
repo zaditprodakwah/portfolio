@@ -25,8 +25,7 @@ export const ContactFooter: React.FC = () => {
               {cvProfile.summaries.id}
             </p>
             <p className="font-mono text-xs text-teal-400 pt-1 font-semibold">
-              {true ? 'Domisili: ' : 'Location: '}
-              {cvProfile.contact.location}
+              Domisili: {cvProfile.contact.location}
             </p>
           </div>
 
@@ -34,7 +33,7 @@ export const ContactFooter: React.FC = () => {
             {/* Hub Eksplorasi & Direktori */}
             <div className="space-y-3">
               <p className="text-slate-300 uppercase tracking-wider text-xs font-bold">
-                {true ? 'Arsitektur & Hub' : 'Ecosystem Hubs'}
+                Arsitektur & Hub
               </p>
               <div className="flex flex-col space-y-2">
                 <Link

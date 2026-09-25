@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ENTITY_NODES } from "@/lib/entity-graph";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { GTranslateWidget } from "@/components/GTranslateWidget";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -201,7 +202,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://muhzadit.pages.dev/#service",
-      name: "PRADIKTIF — PT PRISMA DIGITAL KREATIF",
+      name: "PRADIKTIF: PT PRISMA DIGITAL KREATIF",
       url: "https://muhzadit.pages.dev/",
       parentOrganization: { "@id": "https://muhzadit.pages.dev/#organization" },
       founder: { "@id": "https://muhzadit.pages.dev/#person" },
@@ -294,6 +295,7 @@ export default function RootLayout({
       <body className="font-sans antialiased text-slate-800 bg-alabaster min-h-screen selection:bg-teal-500/20 selection:text-teal-900 w-full max-w-full overflow-x-hidden">
         <LanguageProvider>
           {children}
+          <GTranslateWidget />
         </LanguageProvider>
       </body>
     </html>

@@ -1,62 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAuditTeaser } from "@/components/QuickAuditTeaser";
-import { ServicesSection } from "@/components/ServicesSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { ConsultationBuilder } from "@/components/ConsultationBuilder";
-import { ResumeDownloadSection } from "@/components/ResumeDownloadSection";
-import { ContactFooter } from "@/components/ContactFooter";
-import { AIChatDrawer } from "@/components/AIChatDrawer";
-import { MobileNavDrawer } from "@/components/MobileNavDrawer";
-import { MobileActionDock } from "@/components/MobileActionDock";
-import { FloatingToCWidget } from "@/components/FloatingToCWidget";
-import { LanguageProvider } from "@/context/LanguageContext";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-export default function EnglishHomePage() {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function EnglishRedirectPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/");
+  }, [router]);
 
   return (
-    <LanguageProvider defaultLang="en">
-      <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-alabaster pb-32 sm:pb-12 scroll-smooth">
-        <Navbar
-          onOpenChat={() => setIsChatOpen(true)}
-          onOpenMenu={() => setIsMenuOpen(true)}
-        />
-        
-        <HeroSection onOpenChat={() => setIsChatOpen(true)} />
-
-        <QuickAuditTeaser />
-
-        <ServicesSection />
-
-        <CaseStudiesSection />
-
-        <ConsultationBuilder />
-
-        <ResumeDownloadSection />
-
-        <ContactFooter />
-
-        <MobileNavDrawer
-          isOpen={isMenuOpen}
-          onClose={() => setIsMenuOpen(false)}
-        />
-
-        <MobileActionDock
-          onOpenMenu={() => setIsMenuOpen(true)}
-        />
-
-        <AIChatDrawer
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-        />
-
-        <FloatingToCWidget />
-      </main>
-    </LanguageProvider>
+    <div className="min-h-screen flex items-center justify-center bg-alabaster font-mono text-xs text-slate-500">
+      <div className="flex items-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-teal-600 animate-ping" />
+        <span>Redirecting to unified global portal...</span>
+      </div>
+    </div>
   );
 }

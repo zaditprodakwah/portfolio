@@ -53,10 +53,10 @@ export const FloatingToCWidget: React.FC = () => {
 
   return (
     <>
-      {/* Floating Toggle Button */}
+      {/* Floating Toggle Button (Hidden on Mobile to eliminate UI clutter with Action Dock) */}
       <aside
         aria-label="Navigasi Daftar Isi Halaman"
-        className="fixed bottom-24 right-4 z-40 sm:bottom-8 sm:right-6"
+        className="hidden sm:block fixed bottom-8 right-6 z-40"
       >
         <button
           type="button"

@@ -117,12 +117,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
               {isId ? (
                 <>
                   Solusi Praktis & Presisi untuk <br />
-                  <span className="text-teal-800">Data, Rekayasa Dokumen, Riset, & Platform Bisnis.</span>
+                  <span className="text-teal-800">Dokumen Bisnis, Riset Akademik, & Aset Digital.</span>
                 </>
               ) : (
                 <>
-                  Calm Precision for <br className="hidden sm:inline" />
-                  <span className="text-teal-800">Business Data, Document Engineering, Research & Growth.</span>
+                  Practical & Precise Solutions for <br className="hidden sm:inline" />
+                  <span className="text-teal-800">Business Documents, Academic Research & Digital Assets.</span>
                 </>
               )}
             </h1>

@@ -81,7 +81,7 @@ export const ConsultationBuilder: React.FC = () => {
       msg += `\n\nKira-kira kapan waktu yang tepat untuk diskusi awal tanpa komitmen? Terima kasih.`;
       return msg;
     } else {
-      let msg = `Hello Zadit, my name is ${clientName.trim() || '[My Name]'}`;
+      let msg = `Hello Zadit, my name is ${clientName.trim() || 'Partner'}`;
       if (organization.trim()) {
         msg += ` from ${organization.trim()}`;
       }

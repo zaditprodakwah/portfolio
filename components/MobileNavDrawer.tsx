@@ -61,10 +61,16 @@ export function MobileNavDrawer({ isOpen, onClose, lang = "id" }: MobileNavDrawe
             </button>
           </div>
 
+          {/* Language Switcher for Mobile Drawer */}
+          <div className="pb-4 mb-4 border-b border-slate-100 flex items-center justify-between">
+            <span className="text-xs font-mono font-bold uppercase text-slate-500">Pilih Bahasa:</span>
+            <div className="gtranslate_wrapper" />
+          </div>
+
           {/* Navigation Links */}
           <nav className="space-y-1">
             <div className="text-xs font-bold uppercase tracking-wider text-slate-600 px-3 py-1">
-              {true ? "Pilar Layanan" : "Core Pillars"}
+              Pilar Layanan
             </div>
 
             <Link

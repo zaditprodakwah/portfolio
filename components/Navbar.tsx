@@ -331,17 +331,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Switcher Toggle */}
-            <button
-              type="button"
-              onClick={toggleLanguage}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-teal-600 bg-white hover:bg-teal-50 text-slate-700 hover:text-teal-900 text-xs font-mono font-bold transition-all cursor-pointer shadow-2xs"
-              title={isId ? "Ganti ke Bahasa Inggris" : "Switch to Indonesian"}
-              aria-label="Toggle language between Indonesian and English"
-            >
-              <Globe className="w-3.5 h-3.5 text-teal-700" />
-              <span>{language.toUpperCase()}</span>
-            </button>
+            {/* GTranslate Inline Switcher Container for Desktop */}
+            <div className="gtranslate_wrapper hidden lg:inline-flex items-center text-xs" />
 
             <button
               onClick={onOpenChat}
