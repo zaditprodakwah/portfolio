@@ -60,6 +60,18 @@ export const metadata: Metadata = {
       "application/rss+xml": "https://muhzadit.pages.dev/feed.xml"
     }
   },
+  applicationName: "muhzadit",
+  appleWebApp: {
+    title: "muhzadit",
+    statusBarStyle: "default",
+  },
+  other: {
+    "content-language": "id-ID",
+    "geo.region": "ID",
+    "geo.placename": "Indonesia",
+    "geo.position": "-6.2088;106.8456",
+    "language": "Indonesian",
+  },
   verification: {
     google: "I9y6U1bm8P_UhKve6EYvFENOlia-tQ0ZIvwnul81sxY",
   },
@@ -280,21 +292,11 @@ export default function RootLayout({
       lang="id"
       className={`scroll-smooth w-full max-w-full overflow-x-hidden ${inter.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
-      <head>
-        <meta name="google-site-verification" content="I9y6U1bm8P_UhKve6EYvFENOlia-tQ0ZIvwnul81sxY" />
-        <meta httpEquiv="content-language" content="id-ID" />
-        <meta name="geo.region" content="ID" />
-        <meta name="geo.placename" content="Indonesia" />
-        <meta name="geo.position" content="-6.2088;106.8456" />
-        <meta name="application-name" content="muhzadit" />
-        <meta name="apple-mobile-web-app-title" content="muhzadit" />
-        <meta name="language" content="Indonesian" />
+      <body className="font-sans antialiased text-slate-800 bg-alabaster min-h-screen selection:bg-teal-500/20 selection:text-teal-900 w-full max-w-full overflow-x-hidden">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="font-sans antialiased text-slate-800 bg-alabaster min-h-screen selection:bg-teal-500/20 selection:text-teal-900 w-full max-w-full overflow-x-hidden">
         <LanguageProvider>
           {children}
           <GTranslateWidget />
