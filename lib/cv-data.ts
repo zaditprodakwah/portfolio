@@ -255,121 +255,121 @@ export const cvProfile = {
 
   services: [
     {
-      id: "business-docs",
-      title: {
-        id: "Dokumen, Tata Kelola & Administrasi Bisnis",
-        en: "Governance, SOPs & Executive Business Documents"
-      },
-      shortDesc: {
-        id: "Penyusunan dokumen kemitraan usaha, tata kelola administrasi lembaga & yayasan, manual SOP operasional, serta studi kelayakan bisnis berstandar perbankan.",
-        en: "Developing commercial partnership agreements, institutional governance frameworks, operational SOP manuals, and bank-grade feasibility studies."
-      },
-      deliverables: {
-        id: [
-          "Dokumen Kemitraan & Proposal Usaha",
-          "Tata Kelola Administrasi Lembaga & Yayasan",
-          "Penyusunan Standar Operasional Prosedur (SOP)",
-          "Studi Kelayakan Bisnis (Feasibility Study)",
-          "Model Finansial & Proyeksi Arus Kas 5 Tahun"
-        ],
-        en: [
-          "Commercial Partnership & Business Proposals",
-          "Institutional Governance & Foundation Administration",
-          "Standard Operating Procedures (SOP) Development",
-          "Comprehensive Feasibility Studies & Executive Memos",
-          "5-Year Financial Models & Cash Flow Forecasts"
-        ]
-      },
-      audience: {
-        id: "Pemilik usaha, pengelola yayasan, pengusaha rintisan, dan direksi perusahaan.",
-        en: "Business owners, foundation directors, founders, and corporate leadership."
-      }
-    },
-    {
-      id: "seo-growth",
-      title: {
-        id: "SEO & Pertumbuhan Konten Konversi",
-        en: "SEO & High-Conversion Content Growth"
-      },
-      shortDesc: {
-        id: "Membawa calon pembeli dan audiens tertarget ke website Anda melalui riset kata kunci berniat komersial, perbaikan on-page, dan tulisan persuasif.",
-        en: "Attracting high-intent buyers and targeted audiences to your site through keyword research, technical on-page health, and persuasive copywriting."
-      },
-      deliverables: {
-        id: [
-          "Riset Kata Kunci Berniat Beli & Analisis Pesaing",
-          "Audit Struktur On-Page & Kecepatan Perayapan",
-          "Penulisan Artikel Pilar & Naskah Landing Page",
-          "Penataan Schema FAQ untuk Tampil Menonjol di Google"
-        ],
-        en: [
-          "Commercial Intent Keyword & Competitor Analysis",
-          "On-Page Technical Audit & Crawl Health Check",
-          "Authority Pillar Content & High-Converting Landing Page Copy",
-          "Structured FAQ Schema Integration for Rich Snippets"
-        ]
-      },
-      audience: {
-        id: "Bisnis B2B, penyedia jasa profesional, toko online, dan media informasi.",
-        en: "B2B service providers, professional firms, e-commerce, and digital publications."
-      }
-    },
-    {
       id: "academic-data",
       title: {
-        id: "Riset Akademik & Analisis Data Statistik",
-        en: "Academic Research & Statistical Data Analysis"
+        id: "Data, Rekayasa Dokumen & Olah Statistik",
+        en: "Data Engineering, Documents & Statistical Modeling"
       },
       shortDesc: {
-        id: "Pengolahan data penelitian kuantitatif, pemodelan statistik matematika, serta pendampingan penyusunan artikel ilmiah terstandar akreditasi SINTA.",
-        en: "Quantitative research data processing, mathematical modeling, and comprehensive guidance for SINTA accredited journal manuscripts."
+        id: "Ekstraksi tabel PDF ke Excel/CSV, perapian kuesioner survei, pemodelan statistik Rasch/Aiken, serta layouting dokumen Word OpenXML standar APA 7th.",
+        en: "Deterministic PDF table extraction, survey data cleansing, Rasch/Aiken statistical modeling, and native OpenXML Word APA 7th document engineering."
       },
       deliverables: {
         id: [
-          "Uji Validitas, Reliabilitas & Normalitas Instrumen",
-          "Analisis Korelasi, Regresi, ANOVA & Uji Hipotesis",
-          "Interpretasi Output SPSS / Python dalam Format Laporan Ilmiah",
-          "Penyelarasan Naskah dengan Pedoman Penulisan Jurnal SINTA"
+          "Ekstraksi Rekening Koran, Invoice & Tabel PDF ke Excel/CSV",
+          "Pembersihan Data Survei & Normalisasi Skala Likert",
+          "Rekonstruksi Dokumen Word OpenXML (0 Kotak Teks Liar)",
+          "Uji Validitas, Reliabilitas & Uji Hipotesis SPSS/R",
+          "Penataan Format Tabel Formal Standar APA 7th Edition"
         ],
         en: [
-          "Instrument Validity, Reliability & Normality Testing",
-          "Regression, Correlation, ANOVA & Hypothesis Modeling",
-          "Interpretation of SPSS/Python Outputs into Academic Prose",
-          "Manuscript Alignment with Target Journal Submission Guidelines"
+          "Financial Statement & PDF Table Extraction to Excel/CSV",
+          "Survey Data Cleansing & Likert Scale Normalization",
+          "Native OpenXML Word Formatting (Zero Floating Text Boxes)",
+          "Hypothesis Testing, Rasch Model & Statistical Diagnostics",
+          "Formal 3-Line APA 7th Edition Table Architecture"
         ]
       },
       audience: {
-        id: "Dosen, mahasiswa pascasarjana (S2/S3), peneliti lembaga, dan akademisi.",
-        en: "Lecturers, graduate scholars, institutional researchers, and educators."
+        id: "Bisnis UKM, analis keuangan, peneliti akademis, dan pengambil keputusan data.",
+        en: "SME businesses, financial analysts, graduate researchers, and data operators."
       }
     },
     {
       id: "web-solutions",
       title: {
-        id: "Solusi Digital & Web Berkinerja Tinggi",
-        en: "Digital Solutions & High-Performance Web"
+        id: "Fullstack Web & Otomasi Digital",
+        en: "Fullstack Web & Digital Automation"
       },
       shortDesc: {
-        id: "Pembuatan dan modernisasi website yang sangat cepat, aman, dan mudah digunakan, dengan teknologi yang disesuaikan kebutuhan riil Anda.",
-        en: "Development and modernization of lightweight, secure, and accessible websites tailored to your existing platform."
+        id: "Pembangunan website bisnis berkecepatan sub-detik LCP di Cloudflare Edge, integrasi API, perbaikan bug kode, dan otomasi scraping data headless.",
+        en: "Engineering sub-second LCP web platforms on Cloudflare Edge, API integrations, bug fixing, and headless browser data scraping automation."
       },
       deliverables: {
         id: [
-          "Pembuatan Situs Profil Perusahaan & Landing Page Penjualan",
-          "Optimasi Kecepatan Muat Halaman (Mobile PageSpeed)",
-          "Perbaikan Navigasi & Kemudahan Akses (A11y 100%)",
-          "Konfigurasi Domain, Hosting Cloudflare & Perlindungan Keamanan"
+          "Pembuatan Landing Page & Web Profil Berbobot Ringan",
+          "Optimasi Kecepatan Mobile & Core Web Vitals (INP/LCP)",
+          "Skrip Otomasi Pengumpulan Data (CDP & Playwright)",
+          "Integrasi Tombol Aksi Cepat WhatsApp & Formulir CRM"
         ],
         en: [
-          "Company Profile & High-Conversion Sales Landing Pages",
-          "Mobile PageSpeed Optimization & Core Web Vitals Upgrades",
-          "Usability & Accessibility Improvements (A11y 100%)",
-          "Cloudflare Edge Setup, Fast DNS & Built-In Security"
+          "Lightweight Next.js Business Websites & Landing Pages",
+          "Mobile Speed & Core Web Vitals Optimization (INP/LCP)",
+          "Browser Data Harvesting Automation (CDP & Playwright)",
+          "Direct WhatsApp Conversion Triggers & Structured Forms"
         ]
       },
       audience: {
-        id: "Pelaku UMKM, lembaga nirlaba, instansi publik, dan praktisi independen.",
-        en: "SMEs, non-profits, educational organizations, and independent professionals."
+        id: "Pemilik bisnis, startup founder, dan perusahaan yang membutuhkan web cepat.",
+        en: "Business owners, startup founders, and speed-sensitive digital companies."
+      }
+    },
+    {
+      id: "business-docs",
+      title: {
+        id: "Bisnis, Tata Kelola & SOP Operasional",
+        en: "Business Governance, SOPs & Investor Decks"
+      },
+      shortDesc: {
+        id: "Penyusunan dokumen kemitraan usaha, manual SOP yayasan/korporat anti-bottleneck, studi kelayakan, dan pitch deck eksekutif 16:9 TasteSkill.",
+        en: "Developing commercial partnership agreements, operational SOP manuals, feasibility studies, and 16:9 executive pitch decks."
+      },
+      deliverables: {
+        id: [
+          "Master Pitch Deck Eksekutif 16:9 (TasteSkill Luxury)",
+          "Penyusunan Manual Standar Operasional Prosedur (SOP)",
+          "Studi Kelayakan Bisnis & Proyeksi BEP Realistis",
+          "Tata Kelola Administrasi Yayasan & Lembaga"
+        ],
+        en: [
+          "16:9 Boardroom-Ready Pitch Decks (TasteSkill Luxury)",
+          "Standard Operating Procedures (SOP) Development",
+          "Commercial Feasibility Studies & Realistic Cash Flows",
+          "Foundation Administration & Corporate Governance Memos"
+        ]
+      },
+      audience: {
+        id: "Direksi perusahaan, pengelola yayasan, pengusaha rintisan, dan pencari investasi.",
+        en: "Corporate leadership, foundation directors, founders, and business operators."
+      }
+    },
+    {
+      id: "seo-growth",
+      title: {
+        id: "Branding, SEO & Marketing Konversi",
+        en: "Branding, Technical SEO & Conversion Marketing"
+      },
+      shortDesc: {
+        id: "Akuisisi pembeli melalui riset kata kunci niat beli komersial tinggi, audit Technical SEO, teks antarmuka persuasif, dan optimasi funnel AARRR.",
+        en: "Acquiring qualified customers via high commercial-intent keyword research, Technical SEO audits, UX copywriting, and AARRR funnel optimization."
+      },
+      deliverables: {
+        id: [
+          "Audit Technical SEO, Kecepatan Perayapan & Schema JSON-LD",
+          "Riset Kata Kunci Niat Beli Komersial & Kluster SERP",
+          "Penulisan Teks Konversi (UX Copywriting) Tanpa AI Slop",
+          "Perancangan Alur Funnel Akuisisi Pelanggan Multi-Kanal"
+        ],
+        en: [
+          "Technical SEO Crawl Health Audit & Schema JSON-LD",
+          "High Commercial-Intent Keyword Clustering & SERP Analysis",
+          "Persuasive Human UX Copywriting Without Generic AI Slop",
+          "Multi-Channel Customer Acquisition Funnel Architecture"
+        ]
+      },
+      audience: {
+        id: "Penyedia jasa B2B, e-commerce, pemilik produk digital, dan agensi pertumbuhan.",
+        en: "B2B service firms, e-commerce brands, digital products, and growth agencies."
       }
     }
   ] as ServicePillar[],

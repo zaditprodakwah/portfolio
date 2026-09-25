@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
 import { ReadingProgressBar } from "./ReadingProgressBar";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface NavbarProps {
   onOpenChat: () => void;
@@ -28,7 +29,9 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
-    const [isMegaOpen, setIsMegaOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const isId = language === "id";
+  const [isMegaOpen, setIsMegaOpen] = useState(false);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const megaMenuRef = useRef<HTMLDivElement>(null);
 
@@ -82,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                   {cvProfile.nickname} <span className="hidden xs:inline">Growth</span>
                 </span>
                 <span className="font-mono text-[10px] sm:text-xs tracking-wider text-teal-800 uppercase font-bold truncate">
-                  {true ? "Portofolio" : "Solutions"}
+                  {isId ? "Portofolio" : "Solutions"}
                 </span>
               </div>
             </Link>
@@ -106,7 +109,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                 aria-haspopup="true"
                 className="flex items-center gap-1.5 py-2 px-1 hover:text-teal-700 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 rounded-lg"
               >
-                <span>{true ? "Eksplorasi Solusi" : "Explore Solutions"}</span>
+                <span>{isId ? "Eksplorasi Solusi" : "Explore Solutions"}</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaOpen ? "rotate-180 text-teal-700" : "text-slate-400"}`} />
               </button>
 
@@ -122,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 pb-2 border-b border-slate-100 text-teal-800 font-mono text-xs uppercase tracking-wider font-bold">
                       <Sparkles className="w-4 h-4 text-teal-600" />
-                      <span>{true ? "Layanan Utama" : "Core Services"}</span>
+                      <span>{isId ? "Layanan Utama" : "Core Services"}</span>
                     </div>
                     <Link 
                       href="/layanan/dokumen-administrasi-bisnis" 
@@ -133,10 +136,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                         <FileCheck2 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                            {true ? "Dokumen Legal & SOP" : "Governance & SOP"}
+                            {isId ? "Dokumen Legal & SOP" : "Governance & SOP"}
                           </p>
                           <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                            {true ? "Standardisasi SOP, legalitas, akta yayasan & perjanjian." : "Executive SOPs, contracts, and governance docs."}
+                            {isId ? "Standardisasi SOP, legalitas, akta yayasan & perjanjian." : "Executive SOPs, contracts, and governance docs."}
                           </p>
                         </div>
                       </div>
@@ -151,10 +154,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                         <TrendingUp className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                            {true ? "SEO & Pertumbuhan Web" : "SEO & Web Growth"}
+                            {isId ? "SEO & Pertumbuhan Web" : "SEO & Web Growth"}
                           </p>
                           <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                            {true ? "Programmatic SEO, AEO & web super cepat 0ms TTFB." : "High-speed Next.js platforms, pSEO & AEO."}
+                            {isId ? "Programmatic SEO, AEO & web super cepat 0ms TTFB." : "High-speed Next.js platforms, pSEO & AEO."}
                           </p>
                         </div>
                       </div>
@@ -169,10 +172,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                         <BarChart3 className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                            {true ? "Riset & Olah Data SINTA" : "Research & SINTA"}
+                            {isId ? "Riset & Olah Data SINTA" : "Research & SINTA"}
                           </p>
                           <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                            {true ? "SPSS, SmartPLS 4, AMOS, format IMRaD & Mendeley." : "Statistical models, Mendeley, and IMRaD review."}
+                            {isId ? "SPSS, SmartPLS 4, AMOS, format IMRaD & Mendeley." : "Statistical models, Mendeley, and IMRaD review."}
                           </p>
                         </div>
                       </div>
@@ -200,7 +203,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 pb-2 border-b border-slate-100 text-teal-800 font-mono text-xs uppercase tracking-wider font-bold">
                       <Compass className="w-4 h-4 text-teal-600" />
-                      <span>{true ? "Matriks & Solusi" : "Solutions & Matrix"}</span>
+                      <span>{isId ? "Matriks & Solusi" : "Solutions & Matrix"}</span>
                     </div>
 
                     <Link 
@@ -212,10 +215,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                         <Layers className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-heading font-bold text-xs text-teal-900 group-hover:text-teal-700 flex items-center gap-1">
-                            {true ? "Direktori Solusi pSEO" : "pSEO Solution Matrix"}
+                            {isId ? "Direktori Solusi pSEO" : "pSEO Solution Matrix"}
                           </p>
                           <p className="text-[11px] text-slate-600 leading-snug mt-0.5">
-                            {true ? "Katalog studi komparasi & analisis alternatif kebutuhan." : "Multi-angle comparative analysis matrix."}
+                            {isId ? "Katalog studi komparasi & analisis alternatif kebutuhan." : "Multi-angle comparative analysis matrix."}
                           </p>
                         </div>
                       </div>
@@ -227,10 +230,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
                       <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                        {true ? "Studi Kasus Klien" : "Client Case Studies"}
+                        {isId ? "Studi Kasus Klien" : "Client Case Studies"}
                       </p>
                       <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                        {true ? "Studi kasus riil efisiensi operasional dan pertumbuhan." : "Verified track record and measurable client results."}
+                        {isId ? "Studi kasus riil efisiensi operasional dan pertumbuhan." : "Verified track record and measurable client results."}
                       </p>
                     </Link>
 
@@ -240,10 +243,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
                       <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                        {true ? "Portfolio Interaktif" : "Interactive Portfolio"}
+                        {isId ? "Portfolio Interaktif" : "Interactive Portfolio"}
                       </p>
                       <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                        {true ? "Demo deliverable berjalan langsung di browser." : "Live demos and hands-on deliverables."}
+                        {isId ? "Demo deliverable berjalan langsung di browser." : "Live demos and hands-on deliverables."}
                       </p>
                     </Link>
 
@@ -253,10 +256,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
                       <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                        {true ? "Kalkulator Estimasi" : "Consultation Builder"}
+                        {isId ? "Kalkulator Estimasi" : "Consultation Builder"}
                       </p>
                       <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                        {true ? "Simulasikan kebutuhan spesifik dan rincian kerja." : "Estimate turnaround time and project milestones."}
+                        {isId ? "Simulasikan kebutuhan spesifik dan rincian kerja." : "Estimate turnaround time and project milestones."}
                       </p>
                     </Link>
                   </div>
@@ -265,7 +268,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 pb-2 border-b border-slate-100 text-teal-800 font-mono text-xs uppercase tracking-wider font-bold">
                       <FileText className="w-4 h-4 text-teal-600" />
-                      <span>{true ? "Kredensial" : "Credentials"}</span>
+                      <span>{isId ? "Kredensial" : "Credentials"}</span>
                     </div>
 
                     <Link 
@@ -274,11 +277,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
                       <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700 flex items-center justify-between">
-                        <span>{true ? "Curriculum Vitae" : "Executive CV"}</span>
+                        <span>{isId ? "Curriculum Vitae" : "Executive CV"}</span>
                         <ExternalLink className="w-3 h-3 text-slate-400 group-hover:text-teal-700" />
                       </p>
                       <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                        {true ? "Rekam jejak, sertifikasi, dan kompetensi terverifikasi." : "Full ATS-aligned career and engineering credentials."}
+                        {isId ? "Rekam jejak, sertifikasi, dan kompetensi terverifikasi." : "Full ATS-aligned career and engineering credentials."}
                       </p>
                     </Link>
 
@@ -288,10 +291,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
                       <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700">
-                        {true ? "Wawasan & Artikel" : "Insights & Articles"}
+                        {isId ? "Wawasan & Artikel" : "Insights & Articles"}
                       </p>
                       <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
-                        {true ? "Publikasi metodologi riset dan arsitektur sistem." : "Technical guides, methodologies, and benchmarks."}
+                        {isId ? "Publikasi metodologi riset dan arsitektur sistem." : "Technical guides, methodologies, and benchmarks."}
                       </p>
                     </Link>
 
@@ -300,7 +303,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                       download="Muhammad_Khoiruzzadittaqwa_CV.pdf"
                       className="p-2.5 rounded-xl bg-slate-900 text-white hover:bg-teal-800 transition-colors flex items-center justify-between mt-auto"
                     >
-                      <span className="text-xs font-heading font-bold">{true ? "Unduh CV Resmi" : "Download Official PDF"}</span>
+                      <span className="text-xs font-heading font-bold">{isId ? "Unduh CV Resmi" : "Download Official PDF"}</span>
                       <Download className="w-3.5 h-3.5 text-teal-300" />
                     </a>
                   </div>
@@ -311,15 +314,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
             {/* Direct Quick Links */}
             <Link href="/audit" className="hover:text-teal-700 transition-colors text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200 font-extrabold flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              <span>{true ? "Audit Gratis" : "Free Audit"}</span>
+              <span>{isId ? "Audit Gratis" : "Free Audit"}</span>
             </Link>
             <Link href="/solusi" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
               <Compass className="w-3.5 h-3.5" />
-              <span>{true ? "Matriks" : "Matrix"}</span>
+              <span>{isId ? "Matriks" : "Matrix"}</span>
             </Link>
             <Link href="/portfolio" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
               <Archive className="w-3.5 h-3.5" />
-              <span>{true ? "Portfolio" : "Portfolio"}</span>
+              <span>{isId ? "Portfolio" : "Portfolio"}</span>
             </Link>
             <Link href="/cv" className="hover:text-teal-700 transition-colors flex items-center gap-1">
               <FileText className="w-3.5 h-3.5" />
@@ -328,16 +331,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            
+            {/* Language Switcher Toggle */}
+            <button
+              type="button"
+              onClick={toggleLanguage}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-teal-600 bg-white hover:bg-teal-50 text-slate-700 hover:text-teal-900 text-xs font-mono font-bold transition-all cursor-pointer shadow-2xs"
+              title={isId ? "Ganti ke Bahasa Inggris" : "Switch to Indonesian"}
+              aria-label="Toggle language between Indonesian and English"
+            >
+              <Globe className="w-3.5 h-3.5 text-teal-700" />
+              <span>{language.toUpperCase()}</span>
+            </button>
 
             <button
               onClick={onOpenChat}
               className="flex items-center gap-2 bg-teal-50 border border-teal-300 text-teal-800 hover:bg-teal-700 hover:text-white px-3 py-2 rounded-xl text-xs font-mono uppercase tracking-wider font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 cursor-pointer"
-              aria-label={true ? "Buka tanya asisten AI" : "Open AI assistant chat"}
+              aria-label={isId ? "Buka tanya asisten AI" : "Open AI assistant chat"}
             >
               <MessageSquareCode className="w-4 h-4" />
               <span className="hidden sm:inline">
-                {true ? "Tanya AI" : "Ask AI"}
+                {isId ? "Tanya AI" : "Ask AI"}
               </span>
             </button>
 
@@ -345,10 +358,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
               href="/cv.pdf"
               download="Muhammad_Khoiruzzadittaqwa_CV.pdf"
               className="hidden sm:flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
-              title={true ? "Unduh Berkas PDF Resmi" : "Download Official PDF"}
+              title={isId ? "Unduh Berkas PDF Resmi" : "Download Official PDF"}
             >
               <Download className="w-3.5 h-3.5" />
-              <span>{true ? "Unduh CV" : "Download CV"}</span>
+              <span>{isId ? "Unduh CV" : "Download CV"}</span>
             </a>
           </div>
         </div>

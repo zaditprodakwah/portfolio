@@ -35,6 +35,34 @@ export default function SolutionsIndexPage() {
         </header>
 
         <div className="grid grid-cols-1 gap-6">
+          {/* Featured Interactive Studio */}
+          <Link
+            href="/solusi/document-data-studio/"
+            className="group p-6 sm:p-7 rounded-xl bg-gradient-to-br from-[#1C1322] to-[#150F18] border border-[#8F652E]/40 hover:border-[#8F652E] shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4 text-white"
+          >
+            <div className="space-y-2">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="text-xs font-medium text-[#C5A880] bg-[#231627] px-2.5 py-0.5 rounded border border-[#8F652E]/30">
+                  Interactive Studio & Portofolio Flagship
+                </span>
+                <span className="text-xs text-zinc-400 font-mono">
+                  /solusi/document-data-studio/
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-semibold text-white group-hover:text-[#C5A880] transition-colors">
+                OmniData & DocuMorph Studio: Rekayasa Dokumen & Pembersih Data Interaktif
+              </h2>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Uji langsung sistem pembersihan data survei kuesioner, ekstraksi rekening koran ke format CSV, perbandingan format Word OpenXML standar APA 7th, serta katalog paket kerja untuk Upwork, Freelancer, Projects.co.id, dan Sribu.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-medium text-[#C5A880] pt-3 border-t border-zinc-800">
+              <span>Buka Studio Interaktif & Unduh CSV Sampel</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
           {solutions.map((sol) => (
             <Link
               key={sol.slug}

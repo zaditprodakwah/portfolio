@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ENTITY_NODES } from "@/lib/entity-graph";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -49,6 +50,7 @@ export const metadata: Metadata = {
     canonical: "https://muhzadit.pages.dev/",
     languages: {
       "id-ID": "https://muhzadit.pages.dev/",
+      "en-US": "https://muhzadit.pages.dev/en/",
       "x-default": "https://muhzadit.pages.dev/"
     },
     types: {
@@ -290,7 +292,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased text-slate-800 bg-alabaster min-h-screen selection:bg-teal-500/20 selection:text-teal-900 w-full max-w-full overflow-x-hidden">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

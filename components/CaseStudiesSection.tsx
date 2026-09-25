@@ -3,9 +3,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import { CheckCircle2, ArrowRight, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const CaseStudiesSection: React.FC = () => {
-    const carouselRef = useRef<HTMLDivElement>(null);
+  const { language } = useLanguage();
+  const isId = language === "id";
+  const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);
 
   const totalCases = cvProfile.caseStudies.length;
@@ -55,15 +58,15 @@ export const CaseStudiesSection: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 w-full min-w-0">
         <div className="space-y-3 max-w-2xl">
           <span className="font-mono text-xs text-teal-800 font-bold tracking-widest uppercase">
-            {true ? "Studi Kasus & Hasil Nyata" : "Case Studies & Concrete Impact"}
+            {isId ? "Studi Kasus & Hasil Nyata" : "Case Studies & Concrete Impact"}
           </span>
           <h2 className="text-2xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
-            {true
+            {isId
               ? "Bukti Eksekusi Riil Lintas Bidang"
               : "Verified Client Results Across Real Disciplines"}
           </h2>
           <p className="text-slate-700 text-xs sm:text-base leading-relaxed font-sans">
-            {true
+            {isId
               ? "Setiap proyek diselesaikan dengan orientasi pada kejelasan narasi, ketelitian data, dan ketercapaian target mitra."
               : "Every project is executed with disciplined communication, quantitative rigor, and client milestone delivery."}
           </p>
@@ -131,29 +134,29 @@ export const CaseStudiesSection: React.FC = () => {
             <div className="space-y-3.5">
               <div className="flex justify-between items-start gap-2">
                 <span className="font-mono text-[11px] sm:text-xs uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-teal-50 text-teal-900 border border-teal-300">
-                  {cs.badge.id}
+                  {isId ? cs.badge.id : cs.badge.en}
                 </span>
                 <span className="font-mono text-xs text-slate-700 font-bold">
-                  {cs.clientType.id}
+                  {isId ? cs.clientType.id : cs.clientType.en}
                 </span>
               </div>
 
               <div>
                 <h3 className="font-heading font-bold text-base sm:text-xl text-slate-900 group-hover:text-teal-800 transition-colors leading-snug">
-                  {cs.title.id}
+                  {isId ? cs.title.id : cs.title.en}
                 </h3>
                 <p className="font-mono text-xs text-teal-800 mt-1 font-bold">
-                  {cs.role.id}
+                  {isId ? cs.role.id : cs.role.en}
                 </p>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-sans">
-                {cs.description.id}
+                {isId ? cs.description.id : cs.description.en}
               </p>
 
               {/* Metrics Grid with WCAG AAA Contrast */}
               <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-2.5 border-t border-slate-200">
-                {cs.metrics.id.map((m, mIdx) => (
+                {(isId ? cs.metrics.id : cs.metrics.en).map((m, mIdx) => (
                   <div key={mIdx} className="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
                     <p className="font-heading font-extrabold text-base sm:text-lg text-slate-900">
                       {m.value}
@@ -168,10 +171,10 @@ export const CaseStudiesSection: React.FC = () => {
 
             <div className="pt-3.5 border-t border-slate-200 space-y-2">
               <p className="font-mono text-[11px] sm:text-xs uppercase tracking-wider text-slate-900 font-bold">
-                {true ? "Catatan Eksekusi Kunci:" : "Key Execution Takeaways:"}
+                {isId ? "Catatan Eksekusi Kunci:" : "Key Execution Takeaways:"}
               </p>
               <ul className="space-y-1.5 text-xs text-slate-800 font-sans">
-                {cs.highlights.id.map((h, hIdx) => (
+                {(isId ? cs.highlights.id : cs.highlights.en).map((h, hIdx) => (
                   <li key={hIdx} className="flex items-start gap-2">
                     <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0 mt-0.5" />
                     <span>{h}</span>
@@ -190,7 +193,7 @@ export const CaseStudiesSection: React.FC = () => {
             <MessageSquare className="w-4 h-4" />
           </div>
           <p className="text-slate-800 font-medium leading-snug">
-            {true
+            {isId
               ? "Ingin mendiskusikan kebutuhan serupa untuk bisnis, instansi, atau riset Anda?"
               : "Looking to achieve similar structured outcomes for your business, organization, or research?"}
           </p>
@@ -199,7 +202,7 @@ export const CaseStudiesSection: React.FC = () => {
           href="#consultation"
           className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 text-teal-800 font-heading text-xs uppercase font-bold hover:text-teal-950 bg-teal-50 hover:bg-teal-100 px-4 py-2.5 rounded-xl border border-teal-200 transition-colors"
         >
-          <span>{true ? "Mulai Diskusi Kebutuhan" : "Start a Discussion"}</span>
+          <span>{isId ? "Mulai Diskusi Kebutuhan" : "Start a Discussion"}</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>

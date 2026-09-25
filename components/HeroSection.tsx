@@ -13,55 +13,58 @@ import {
 } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
 import { AudienceQualifier } from "./AudienceQualifier";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface HeroSectionProps {
   onOpenChat: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
-    const stats = cvProfile.stats.id;
+  const { language } = useLanguage();
+  const isId = language === "id";
+  const stats = isId ? cvProfile.stats.id : cvProfile.stats.en;
 
   // 4 Interactive Rotating Problem-Solution Pillars with Problem-Centric Hooks + SEO Spectrum
   const pillars = [
     {
-      id: "academic",
-      label: true ? "Riset, Skripsi & Olah Data" : "Research & Statistics",
+      id: "data-engineering",
+      label: isId ? "Data & Rekayasa Dokumen" : "Data & Document Engineering",
       icon: GraduationCap,
-      headline: true 
+      headline: isId 
+        ? "Membersihkan data berantakan, ekstraksi PDF/OCR mutasi rekening, dan konversi instan ke naskah Word OpenXML atau format audit." 
+        : "Automating messy data cleanup, PDF/OCR statement parsing, and instant conversion to Word OpenXML or audit-ready formats.",
+      badge: isId ? "Otomasi Data, OCR & Format Dokumen" : "Data Automation, OCR & Document Standards",
+      link: "/solusi/document-data-studio"
+    },
+    {
+      id: "academic",
+      label: isId ? "Riset & Olah Data Statistik" : "Research & Statistics",
+      icon: GraduationCap,
+      headline: isId 
         ? "Mengurai kebuntuan olah data statistik (SPSS, SEM, Python), uji hipotesis, dan naskah riset agar siap sidang dan lolos telaah jurnal tanpa revisi berulang." 
         : "Overcoming quantitative data bottlenecks (SPSS, SEM, Python), hypothesis tests, and research papers for defense readiness and journal peer-review.",
-      badge: true ? "Bimbingan Metodologi & Olah Data Statistik" : "Methodology & Statistical Modeling",
+      badge: isId ? "Bimbingan Metodologi & Olah Data Statistik" : "Methodology & Statistical Modeling",
       link: "/layanan/olah-data-statistik-sinta"
     },
     {
       id: "business",
-      label: true ? "Proposal Usaha & SOP" : "Proposals & SOP",
+      label: isId ? "Proposal Bisnis & SOP" : "Proposals & SOP",
       icon: Briefcase,
-      headline: true 
+      headline: isId 
         ? "Menyusun proposal kemitraan investor, model keuangan BEP realistis, dan standardisasi SOP operasional agar bisnis mandiri tanpa hambatan birokrasi." 
         : "Drafting executive investor proposals, commercial feasibility models, and operational SOPs that eliminate owner bottlenecks.",
-      badge: true ? "Unit Economics & Standardisasi Operasional" : "Unit Economics & Process Standardization",
+      badge: isId ? "Unit Economics & Standardisasi Operasional" : "Unit Economics & Process Standardization",
       link: "/layanan/dokumen-administrasi-bisnis"
     },
     {
       id: "web",
-      label: true ? "Website Bisnis & Konversi" : "Business Web & Conversion",
+      label: isId ? "Website Bisnis & Konversi" : "Business Web & Conversion",
       icon: Globe,
-      headline: true 
+      headline: isId 
         ? "Membangun website profil usaha dan landing page yang terbuka instan di ponsel pelanggan, bebas downtime, dan langsung terhubung ke WhatsApp penjualan." 
         : "Engineering lightweight, instant-loading mobile business websites optimized for search intent and direct WhatsApp client acquisition.",
-      badge: true ? "Cepat di Ponsel, Bebas Downtime & Ramah SEO" : "Mobile Speed, High Uptime & High-Intent SEO",
+      badge: isId ? "Cepat di Ponsel, Bebas Downtime & Ramah SEO" : "Mobile Speed, High Uptime & High-Intent SEO",
       link: "/layanan/solusi-web-performa"
-    },
-    {
-      id: "career",
-      label: true ? "CV Eksekutif & Karir" : "Executive CV & Career",
-      icon: FileCheck2,
-      headline: true 
-        ? "Menata portofolio profesional dan resume berstandar ATS internasional untuk meyakinkan rekruter korporat, seleksi BUMN, maupun beasiswa luar negeri." 
-        : "Architecting ATS-compliant executive resumes and verified career portfolios that clear initial screening and convince leadership.",
-      badge: true ? "Standar Format ATS & Rekam Jejak Terverifikasi" : "ATS Compliance & Verified Credentials",
-      link: "/cv"
     }
   ];
 
@@ -88,7 +91,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 border border-teal-300 max-w-full">
             <span className="w-2.5 h-2.5 rounded-full bg-teal-700 animate-pulse"></span>
             <span className="font-mono text-xs tracking-wider uppercase font-bold text-teal-900">
-              {true
+              {isId
                 ? "Kesiapan: Terbuka untuk Konsultasi & Kemitraan"
                 : "Availability: Open for Strategic Advisory"}
             </span>
@@ -106,20 +109,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 ★ 5.0 Sribulancer
               </span>
               <span className="text-[11px] font-mono text-slate-600 font-semibold">
-                10+ Thn Rekam Jejak
+                {isId ? "10+ Thn Rekam Jejak" : "10+ Yrs Track Record"}
               </span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight text-slate-900 leading-[1.2] break-words">
-              {true ? (
+              {isId ? (
                 <>
                   Solusi Praktis & Presisi untuk <br />
-                  <span className="text-teal-800">Dokumen Bisnis, Riset Akademik, & Aset Digital.</span>
+                  <span className="text-teal-800">Data, Rekayasa Dokumen, Riset, & Platform Bisnis.</span>
                 </>
               ) : (
                 <>
                   Calm Precision for <br className="hidden sm:inline" />
-                  <span className="text-teal-800">Business Documents, Research & Digital Growth.</span>
+                  <span className="text-teal-800">Business Data, Document Engineering, Research & Growth.</span>
                 </>
               )}
             </h1>
@@ -134,7 +137,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
             {/* 4 Pillar Tabs (Pills) */}
             <div className="flex flex-wrap items-center gap-1.5 pb-2 border-b border-slate-100">
               <span className="text-[11px] font-mono text-slate-600 font-bold uppercase tracking-wider mr-1">
-                {true ? "Fokus Masalah:" : "Problem Focus:"}
+                {isId ? "Fokus Masalah:" : "Problem Focus:"}
               </span>
               {pillars.map((p, idx) => {
                 const isActive = activePillarIndex === idx;
@@ -178,7 +181,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 href="#consultation"
                 className="inline-flex items-center justify-center gap-2 bg-teal-800 hover:bg-teal-900 text-white px-5 sm:px-6 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
               >
-                <span>{true ? "Konsultasikan Kebutuhan" : "Discuss Your Project"}</span>
+                <span>{isId ? "Konsultasikan Kebutuhan" : "Discuss Your Project"}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -186,14 +189,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 href="/audit"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 hover:text-teal-800 px-4 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors border border-slate-200 shadow-xs cursor-pointer"
               >
-                <span>{true ? "Audit Kesiapan Proyek" : "Readiness Audit"}</span>
+                <span>{isId ? "Audit Kesiapan Proyek" : "Readiness Audit"}</span>
               </Link>
 
               <Link
                 href="/cv"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 hover:text-teal-800 px-4 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors border border-slate-200 shadow-xs cursor-pointer"
               >
-                <span>{true ? "Pratinjau CV" : "View CV"}</span>
+                <span>{isId ? "Pratinjau CV" : "View CV"}</span>
               </Link>
 
               <button
@@ -202,12 +205,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 className="inline-flex items-center justify-center gap-2 bg-teal-50 hover:bg-teal-100 text-teal-900 px-4 py-3 rounded-xl text-xs sm:text-sm font-heading font-bold uppercase tracking-wider transition-colors border border-teal-200 cursor-pointer"
                 aria-label="Buka Asisten AI Interaktif"
               >
-                <span>{true ? "Tanya AI" : "Ask AI"}</span>
+                <span>{isId ? "Tanya AI" : "Ask AI"}</span>
               </button>
             </div>
             
             <p className="text-[11px] font-mono text-slate-600 font-medium">
-              {true 
+              {isId 
                 ? "Respon dalam hitungan jam · Diskusi tanpa komitmen · Kerahasiaan data terjamin"
                 : "Responses within hours · Zero obligation discussion · Strict data confidentiality"}
             </p>
@@ -217,15 +220,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
           <div className="pt-1 flex flex-wrap items-center gap-4 sm:gap-5 text-xs text-slate-700 font-sans font-medium">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-              <span>{true ? "Transparan & Tanpa Janji Bombastis" : "Rigorous Pragmatic Craft"}</span>
+              <span>{isId ? "Transparan & Tanpa Janji Bombastis" : "Rigorous Pragmatic Craft"}</span>
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-              <span>{true ? "Kerahasiaan Data Riset & Bisnis" : "Strict NDA & Data Privacy"}</span>
+              <span>{isId ? "Kerahasiaan Data Riset & Bisnis" : "Strict NDA & Data Privacy"}</span>
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-teal-700 shrink-0" />
-              <span>{true ? "Transaksi Resmi Sribu (Escrow)" : "Official Escrow Platform"}</span>
+              <span>{isId ? "Transaksi Resmi Sribu (Escrow)" : "Official Escrow Platform"}</span>
             </span>
           </div>
         </div>
@@ -256,12 +259,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 truncate mt-0.5 font-medium">
-                  {true ? "Konsultan Pertumbuhan & Riset" : "Growth & Research Consultant"}
+                  {isId ? "Konsultan Pertumbuhan & Riset" : "Growth & Research Consultant"}
                 </p>
                 <div className="flex items-center gap-1.5 mt-1 text-[11px] text-teal-800 font-semibold font-mono">
                   <span>★ 5.0 Rating Sribulancer</span>
                   <span>•</span>
-                  <span>10+ Thn Rekam Jejak</span>
+                  <span>{isId ? "10+ Thn Rekam Jejak" : "10+ Yrs Track Record"}</span>
                 </div>
               </div>
             </div>
@@ -270,14 +273,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
             <div className="space-y-2.5 sm:space-y-3 text-xs font-sans">
               <div className="flex items-start gap-3 p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90">
                 <div className="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                  <FileCheck2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
+                    {isId ? "Otomasi Data & Rekayasa Dokumen" : "Data Automation & Document Engineering"}
+                  </p>
+                  <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
+                    {isId ? "Pembersihan dataset, OCR bank statement, dan OpenXML Word" : "Dataset sanitization, bank statement OCR, and Word OpenXML"}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90">
+                <div className="w-8 h-8 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center shrink-0 mt-0.5 font-bold">
                   <Briefcase className="w-4 h-4" />
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {true ? "Proposal Bisnis & SOP Operasional" : "Business Proposals & SOP"}
+                    {isId ? "Proposal Bisnis & SOP Operasional" : "Business Proposals & SOP"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {true ? "Studi kelayakan, proyeksi BEP, dan pedoman kerja terstandar" : "Feasibility, financial cash flows, investor decks"}
+                    {isId ? "Studi kelayakan, proyeksi BEP, dan pedoman kerja terstandar" : "Feasibility, financial cash flows, investor decks"}
                   </p>
                 </div>
               </div>
@@ -288,10 +305,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {true ? "Riset Akademik & Olah Data Statistik" : "Academic Research & Data"}
+                    {isId ? "Riset Akademik & Olah Data Statistik" : "Academic Research & Data"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {true ? "Bimbingan skripsi/tesis, uji hipotesis SPSS, dan jurnal SINTA" : "Quantitative analysis (SPSS, SEM) & journal publishing"}
+                    {isId ? "Bimbingan skripsi/tesis, uji hipotesis SPSS, dan jurnal SINTA" : "Quantitative analysis (SPSS, SEM) & journal publishing"}
                   </p>
                 </div>
               </div>
@@ -302,24 +319,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {true ? "Website Bisnis & Konversi" : "Business Web & Conversion"}
+                    {isId ? "Website Bisnis & Konversi" : "Business Web & Conversion"}
                   </p>
                   <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {true ? "Situs cepat ramah ponsel, SEO on-page, dan integrasi WhatsApp" : "Fast mobile business sites, SEO, and WhatsApp integration"}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-2.5 sm:p-3 rounded-xl bg-slate-50 border border-slate-200/90">
-                <div className="w-8 h-8 rounded-lg bg-violet-100 text-violet-800 flex items-center justify-center shrink-0 mt-0.5 font-bold">
-                  <FileCheck2 className="w-4 h-4" />
-                </div>
-                <div>
-                  <p className="font-heading font-bold text-slate-900 text-xs sm:text-sm">
-                    {true ? "CV Eksekutif & Kredensial Karir" : "Executive CV & Career Assets"}
-                  </p>
-                  <p className="text-slate-600 text-[11px] sm:text-xs mt-0.5">
-                    {true ? "Resume standar ATS, portofolio digital, dan verifikasi profil" : "ATS-compliant resumes and verified career portfolios"}
+                    {isId ? "Situs cepat ramah ponsel, SEO on-page, dan integrasi WhatsApp" : "Fast mobile business sites, SEO, and WhatsApp integration"}
                   </p>
                 </div>
               </div>
@@ -333,7 +336,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
                 rel="noopener noreferrer"
                 className="text-xs font-mono text-teal-800 hover:text-teal-950 font-bold flex items-center justify-between"
               >
-                <span>{true ? "Lihat Reputasi & Ulasan Klien di Sribu" : "View Verified Sribu Reviews"}</span>
+                <span>{isId ? "Lihat Reputasi & Ulasan Klien di Sribu" : "View Verified Sribu Reviews"}</span>
                 <span className="text-sm font-heading font-bold">→</span>
               </a>
             </div>
