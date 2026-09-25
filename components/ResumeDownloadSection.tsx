@@ -56,10 +56,19 @@ export const ResumeDownloadSection: React.FC = () => {
             <a
               href="/cv.pdf"
               download="Muhammad_Khoiruzzadittaqwa_CV.pdf"
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold uppercase tracking-wider text-xs px-5 py-3 rounded-xl shadow-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
+              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold uppercase tracking-wider text-xs px-4 py-3 rounded-xl shadow-xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
             >
               <Download className="w-4 h-4 text-teal-300" />
-              <span>Unduh Dokumen PDF</span>
+              <span>Unduh PDF (English ATS)</span>
+            </a>
+
+            <a
+              href="/cv-id.pdf"
+              download="Muhammad_Khoiruzzadittaqwa_CV_ID.pdf"
+              className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-bold uppercase tracking-wider text-xs px-4 py-3 rounded-xl transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700"
+            >
+              <Download className="w-4 h-4 text-teal-700" />
+              <span>Unduh PDF (Indonesia)</span>
             </a>
 
             <a

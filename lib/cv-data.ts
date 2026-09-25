@@ -50,7 +50,7 @@ export const cvProfile = {
   aliases: ["Zadit", "Muh Zadit", "Aditt", "muhzadit", "Zadit Dev"],
   titles: {
     id: "Konsultan Pertumbuhan, Dokumen Bisnis & Riset Terpadu",
-    en: "Strategic Growth, Business & Research Consultant"
+    en: "Full-Stack Web Dev, Docs/Slide Design, & Data Solutions Specialist"
   },
   taglines: {
     id: "Dari Kata ke Konversi. Dari Data ke Keputusan Nyata.",
