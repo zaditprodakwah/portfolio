@@ -229,10 +229,12 @@ _Penyedia: Zadit (PT Prisma Digital Kreatif - NIB 1801250039976)_`;
 
                 {/* Target Spesifik */}
                 <div className="space-y-1.5">
-                  <label className="block text-[#cbd5e1] font-medium">
+                  <label htmlFor="lead-target-query" className="block text-[#cbd5e1] font-medium">
                     2. Objek atau Target Spesifik yang Ingin Dipantau <span className="text-[#10b981]">*</span>
                   </label>
                   <input
+                    id="lead-target-query"
+                    name="targetQuery"
                     type="text"
                     placeholder="Contoh: Nama toko resmi kompetitor di marketplace, domain LPSE daerah, pelabuhan tertentu..."
                     value={targetQuery}
@@ -306,10 +308,13 @@ _Penyedia: Zadit (PT Prisma Digital Kreatif - NIB 1801250039976)_`;
                 {/* Nama Lengkap & Perusahaan */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="space-y-1.5">
-                    <label className="block text-[#cbd5e1] font-medium">
+                    <label htmlFor="lead-full-name" className="block text-[#cbd5e1] font-medium">
                       Nama Pemohon / PIC <span className="text-[#10b981]">*</span>
                     </label>
                     <input
+                      id="lead-full-name"
+                      name="fullName"
+                      autoComplete="name"
                       type="text"
                       placeholder="Nama Lengkap Anda"
                       value={fullName}
@@ -320,10 +325,13 @@ _Penyedia: Zadit (PT Prisma Digital Kreatif - NIB 1801250039976)_`;
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="block text-[#cbd5e1] font-medium">
+                    <label htmlFor="lead-company-name" className="block text-[#cbd5e1] font-medium">
                       Perusahaan / Brand <span className="text-[#10b981]">*</span>
                     </label>
                     <input
+                      id="lead-company-name"
+                      name="companyName"
+                      autoComplete="organization"
                       type="text"
                       placeholder="Nama PT / CV / Brand"
                       value={companyName}
@@ -336,10 +344,13 @@ _Penyedia: Zadit (PT Prisma Digital Kreatif - NIB 1801250039976)_`;
 
                 {/* Nomor WhatsApp */}
                 <div className="space-y-1.5">
-                  <label className="block text-[#cbd5e1] font-medium">
+                  <label htmlFor="lead-whatsapp-number" className="block text-[#cbd5e1] font-medium">
                     Nomor WhatsApp Anda <span className="text-[#10b981]">*</span>
                   </label>
                   <input
+                    id="lead-whatsapp-number"
+                    name="whatsappNumber"
+                    autoComplete="tel"
                     type="tel"
                     placeholder="Contoh: 081234567890"
                     value={whatsappNumber}
@@ -354,10 +365,12 @@ _Penyedia: Zadit (PT Prisma Digital Kreatif - NIB 1801250039976)_`;
 
                 {/* Catatan Tambahan (Opsional) */}
                 <div className="space-y-1.5">
-                  <label className="block text-[#cbd5e1] font-medium">
+                  <label htmlFor="lead-notes" className="block text-[#cbd5e1] font-medium">
                     Kebutuhan Kolom / Catatan Khusus (Opsional)
                   </label>
                   <input
+                    id="lead-notes"
+                    name="notes"
                     type="text"
                     placeholder="Contoh: Perlu kolom estimasi stok, nomor tender, atau tanggal lelang"
                     value={notes}

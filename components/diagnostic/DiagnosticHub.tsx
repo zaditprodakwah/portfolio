@@ -161,7 +161,11 @@ export const DiagnosticHub: React.FC = () => {
 
           <form onSubmit={handleUrlSubmit} className="space-y-4">
             <div className="relative">
+              <label htmlFor="diagnostic-url-input" className="sr-only">URL Website atau Domain untuk Diuji</label>
               <input
+                id="diagnostic-url-input"
+                name="targetUrl"
+                autoComplete="url"
                 type="text"
                 value={urlInput}
                 onChange={(e) => setUrlInput(e.target.value)}
