@@ -50,7 +50,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://muhzadit.pages.dev/",
     languages: {
+      "id": "https://muhzadit.pages.dev/",
       "id-ID": "https://muhzadit.pages.dev/",
+      "en": "https://muhzadit.pages.dev/en/",
       "en-US": "https://muhzadit.pages.dev/en/",
       "x-default": "https://muhzadit.pages.dev/"
     },
