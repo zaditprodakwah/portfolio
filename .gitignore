@@ -29,3 +29,7 @@ yarn-error.log*
 # OS Files
 .DS_Store
 *.pem
+*.nosync/
+node_modules.nosync/
+*.tsbuildinfo
+

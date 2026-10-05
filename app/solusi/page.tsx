@@ -35,11 +35,37 @@ export default function SolutionsIndexPage() {
         </header>
 
         <div className="grid grid-cols-1 gap-6">
+          {/* Official Commercial Packages Hub */}
+          <Link
+            href="/paket-solusi/"
+            className="group p-6 sm:p-7 rounded-2xl bg-white border-2 border-teal-600/40 hover:border-teal-700 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-slate-900"
+          >
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-bold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded border border-teal-200 uppercase tracking-wider">
+                  Katalog Komersial Resmi
+                </span>
+                <span className="text-xs font-mono text-slate-400">/paket-solusi/</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-slate-900 group-hover:text-teal-700 transition-colors">
+                Paket Solusi Rekayasa & Biaya Transparan (4 Pilar Bisnis)
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Telusuri paket lengkap otomasi alur kerja data B2B, arsitektur web edge $0 Cloudflare, pitch deck eksekutif 16:9, dan riset akademik SINTA resmi lengkap dengan kalkulator kebutuhan interaktif.
+              </p>
+            </div>
+            <div className="shrink-0 inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-4 py-2.5 rounded-xl border border-teal-200/80 group-hover:bg-teal-700 group-hover:text-white transition-colors">
+              <span>Buka Paket & Biaya</span>
+              <ArrowRight className="w-4 h-4" />
+            </div>
+          </Link>
+
           {/* Featured Interactive Studio */}
           <Link
             href="/solusi/document-data-studio/"
             className="group p-6 sm:p-7 rounded-xl bg-gradient-to-br from-[#1C1322] to-[#150F18] border border-[#8F652E]/40 hover:border-[#8F652E] shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4 text-white"
           >
+
             <div className="space-y-2">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="text-xs font-medium text-[#C5A880] bg-[#231627] px-2.5 py-0.5 rounded border border-[#8F652E]/30">

@@ -72,12 +72,12 @@ export const ENTITY_NODES: Record<string, EntityNode> = {
   },
   "technical-seo": {
     id: "technical-seo",
-    name: "Technical SEO & Silo Architecture",
+    name: "Technical SEO & Klaster Topik Terstruktur",
     level: "micro",
     pillar: "marketing-seo",
     wikidataUri: "https://www.wikidata.org/wiki/Q180711",
-    description: "Penataan struktur perayapan, pembersihan kode, sitemap XML, dan arsitektur tautan internal bebas orphan.",
-    aliases: ["audit technical seo", "internal linking silo", "crawl budget"]
+    description: "Penataan struktur perayapan, pembersihan kode, sitemap XML, dan arsitektur tautan internal kontekstual bebas orphan.",
+    aliases: ["audit technical seo", "internal linking kontekstual", "crawl budget"]
   },
 
   // --- Pilar 3: Olah Data Statistik & Riset SINTA ---

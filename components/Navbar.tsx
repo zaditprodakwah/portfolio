@@ -207,22 +207,60 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                     </div>
 
                     <Link 
-                      href="/solusi" 
+                      href="/paket-solusi" 
                       onClick={() => setIsMegaOpen(false)}
-                      className="group p-2.5 rounded-xl hover:bg-teal-50/60 transition-colors border border-teal-100/60"
+                      className="group p-2.5 rounded-xl hover:bg-teal-50/70 transition-colors border border-teal-200/80 bg-teal-50/30"
                     >
                       <div className="flex items-start gap-2.5">
-                        <Layers className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
+                        <Sparkles className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-heading font-bold text-xs text-teal-900 group-hover:text-teal-700 flex items-center gap-1">
-                            {isId ? "Direktori Solusi pSEO" : "pSEO Solution Matrix"}
+                            {isId ? "Paket Solusi & Biaya" : "Commercial Packages"}
                           </p>
                           <p className="text-[11px] text-slate-600 leading-snug mt-0.5">
+                            {isId ? "Katalog paket resmi 4 pilar bisnis & kalkulator estimasi." : "Fixed-price 4-pillar packages & cost calculator."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link 
+                      href="/landing-300rb" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-amber-50/80 transition-colors border border-amber-200/90 bg-amber-50/40"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <Globe className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-amber-950 group-hover:text-amber-800 flex items-center gap-1">
+                            {isId ? "Web Bisnis Siap Pakai (300rb)" : "Turnkey Business Site (300k)"}
+                          </p>
+                          <p className="text-[11px] text-amber-900/80 leading-snug mt-0.5">
+                            {isId ? "Website satu halaman cepat termasuk domain & WhatsApp." : "Single-page fast site with domain & WhatsApp."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+
+                    <Link 
+                      href="/solusi" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <Layers className="w-4 h-4 text-slate-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-slate-900 group-hover:text-teal-700 flex items-center gap-1">
+                            {isId ? "Direktori Solusi pSEO" : "pSEO Solution Matrix"}
+                          </p>
+                          <p className="text-[11px] text-slate-500 leading-snug mt-0.5">
                             {isId ? "Katalog studi komparasi & analisis alternatif kebutuhan." : "Multi-angle comparative analysis matrix."}
                           </p>
                         </div>
                       </div>
                     </Link>
+
 
                     <Link 
                       href="/#studi-kasus" 

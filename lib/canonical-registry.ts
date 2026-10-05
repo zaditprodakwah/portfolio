@@ -125,11 +125,20 @@ export const SITE_CANONICAL_REGISTRY: Record<string, IntentMapping> = {
     pillar: "bisnis",
     category: "solusi",
   },
-  "/intelligence/": {
-    canonicalPath: "/intel/",
-    primaryKeyword: "intelijen data telemetri bisnis dan sentinel pasar",
-    secondaryKeywords: ["alternative data daas indonesia", "deteksi anomali spc h3", "delta katalog e-commerce", "monitoring tender lpse"],
-    pillar: "bisnis",
-    category: "solusi",
+  "/paket-solusi/": {
+    canonicalPath: "/paket-solusi/",
+    primaryKeyword: "paket solusi rekayasa teknologi dan penawaran bisnis indonesia",
+    secondaryKeywords: ["jasa olah data sinta", "pembuatan website edge nextjs", "pitch deck 16:9 eksekutif", "automasi jira b2b", "biaya jasa teknologi indonesia"],
+    pillar: "general",
+    category: "layanan",
+  },
+  "/landing-300rb/": {
+    canonicalPath: "/landing-300rb/",
+    primaryKeyword: "website bisnis satu halaman 300 ribu termasuk domain",
+    secondaryKeywords: ["jasa bikin website murah cepat", "web umkm siap pakai domain", "website tanpa biaya server bulanan", "landing page whatsapp bisnis lokal"],
+    pillar: "web",
+    category: "layanan",
   },
 };
+
+

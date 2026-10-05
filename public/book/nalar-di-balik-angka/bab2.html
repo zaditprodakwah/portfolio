@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Anatomi Manipulasi Visual – Nalar di Balik Angka</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./bab3.html" rel="next">
+<link href="./bab1.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-9b13294eb98a7ccc9837366643235be5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-ad7a70ee837950f74c3137b2b7f1bb4b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-9b13294eb98a7ccc9837366643235be5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8a7dd0c29283f4eae197dd35601c6170.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2724ed26f0e325f66737ee2448127f0c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-8a7dd0c29283f4eae197dd35601c6170.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bab1.html">BAGIAN I: ANATOMI KEBUTAAN DAN ILUSI VISUAL</a></li><li class="breadcrumb-item"><a href="./bab2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anatomi Manipulasi Visual</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Nalar di Balik Angka</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pengantar: Menghidupkan Nalar, Membaca Nurani</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./frontmatter/hak-cipta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Informasi Penerbitan &amp; Hak Cipta</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./frontmatter/prakata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prakata: Mengapa Buku Ini Ditulis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./frontmatter/panduan-membaca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Panduan Membaca &amp; Peta Tiga Instrumen</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">BAGIAN I: ANATOMI KEBUTAAN DAN ILUSI VISUAL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Menghafal Rumus, Buta Makna</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anatomi Manipulasi Visual</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">BAGIAN II: PISAU BEDAH NILAI: EPISTEMOLOGI DAN ETIKA DATA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Epistemologi Tabayyun: Seni Menguji Klaim</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Amanah dan Tawazun: Etika Keseimbangan</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">BAGIAN III: REVOLUSI LAYAR: DARI KERTAS KE LABORATORIUM VIRTUAL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mengapa Kertas Membekukan Nalar?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Laboratorium Visual di Atas Layar</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">BAGIAN IV: PRAKSIS DAN MASA DEPAN DI ERA KECERDASAN BUATAN</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Membimbing Nalar Kritis di Sekolah dan Rumah</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bab8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Menavigasi Dunia yang Dipenuhi Algoritma</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./backmatter/glosarium.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glosarium Istilah</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./backmatter/tentang-penulis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tentang Penulis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./backmatter/kolofon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kolofon &amp; Catatan Produksi</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./backmatter/daftar-pustaka.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Daftar Pustaka</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./backmatter/lampiran-a-ceklist-agm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Lampiran A: Lembar Ceklis Audit Grafik Mandiri</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./backmatter/lampiran-b-taksonomi-grafik.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Lampiran B: Matriks Taksonomi Enam Distorsi Visual dan Panduan Mitigasi</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#pesona-visual-dan-celah-persepsi" id="toc-pesona-visual-dan-celah-persepsi" class="nav-link active" data-scroll-target="#pesona-visual-dan-celah-persepsi"><span class="header-section-number">2.1</span> Pesona Visual dan Celah Persepsi</a></li>
+  <li><a href="#enam-taksonomi-manipulasi-grafik" id="toc-enam-taksonomi-manipulasi-grafik" class="nav-link" data-scroll-target="#enam-taksonomi-manipulasi-grafik"><span class="header-section-number">2.2</span> Enam Taksonomi Manipulasi Grafik</a></li>
+  <li><a href="#menegakkan-timbangan-di-era-kecerdasan-buatan" id="toc-menegakkan-timbangan-di-era-kecerdasan-buatan" class="nav-link" data-scroll-target="#menegakkan-timbangan-di-era-kecerdasan-buatan"><span class="header-section-number">2.3</span> Menegakkan Timbangan di Era Kecerdasan Buatan</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bab1.html">BAGIAN I: ANATOMI KEBUTAAN DAN ILUSI VISUAL</a></li><li class="breadcrumb-item"><a href="./bab2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anatomi Manipulasi Visual</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-bab2" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Anatomi Manipulasi Visual</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p><em>“Mata manusia dirancang oleh Sang Pencipta untuk mengagumi keindahan bentuk dan keserasian warna. Namun, ketika keindahan visual itu disalahgunakan untuk menyembunyikan cacat pada data, mata kita dengan mudah menjadi pintu masuk bagi kebohongan yang paling meyakinkan.”</em></p>
+</blockquote>
+<section id="pesona-visual-dan-celah-persepsi" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="pesona-visual-dan-celah-persepsi"><span class="header-section-number">2.1</span> Pesona Visual dan Celah Persepsi</h2>
+<p>Setiap awal pekan di sebuah sekolah menengah di Jawa Timur, papan pengumuman kayu di depan lobi utama selalu dikerumuni oleh para siswa dan guru. Papan itu memuat buletin mingguan yang dikelola oleh tim redaksi siswa. Di samping rubrik karya sastra dan artikel wawasan, ada satu pojok yang paling sering memicu perdebatan seru: pojok infografis evaluasi kelas.</p>
+<p>Minggu ini, redaksi mading menampilkan sebuah grafik batang berwarna biru terang yang memetakan skor kebersihan antarkelas di lantai dua. Di grafik tersebut, batang milik Kelas A tampak menjulang tinggi menyentuh garis atas bingkai, sementara batang milik Kelas B tampak kerdil, tingginya tidak sampai separuh dari Kelas A.</p>
+<p>Melihat pemandangan visual itu, perwakilan murid Kelas B langsung merasa tertunduk malu, sementara murid Kelas A bersorak bangga. Namun, ketika seorang guru pembina menghampiri papan mading dan membaca angka-angka kecil yang tertera di puncak masing-masing batang, beliau tersenyum lalu menggelengkan kepala.</p>
+<p>“Mengapa kalian bersedih?” tanya sang guru kepada perwakilan Kelas B.<br>
+“Nilai kebersihan kami hancur lebur, Bu. Lihat saja grafiknya, kelas kami ketinggalan jauh sekali di dasar.”<br>
+“Kalian melihat gambar, tetapi belum membaca angka,” jawab sang guru tenang. “Kelas A memperoleh nilai sembilan puluh delapan koma lima, sedangkan kelas kalian memperoleh nilai sembilan puluh tujuh. Selisihnya hanya satu koma lima poin dari skala seratus. Kedua kelas sama-sama bersih dan sangat terawat. Gambar ini tampak timpang karena redaksi mading memotong garis bawah grafik dan memulainya dari angka sembilan puluh enam.”</p>
+<p>Peristiwa di depan papan mading sekolah itu adalah miniatur dari apa yang terjadi setiap hari di panggung dunia modern. Manusia adalah makhluk visual. Secara evolusioner dan biologis, korteks visual di otak kita memproses luas bidang, panjang garis, kontras warna, dan kemiringan sudut jauh lebih cepat daripada memproses deretan simbol angka atau teks narasi. Ketika kita melihat sebuah bentuk geometris yang menjulang, otak bawah sadar kita secara otomatis menarik kesimpulan: <em>“Ini besar, ini unggul, ini menang!”</em>.</p>
+<p>Para perancang infografis media, konsultan pemasaran politik, dan pembuat laporan keuangan korporat memahami betul celah kognitif ini. Mereka menyadari bahwa sebagian besar pembaca tidak memiliki waktu atau ketelitian untuk memeriksa label sumbu koordinat. Akibatnya, grafik tidak lagi difungsikan sebagai jendela kejujuran untuk melihat realitas apa adanya, melainkan diubah menjadi panggung sandiwara visual untuk menggiring opini publik <span class="citation" data-cites="huff1954how cairo2019charts">(<a href="backmatter/daftar-pustaka.html#ref-huff1954how" role="doc-biblioref">Huff 1954</a>; <a href="backmatter/daftar-pustaka.html#ref-cairo2019charts" role="doc-biblioref">Cairo 2019</a>)</span>.</p>
+<p>Di era media sosial yang digerakkan oleh algoritma rekomendasi umpan-klik (<em>clickbait algorithms</em>), distorsi visual ini mengalami amplifikasi yang luar biasa. Sebuah grafik yang dramatis, kontroversial, atau memicu kemarahan publik akan dibagikan puluhan ribu kali dalam hitungan menit, terlepas dari apakah grafik tersebut jujur atau culas. Untuk membentengi akal sehat kita, kita perlu membedah secara mendalam enam taksonomi manipulasi visual yang paling sering mengecoh nalar masyarakat.</p>
+</section>
+<section id="enam-taksonomi-manipulasi-grafik" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="enam-taksonomi-manipulasi-grafik"><span class="header-section-number">2.2</span> Enam Taksonomi Manipulasi Grafik</h2>
+<section id="pemotongan-sumbu-vertikal-truncated-y-axis" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="pemotongan-sumbu-vertikal-truncated-y-axis"><span class="header-section-number">2.2.1</span> Pemotongan Sumbu Vertikal (Truncated Y-Axis)</h3>
+<p>Bentuk manipulasi paling klasik, paling sederhana, namun paling mematikan dalam sejarah visualisasi data adalah pemotongan sumbu vertikal (<span class="math inline">\(y_{\min} \neq 0\)</span>). Diagram batang (<em>bar chart</em>) bekerja berdasarkan prinsip proporsionalitas luas bidang: mata kita menilai besaran kuantitas data berdasarkan tinggi batang relatif terhadap garis dasar (<em>baseline</em>).</p>
+<p>Ketika pembuat grafik memotong sumbu vertikal dan memulai skala dari angka yang mendekati nilai data terendah, proporsi visual batang hancur total.</p>
+<div id="fig-truncated" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-truncated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig-truncated-axis.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-truncated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Perbandingan Diagram Batang: Sumbu Y Terpotong vs Sumbu Y Berbasis Nol
+</figcaption>
+</figure>
+</div>
+<p>Perhatikan perbandingan pada <a href="#fig-truncated" class="quarto-xref">Figure&nbsp;<span>2.1</span></a>. Pada Panel A, sumbu tegak dimulai dari angka 97% hingga 100%. Peningkatan tingkat kelulusan siswa dari <span class="math inline">\(98{,}2\%\)</span> ke <span class="math inline">\(99{,}4\%\)</span> disajikan secara hiperbolis: batang tahun kedua tampak dua kali lebih tinggi dibandingkan tahun pertama, menciptakan ilusi pelipatgandaan tinggi visual (+100%) atas selisih absolut yang hanya <span class="math inline">\(1{,}2\%\)</span>.</p>
+<p>Namun, ketika sumbu tegak dikembalikan ke titik nol objektif sebagaimana tampak pada Panel B, mata kita segera menangkap kenyataan yang sesungguhnya: tingkat kelulusan siswa pada kedua tahun tersebut sejatinya sudah berada di puncak performa yang luar biasa stabil. Selisih <span class="math inline">\(1{,}2\%\)</span> adalah peningkatan wajar yang tidak selayaknya digambarkan laksana ledakan spektakuler. Memotong sumbu pada diagram batang adalah pelanggaran berat terhadap etika geometri data, karena diagram batang mewajibkan keterikatan mutlak antara panjang fisik batang dengan rasio nilai aslinya.</p>
+<p>Perlu satu nuansa agar kaidah ini tidak menjadi overgeneralisasi. Ketegasan titik nol di atas berlaku untuk diagram batang dan lingkaran yang dibaca lewat panjang atau luas. Untuk diagram garis deret waktu, panduan praktik visualisasi data dan literatur visualisasi <span class="citation" data-cites="cairo2019charts tufte1983visual">(<a href="backmatter/daftar-pustaka.html#ref-cairo2019charts" role="doc-biblioref">Cairo 2019</a>; <a href="backmatter/daftar-pustaka.html#ref-tufte1983visual" role="doc-biblioref">Tufte 1983</a>)</span> sepakat pada posisi kontekstual: memperbesar rentang sumbu garis untuk suhu global, harga saham harian, atau suhu turbin sekitar 900 Kelvin adalah sah selama sumbu diberi label jujur, diskala linear konsisten, dan anotasi menjelaskan pembesaran. Yang tetap dilarang adalah menyembunyikan pemotongan, mencampur dua satuan tak sepadan, atau memakai pembesaran untuk memanaskan emosi. Kaidahnya: batang dan pai wajib nol, garis boleh zoom dengan pengungkapan penuh.</p>
+</section>
+<section id="distorsi-perspektif-tiga-dimensi-3d-perspective-distortion" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="distorsi-perspektif-tiga-dimensi-3d-perspective-distortion"><span class="header-section-number">2.2.2</span> Distorsi Perspektif Tiga Dimensi (3D Perspective Distortion)</h3>
+<p>Di ruang rapat kantor modern maupun selebaran promosi lembaga bimbingan belajar, kita kerap menjumpai diagram lingkaran (<em>pie chart</em>) dan diagram batang yang dihias dengan efek tiga dimensi (3D). Banyak orang mengira bahwa penambahan bayangan dan kemiringan sudut adalah upaya artistik untuk mempercantik laporan. Faktanya, dalam kaidah visualisasi data, efek 3D tanpa fungsi spasial riil adalah racun persepsi <span class="citation" data-cites="tufte1983visual">(<a href="backmatter/daftar-pustaka.html#ref-tufte1983visual" role="doc-biblioref">Tufte 1983</a>)</span>.</p>
+<p>Ketika sebuah diagram lingkaran dimiringkan secara perspektif, hukum optik proyektif mulai mendistorsi kebenaran. Potongan lingkaran yang berada di bagian depan bawah akan menempati piksel visual yang jauh lebih luas dibandingkan potongan lingkaran yang berada di bagian belakang atas, meskipun nilai persentase numerik potongan belakang jauh lebih besar.</p>
+<p>Sebagai contoh, sebuah potongan data yang hanya bernilai 20% dapat tampak jauh lebih dominan dan perkasa daripada potongan data bernilai 35% hanya karena potongan 20% diletakkan di bagian depan dengan sudut kemiringan tajam. Di mata pembaca yang membaca sepintas, potongan depan itulah yang dianggap sebagai suara mayoritas. Menambahkan dimensi semu pada data datar dua dimensi adalah trik manipulasi yang mengeksploitasi keterbatasan sudut pandang manusia.</p>
+</section>
+<section id="skala-non-linear-yang-menyesatkan-non-linear-and-inconsistent-scaling" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="skala-non-linear-yang-menyesatkan-non-linear-and-inconsistent-scaling"><span class="header-section-number">2.2.3</span> Skala Non-Linear yang Menyesatkan (Non-Linear and Inconsistent Scaling)</h3>
+<p>Sumbu koordinat adalah timbangan sebuah grafik. Timbangan yang adil mensyaratkan jarak fisik yang seragam untuk mewakili kenaikan nilai yang setara. Pada sumbu linear, jarak antara angka 10 ke 20 harus sama persis dengan jarak antara angka 20 ke 30.</p>
+<p>Manipulasi terjadi ketika pembuat grafik mempermainkan interval sumbu secara sembunyi-sembunyi. Sebagai contoh, pada sumbu horizontal yang memetakan waktu, jarak antara tahun 2010 ke 2015 digambar sepanjang dua sentimeter, tetapi jarak antara tahun 2015 ke 2024 (sembilan tahun) juga digambar sepanjang dua sentimeter tanpa penandaan khusus.</p>
+<p>Dengan cara ini, laju pertumbuhan utang atau perlambatan ekonomi yang sejatinya melandai dapat ditarik menjadi garis lurus yang tampak menanjak curam, atau sebaliknya. Ketika skala sumbu tidak konsisten, grafik kehilangan integritas geometrisnya dan berubah menjadi karikatur data.</p>
+</section>
+<section id="pemilihan-rentang-waktu-terpilih-cherry-picking-time-intervals" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="pemilihan-rentang-waktu-terpilih-cherry-picking-time-intervals"><span class="header-section-number">2.2.4</span> Pemilihan Rentang Waktu Terpilih (Cherry-Picking Time Intervals)</h3>
+<p>Data deret waktu (<em>time-series</em>) adalah sasaran empuk bagi mereka yang ingin mengarang cerita sepihak. Sebuah fenomena ekonomi, suhu iklim, atau performa kepengurusan organisasi selalu mengalami fluktuasi siklikal: ada masa naik, ada masa turun, dan ada masa tenang.</p>
+<p>Trik <em>cherry-picking</em> dilakukan dengan cara memotong jendela waktu pengamatan secara sangat selektif. Bayangkan sebuah lembaga filantropi yang selama sepuluh tahun terakhir mengalami penurunan penerimaan donasi secara berkesinambungan. Namun, pada bulan Ramadan tahun lalu, penerimaan donasi kebetulan melonjak sesaat karena adanya program darurat bencana.</p>
+<p>Jika pengurus yayasan ingin menampilkan citra keberhasilan semu kepada para donatur, mereka cukup memotong rentang waktu grafik: mereka membuang data sembilan tahun sebelumnya, dan hanya menampilkan grafik dari bulan Syaban hingga bulan Syawal tahun lalu. Garis grafik akan tampak melesat ke langit, memberi kesan bahwa yayasan sedang berada dalam masa keemasan, padahal tren makro jangka panjangnya sedang berada di ambang kebangkrutan. Menilai tren tanpa melihat horizon waktu yang komprehensif adalah kekeliruan fatal yang kerap memicu salah langkah dalam pengambilan keputusan.</p>
+</section>
+<section id="jebakan-korelasi-palsu-spurious-correlations" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="jebakan-korelasi-palsu-spurious-correlations"><span class="header-section-number">2.2.5</span> Jebakan Korelasi Palsu (Spurious Correlations)</h3>
+<p>Di era komputasi modern, membandingkan ribuan deret data acak menggunakan perangkat lunak statistik sangatlah mudah. Jika kita memasukkan ratusan variabel acak ke dalam komputer, hukum peluang memastikan bahwa kita akan menemukan beberapa pasang variabel yang memiliki koefisien korelasi linear (<span class="math inline">\(r\)</span>) sangat tinggi mendekati satu, murni karena faktor kebetulan matematis semata.</p>
+<p>Secara matematis, koefisien korelasi Pearson dirumuskan sebagai:</p>
+<p><span class="math display">\[r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2 \cdot \sum_{i=1}^{n} (y_i - \bar{y})^2}}\]</span></p>
+<p>Formula di atas murni mengukur sejauh mana dua variabel bergerak bersama dalam pola garis lurus. Jika nilai <span class="math inline">\(x\)</span> naik saat <span class="math inline">\(y\)</span> naik, maka nilai <span class="math inline">\(r\)</span> akan positif mendekati satu. Namun, formula matematika ini sama sekali tidak memiliki kemampuan untuk membedakan apakah kenaikan <span class="math inline">\(x\)</span> memang menjadi penyebab (<em>illat</em>) bagi kenaikan <span class="math inline">\(y\)</span>, ataukah keduanya hanyalah dua peristiwa terpisah yang kebetulan beriringan.</p>
+<div id="fig-spurious" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spurious-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig-spurious-correlations.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spurious-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Anatomi Korelasi Palsu: Konsumsi Keju per Kapita vs Jumlah Lulusan Doktor
+</figcaption>
+</figure>
+</div>
+<p>Perhatikan <a href="#fig-spurious" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> yang mengadaptasi fenomena korelasi palsu terkenal (data ilustratif yang disintesis menyerupai pola Tyler Vigen <span class="citation" data-cites="vigen2015spurious">(<a href="backmatter/daftar-pustaka.html#ref-vigen2015spurious" role="doc-biblioref">Vigen 2015</a>)</span>). Kurva tingkat konsumsi keju per kapita bergerak beriringan secara sangat harmonis dengan kurva jumlah lulusan doktor teknik sipil (<span class="math inline">\(r = 0{,}99\)</span>, terhitung dari data yang diplot). Apakah ini berarti makan keju membuat seseorang menjadi ahli struktur jembatan? Ataukah belajar teknik sipil memicu kecanduan keju?</p>
+<p>Tentu saja tidak. Keduanya sama sekali tidak memiliki hubungan sebab-akibat (<em>causality</em>). Dalam tradisi filsafat Islam dan kaidah ushul fikih, para ulama membedakan secara tegas antara hubungan penyertaan kebiasaan (<em>iqtiran</em>) dengan hubungan sebab-akibat hakiki (<em>sababiyyah</em>). Hanya karena dua peristiwa terjadi bersamaan secara berulang, akal sehat kita tidak boleh secara serampangan menetapkan bahwa peristiwa pertama adalah penyebab bagi peristiwa kedua tanpa adanya bukti mekanisme kausalitas yang nyata dan rasional.</p>
+<p>Namun, di media massa, panggung seminar, dan lini masa media sosial, grafik semacam ini kerap dipamerkan untuk membenarkan teori-teori tak masuk akal. Seseorang bisa saja menghubungkan grafik peningkatan pengguna gawai pintar di sebuah kota dengan grafik penurunan angka kehadiran salat berjamaah di masjid, lalu menyimpulkan secara tergesa-gesa bahwa layar ponsel secara langsung merusak keimanan warga, tanpa meneliti variabel lain seperti perubahan jam kerja buruh atau pergeseran demografi permukiman. Mengacaukan korelasi dengan kausalitas adalah salah satu bentuk kebutaan nalar yang paling berbahaya di era banjir data.</p>
+</section>
+<section id="jebakan-sumbu-ganda-misleading-dual-y-axes" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="jebakan-sumbu-ganda-misleading-dual-y-axes"><span class="header-section-number">2.2.6</span> Jebakan Sumbu Ganda (Misleading Dual Y-Axes)</h3>
+<p>Teknik manipulasi yang paling canggih dan sering lolos dari pengawasan para profesional di ruang rapat kantor adalah penggunaan sumbu ganda (<em>dual Y-axes</em>). Grafik sumbu ganda menempatkan dua variabel dengan satuan berbeda pada satu bidang gambar yang sama: sumbu Y sebelah kiri untuk variabel pertama (misalnya pendapatan dalam miliar rupiah), dan sumbu Y sebelah kanan untuk variabel kedua (misalnya jumlah keluhan pelanggan dalam satuan orang).</p>
+<div id="fig-dual-axis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dual-axis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/fig-dual-axis-trap.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dual-axis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: Jebakan Sumbu Ganda: Mengatur Skala untuk Menciptakan Titik Temu Semu
+</figcaption>
+</figure>
+</div>
+<p>Sebagaimana tampak pada <a href="#fig-dual-axis" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>, bahaya utama dari sumbu ganda terletak pada kebebasan mutlak pembuat grafik dalam mengatur rentang skala kedua sumbu tersebut. Pembuat grafik dapat memperlebar skala sumbu kiri dan mempersempit skala sumbu kanan sesuka hati hingga kedua garis kurva saling bersilangan (<em>crossing point</em>) tepat di bulan tertentu.</p>
+<p>Persilangan visual ini memicu ilusi kognitif yang sangat kuat: pembaca akan mengira bahwa ada peristiwa luar biasa yang terjadi di titik persilangan tersebut, di mana pendapatan melampaui keluhan, padahal titik potong itu adalah ilusi optik fiktif yang tercipta semata-mata karena pilihan pengaturan skala desainer. Dua variabel dengan satuan ukuran yang berbeda tidak memiliki titik temu fisik di alam nyata. Menggunakan grafik sumbu ganda untuk membuktikan korelasi erat adalah tindakan yang sangat tidak dianjurkan dalam standar visualisasi data ilmiah terkini.</p>
+</section>
+</section>
+<section id="menegakkan-timbangan-di-era-kecerdasan-buatan" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="menegakkan-timbangan-di-era-kecerdasan-buatan"><span class="header-section-number">2.3</span> Menegakkan Timbangan di Era Kecerdasan Buatan</h2>
+<p>Setelah kita membedah enam anatomi manipulasi visual di atas, sebuah pertanyaan mendasar muncul: mengapa praktik manipulasi ini terus bertahan dan bahkan semakin merajalela di era kecerdasan buatan saat ini?</p>
+<p>Jawabannya berkaitan erat dengan perubahan lanskap produksi konten digital. Di masa lalu, membuat grafik manipulatif membutuhkan usaha manual yang disengaja. Di era Generative AI saat ini, ribuan grafik dapat diproduksi secara otomatis oleh agen kecerdasan buatan hanya dengan satu perintah teks sederhana.</p>
+<p>Sistem kecerdasan buatan dilatih untuk mematuhi preferensi pengguna. Jika seorang pengguna meminta AI: <em>“Buatkan grafik yang memperlihatkan bahwa program kerja saya berhasil gemilang tahun ini”</em>, sistem AI tanpa beban moral akan secara otomatis memilihkan rentang waktu terbaik, memotong sumbu Y ke batas terendah, dan memilih representasi visual yang paling dramatis. Mesin tidak memiliki nurani; mesin hanya mengeksekusi optimasi prompt.</p>
+<p>Bagi para calon pemimpin, pendidik, dan profesional di berbagai sektor, penguasaan terhadap anatomi manipulasi visual ini adalah benteng pertahanan moral. Keterampilan ini selaras dengan ajaran fundamental dalam Al-Quran mengenai etika keadilan timbangan:</p>
+<blockquote class="blockquote">
+<p><em>“Kecelakaan besarlah bagi orang-orang yang curang (dalam menakar dan menimbang)! Yaitu orang-orang yang apabila menerima takaran dari orang lain mereka minta dipenuhi, dan apabila mereka menakar atau menimbang (untuk orang lain), mereka mengurangi.”</em> (QS. Al-Muthaffifin: 1-3)</p>
+</blockquote>
+<p>Para ulama tafsir menjelaskan bahwa ayat ini tidak hanya berlaku bagi pedagang gandum atau minyak di pasar tradisional yang mempermainkan batu timbangan fisik. Ayat ini berlaku umum bagi setiap bentuk timbangan dan takaran dalam kehidupan manusia, termasuk timbangan informasi dan neraca representasi data.</p>
+<p>Dalam konteks tata kelola organisasi, yayasan kemanusiaan, lembaga nirlaba, dan institusi publik, penyajian grafik yang jujur adalah pilar utama akuntabilitas publik. Jika sebuah lembaga pengelola dana sosial memotong sumbu grafik pertumbuhan aset atau program pemberdayaan agar tampak melonjak ratusan persen demi menarik simpati donatur, tindakan tersebut hakikatnya adalah penipuan visual yang mencederai amanah. Demikian pula dalam laporan evaluasi program sekolah atau perusahaan: jika grafik capaian disajikan dengan sumbu ganda yang dimanipulasi agar kurva prestasi tampak melompat tinggi melampaui kurva biaya operasional, hal itu merusak martabat kejujuran intelektual.</p>
+<p>Memotong sumbu vertikal grafik untuk membesar-besarkan prestasi pribadi, menyembunyikan rentang waktu penurunan untuk menipu publik, atau mempermainkan skala sumbu ganda untuk menjatuhkan pihak lain pada hakikatnya adalah perbuatan mengurangi timbangan kebenaran. Menegakkan kejujuran grafik adalah bagian integral dari memegang amanah keilmuan (<em>Amanah Ilmiyyah</em>).</p>
+<p>Ketika generasi muda terjun ke masyarakat, baik sebagai pendidik, pengurus yayasan, manajer bisnis, maupun pengambil kebijakan publik di instansi pemerintahan, mereka harus menjadi pelopor transparansi data. Mereka tidak boleh silau oleh visual yang gemerlap, tidak boleh gentar mengkritisi grafik yang tampak canggih, dan selalu memegang teguh prinsip bahwa kebenaran fakta harus disampaikan secara adil, proporsional, dan apa adanya. Kejujuran di atas selembar grafik adalah cermin dari ketakwaan dan integritas di dalam dada.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Audit Grafik Mandiri
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Gunakan protokol audit visual lima langkah ini setiap kali Anda memeriksa laporan data, proposal bisnis, atau infografis media digital:</p>
+<ol type="1">
+<li><strong>Uji Titik Nol:</strong> Periksa apakah sumbu nilai kuantitatif dimulai dari angka nol. Jika dipotong, mintalah grafik versi skala penuh untuk melihat proporsi aslinya.</li>
+<li><strong>Uji Efek Tiga Dimensi:</strong> Apakah diagram lingkaran atau diagram batang menggunakan kemiringan perspektif 3D? Jika ya, abaikan ukuran luas potongannya dan fokuslah hanya pada angka persentase tertulisnya.</li>
+<li><strong>Uji Interval Sumbu:</strong> Periksa apakah jarak fisik antarangka pada sumbu horizontal dan vertikal memiliki kelipatan yang konsisten dan jujur.</li>
+<li><strong>Uji Rentang Horizon Waktu:</strong> Tanyakan apakah periode waktu yang ditampilkan mewakili siklus penuh atau sekadar cuplikan waktu tertentu yang menguntungkan narasi pembuatnya.</li>
+<li><strong>Uji Sumbu Ganda:</strong> Waspadai grafik dengan dua sumbu vertikal yang berbeda satuan. Jangan pernah menganggap titik persilangan kedua kurva sebagai bukti fenomena nyata.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Refleksi Nilai: Amanah dalam Timbangan Visual
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Integritas (<em>Amanah</em>) seorang penuntut ilmu diuji bukan saat ia berada di atas mimbar ceramah, melainkan saat ia menyajikan fakta di hadapan manusia. Menampilkan data yang dimanipulasi secara visual untuk memenangkan perdebatan atau menarik simpati publik adalah bentuk pengkhianatan terhadap amanah akal budi. Sikap ksatria dalam tradisi Islam menuntut kita untuk berani menampilkan data apa adanya: jika program kerja kita belum berhasil, tampilkan grafik yang melandai dengan jujur, lalu carilah solusi perbaikan secara tawaduk dan berbasis ilmu pengetahuan.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Eksplorasi Visual Mandiri
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tantangan audit visual ini dirancang agar dapat Anda jalankan secara luring di meja kerja atau ruang belajar Anda maupun secara daring di komputer:</p>
+<ol type="1">
+<li><strong>Eksplorasi Manual di Kertas (Penggaris dan Laporan Nyata):</strong>
+<ul>
+<li>Ambillah selembar koran lama, majalah sekolah atau kampus, atau cetakan laporan pertanggungjawaban organisasi.</li>
+<li>Carilah satu diagram batang yang menyajikan data perbandingan.</li>
+<li>Gunakan penggaris untuk mengukur tinggi batang fisik dalam satuan milimeter. Hitung rasio fisik antara batang tertinggi dan terendah.</li>
+<li>Bandingkan rasio fisik tersebut dengan rasio nilai angka asli yang tertulis di atasnya. Jika angka aslinya hanya berbeda 5% tetapi tinggi fisik batangnya berbeda 300%, Anda baru saja menemukan contoh nyata manipulasi sumbu terpotong di lingkungan sekitar Anda. Bagikan temuan ini kepada rekan atau kawan Anda sebagai bahan diskusi nalar.</li>
+</ul></li>
+<li><strong>Eksplorasi Digital Lanjutan (StatsLab DSI Interactive):</strong>
+<ul>
+<li>Saat berada di depan komputer atau gawai digital, buka modul simulasi visualisasi interaktif pada platform <strong>StatsLab DSI (Dasbor Statistika Interaktif)</strong> (lihat tautan kanonikal pada Kolofon di bagian penutup buku ini).</li>
+<li>Pilih menu <em>Manipulasi Sumbu</em>. Geser tombol interaktif untuk mengubah sudut kemiringan diagram lingkaran dari tampilan dua dimensi datar menjadi sudut kemiringan tiga dimensi enam puluh derajat.</li>
+<li>Perhatikan bagaimana potongan data minoritas yang diletakkan di bagian depan perlahan membesar dan mendominasi layar pandang Anda, membuktikan secara langsung bagaimana manipulasi perspektif optik mampu mengelabui persepsi manusia secara sistemik.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-cairo2019charts" class="csl-entry" role="listitem">
+Cairo, Alberto. 2019. <em>How Charts Lie: Getting Smarter about Visual Information</em>. W. W. Norton &amp; Company.
+</div>
+<div id="ref-huff1954how" class="csl-entry" role="listitem">
+Huff, Darrell. 1954. <em>How to Lie with Statistics</em>. W. W. Norton &amp; Company.
+</div>
+<div id="ref-tufte1983visual" class="csl-entry" role="listitem">
+Tufte, Edward R. 1983. <em>The Visual Display of Quantitative Information</em>. Graphics Press.
+</div>
+<div id="ref-vigen2015spurious" class="csl-entry" role="listitem">
+Vigen, Tyler. 2015. <em>Spurious Correlations</em>. Hachette Books. <a href="https://www.tylervigen.com/spurious-correlations">https://www.tylervigen.com/spurious-correlations</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./bab1.html" class="pagination-link" aria-label="Menghafal Rumus, Buta Makna">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Menghafal Rumus, Buta Makna</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./bab3.html" class="pagination-link" aria-label="Epistemologi Tabayyun: Seni Menguji Klaim">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Epistemologi Tabayyun: Seni Menguji Klaim</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

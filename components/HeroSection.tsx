@@ -10,6 +10,7 @@ import {
   GraduationCap,
   Briefcase,
   FileCheck2,
+  Sparkles,
 } from "lucide-react";
 import { cvProfile } from "@/lib/cv-data";
 import { AudienceQualifier } from "./AudienceQualifier";
@@ -87,15 +88,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenChat }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mt-2">
         {/* Left Column: Core Value Proposition & Problem-Solution Switcher */}
         <div className="lg:col-span-7 space-y-6">
-          {/* Availability Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 border border-teal-300 max-w-full">
-            <span className="w-2.5 h-2.5 rounded-full bg-teal-700 animate-pulse"></span>
-            <span className="font-mono text-xs tracking-wider uppercase font-bold text-teal-900">
-              {isId
-                ? "Kesiapan: Terbuka untuk Konsultasi & Kemitraan"
-                : "Availability: Open for Strategic Advisory"}
-            </span>
+          {/* Availability Status Badge & Promo Link */}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 border border-teal-300 max-w-full">
+              <span className="w-2.5 h-2.5 rounded-full bg-teal-700 animate-pulse"></span>
+              <span className="font-mono text-xs tracking-wider uppercase font-bold text-teal-900">
+                {isId
+                  ? "Kesiapan: Terbuka untuk Konsultasi & Kemitraan"
+                  : "Availability: Open for Strategic Advisory"}
+              </span>
+            </div>
+
+            <Link
+              href="/landing-300rb/"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 hover:bg-amber-100 border border-amber-300/80 text-amber-950 font-mono text-xs font-bold transition-colors shadow-xs"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+              <span>{isId ? "Website Siap Pakai Rp300rb (Termasuk Domain)" : "Turnkey Business Site Rp300k (Domain Included)"}</span>
+              <ArrowRight className="w-3 h-3 text-amber-700" />
+            </Link>
           </div>
+
 
           {/* Master Semantic H1 */}
           <div className="space-y-3">

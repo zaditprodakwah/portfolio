@@ -20,10 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/layanan/olah-data-statistik-sinta/",
     "/layanan/solusi-web-performa/",
     "/solusi/",
+    "/paket-solusi/",
+    "/landing-300rb/",
     "/wawasan/",
     "/direktori/",
     "/web3/",
+    "/buku/nalar-di-balik-angka/",
   ];
+
 
   const staticRoutes: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: getCanonicalUrl(path),

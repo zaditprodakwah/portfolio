@@ -3,7 +3,7 @@
   "pillarId": "marketing-seo",
   "pillarName": "SEO, Konten & Konversi Digital",
   "title": "Audit Technical SEO & Core Web Vitals: Konversi Organik Berkelanjutan Bebas Biaya Server Bulanan",
-  "metaDescription": "Layanan audit technical SEO on-page, perbaikan Core Web Vitals (LCP < 1.2s), dan restrukturisasi tautan internal silo. Peningkatan ranking Google organik tanpa ketergantungan PBN.",
+  "metaDescription": "Layanan audit technical SEO on-page, perbaikan Core Web Vitals (LCP < 1.2s), dan restrukturisasi jejaring tautan internal kontekstual. Peningkatan ranking Google organik tanpa ketergantungan PBN.",
   "focusKeyword": "jasa audit technical seo website",
   "secondaryKeywords": [
     "optimasi core web vitals indonesia",
@@ -11,10 +11,10 @@
     "strategi internal linking seo"
   ],
   "directAnswer": {
-    "summary": "Technical SEO modern bukan sekadar memasang plugin di WordPress atau membeli backlink massal di forum. Inti dari dominasi pencarian Google saat ini adalah kecepatan muat di jaringan seluler (LCP & INP), arsitektur tautan internal berbasis silo topik yang rapi, serta metadata terstruktur (JSON-LD) yang ramah terhadap mesin perayap AI seperti Google Gemini, Perplexity, dan ChatGPT Search.",
+    "summary": "Technical SEO modern bukan sekadar memasang plugin di WordPress atau membeli backlink massal di forum. Inti dari dominasi pencarian Google saat ini adalah kecepatan muat di jaringan seluler (LCP & INP), arsitektur jejaring tautan internal kontekstual yang rapi, serta metadata terstruktur (JSON-LD) yang ramah terhadap mesin perayap AI seperti Google Gemini, Perplexity, dan ChatGPT Search.",
     "takeaways": [
       "Penghapusan skrip berat yang menghambat pengalaman render ponsel pengunjung.",
-      "Penataan topical silo internal linking yang mengalirkan link equity secara deterministik.",
+      "Penataan klaster topik dan jejaring tautan internal yang mengalirkan link equity secara merata.",
       "Optimasi Core Web Vitals dengan skor 98-100 di Google PageSpeed Insights.",
       "Solusi arsitektur cerdas yang mengeliminasi biaya sewa server bulanan yang boros."
     ]
@@ -57,7 +57,7 @@
   "competitorMatrix": [
     {
       "dimension": "Metode Optimasi",
-      "ourSolution": "Pembersihan kode sumber, arsitektur data terstruktur, dan penataan topical silo organik.",
+      "ourSolution": "Pembersihan kode sumber, arsitektur data terstruktur, dan penataan klaster topik organik.",
       "legacyAgency": "Membeli paket backlink PBN murahan yang berisiko terkena penalti deindex Google.",
       "cheapFreelance": "Hanya menginstal plugin SEO standar tanpa memahami logika perayapan Googlebot."
     },
