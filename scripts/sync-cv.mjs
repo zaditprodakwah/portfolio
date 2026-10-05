@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
-const careerEngineDir = path.resolve(rootDir, '../../05_CAREER_ATS_ENGINE');
+const careerEngineDir = path.resolve(rootDir, '../../05_BRAND_AND_CAREER_OPERATIONS/career_ats_engine');
 
 const masterPdfPath = path.join(careerEngineDir, 'rendercv_output_en', 'Muhammad_Khoiruzzadittaqwa_CV.pdf');
 const masterPdfIdPath = path.join(careerEngineDir, 'rendercv_output_id', 'Muhammad_Khoiruzzadittaqwa_CV.pdf');
