@@ -1,0 +1,171 @@
+[
+  {
+    "id": "quick_launch_foundation",
+    "name": "Website Peluncur Cepat (Quick-Launch Foundation)",
+    "category": "Fondasi Bisnis",
+    "badge": "Siap Rilis 7 Hari",
+    "targetAudience": "UMKM, pemilik usaha retail, dan penyedia jasa lokal yang membutuhkan kehadiran web profesional pertama.",
+    "summary": "Pembangunan situs profil bisnis modern yang memuat katalog layanan, peta lokasi, navigasi responsif, dan tombol kontak WhatsApp langsung.",
+    "timeline": "5 hingga 7 Hari Kerja",
+    "priceRange": {
+      "min": 2500000,
+      "max": 5000000,
+      "currency": "IDR",
+      "display": "Rp 2.500.000 - Rp 5.000.000",
+      "terms": "50% Uang Muka di awal, 50% Pelunasan saat serah terima final"
+    },
+    "deliverables": [
+      "Website responsif 1 hingga 5 halaman (Beranda, Profil, Katalog, Kontak)",
+      "Penyelarasan domain kustom dan sertifikat keamanan SSL gratis",
+      "Pengaturan hosting edge Cloudflare Pages dengan biaya server tetap Rp 0/bulan",
+      "Integrasi tombol WhatsApp Click-to-Chat dengan template pesan otomatis",
+      "Konfigurasi dasar SEO lokal dan pendaftaran di Google Search Console",
+      "Panduan serah terima mandiri untuk pembaruan teks dan gambar"
+    ],
+    "outOfScope": [
+      "Integrasi payment gateway e-commerce multi-vendor",
+      "Sistem login pengguna dengan registrasi kata sandi",
+      "Penulisan naskah narasumber lebih dari 5 artikel khusus"
+    ]
+  },
+  {
+    "id": "website_rescue_rebuild",
+    "name": "Penyelamatan & Modernisasi Situs (Website Rescue)",
+    "category": "Optimasi & Pemulihan",
+    "badge": "Audit Selesai 48 Jam",
+    "targetAudience": "Pemilik bisnis dengan situs WordPress lama yang sangat lambat, diretas, atau ditinggalkan oleh vendor sebelumnya.",
+    "summary": "Penyelamatan darurat, pengembalian kendali akses domain, perbaikan keamanan, dan migrasi arsitektur dari VPS boros ke edge berkecepatan tinggi.",
+    "timeline": "3 hingga 7 Hari Kerja (Audit Kritis 48 Jam)",
+    "priceRange": {
+      "min": 3500000,
+      "max": 7500000,
+      "currency": "IDR",
+      "display": "Rp 3.500.000 - Rp 7.500.000",
+      "terms": "50% Uang Muka di awal, 50% Pelunasan setelah pengujian performa"
+    },
+    "deliverables": [
+      "Audit forensik keamanan dan inventarisasi hak akses domain",
+      "Pembersihan malware dan penutupan celah injeksi database",
+      "Migrasi aset ke arsitektur edge statis tanpa biaya server bulanan",
+      "Optimasi Core Web Vitals hingga skor LCP mencapai di bawah 1,0 detik",
+      "Pengalihan URL lama (301 redirects) untuk menyelamatkan peringkat SEO",
+      "Berita acara serah terima kendali penuh kepada pemilik bisnis"
+    ],
+    "outOfScope": [
+      "Pemulihan data database yang telah hilang sebelum masa retensi backup",
+      "Pembayaran sengketa hukum dengan vendor pengembang sebelumnya"
+    ]
+  },
+  {
+    "id": "lead_engine_conversion",
+    "name": "Landing Page Berkonversi & Mesin Prospek",
+    "category": "Pertumbuhan Penjualan",
+    "badge": "Fokus Konversi",
+    "targetAudience": "Pengusaha produk bernilai tinggi, konsultan, dan penyedia paket jasa yang menjalankan iklan berbayar (Meta/Google Ads).",
+    "summary": "Landing page khusus dengan struktur persuasi teruji, copywriting berbasis solusi masalah, waktu muat instan, dan pelacakan analitik presisi.",
+    "timeline": "5 hingga 10 Hari Kerja",
+    "priceRange": {
+      "min": 3500000,
+      "max": 6500000,
+      "currency": "IDR",
+      "display": "Rp 3.500.000 - Rp 6.500.000",
+      "terms": "50% Uang Muka di awal, 50% Pelunasan saat uji pelacakan tuntas"
+    },
+    "deliverables": [
+      "Struktur landing page AIDA (Attention, Interest, Desire, Action)",
+      "Penyusunan naskah copywriting berbasis titik sakit calon pembeli",
+      "Pengujian kecepatan ekstrem (LCP < 0,8 detik) guna mencegah bounce iklan",
+      "Integrasi formulir prapendaftaran cepat dengan validasi nomor WhatsApp",
+      "Pemasangan Meta Pixel, Google Tag Manager, dan pelacakan event konversi",
+      "Uji coba alur pesan masuk di berbagai perangkat seluler"
+    ],
+    "outOfScope": [
+      "Anggaran belanja saldo iklan berbayar",
+      "Pembuatan video produksi komersial studio profesional"
+    ]
+  },
+  {
+    "id": "b2b_catalog_workflow",
+    "name": "Katalog B2B & Alur Permintaan Harga (RFQ)",
+    "category": "Sistem B2B",
+    "badge": "Spesifikasi Industri",
+    "targetAudience": "Pabrik manufaktur, distributor alat berat, bengkel fabrikasi, dan pemasok bahan baku industri.",
+    "summary": "Portal katalog terstruktur untuk ratusan spesifikasi teknis barang industri yang memudahkan pembeli bisnis mengunduh brosur teknis dan mengajukan RFQ.",
+    "timeline": "10 hingga 20 Hari Kerja",
+    "priceRange": {
+      "min": 8000000,
+      "max": 20000000,
+      "currency": "IDR",
+      "display": "Rp 8.000.000 - Rp 20.000.000",
+      "terms": "50% Uang Muka, 50% Pelunasan setelah pengesahan katalog"
+    },
+    "deliverables": [
+      "Tabel spesifikasi produk interaktif dengan fitur filter kategori cepat",
+      "Penyediaan tombol unduh dokumen PDF spesifikasi teknis satu klik",
+      "Formulir Permintaan Penawaran Harga (RFQ) langsung ke tim pemasaran",
+      "Struktur data Schema.org Product dan Organization untuk visibilitas B2B",
+      "Arsitektur statis edge yang sanggup menampung lonjakan trafik katalog",
+      "Panduan pembaruan data produk via berkas spreadsheet / JSON sederhana"
+    ],
+    "outOfScope": [
+      "Integrasi ERP kustom tingkat enterprise (SAP/Oracle)",
+      "Sistem lelang tender langsung multi-tier yang membutuhkan regulasi perbankan"
+    ]
+  },
+  {
+    "id": "business_workflow_automation",
+    "name": "Otomasi Alur Operasional Bisnis",
+    "category": "Efisiensi Operasional",
+    "badge": "Integrasi Ringan",
+    "targetAudience": "Bisnis yang kewalahan mengelola pesanan manual, rekap transaksi, dan pencatatan inventaris di banyak lembar kerja terpisah.",
+    "summary": "Penyederhanaan proses operasional melalui integrasi spreadsheet, pengiriman notifikasi otomatis, dan formulir digital terstandardisasi.",
+    "timeline": "7 hingga 14 Hari Kerja",
+    "priceRange": {
+      "min": 6000000,
+      "max": 15000000,
+      "currency": "IDR",
+      "display": "Rp 6.000.000 - Rp 15.000.000",
+      "terms": "50% Uang Muka, 50% Pelunasan setelah verifikasi otomasi"
+    },
+    "deliverables": [
+      "Pemetaan alur kerja bisnis dari pemesanan hingga serah terima",
+      "Integrasi formulir pemesanan dengan Google Sheets atau basis data relasional ringan",
+      "Notifikasi instan otomatis ke grup WhatsApp operasional internal",
+      "Dasbor ringkasan matriks kinerja harian berbasis data waktu nyata",
+      "SOP tertulis pengoperasian sistem bagi staf operasional",
+      "Sesi pelatihan daring selama 2 jam untuk tim kerja internal"
+    ],
+    "outOfScope": [
+      "Pengembangan aplikasi seluler native Android/iOS khusus",
+      "Pemrosesan data yang membutuhkan sertifikasi kepatuhan PCI-DSS perbankan"
+    ]
+  },
+  {
+    "id": "managed_operations_retainer",
+    "name": "Pemeliharaan & Pendampingan Rutin (Managed Care)",
+    "category": "Layanan Berkelanjutan",
+    "badge": "SLA 4 Jam",
+    "targetAudience": "Pemilik bisnis yang ingin aset webnya selalu prima, aman, dan mutakhir tanpa perlu mempekerjakan tim teknologi internal penuh waktu.",
+    "summary": "Paket berlangganan bulanan fleksibel untuk pemantauan keamanan, pemeriksaan cadangan data, pembaruan konten minor, dan jaminan penanganan kendala.",
+    "timeline": "Berlangganan Bulanan (Dapat Dibatalkan Kapan Saja)",
+    "priceRange": {
+      "min": 500000,
+      "max": 1500000,
+      "currency": "IDR",
+      "display": "Rp 500.000 - Rp 1.500.000 / bulan",
+      "terms": "Dibayarkan di awal setiap periode 30 hari kalender"
+    },
+    "deliverables": [
+      "Pemantauan status aktif (uptime) dan sertifikat SSL 24/7",
+      "Pemeriksaan berkala cadangan data kode dan aset setiap pekan",
+      "Alokasi waktu kerja hingga 3 jam per bulan untuk pembaruan konten minor",
+      "Waktu respon darurat maksimal 4 jam untuk insiden kendala akses",
+      "Laporan ringkasan performa kecepatan dan trafik pengunjung bulanan",
+      "Konsultasi prioritas via jalur percakapan langsung WhatsApp"
+    ],
+    "outOfScope": [
+      "Desain ulang menyeluruh struktur website yang telah berjalan",
+      "Penambahan modul fungsional baru di luar cakupan pemeliharaan minor"
+    ]
+  }
+]

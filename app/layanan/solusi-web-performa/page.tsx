@@ -4,6 +4,7 @@ import { ArrowLeft, Globe, ArrowRight, CheckCircle2 } from "lucide-react";
 import { DirectAnswerBox } from "@/components/DirectAnswerBox";
 import { EntityPills } from "@/components/EntityPills";
 import { ProtectedContact } from "@/components/ProtectedContact";
+import DiagnosticCalculator from "@/components/digital-services/DiagnosticCalculator";
 
 export const metadata: Metadata = {
   title: "Solusi Web Cepat, Modern & Aksesibel | Zadit Growth",
@@ -118,27 +119,51 @@ export default function DigitalSolutionsPage() {
           </div>
         </section>
 
+        {/* Kalkulator Mandiri Efisiensi Hosting */}
+        <DiagnosticCalculator />
+
         {/* Solusi Programmatik Terkait (Spokes) */}
         <section className="space-y-4">
-          <h2 className="text-lg font-bold text-slate-900">Solusi Terfokus & Studi Kasus Spesifik:</h2>
+          <h2 className="text-lg font-bold text-slate-900">Solusi Terfokus &amp; Studi Kasus Spesifik:</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link
+              href="/layanan/digital-services/"
+              className="group p-5 rounded-2xl bg-white border border-teal-500/50 hover:border-teal-600 shadow-xs transition-all flex flex-col justify-between ring-1 ring-teal-500/20"
+            >
+              <div>
+                <span className="text-[11px] font-bold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-200 inline-block mb-2">
+                  Katalog Terpadu 6 Paket
+                </span>
+                <h3 className="font-bold text-base text-slate-900 group-hover:text-teal-800 transition-colors mb-2">
+                  Katalog Rekayasa Web &amp; Layanan Pertumbuhan Digital
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  Paket Quick-Launch, Website Rescue, Katalog B2B, Mesin Prospek, dan Retainer Terkelola dengan SLA respons 4 jam.
+                </p>
+              </div>
+              <div className="flex items-center gap-1 text-xs font-bold text-teal-700 mt-4 pt-2 border-t border-slate-100">
+                <span>Buka Katalog Lengkap &amp; Transparansi Harga</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
             <Link
               href="/solusi/audit-technical-seo-core-web-vitals"
               className="group p-5 rounded-2xl bg-white border border-slate-200 hover:border-teal-600 shadow-xs transition-all flex flex-col justify-between"
             >
               <div>
                 <span className="text-[11px] font-bold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-md border border-teal-200 inline-block mb-2">
-                  Kecepatan & Caching Edge
+                  Kecepatan &amp; Caching Edge
                 </span>
                 <h3 className="font-bold text-base text-slate-900 group-hover:text-teal-800 transition-colors mb-2">
-                  Audit Technical SEO & Core Web Vitals
+                  Audit Technical SEO &amp; Core Web Vitals
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                   Skor PageSpeed 99/100, LCP 0.6 detik, dan pemangkasan 100% biaya server dengan Cloudflare Pages.
                 </p>
               </div>
               <div className="flex items-center gap-1 text-xs font-bold text-teal-700 mt-4 pt-2 border-t border-slate-100">
-                <span>Bedah Solusi & Matriks Kasus</span>
+                <span>Bedah Solusi &amp; Matriks Kasus</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>

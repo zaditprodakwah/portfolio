@@ -1,0 +1,62 @@
+[
+  {
+    "id": "case_fashion_retail",
+    "title": "Modernisasi Toko Retail Busana Muslim Bandung",
+    "industry": "Retail & E-Commerce Fesyen",
+    "challenge": "Situs WooCommerce lama berjalan pada shared hosting lambat dengan waktu muat 4,8 detik, sering mengalami kegagalan saat menerima lonjakan trafik promosi, dan membebani biaya server Rp 300.000 per bulan.",
+    "solution": "Restrukturisasi arsitektur menjadi static edge Next.js yang disajikan via Cloudflare Pages global CDN, integrasi katalog visual ringan, dan pengalihan transaksi pemesanan langsung ke kasir WhatsApp.",
+    "metricsBefore": {
+      "lcp": "4,8 Detik (Kategori Merah)",
+      "monthlyServerCost": "Rp 300.000 / bulan",
+      "mobileBounceRate": "68%",
+      "uptimeReliability": "96,2% (Sering Down)"
+    },
+    "metricsAfter": {
+      "lcp": "0,7 Detik (Kategori Hijau Prima)",
+      "monthlyServerCost": "Rp 0 / bulan (Hemat Rp 3,6 Juta/Tahun)",
+      "mobileBounceRate": "24%",
+      "uptimeReliability": "99,99% (Terdistribusi Edge)"
+    },
+    "keyTakeaway": "Menghilangkan beban biaya server bulanan secara permanen sekaligus melipatgandakan jumlah calon pembeli yang sukses menghubungi tim penjualan."
+  },
+  {
+    "id": "case_b2b_fabrication",
+    "title": "Transformasi Katalog Spesifikasi Fabrikasi Logam Cikarang",
+    "industry": "Manufaktur & Rekayasa Industri",
+    "challenge": "Perusahaan hanya memiliki situs profil statis usang berusia 6 tahun yang tidak menampilkan toleransi dimensi mesin, sehingga pembeli institusi kesulitan mempelajari kapabilitas pabrik.",
+    "solution": "Membangun portal katalog spesifikasi komponen interaktif dengan tabel dimensi presisi, fitur pencarian kode produk cepat, dan formulir Permintaan Penawaran Harga (RFQ) langsung ke manajer akun.",
+    "metricsBefore": {
+      "lcp": "3,4 Detik",
+      "inquiryLeadPerMonth": "2 hingga 3 kontak masuk",
+      "documentDownload": "Tautan PDF manual lambat",
+      "schemaValidation": "0 Data Terstruktur"
+    },
+    "metricsAfter": {
+      "lcp": "0,8 Detik",
+      "inquiryLeadPerMonth": "14 kontak RFQ terverifikasi",
+      "documentDownload": "Akses brosur teknis 1-klik",
+      "schemaValidation": "100% Valid Schema.org Product"
+    },
+    "keyTakeaway": "Katalog yang dirancang dengan presisi teknis mengubah pengunjung korporat menjadi calon rekanan tender bernilai miliaran rupiah."
+  },
+  {
+    "id": "case_legal_firm",
+    "title": "Penyelamatan Situs & Pemulihan Kendali Kantor Hukum Jakarta",
+    "industry": "Jasa Hukum & Advokasi Bisnis",
+    "challenge": "Situs kantor hukum terkena injeksi malware akibat plugin usang yang ditinggalkan pengembang lama, akun domain disandera, dan alamat web diblokir oleh peramban klien dengan peringatan bahaya.",
+    "solution": "Audit forensik darurat dalam 48 jam, pemulihan otoritas domain ke akun resmi mitra pengelola, pembersihan total naskah asing, dan pembangunan ulang ke platform modern bebas database.",
+    "metricsBefore": {
+      "securityStatus": "Terinfeksi Malware & Blacklist Browser",
+      "domainAccess": "Tersandera Vendor Lama",
+      "reputationScore": "Kritis (Peringatan Bahaya)",
+      "lcp": "5,1 Detik"
+    },
+    "metricsAfter": {
+      "securityStatus": "100% Bersih & Terenkripsi TLS 1.3",
+      "domainAccess": "Kendali Mandiri Penuh di Tangan Klien",
+      "reputationScore": "Sertifikat Keamanan Pulih",
+      "lcp": "0,6 Detik"
+    },
+    "keyTakeaway": "Tindakan cepat 48 jam menyelamatkan reputasi puluhan tahun kantor hukum dari ancaman kehilangan klien korporat."
+  }
+]

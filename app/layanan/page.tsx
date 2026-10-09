@@ -121,6 +121,28 @@ export default function LayananDirectoryPage() {
           <p className="mt-3 text-base text-zinc-600 md:text-lg leading-relaxed max-w-2xl">
             Empat pilar layanan terfokus dengan cakupan deliverable terukur, tanpa biaya tersembunyi, dan dikerjakan langsung secara presisi tanpa perantara birokrasi.
           </p>
+
+          {/* Featured Portal Banner */}
+          <div className="mt-6 p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-teal-950 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-teal-800/40">
+            <div className="space-y-1">
+              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-wider bg-teal-500 text-slate-950 px-2 py-0.5 rounded">
+                Portal Interaktif Baru
+              </span>
+              <h3 className="text-base sm:text-lg font-bold">
+                Kalkulator Efisiensi Hosting &amp; Katalog 6 Paket Rekayasa Web
+              </h3>
+              <p className="text-xs text-slate-300 max-w-xl">
+                Simulasi mandiri penghematan biaya server 3 tahun, proyeksi kenaikan konversi, dan penawaran transparan Rp 0/bulan edge hosting.
+              </p>
+            </div>
+            <Link
+              href="/layanan/digital-services/"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs bg-teal-400 hover:bg-teal-300 text-slate-950 transition-colors shrink-0 text-center"
+            >
+              <span>Buka Portal Layanan</span>
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
         </header>
 
         {/* Pillars Grid */}

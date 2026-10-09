@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/layanan/seo-konten-konversi/",
     "/layanan/olah-data-statistik-sinta/",
     "/layanan/solusi-web-performa/",
+    "/layanan/digital-services/",
     "/solusi/",
     "/paket-solusi/",
     "/landing-300rb/",
