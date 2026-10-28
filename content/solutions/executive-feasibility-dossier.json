@@ -1,0 +1,98 @@
+{
+  "slug": "executive-feasibility-dossier",
+  "pillarId": "business-docs",
+  "pillarName": "Dokumen, Tata Kelola & Administrasi Bisnis",
+  "title": "Executive Intelligence & Feasibility Dossier: Dokumen Keputusan Investasi dan Pemodelan Finansial Terpadu",
+  "metaDescription": "Dossier strategis tingkat direksi yang memadukan pemodelan finansial deterministik 5 tahun, radar intelijen pasar aktual, materi presentasi eksekutif 16:9, dan cetak biru arsitektur digital efisien.",
+  "focusKeyword": "executive feasibility dossier",
+  "secondaryKeywords": [
+    "studi kelayakan investasi",
+    "pemodelan finansial 5 tahun",
+    "dokumen keputusan direksi",
+    "pitch deck eksekutif 16:9"
+  ],
+  "directAnswer": {
+    "summary": "Executive Intelligence & Feasibility Dossier adalah paket dokumen keputusan terpadu untuk dewan direksi, perbankan, dan komite investasi. Dokumen ini menyatukan pemodelan proyeksi kas deterministik 5 tahun dengan uji sensitivitas margin, laporan intelijen pasar berbasis pemantauan data riil, materi presentasi eksekutif 16:9 yang ringkas, serta rekomendasi arsitektur infrastruktur digital berdaya tahan tinggi tanpa beban biaya lisensi berulang.",
+    "takeaways": [
+      "Model keuangan dinamis 5 tahun menyajikan kalkulasi NPV, IRR, Payback Period, dan simulasi tekanan margin secara terbuka.",
+      "Laporan intelijen pasar berbasis data aktual memetakan pergerakan kompetitor dan struktur penawaran di lapangan.",
+      "Slide presentasi eksekutif 16:9 dirancang padat tanpa basa-basi untuk mempercepat persetujuan pemangku kepentingan.",
+      "Cetak biru sistem digital merekomendasikan infrastruktur modern hemat biaya yang terbukti andal."
+    ]
+  },
+  "triadFramework": {
+    "stakeholderDilemma": "Dewan direksi dan komite investasi kerap dihadapkan pada proposal bisnis yang hanya menyajikan grafik pendapatan eksponensial tanpa pembuktian unit ekonomi dasar. Sementara itu, tim manajemen cemas proyeksi mereka ditolak perbankan karena asumsi biaya modal dan fluktuasi rantai pasok belum teruji dalam skenario krisis.",
+    "diplomaticNavigation": "Kami menyusun dokumen yang mendudukkan angka secara objektif melalui simulasi uji stres (stress testing). Kami menjembatani kehati-hatian fiduciary dewan komisaris dengan kebutuhan operasional direksi pelaksana, menyajikan skenario konservatif, moderat, dan agresif secara berimbang tanpa rekayasa data.",
+    "executionDeliverable": "Dossier lengkap mencakup: buku laporan studi kelayakan format cetak berstandar audit, buku kerja spreadsheet Excel dinamis dengan formula transparan, dek slide eksekutif 16:9 siap rapat umum pemegang saham, serta dokumen ringkasan eksekutif satu lembar (one-page brief) untuk pengambil keputusan utama."
+  },
+  "impactDashboard": {
+    "businessRoi": [
+      {
+        "label": "Tingkat Kelolosan Audit",
+        "value": "100% Siap Uji Kelayakan"
+      },
+      {
+        "label": "Akurasi Model Finansial",
+        "value": "5 Tahun Formula Dinamis"
+      },
+      {
+        "label": "Efisiensi Waktu Pengambilan Keputusan",
+        "value": "3x Lebih Cepat"
+      }
+    ],
+    "technicalRigor": [
+      {
+        "label": "Uji Tekanan Margin (Stress Test)",
+        "value": "3 Skenario Teruji"
+      },
+      {
+        "label": "Rasio Kelayakan Finansial",
+        "value": "NPV, IRR, & BEP Terkunci"
+      },
+      {
+        "label": "Waktu Penyusunan Tuntas",
+        "value": "14 Hari Kerja"
+      }
+    ]
+  },
+  "competitorMatrix": [
+    {
+      "dimension": "Kedalaman Pemodelan Keuangan",
+      "ourSolution": "Spreadsheet dinamis multi-skenario dengan formula terbuka, uji sensitivitas margin, dan kalkulasi risiko likuiditas riil.",
+      "legacyAgency": "Menggunakan template korporat statis dengan formula terkunci dan biaya jasa puluhan juta rupiah.",
+      "cheapFreelance": "Tabel perkiraan kasar tanpa kalkulasi biaya modal riil, depresiasi aset, maupun analisis titik impas."
+    },
+    {
+      "dimension": "Dukungan Data Pasar & Kompetisi",
+      "ourSolution": "Pemantauan intelijen pasar terverifikasi yang melacak pergerakan harga, saluran distribusi, dan penawaran kompetitor.",
+      "legacyAgency": "Kutipan laporan industri umum pihak ketiga yang sudah usang dan kurang relevan dengan dinamika lokal.",
+      "cheapFreelance": "Klaim potensi pasar sepihak tanpa rujukan sumber data primer yang dapat dipertanggungjawabkan."
+    },
+    {
+      "dimension": "Format Deliverable & Kecepatan",
+      "ourSolution": "Paket terpadu siap dewan direksi (buku laporan, spreadsheet dinamis, dan dek 16:9) dalam waktu 14 hari kerja.",
+      "legacyAgency": "Proses birokratis berminggu-minggu dengan perantara staf junior yang memperpanjang siklus revisi.",
+      "cheapFreelance": "Dokumen Word dan PowerPoint terpisah tanpa keselarasan angka dan narasi."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Mengapa proposal bisnis membutuhkan format Executive Feasibility Dossier?",
+      "answer": "Pihak perbankan, investor institusi, dan dewan direksi memerlukan kepastian mitigasi risiko sebelum mengucurkan dana modal. Dossier menyatukan bukti kelayakan operasional, validasi pasar aktual, dan kalkulasi pengembalian modal dalam satu bahasa keputusan yang padat."
+    },
+    {
+      "question": "Apakah spreadsheet keuangan dapat disesuaikan secara mandiri oleh tim internal?",
+      "answer": "Ya. Seluruh formula dalam spreadsheet Excel disusun secara transparan tanpa proteksi kode yang menyulitkan. Tim keuangan Anda dapat mengubah variabel asumsi harga jual, volume produksi, atau inflasi untuk melihat dampaknya seketika pada arus kas."
+    },
+    {
+      "question": "Berapa lama waktu yang dibutuhkan untuk menyelesaikan satu paket dossier lengkap?",
+      "answer": "Pengerjaan standar memakan waktu 10 hingga 14 hari kerja sejak data operasional dasar dan ruang lingkup rencana usaha disepakati bersama."
+    }
+  ],
+  "relatedEntities": [
+    "studi-kelayakan",
+    "business-admin",
+    "proposal-kemitraan",
+    "sop-administrasi"
+  ]
+}

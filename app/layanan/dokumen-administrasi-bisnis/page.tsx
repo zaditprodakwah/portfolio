@@ -130,6 +130,29 @@ export default function BusinessDocsPage() {
         {/* Solusi Programmatik Terkait (Spokes) */}
         <section className="space-y-4">
           <h2 className="text-lg font-bold text-slate-900">Solusi Terfokus & Studi Kasus Spesifik:</h2>
+          
+          {/* Featured Flagship Dossier */}
+          <Link
+            href="/solusi/executive-feasibility-dossier"
+            className="group p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white border border-slate-700 hover:border-teal-400 shadow-sm transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 block"
+          >
+            <div className="space-y-1.5 max-w-2xl">
+              <span className="text-[11px] font-mono font-bold text-teal-300 bg-teal-900/60 px-2.5 py-0.5 rounded border border-teal-500/40 uppercase tracking-wider inline-block">
+                Flagship Executive Offering
+              </span>
+              <h3 className="font-heading font-extrabold text-base sm:text-lg text-white group-hover:text-teal-200 transition-colors">
+                Executive Intelligence & Feasibility Dossier
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                Paket dokumen keputusan dewan direksi dan komite investasi: model finansial dinamis 5 tahun, uji tekanan margin, radar intelijen pasar aktual, serta slide presentasi eksekutif 16:9.
+              </p>
+            </div>
+            <div className="shrink-0 inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-teal-300 bg-slate-800/80 px-4 py-2.5 rounded-xl border border-teal-500/30 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+              <span>Buka Dossier</span>
+              <ArrowRight className="w-4 h-4" />
+            </div>
+          </Link>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
               href="/solusi/proposal-bisnis-rantai-pasok-investor"
