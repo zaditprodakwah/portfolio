@@ -10,7 +10,7 @@ export async function GET() {
   const teardowns = getAllWawasan();
   const directory = getAllDirectoryItems();
 
-  let text = `# Zadit Executive Hub — Full Machine Knowledge Base\n\n`;
+  let text = `# Zadit Executive Hub -- Full Machine Knowledge Base\n\n`;
   text += `Domain Otoritatif: ${getCanonicalUrl("/")}\n`;
   text += `Pengembang: Muhammad Khoiruzzadittaqwa\n\n`;
 

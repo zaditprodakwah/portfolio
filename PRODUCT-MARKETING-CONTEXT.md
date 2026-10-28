@@ -1,4 +1,4 @@
-# PRODUCT-MARKETING-CONTEXT.md — Zadit Executive Hub (`muhzadit.pages.dev`)
+# PRODUCT-MARKETING-CONTEXT.md -- Zadit Executive Hub (`muhzadit.pages.dev`)
 
 **Entitas:** Muhammad Khoiruzzadittaqwa (Zadit)  
 **Domain Otoritatif:** `https://muhzadit.pages.dev/`  
@@ -24,7 +24,7 @@
 ## 2. Nilai Unggulan & Diferensiator Teknis
 
 - **Arsitektur Edge Serverless $0 USD**: Mengompilasi kode ke static edge (Cloudflare Pages), mengeliminasi sewa server bulanan dan risiko kebocoran SQL database.
-- **Presisi Metodologis Legal**: Bimbingan komputasi yang 100% mematuhi Permendikbudristek No. 39/2021—mentransfer penalaran verbal kepada peneliti, bukan memalsukan kepengarangan.
+- **Presisi Metodologis Legal**: Bimbingan komputasi yang 100% mematuhi Permendikbudristek No. 39/2021--mentransfer penalaran verbal kepada peneliti, bukan memalsukan kepengarangan.
 - **Triad Framework**: Setiap deliverable dibangun dari segitiga pemecahan masalah: Dilema Pemangku Kepentingan $\to$ Navigasi Diplomatik $\to$ Deliverable Teknis Nyata.
 - **Akses Langsung Satu Pintu**: Klien berkomunikasi langsung dengan rekayasawan utama tanpa perantara Account Manager atau birokrasi berjenjang.
 

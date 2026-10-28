@@ -10,7 +10,7 @@ const kItemTypeMoreHref = "0767FDFD-0422-4E5A-BC8A-3BE11E5BBA05";
 
 // Capture search params and clean ?q= from URL at module load time, before
 // any DOMContentLoaded handlers run. quarto-nav.js resolves all <a> hrefs
-// against window.location during DOMContentLoaded — if ?q= is still present,
+// against window.location during DOMContentLoaded -- if ?q= is still present,
 // every link on the page gets the query param baked into its href.
 const currentUrl = new URL(window.location);
 const kQuery = currentUrl.searchParams.get(kQueryArg);
@@ -57,10 +57,10 @@ window.document.addEventListener("DOMContentLoaded", function (_event) {
   if (query && mainEl) {
     highlight(query, mainEl);
 
-    // Activate tabs on pageshow — after tabsets.js restores localStorage state.
+    // Activate tabs on pageshow -- after tabsets.js restores localStorage state.
     // tabsets.js registers its pageshow handler during module execution (before
     // DOMContentLoaded). By registering ours during DOMContentLoaded, listener
-    // ordering guarantees we run after tabsets.js — so search activation wins.
+    // ordering guarantees we run after tabsets.js -- so search activation wins.
     window.addEventListener("pageshow", function (event) {
       if (!event.persisted) {
         for (const mark of mainEl.querySelectorAll("mark")) {
@@ -1255,7 +1255,7 @@ function markMatches(node, lohis) {
 
 // Activate ancestor tabs so a search match inside an inactive pane becomes visible.
 // When multiple panes in the same tabset contain matches, avoid switching away from
-// the currently active pane — the user already sees a match there.
+// the currently active pane -- the user already sees a match there.
 function openAllTabsetsContainingEl(el) {
   for (const pane of matchAncestors(el, '.tab-pane')) {
     const tabContent = pane.closest('.tab-content');

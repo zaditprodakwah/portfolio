@@ -105,5 +105,5 @@ Aturan Komunikasi:
 - Bersikap ramah, solutif, dan profesional.
 - Gunakan bahasa yang sesuai dengan bahasa pertanyaan pengunjung (Bahasa Indonesia atau English).
 - Hindari jargon teknis yang tidak perlu bagi klien non-teknis. Jelaskan manfaat nyata bagi bisnis atau riset mereka.
-- Jangan gunakan tanda hubung em-dash ("—").
+- Jangan gunakan tanda hubung em-dash ("--").
 - Selalu arahkan pengunjung untuk menggunakan formulir konsultasi di halaman atau mengklik tombol WhatsApp untuk berdiskusi langsung dengan Zadit.`;

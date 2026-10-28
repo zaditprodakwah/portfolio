@@ -2,12 +2,13 @@
 
 import React, { useState } from "react";
 import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAuditTeaser } from "@/components/QuickAuditTeaser";
-import { ServicesSection } from "@/components/ServicesSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { ConsultationBuilder } from "@/components/ConsultationBuilder";
+import { ExecutiveLobbyHero } from "@/components/ExecutiveLobbyHero";
+import { EpistemicDoctrine } from "@/components/EpistemicDoctrine";
+import { ExecutivePavilions } from "@/components/ExecutivePavilions";
+import { ScholarlyMonographPreview } from "@/components/ScholarlyMonographPreview";
+import { SelectedCaseEvidence } from "@/components/SelectedCaseEvidence";
 import { ResumeDownloadSection } from "@/components/ResumeDownloadSection";
+import { ExecutiveDialogueSalon } from "@/components/ExecutiveDialogueSalon";
 import { ContactFooter } from "@/components/ContactFooter";
 import { AIChatDrawer } from "@/components/AIChatDrawer";
 import { MobileNavDrawer } from "@/components/MobileNavDrawer";
@@ -19,43 +20,52 @@ export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    
-      <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-alabaster pb-32 sm:pb-12 scroll-smooth">
-        <Navbar
-          onOpenChat={() => setIsChatOpen(true)}
-          onOpenMenu={() => setIsMenuOpen(true)}
-        />
-        
-        <HeroSection onOpenChat={() => setIsChatOpen(true)} />
+    <main className="min-h-screen w-full max-w-full overflow-x-hidden flex flex-col bg-[#FAF9F6] text-[#141416] pb-24 sm:pb-12 scroll-smooth">
+      <Navbar
+        onOpenChat={() => setIsChatOpen(true)}
+        onOpenMenu={() => setIsMenuOpen(true)}
+      />
+      
+      {/* 1. Sapaan Lobi Eksekutif: Foto, Identitas, H1 Lugas, Tombol Aksi Jempol */}
+      <ExecutiveLobbyHero onOpenChat={() => setIsChatOpen(true)} />
 
-        <QuickAuditTeaser />
+      {/* 2. Doktrin Nalar: 3 Prinsip Berpikir Fundamental */}
+      <EpistemicDoctrine />
 
-        <ServicesSection />
+      {/* 3. Empat Koridor Praktik: Navigasi Padat Tanpa Label Harga/Paket */}
+      <ExecutivePavilions />
 
-        <CaseStudiesSection />
+      {/* 4. Etalase Manuskrip Kesarjanaan: Jangkar & Kompas Riset Ilmiah (ilmify.id) */}
+      <ScholarlyMonographPreview />
 
-        <ConsultationBuilder />
+      {/* 5. Rekam Jejak & Bukti Empiris Terpilih */}
+      <SelectedCaseEvidence />
 
-        <ResumeDownloadSection />
+      {/* 6. Akses Resume & CV Resmi */}
+      <ResumeDownloadSection />
 
-        <ContactFooter />
+      {/* 7. Salon Dialog: Pintu Masuk Konsultasi Terbuka & Ramah */}
+      <ExecutiveDialogueSalon />
 
-        <MobileNavDrawer
-          isOpen={isMenuOpen}
-          onClose={() => setIsMenuOpen(false)}
-        />
+      {/* 8. Catatan Kaki & Hak Cipta */}
+      <ContactFooter />
 
-        <MobileActionDock
-          onOpenMenu={() => setIsMenuOpen(true)}
-        />
+      {/* Drawers & Controls */}
+      <MobileNavDrawer
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+      />
 
-        <AIChatDrawer
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-        />
+      <MobileActionDock
+        onOpenMenu={() => setIsMenuOpen(true)}
+      />
 
-        <FloatingToCWidget />
-      </main>
-    
+      <AIChatDrawer
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
+
+      <FloatingToCWidget />
+    </main>
   );
 }

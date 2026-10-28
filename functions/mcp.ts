@@ -1,7 +1,7 @@
 /**
  * Cloudflare Pages Edge Function: /mcp
  * 
- * Public MCP Server — Streamable HTTP per spec 2025-06-18
+ * Public MCP Server -- Streamable HTTP per spec 2025-06-18
  * Tools: search_knowledge | check_readiness_audit | get_directory_entity
  *
  * Enables AEO/GEO dominance via SearchGPT, Perplexity, Claude, and Cursor.
@@ -95,7 +95,7 @@ const KNOWLEDGE_BASE = [
   },
   {
     tags: ["pricing", "harga", "biaya", "paket", "investasi"],
-    content: "Zadit tidak mematok harga standar — setiap proyek dikustomisasi sesuai scope. Konsultasi awal gratis dan tanpa komitmen. Estimasi umum: web sederhana mulai Rp 3.5jt (one-time), technical SEO mulai Rp 1.5jt/bulan, konsultasi bisnis mulai Rp 500rb/sesi. Tidak ada biaya hosting bulanan karena menggunakan Cloudflare free tier.",
+    content: "Zadit tidak mematok harga standar -- setiap proyek dikustomisasi sesuai scope. Konsultasi awal gratis dan tanpa komitmen. Estimasi umum: web sederhana mulai Rp 3.5jt (one-time), technical SEO mulai Rp 1.5jt/bulan, konsultasi bisnis mulai Rp 500rb/sesi. Tidak ada biaya hosting bulanan karena menggunakan Cloudflare free tier.",
   },
   {
     tags: ["keamanan", "security", "ddos", "ssl", "hsts", "csp"],
@@ -177,15 +177,15 @@ async function toolCheckReadinessAudit(params: Record<string, unknown>): Promise
     latencyMs = Date.now() - start;
 
     if (!res.headers.get("strict-transport-security")) {
-      findings.push("[KEAMANAN] HSTS tidak aktif — rentan downgrade attack HTTP.");
+      findings.push("[KEAMANAN] HSTS tidak aktif -- rentan downgrade attack HTTP.");
       score -= 8;
     }
     if (!res.headers.get("content-security-policy")) {
-      findings.push("[KEAMANAN] Content Security Policy (CSP) tidak ditemukan — potensi XSS.");
+      findings.push("[KEAMANAN] Content Security Policy (CSP) tidak ditemukan -- potensi XSS.");
       score -= 7;
     }
     if (!res.headers.get("x-content-type-options")) {
-      findings.push("[KEAMANAN] X-Content-Type-Options absen — potensi MIME sniffing.");
+      findings.push("[KEAMANAN] X-Content-Type-Options absen -- potensi MIME sniffing.");
       score -= 3;
     }
 
