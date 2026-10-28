@@ -18,7 +18,7 @@ export const ExecutiveLobbyHero: React.FC<ExecutiveLobbyHeroProps> = () => {
     <section 
       id="foyer" 
       aria-label="Lobi Eksekutif dan Pengenalan Diri"
-      className="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-12 pb-8 sm:pb-12"
+      className="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12"
     >
       <div className="flex flex-col items-start gap-4 sm:gap-6">
         

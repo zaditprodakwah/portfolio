@@ -82,10 +82,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-xs sm:text-sm text-slate-900 tracking-tight truncate">
-                  {cvProfile.nickname} <span className="hidden xs:inline">Growth</span>
+                  Muhammad Khoiruzzadittaqwa
                 </span>
-                <span className="font-mono text-[10px] sm:text-xs tracking-wider text-teal-800 uppercase font-bold truncate">
-                  {isId ? "Portofolio" : "Solutions"}
+                <span className="font-mono text-[10px] sm:text-xs tracking-wider text-slate-500 uppercase font-semibold truncate">
+                  {isId ? "Lobi Eksekutif" : "Executive Foyer"}
                 </span>
               </div>
             </Link>
@@ -349,21 +349,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
               )}
             </div>
 
-            {/* Direct Quick Links */}
-            <Link href="/audit" className="hover:text-teal-700 transition-colors text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200 font-extrabold flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              <span>{isId ? "Audit Gratis" : "Free Audit"}</span>
+            {/* Direct Quick Links: Executive Foyer Navigation */}
+            <Link href="/#paviliun" className="hover:text-slate-900 text-slate-700 font-semibold transition-colors flex items-center gap-1">
+              <Compass className="w-3.5 h-3.5 text-slate-500" />
+              <span>{isId ? "Ruang Praktik" : "Practice"}</span>
             </Link>
-            <Link href="/solusi" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
-              <Compass className="w-3.5 h-3.5" />
-              <span>{isId ? "Matriks" : "Matrix"}</span>
+            <Link href="/#doktrin" className="hover:text-slate-900 text-slate-700 font-semibold transition-colors flex items-center gap-1">
+              <span>{isId ? "Doktrin Nalar" : "Doctrine"}</span>
             </Link>
-            <Link href="/portfolio" className="hover:text-teal-700 transition-colors text-teal-800 font-extrabold flex items-center gap-1">
-              <Archive className="w-3.5 h-3.5" />
-              <span>{isId ? "Portfolio" : "Portfolio"}</span>
+            <Link href="/#karya" className="hover:text-slate-900 text-slate-700 font-semibold transition-colors flex items-center gap-1">
+              <BookOpen className="w-3.5 h-3.5 text-slate-500" />
+              <span>{isId ? "Karya Riset" : "Monograph"}</span>
             </Link>
-            <Link href="/cv" className="hover:text-teal-700 transition-colors flex items-center gap-1">
-              <FileText className="w-3.5 h-3.5" />
+            <Link href="/cv" className="hover:text-slate-900 text-slate-700 font-semibold transition-colors flex items-center gap-1">
+              <FileText className="w-3.5 h-3.5 text-slate-500" />
               <span>CV</span>
             </Link>
           </nav>

@@ -64,8 +64,6 @@ export default function HomePage() {
         isOpen={isChatOpen}
         onClose={() => setIsChatOpen(false)}
       />
-
-      <FloatingToCWidget />
     </main>
   );
 }

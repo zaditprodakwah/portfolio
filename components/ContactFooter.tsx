@@ -99,13 +99,13 @@ export const ContactFooter: React.FC = () => {
               </p>
               <div className="space-y-2.5">
                 <a
-                  href={cvProfile.contact.sribuProfile}
+                  href="https://ilmify.id/arsitektur-kesarjanaan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-slate-200 hover:text-teal-300 transition-colors font-medium"
                 >
-                  <Award className="w-4 h-4 text-teal-400" />
-                  <span>Sribu (Rating 5.0)</span>
+                  <BookOpen className="w-4 h-4 text-amber-400" />
+                  <span>Ilmify (Penerbit Riset)</span>
                 </a>
                 <a
                   href={cvProfile.contact.linkedin}
