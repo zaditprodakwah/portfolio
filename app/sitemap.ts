@@ -26,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/wawasan/",
     "/direktori/",
     "/web3/",
-    "/buku/nalar-di-balik-angka/",
   ];
 
 

@@ -316,7 +316,7 @@ export const COMMERCIAL_PACKAGES: CommercialPackage[] = [
     badge: "100% Legal & Bebas Joki",
     iconName: "BarChart3",
     problemSummary: "Naskah penelitian dosen dan mahasiswa pascasarjana kerap tertahan atau ditolak reviewer SINTA/Scopus akibat cacat uji asumsi statistik, ketidakjelasan sintesis literatur, atau pemformatan sitasi manual yang acak-acakan.",
-    solutionMechanism: "Dipimpin langsung oleh Sarjana Pendidikan Matematika (140 SKS, Nilai Statistika 89.8/A-), kami mentransfer penalaran komputasi legal dan menyusun naskah Word OpenXML Native Zotero standar APA 7th Edition murni.",
+    solutionMechanism: "Dipimpin langsung oleh praktisi berlatar belakang studi S1 Tadris Matematika (tuntas 140 SKS, IPK 3.71, nilai Statistika 89.8/A-), kami mentransfer penalaran komputasi legal dan menyusun naskah Word OpenXML Native Zotero standar APA 7th Edition murni.",
     tiers: [
       {
         id: "statistical-computing",
