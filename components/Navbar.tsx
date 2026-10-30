@@ -300,7 +300,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                             {isId ? "Visual Editorial & Cover 3D" : "Visual Editorial Studio"}
                           </p>
                           <p className="text-[11px] text-slate-600 leading-snug mt-0.5">
-                            {isId ? "Desain sampul buku, spesifikasi fisik cetak & 3D WebGL." : "Realistic book cover design & 3D WebGL studio."}
+                            {isId ? "Desain sampul buku, kemasan box & simulasi 3D fisik." : "Realistic book cover, packaging box & 3D physical studio."}
                           </p>
                         </div>
                       </div>

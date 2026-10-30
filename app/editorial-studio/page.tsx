@@ -23,37 +23,115 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Visual Editorial Studio & Desain Sampul Realistis | Muhammad Khoiruzzadittaqwa (Zadit)",
   description:
-    "Layanan desain sampul buku dan e-book profesional dengan kalkulasi presisi fisik penerbitan: kurvatur punggung jilid, ketebalan greyboard, mockup 3D fotorealistik 300 DPI, master PSD Smart Object, dan video teaser 9:16.",
+    "Layanan desain sampul buku, e-book, dan kemasan box profesional dengan kalkulasi presisi fisik penerbitan: kurvatur punggung jilid, ketebalan greyboard, dus FEFCO 0427, mockup 3D fotorealistik 300 DPI, master PSD Smart Object, dan video teaser 9:16.",
   alternates: {
     canonical: "https://muhzadit.pages.dev/editorial-studio/",
+  },
+  openGraph: {
+    title: "Visual Editorial Studio & Desain Sampul Realistis",
+    description:
+      "Desain sampul buku fisik, e-book, dan kemasan box dengan presisi kurvatur jilid, pola vektor FEFCO 0427, serta simulasi 3D fotorealistik.",
+    url: "https://muhzadit.pages.dev/editorial-studio/",
+    siteName: "Muhammad Khoiruzzadittaqwa (Zadit)",
+    images: [
+      {
+        url: "/og-editorial-studio.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Visual Editorial & Packaging Studio",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Visual Editorial Studio & Desain Sampul Realistis",
+    description:
+      "Desain sampul buku fisik, e-book, dan kemasan box dengan presisi kurvatur jilid, pola vektor FEFCO 0427, serta simulasi 3D fotorealistik.",
+    images: ["/og-editorial-studio.jpg"],
   },
 };
 
 export default function EditorialStudioPage() {
   const whatsappNumber = "6285156550882";
   const whatsappMessage = encodeURIComponent(
-    "Halo Mas Zadit, saya ingin berkonsultasi mengenai desain sampul buku/e-book dengan spesifikasi editorial fisik dan visual mockup 3D."
+    "Halo Mas Zadit, saya ingin berkonsultasi mengenai desain sampul buku dan kemasan dus box dengan spesifikasi fisik cetak serta simulasi 3D."
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "Layanan Desain Sampul Buku & Dus Kemasan Box 3D",
+        "description":
+          "Desain sampul buku hardcover, softcover, dus kemasan box FEFCO 0427, pola vektor cetak 1:1, dan animasi 3D fotorealistik.",
+        "brand": {
+          "@type": "Person",
+          "name": "Muhammad Khoiruzzadittaqwa",
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "IDR",
+          "lowPrice": "350000",
+          "highPrice": "1500000",
+        },
+      },
+      {
+        "@type": "Service",
+        "name": "Visual Editorial & 3D Packaging Design Studio",
+        "serviceType": "Editorial Cover and Packaging Design",
+        "provider": {
+          "@type": "Person",
+          "name": "Muhammad Khoiruzzadittaqwa",
+          "url": "https://muhzadit.pages.dev",
+        },
+        "areaServed": "Indonesia",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://muhzadit.pages.dev/",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Visual Editorial Studio",
+            "item": "https://muhzadit.pages.dev/editorial-studio/",
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#FDFBF7] py-12 px-4 sm:px-6 text-zinc-900 font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Header Breadcrumbs & Intro */}
         <header className="space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-900 border border-amber-200/80 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-            <span>Boutique Visual Editorial & Cover Studio</span>
+            <span>Boutique Visual Editorial & Packaging Studio</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-heading font-bold text-zinc-900 tracking-tight leading-tight">
-            Desain Sampul Buku Realistis: Presisi Fisik Cetak, Geometri Punggung, dan Visual 3D Sinematik
+            Desain Sampul Buku & Dus Kemasan Box Realistis: Presisi Fisik Cetak, Geometri Punggung Jilid, Pola Dieline FEFCO 0427, dan Simulasi 3D Sinematik
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-700 leading-relaxed max-w-3xl">
-            Banyak penulis dan penerbit menerima mockup sampul berupa kotak digital datar yang tampak kaku
-            seperti template instan. Di studio ini, saya merancang sampul dengan memperhitungkan ilmu fisika
-            kertas, ketebalan jilid asli, serta kilau tekstur pernis agar buku Anda tampak memikat baik di etalase
+            Banyak penulis dan penerbit menerima pratinjau sampul berupa kotak digital datar yang tampak kaku seperti template instan.
+            Di studio ini, saya merancang sampul buku fisik dan dus kemasan boks mailer dengan memperhitungkan ilmu fisika kertas,
+            ketebalan greyboard, pola garis lipat percetakan, serta kilau tekstur pernis agar karya Anda tampil memikat baik di etalase
             toko maupun layar gawai.
           </p>
         </header>
@@ -63,21 +141,21 @@ export default function EditorialStudioPage() {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-xl sm:text-2xl font-heading font-bold text-zinc-900">
-                Spesimen 3D Interaktif: Belajar Desain Grafis Untuk Pemula
+                Spesimen Fisik Interaktif: Buku Hardcover & Dus Kemasan Box FEFCO 0427
               </h2>
               <p className="text-sm text-zinc-600">
-                Putar buku secara leluasa di bawah untuk memeriksa sampul depan, lekukan punggung jilid, dan barcode belakang.
+                Pilih spesimen di bilah kontrol: periksa kurvatur jilid buku fisik, buka kemasan dus mailer dengan penggeser unboxing, atau amati tumpukan karton display etalase toko.
               </p>
             </div>
             <span className="hidden sm:inline-flex items-center px-3 py-1 rounded-md text-xs font-mono bg-zinc-100 text-zinc-700 border border-zinc-200">
-              ISO A5 : 240 Halaman
+              Presisi Percetakan Skala 1:1
             </span>
           </div>
 
           <InteractiveBookViewer fallbackImage="/editorial-studio/hero-mockup-3d.png" />
         </section>
 
-        {/* Physical Print Specifications Card */}
+        {/* Physical Print & Packaging Specifications Card */}
         <section className="bg-white rounded-2xl border border-zinc-200/90 p-6 sm:p-8 shadow-xs space-y-6">
           <div className="flex items-center gap-3 border-b border-zinc-100 pb-4">
             <div className="p-2.5 rounded-xl bg-teal-50 text-teal-800 border border-teal-100">
@@ -85,10 +163,10 @@ export default function EditorialStudioPage() {
             </div>
             <div>
               <h3 className="text-lg sm:text-xl font-heading font-bold text-zinc-900">
-                Kartu Spesifikasi Fisik Penerbitan
+                Kartu Spesifikasi Fisik Penerbitan & Kemasan Boks
               </h3>
               <p className="text-xs sm:text-sm text-zinc-500">
-                Dihitung secara matematis berdasarkan standar produksi percetakan buku nasional.
+                Dihitung secara matematis berdasarkan standar produksi percetakan buku dan pabrik kemasan karton nasional.
               </p>
             </div>
           </div>
@@ -96,61 +174,61 @@ export default function EditorialStudioPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/70 space-y-1.5">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">
-                Format Dimensi
+                Buku ISO A5 & Punggung
               </span>
-              <p className="text-base font-semibold text-zinc-900">ISO A5 (14.8 x 21.0 cm)</p>
+              <p className="text-base font-semibold text-zinc-900">14.8 x 21.0 cm (Spine 17.4 mm)</p>
               <p className="text-xs text-zinc-600 leading-normal">
-                Proporsi standar buku panduan populer, nyaman digenggam dan proporsional di rak display.
+                Kalkulasi 240 halaman kertas bookpaper krem 72 gsm ditambah ketebalan board hardcover 3.0 mm.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/70 space-y-1.5">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">
-                Tebal Punggung (Spine)
+                Dus Kemasan Mailer
               </span>
-              <p className="text-base font-semibold text-zinc-900">17.4 mm (Presisi Kaliber)</p>
+              <p className="text-base font-semibold text-zinc-900">FEFCO 0427 (22.0 x 16.0 x 4.5 cm)</p>
               <p className="text-xs text-zinc-600 leading-normal">
-                Kalkulasi 240 halaman kertas isi krem 72 gsm ditambah ketebalan board hardcover 3.0 mm.
+                Dimensi interior presisi dengan ruang proteksi kertas tisu, mengunci buku agar tidak goyang saat ekspedisi.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/70 space-y-1.5">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">
-                Kertas & Gramatur
+                Bahan Karton Kemasan
               </span>
-              <p className="text-base font-semibold text-zinc-900">Bookpaper Krem 72 gsm</p>
+              <p className="text-base font-semibold text-zinc-900">Corrugated E-Flute 1.5 mm (400 gsm)</p>
               <p className="text-xs text-zinc-600 leading-normal">
-                Kertas bertekstur lembut dengan daya pantul rendah, menjaga mata pembaca tetap nyaman berlama-lama.
+                Struktur karton gelombang mikro kokoh dengan liner kraft alami, tahan benturan dan ramah daur ulang.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/70 space-y-1.5">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">
-                Struktur Jilid
+                Struktur Jilid Buku
               </span>
               <p className="text-base font-semibold text-zinc-900">Hardcover Jahit Benang</p>
               <p className="text-xs text-zinc-600 leading-normal">
-                Inti greyboard kaku dengan punggung silindris fleksibel yang dapat dibuka rata tanpa merusak ikatan.
+                Inti greyboard kaku dengan punggung silindris fleksibel yang dapat dibuka rata tanpa merusak ikatan halaman.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/70 space-y-1.5">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">
-                Finishing Sampul
+                Finishing Eksklusif
               </span>
-              <p className="text-base font-semibold text-zinc-900">Doff + Spot UV 3D Glossy</p>
+              <p className="text-base font-semibold text-zinc-900">Doff Beludru, Spot UV & Sablon</p>
               <p className="text-xs text-zinc-600 leading-normal">
-                Lapisan doff beludru dipadukan dengan pernis berkilap timbul pada tipografi judul utama.
+                Tekstur doff halus dipadu pernis timbul pada judul buku serta sablon presisi pada tutup kemasan karton.
               </p>
             </div>
 
             <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200/70 space-y-1.5">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-500 font-semibold">
-                Legalitas & Kolofon
+                Pola Pisau & Legalitas
               </span>
-              <p className="text-base font-semibold text-zinc-900">EAN-13 ISBN & Barcode Harga</p>
+              <p className="text-base font-semibold text-zinc-900">Dieline 1:1, ISBN & Barcode</p>
               <p className="text-xs text-zinc-600 leading-normal">
-                Garis barcode vektor berdefinisi tinggi, siap dipindai scanner optik kasir dan toko ritel.
+                Pola pond pisau siap potong pabrik dan garis barcode EAN-13 tajam siap pindai kasir toko buku.
               </p>
             </div>
           </div>
@@ -163,7 +241,7 @@ export default function EditorialStudioPage() {
               Format Serah Terima Siap Pakai untuk Segala Kebutuhan
             </h2>
             <p className="text-sm sm:text-base text-zinc-600 max-w-3xl">
-              Anda tidak hanya menerima gambar mentah. Setiap paket dilengkapi berkas produksi yang ramah bagi
+              Anda tidak hanya menerima gambar mentah. Setiap paket dilengkapi berkas produksi lengkap yang ramah bagi
               tim percetakan, desainer in-house, dan promotor media sosial.
             </p>
           </div>
@@ -179,13 +257,13 @@ export default function EditorialStudioPage() {
                   Photoshop Smart Object Master Mockup
                 </h3>
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  Berkas master resolusi tinggi (35 MB) dengan layer Smart Object terpisah. Tim Anda dapat mengganti
-                  artwork sampul depan atau belakang dalam dua kali klik tanpa perlu mengatur ulang bayangan.
+                  Berkas master resolusi tinggi (35 MB) dengan layer Smart Object terpisah untuk sampul buku dan boks kemasan.
+                  Tim Anda dapat mengganti artwork sampul atau logo boks dalam dua kali klik tanpa perlu mengatur ulang bayangan.
                 </p>
               </div>
               <div className="pt-2 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-500 font-mono">
                 <span>Photoshop CC Compatible</span>
-                <span>Layer Smart Object</span>
+                <span>Layer Smart Object Buku & Boks</span>
               </div>
             </div>
 
@@ -196,16 +274,16 @@ export default function EditorialStudioPage() {
                   SVG
                 </div>
                 <h3 className="text-lg font-heading font-bold text-zinc-900">
-                  Pola Vektor Skala 1:1 (CorelDraw & Illustrator)
+                  Pola Vektor Skala 1:1 (Sampul Buku & Dieline Box)
                 </h3>
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  Pola kerja lengkap berskala milimeter presisi: garis potong (trim lines), area bleed 3 mm,
-                  panduan lipat engsel (hinge fold), dan batas aman teks agar tidak terpotong pisau percetakan.
+                  Pola kerja lengkap berskala milimeter presisi: garis potong (cut lines), rel lipat (crease rules),
+                  area bleed 3 mm, serta pola bentang dieline boks FEFCO 0427 siap diserahkan ke vendor percetakan.
                 </p>
               </div>
               <div className="pt-2 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-500 font-mono">
                 <span>Skala 1:1 Milimeter</span>
-                <span>Bleed & Fold Guides</span>
+                <span>Sampul + Dieline Boks FEFCO 0427</span>
               </div>
             </div>
 
@@ -219,13 +297,13 @@ export default function EditorialStudioPage() {
                   Render 300 DPI True Alpha Transparent
                 </h3>
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  Gambar transparansi murni beresolusi ultra-tinggi (5120 x 2880 piksel) dengan bayangan lantai
-                  alami. Sangat fleksibel untuk ditempelkan di landing page, marketplace, atau poster promosi.
+                  Gambar transparansi murni beresolusi ultra-tinggi (5120 x 2880 piksel) dengan bayangan lantai alami:
+                  buku hardcover tunggal, dus kemasan terbuka berisi buku, dan tumpukan dus untuk display toko online.
                 </p>
               </div>
               <div className="pt-2 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-500 font-mono">
                 <span>5120 x 2880 Retina 2x</span>
-                <span>Alpha Transparency</span>
+                <span>Buku, Boks & Tumpukan Dus</span>
               </div>
             </div>
 
@@ -236,16 +314,16 @@ export default function EditorialStudioPage() {
                   MP4
                 </div>
                 <h3 className="text-lg font-heading font-bold text-zinc-900">
-                  Video Teaser Vertikal 9:16 (60 FPS) & GIF
+                  Video Teaser Vertikal 9:16 (60 FPS) & Animasi Unboxing
                 </h3>
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  Klip animasi gerak kamera sinematik yang menampakkan detail buku secara berputar halus.
+                  Klip animasi gerak kamera sinematik yang memperlihatkan unboxing boks kemasan dan pemaparan buku secara berputar halus.
                   Format vertikal siap tayang langsung di Instagram Reels, TikTok, YouTube Shorts, dan Threads.
                 </p>
               </div>
               <div className="pt-2 border-t border-zinc-100 flex items-center justify-between text-xs text-zinc-500 font-mono">
                 <span>1080 x 1920 Vertikal</span>
-                <span>60 FPS Smooth Motion</span>
+                <span>60 FPS Smooth Unboxing Motion</span>
               </div>
             </div>
           </div>
@@ -254,7 +332,6 @@ export default function EditorialStudioPage() {
         {/* Multi-Asset Showcase & Media Promotion */}
         <EditorialShowcaseTabs />
 
-
         {/* 3-Tier Packages & Pricing */}
         <section className="space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -262,7 +339,7 @@ export default function EditorialStudioPage() {
               Pilihan Paket Layanan Editorial Studio
             </h2>
             <p className="text-sm sm:text-base text-zinc-600">
-              Pilih cakupan yang sesuai dengan tahap penerbitan Anda, mulai dari template cepat hingga paket lengkap media promosi.
+              Pilih cakupan yang sesuai dengan tahap penerbitan Anda, mulai dari template cepat hingga paket lengkap media promosi dan kemasan boks fisik.
             </p>
           </div>
 
@@ -312,7 +389,7 @@ export default function EditorialStudioPage() {
               </div>
             </div>
 
-            {/* Tier 2: 3D Studio & Master Print (Recommended) */}
+            {/* Tier 2: 3D Studio & Master Packaging Suite (Recommended) */}
             <div className="bg-white rounded-2xl border-2 border-teal-700 p-6 flex flex-col justify-between space-y-6 shadow-md relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-[11px] font-bold bg-teal-700 text-white shadow-xs">
                 PALING POPULER
@@ -320,12 +397,12 @@ export default function EditorialStudioPage() {
 
               <div className="space-y-4">
                 <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-teal-50 text-teal-800">
-                  Tier 2 : Standar Industri Cetak
+                  Tier 2 : Standar Industri Cetak & Kemasan
                 </div>
-                <h3 className="text-xl font-heading font-bold text-zinc-900">3D Studio & Master Suite</h3>
+                <h3 className="text-xl font-heading font-bold text-zinc-900">3D Studio & Packaging Suite</h3>
                 <p className="text-xs text-zinc-600 leading-relaxed">
-                  Solusi ideal bagi penerbit profesional dan indie author yang menerbitkan buku fisik ke percetakan
-                  sekaligus membutuhkan aset etalase digital.
+                  Solusi ideal bagi penerbit profesional dan indie author yang menerbitkan buku fisik serta kemasan boks eksklusif
+                  ke percetakan sekaligus membutuhkan aset etalase digital.
                 </p>
 
                 <div className="pt-2 border-t border-zinc-100 space-y-2.5 text-xs text-zinc-700">
@@ -335,19 +412,19 @@ export default function EditorialStudioPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
-                    <span>Mockup 3D interaktif fotorealistik 300 DPI dengan kurvatur jilid asli</span>
+                    <span>Mockup 3D interaktif fotorealistik sampul buku & dus kemasan box</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
-                    <span>Master Photoshop Smart Object (.psd 35MB)</span>
+                    <span>Master Photoshop Smart Object (.psd) buku dan boks kemasan</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
-                    <span>Pola vektor 1:1 Corel/Illustrator dengan garis lipat & bleed</span>
+                    <span>Pola vektor 1:1 Corel/Illustrator (sampul buku + dieline box FEFCO 0427)</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
-                    <span>Spesifikasi tata letak InDesign dan kalkulasi ketebalan punggung</span>
+                    <span>Spesifikasi percetakan buku (InDesign) & spesifikasi produksi karton box</span>
                   </div>
                 </div>
               </div>
@@ -371,9 +448,9 @@ export default function EditorialStudioPage() {
                 <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-800">
                   Tier 3 : Kampanye Peluncuran Penuh
                 </div>
-                <h3 className="text-xl font-heading font-bold text-zinc-900">Motion Cinematic Teaser</h3>
+                <h3 className="text-xl font-heading font-bold text-zinc-900">Motion Cinematic Teaser & Unboxing</h3>
                 <p className="text-xs text-zinc-600 leading-relaxed">
-                  Layanan komprehensif bagi Anda yang ingin menggalang pre-order atau meluncurkan buku secara agresif
+                  Layanan komprehensif bagi Anda yang ingin menggalang pre-order atau meluncurkan buku dan edisi kemasan boks secara agresif
                   di platform media sosial berbasis video.
                 </p>
 
@@ -384,7 +461,7 @@ export default function EditorialStudioPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
-                    <span>Video gerak 3D vertikal 9:16 (60 FPS MP4)</span>
+                    <span>Video gerak sinematik unboxing 3D vertikal 9:16 (60 FPS MP4)</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
@@ -416,12 +493,12 @@ export default function EditorialStudioPage() {
         <section className="bg-amber-50/60 rounded-3xl border border-amber-200/80 p-8 sm:p-12 space-y-6 text-center">
           <div className="max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl font-heading font-bold text-zinc-900">
-              Diskusikan Kebutuhan Sampul & Format Cetak Buku Anda
+              Diskusikan Kebutuhan Sampul Buku & Dus Kemasan Box Anda
             </h2>
             <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
-              Punya naskah yang siap diterbitkan atau ingin memperbarui tampilan sampul buku lama? Kirimkan judul,
-              ringkasan cerita, dan estimasi halaman. Saya akan menghitungkan tebal punggung jilid yang tepat
-              serta menyiapkan rekomendasi visualnya.
+              Punya naskah yang siap diterbitkan, ingin menyiapkan edisi box set eksklusif, atau memperbarui tampilan sampul buku lama?
+              Kirimkan judul, ringkasan naskah, dan format cetak yang diinginkan. Saya akan menghitungkan tebal punggung jilid,
+              menyiapkan rekomendasi pola kemasan boks, serta merancang visual 3D-nya.
             </p>
           </div>
 

@@ -340,6 +340,39 @@ def generate_pillar_cards():
         img.save(out_file, "JPEG", quality=95, optimize=True)
         print(f"Generated: {out_file}")
 
+def generate_editorial_studio_card():
+    img, draw = create_base_canvas()
+    render_left_column(
+        draw,
+        eyebrow="BOUTIQUE EDITORIAL & PACKAGING STUDIO",
+        title_lines=[
+            ("Visual Editorial &", font_title_large, (15, 23, 42)),
+            ("Desain Kemasan 3D", font_title_large, (13, 148, 136))
+        ],
+        sub_lines=[
+            "Simulasi Fisik Buku Hardcover, Dus Kemasan Box,",
+            "Master Pola Vektor FEFCO, & Video Gerak 3D."
+        ],
+        pills_data=[
+            ["Sampul ISO A5/B5", "Dus Boks FEFCO 0427"],
+            ["Pola Dieline Vektor", "Master Smart Object 300 DPI"]
+        ],
+        max_left_w=670
+    )
+    render_right_metric_card(
+        img, draw,
+        header_text="Spesimen Studio & Cetak Fisik",
+        metric_rows=[
+            ("FEFCO 0427", "Standar Dus Mailer"),
+            ("ISO A5 / B5", "Geometri Hardcover"),
+            ("300 DPI", "Master Smart Object"),
+            ("1:1 Vektor", "Pola Garis Potong")
+        ]
+    )
+    out_file = os.path.join(PUBLIC_DIR, "og-editorial-studio.jpg")
+    img.save(out_file, "JPEG", quality=95, optimize=True)
+    print(f"Generated: {out_file}")
+
 def generate_solution_cards():
     solutions_dir = "/Users/mac/Documents/AGENTS_WORK_HUB/apps/zadit-pages/content/solutions"
     if not os.path.exists(solutions_dir):
@@ -405,5 +438,6 @@ if __name__ == "__main__":
     generate_master_card()
     generate_audit_card()
     generate_pillar_cards()
+    generate_editorial_studio_card()
     generate_solution_cards()
     print("All OG images successfully generated!")
