@@ -7,6 +7,7 @@ import { EpistemicDoctrine } from "@/components/EpistemicDoctrine";
 import { ExecutivePavilions } from "@/components/ExecutivePavilions";
 import { ScholarlyMonographPreview } from "@/components/ScholarlyMonographPreview";
 import { SelectedCaseEvidence } from "@/components/SelectedCaseEvidence";
+import { CredentialRegistryStrip } from "@/components/CredentialRegistryStrip";
 import { ResumeDownloadSection } from "@/components/ResumeDownloadSection";
 import { ExecutiveDialogueSalon } from "@/components/ExecutiveDialogueSalon";
 import { ContactFooter } from "@/components/ContactFooter";
@@ -41,7 +42,10 @@ export default function HomePage() {
       {/* 5. Rekam Jejak & Bukti Empiris Terpilih */}
       <SelectedCaseEvidence />
 
-      {/* 6. Akses Resume & CV Resmi */}
+      {/* 6. Registri Kredensial & Sertifikasi Resmi */}
+      <CredentialRegistryStrip />
+
+      {/* 7. Akses Resume & CV Resmi */}
       <ResumeDownloadSection />
 
       {/* 7. Salon Dialog: Pintu Masuk Konsultasi Terbuka & Ramah */}

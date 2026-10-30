@@ -8,6 +8,9 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  outputFileTracingExcludes: {
+    "*": ["**/*"],
+  },
   webpack: (config, { isServer, dir }) => {
     if (isServer) {
       config.plugins.push({

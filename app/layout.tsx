@@ -144,6 +144,47 @@ const jsonLd = {
       hasCredential: [
         {
           "@type": "EducationalOccupationalCredential",
+          name: "Back-End Development and APIs V8 Developer Certification",
+          credentialCategory: "Developer Certification",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "freeCodeCamp.org"
+          },
+          url: "https://freecodecamp.org/certification/muhzadit/back-end-development-and-apis"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Content Marketing Certification",
+          credentialCategory: "Professional Certification",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "eMarketing Institute",
+            address: "Denmark"
+          },
+          identifier: "CERT002199550-EMI"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Blogging & Digital Publishing Certification",
+          credentialCategory: "Professional Certification",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "eMarketing Institute",
+            address: "Denmark"
+          },
+          identifier: "CERT002198818-EMI"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Project Management Certified",
+          credentialCategory: "Professional Certification",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Professional Certification Academy"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
           name: "Certified Branding & Digital Marketing 360",
           credentialCategory: "Professional Certification",
           recognizedBy: {
