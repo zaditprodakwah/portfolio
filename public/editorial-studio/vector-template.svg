@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="319.4mm" height="216.0mm" viewBox="0 0 1207.1723 816.3720000000001">
+  <defs>
+    <style>
+      .bleed-box { fill: #fdfbf7; stroke: #ef4444; stroke-width: 1; stroke-dasharray: 4,4; }
+      .cut-line { fill: none; stroke: #0284c7; stroke-width: 1.5; }
+      .fold-line { stroke: #10b981; stroke-width: 1.5; stroke-dasharray: 6,3; }
+      .hinge-line { stroke: #f59e0b; stroke-width: 1; stroke-dasharray: 2,2; }
+      .guide-text { font-family: sans-serif; font-size: 14px; fill: #64748b; }
+      .title-text { font-family: sans-serif; font-size: 28px; font-weight: bold; fill: #1e293b; }
+    </style>
+  </defs>
+
+  <!-- Layer 1: Bleed Outer Box (+3mm) -->
+  <rect class="bleed-box" x="0" y="0" width="1207.1723" height="816.3720000000001"/>
+
+  <!-- Layer 2: Final Trim Box (Garis Potong) -->
+  <rect class="cut-line" x="11.3385" y="11.3385" width="1184.4953" height="793.695"/>
+
+  <!-- Layer 3: Spine Guides (Punggung Buku: 17.4 mm) -->
+  <line class="fold-line" x1="570.7044999999999" y1="11.3385" x2="570.7044999999999" y2="805.0335"/>
+  <line class="fold-line" x1="636.4677999999999" y1="11.3385" x2="636.4677999999999" y2="805.0335"/>
+
+  <!-- Layer 4: Hinge Crease Lines (Lekukan Engsel 6mm) -->
+  <line class="hinge-line" x1="548.0274999999999" y1="11.3385" x2="548.0274999999999" y2="805.0335"/>
+  <line class="hinge-line" x1="659.1447999999999" y1="11.3385" x2="659.1447999999999" y2="805.0335"/>
+
+  <!-- Layer 5: Labels & Artwork Baseline -->
+  <text class="guide-text" x="31.3385" y="41.338499999999996">[SAMPUL BELAKANG / BACK COVER]</text>
+  <text class="guide-text" x="656.4677999999999" y="41.338499999999996">[SAMPUL DEPAN / FRONT COVER]</text>
+  <text class="guide-text" x="575.7044999999999" y="41.338499999999996" transform="rotate(90, 575.7044999999999, 41.338499999999996)">PUNGGUNG (17.4 mm)</text>
+
+  <!-- Artwork Depan -->
+  <text class="title-text" x="676.4677999999999" y="131.3385">Belajar Desain Grafis</text>
+  <text class="guide-text" x="676.4677999999999" y="171.3385">Aaliyah Lusianti dkk</text>
+</svg>

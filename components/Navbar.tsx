@@ -289,6 +289,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, onOpenMenu }) => {
                     </Link>
 
                     <Link 
+                      href="/editorial-studio" 
+                      onClick={() => setIsMegaOpen(false)}
+                      className="group p-2.5 rounded-xl hover:bg-teal-50/70 transition-colors border border-teal-200/80 bg-teal-50/20"
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <BookOpen className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="font-heading font-bold text-xs text-teal-900 group-hover:text-teal-700 flex items-center gap-1">
+                            {isId ? "Visual Editorial & Cover 3D" : "Visual Editorial Studio"}
+                          </p>
+                          <p className="text-[11px] text-slate-600 leading-snug mt-0.5">
+                            {isId ? "Desain sampul buku, spesifikasi fisik cetak & 3D WebGL." : "Realistic book cover design & 3D WebGL studio."}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link 
                       href="/#consultation" 
                       onClick={() => setIsMegaOpen(false)}
                       className="group p-2.5 rounded-xl hover:bg-slate-50 transition-colors"

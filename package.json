@@ -10,6 +10,7 @@
     "deploy": "npm run build && npx wrangler pages deploy out --project-name=muhzadit"
   },
   "dependencies": {
+    "@types/three": "^0.186.0",
     "@vercel/og": "^1.0.2",
     "gsap": "^3.15.0",
     "lucide-react": "^0.469.0",
@@ -17,6 +18,7 @@
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "three": "^0.187.0",
     "zod": "^4.5.4"
   },
   "devDependencies": {

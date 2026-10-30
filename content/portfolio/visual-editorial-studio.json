@@ -1,0 +1,26 @@
+{
+  "slug": "visual-editorial-studio",
+  "title": "Visual Editorial Studio: Desain Sampul Realistis & Spesifikasi Cetak Fisik",
+  "metaDescription": "Studio desain sampul buku dan e-book profesional dengan kalkulasi presisi fisik penerbitan: kurvatur punggung jilid, ketebalan greyboard, mockup 3D fotorealistik 300 DPI, master PSD Smart Object, dan video teaser 9:16.",
+  "badge": "INTERAKTIF 3D & FISIK CETAK",
+  "category": "Visual Editorial & Print",
+  "year": "2026",
+  "kind": "embed",
+  "demoUrl": "/editorial-studio/",
+  "tags": ["Mockup 3D Interaktif", "Desain Sampul", "Master PSD", "CorelDraw SVG", "InDesign", "Video 9:16"],
+  "summary": "Bukan sekadar mockup kotak digital polosan. Saya merancang sampul buku dengan menghitung presisi fisik penerbitan: kurvatur lengkung punggung buku, ketebalan greyboard hardcover, kertas bookpaper krem 72 gsm alami, serta finishing doff berpadu spot UV 3D. Seluruh deliverable mencakup berkas master Photoshop Smart Object 35 MB, pola vektor skala 1:1 untuk CorelDraw dan Illustrator, render fotorealistik 300 DPI, dan video motion 9:16 untuk media sosial.",
+  "highlights": [
+    "Kalkulasi matematis ketebalan punggung buku (spine) berdasarkan gramatur kertas dan jenis jilid (240 halaman = 17.4 mm).",
+    "Model fisik 3D interaktif yang dapat diputar 360 derajat, dibuka sampulnya, dan diperbesar dengan gestur sentuh tanpa instalasi aplikasi tambahan.",
+    "Master Photoshop Smart Object (.psd 35MB) yang memudahkan pergantian artwork hanya dengan klik ganda tanpa mengatur ulang efek bayangan.",
+    "Template vektor berskala 1:1 milimeter dengan garis bleed 3 mm, batas aman teks, dan panduan lipat engsel jilid."
+  ],
+  "deliverables": [
+    "Mockup 3D Fotorealistik 300 DPI True Alpha Transparent (5120 x 2880 piksel).",
+    "Master Photoshop Smart Object (.psd 35MB).",
+    "Pola Vektor Skala 1:1 CorelDraw dan Illustrator (.svg).",
+    "Spesifikasi Tata Letak InDesign (.txt).",
+    "Video Teaser Vertikal 9:16 (60 FPS MP4) dan Looping Web GIF.",
+    "Tautan Template Kolaboratif Canva."
+  ]
+}
