@@ -74,19 +74,30 @@ export default function InteractiveBookViewer({
 
   // Materials & Dynamic Textures
   const bookMaterialsRef = useRef<{
+    frontMat: THREE.MeshStandardMaterial;
     backMat: THREE.MeshStandardMaterial;
     spineMat: THREE.MeshStandardMaterial;
-    frontMat: THREE.MeshStandardMaterial;
+    paperEdgeMat: THREE.MeshStandardMaterial;
+    spreadMat: THREE.MeshStandardMaterial;
+    endpaperMat: THREE.MeshStandardMaterial;
   } | null>(null);
   const boxMaterialsRef = useRef<{
     kraftExterior: THREE.MeshStandardMaterial;
     kraftInterior: THREE.MeshStandardMaterial;
+    kraftPlain: THREE.MeshStandardMaterial;
+    kraftFloor: THREE.MeshStandardMaterial;
     blackExterior: THREE.MeshStandardMaterial;
     blackInterior: THREE.MeshStandardMaterial;
+    blackPlain: THREE.MeshStandardMaterial;
+    blackFloor: THREE.MeshStandardMaterial;
     whiteExterior: THREE.MeshStandardMaterial;
     whiteInterior: THREE.MeshStandardMaterial;
+    whitePlain: THREE.MeshStandardMaterial;
+    whiteFloor: THREE.MeshStandardMaterial;
   } | null>(null);
   const boxMeshesRef = useRef<THREE.Mesh[]>([]);
+  const boxPlainMeshesRef = useRef<THREE.Mesh[]>([]);
+  const boxFloorMeshRef = useRef<THREE.Mesh | null>(null);
   const decalMeshRef = useRef<THREE.Mesh | null>(null);
   const customTextureRef = useRef<THREE.CanvasTexture | null>(null);
 
@@ -154,6 +165,39 @@ export default function InteractiveBookViewer({
     }
   }, [isMuted]);
 
+  // Texture Baker: High-DPI Book Paper Fore-Edges (Stacked 240 Pages)
+  const bakePaperEdgeTexture = useCallback(() => {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+
+    canvas.width = 1024;
+    canvas.height = 256;
+    ctx.fillStyle = "#faf7ee"; // Natural ivory bookpaper tone
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Fine microscopic horizontal layer lines of stacked bookpaper sheets
+    for (let y = 0; y < canvas.height; y += 3) {
+      const alpha = 0.08 + Math.sin(y * 1.5) * 0.04;
+      ctx.fillStyle = `rgba(160, 140, 110, ${alpha})`;
+      ctx.fillRect(0, y, canvas.width, 1.2);
+    }
+
+    // Soft edge shadow vignette
+    const grad = ctx.createLinearGradient(0, 0, canvas.width, 0);
+    grad.addColorStop(0, "rgba(0,0,0,0.08)");
+    grad.addColorStop(0.08, "rgba(0,0,0,0.0)");
+    grad.addColorStop(0.92, "rgba(0,0,0,0.0)");
+    grad.addColorStop(1, "rgba(0,0,0,0.08)");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.wrapS = THREE.RepeatWrapping;
+    tex.wrapT = THREE.RepeatWrapping;
+    return tex;
+  }, []);
+
   // Texture Baker: High-DPI Book Covers
   const bakeCoverTexture = useCallback((type: "front" | "back" | "spine" | "inside_spread" | "endpaper") => {
     const canvas = document.createElement("canvas");
@@ -182,6 +226,77 @@ export default function InteractiveBookViewer({
       ctx.textAlign = "center";
       ctx.fillText("BELAJAR DESAIN GRAFIS  :  AALIYAH LUSIANTI DKK", 0, 18);
       ctx.restore();
+      return new THREE.CanvasTexture(canvas);
+    }
+
+    if (type === "back") {
+      // Real Book Back Cover: Synopsis, Testimonial, Barcode & Publisher
+      canvas.width = 1600;
+      canvas.height = 2560;
+      ctx.fillStyle = "#f8f5ee";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Category Header Pill
+      ctx.fillStyle = "#0f766e";
+      ctx.font = "bold 32px monospace";
+      ctx.fillText("DESAIN & KOMUNIKASI VISUAL", 160, 280);
+
+      // Book Title Summary
+      ctx.fillStyle = "#1e293b";
+      ctx.font = "bold 64px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.fillText("Belajar Desain Grafis", 160, 420);
+
+      // Synopsis Body
+      ctx.fillStyle = "#334155";
+      ctx.font = "38px -apple-system, BlinkMacSystemFont, sans-serif";
+      const blurbLines = [
+        "Buku ini menyajikan panduan praktis dan fundamental bagi",
+        "para desainer, penulis mandiri, serta pelaku kreatif untuk",
+        "menguasai kaidah tata letak, hierarki tipografi, kalibrasi",
+        "warna CMYK cetak, dan kalkulasi presisi fisik punggung jilid.",
+        "",
+        "Dilengkapi studi kasus nyata pra-cetak, simulasi dieline",
+        "skala 1:1, serta standarisasi berkas produksi siap pabrik."
+      ];
+      blurbLines.forEach((line, i) => {
+        ctx.fillText(line, 160, 560 + i * 56);
+      });
+
+      // Testimonial Box
+      ctx.fillStyle = "#f1f5f9";
+      ctx.fillRect(160, 1040, 1280, 240);
+      ctx.fillStyle = "#0f766e";
+      ctx.font = "italic 36px -apple-system, BlinkMacSystemFont, serif";
+      ctx.fillText("“Jembatan esensial antara estetika visual di layar digital", 200, 1130);
+      ctx.fillText("dan keandalan presisi cetak di dunia percetakan fisik.”", 200, 1190);
+
+      // Author & ISBN Barcode Area
+      ctx.strokeStyle = "#cbd5e1";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(960, 2060, 480, 260);
+
+      // Simulated EAN-13 Barcode Lines
+      ctx.fillStyle = "#0f172a";
+      const barcodeX = 990;
+      const barcodeY = 2090;
+      const barPattern = [3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 1, 4, 2, 3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 1, 4, 2];
+      let curX = barcodeX;
+      barPattern.forEach((w) => {
+        ctx.fillRect(curX, barcodeY, w * 3, 150);
+        curX += (w * 3) + 6;
+      });
+
+      ctx.font = "28px monospace";
+      ctx.fillText("ISBN 978-623-1234-56-7", 1020, 2290);
+
+      // Publisher imprint
+      ctx.fillStyle = "#64748b";
+      ctx.font = "bold 34px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.fillText("LITERASI NUSANTARA PRESS", 160, 2180);
+      ctx.font = "28px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.fillText("Penerbit Anggota IKAPI • Jakarta - Yogyakarta", 160, 2240);
+      ctx.fillText("www.literasinusantara.id", 160, 2290);
+
       return new THREE.CanvasTexture(canvas);
     }
 
@@ -253,19 +368,56 @@ export default function InteractiveBookViewer({
     }
 
     if (type === "endpaper") {
+      // Collector's Ex-Libris Bookplate Endpaper
       canvas.width = 1600;
       canvas.height = 2560;
       ctx.fillStyle = "#f3eee3";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.strokeStyle = "rgba(180, 160, 130, 0.18)";
-      ctx.lineWidth = 2;
-      for (let i = -canvas.height; i < canvas.width * 2; i += 60) {
+      // Fine woven parchment noise
+      ctx.strokeStyle = "rgba(180, 160, 130, 0.12)";
+      ctx.lineWidth = 1.5;
+      for (let i = -canvas.height; i < canvas.width * 2; i += 40) {
         ctx.beginPath();
         ctx.moveTo(i, 0);
         ctx.lineTo(i + canvas.height, canvas.height);
         ctx.stroke();
       }
+
+      // Classic Ex-Libris Bookplate Frame in Center
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+
+      ctx.strokeStyle = "rgba(15, 118, 110, 0.4)";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(-360, -480, 720, 960);
+
+      ctx.strokeStyle = "rgba(15, 118, 110, 0.25)";
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(-340, -460, 680, 920);
+
+      ctx.fillStyle = "rgba(15, 118, 110, 0.75)";
+      ctx.font = "bold 56px -apple-system, BlinkMacSystemFont, serif";
+      ctx.textAlign = "center";
+      ctx.fillText("EX LIBRIS", 0, -220);
+
+      ctx.font = "italic 32px -apple-system, BlinkMacSystemFont, serif";
+      ctx.fillStyle = "#64748b";
+      ctx.fillText("Edisi Cetak Fisik Terbatas", 0, -140);
+      ctx.fillText("Koleksi Pribadi:", 0, 40);
+
+      ctx.strokeStyle = "rgba(148, 163, 184, 0.6)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(-240, 140);
+      ctx.lineTo(240, 140);
+      ctx.stroke();
+
+      ctx.font = "24px monospace";
+      ctx.fillStyle = "#94a3b8";
+      ctx.fillText("NO. REGISTRI: 2026-EDT-0427", 0, 320);
+
+      ctx.restore();
       return new THREE.CanvasTexture(canvas);
     }
 
@@ -307,7 +459,7 @@ export default function InteractiveBookViewer({
   }, []);
 
   // Texture Baker: High-Fidelity Packaging Box Textures
-  const bakeBoxTexture = useCallback((preset: MaterialType, face: "top" | "side" | "inside") => {
+  const bakeBoxTexture = useCallback((preset: MaterialType, face: "top" | "side" | "inside" | "inside_floor") => {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
     if (!ctx) return null;
@@ -385,7 +537,17 @@ export default function InteractiveBookViewer({
       ctx.fillStyle = preset === "black" ? "#e4e4e7" : "#334155";
       ctx.fillText("Karya cetak fisik bernilai tinggi untuk pembaca setia Anda.", 0, 40);
       ctx.restore();
+    } else if (face === "inside_floor") {
+      // Subtle discrete eco-recycle mark on interior base floor (NO repetitive branding)
+      ctx.save();
+      ctx.translate(canvas.width - 240, canvas.height - 180);
+      ctx.fillStyle = preset === "black" ? "rgba(255, 255, 255, 0.12)" : "rgba(0, 0, 0, 0.12)";
+      ctx.font = "bold 32px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText("♻ PAP-20  RECYCLABLE", 0, 0);
+      ctx.restore();
     }
+    // Note: For "side", canvas is returned clean without any text stamps!
 
     const tex = new THREE.CanvasTexture(canvas);
     tex.wrapS = THREE.RepeatWrapping;
@@ -464,7 +626,7 @@ export default function InteractiveBookViewer({
       renderer.setSize(width, height);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.shadowMap.enabled = true;
-      renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Clean PCF Soft Shadows (Zero warning)
+      renderer.shadowMap.type = THREE.PCFShadowMap; // Clean PCF Shadows (Zero deprecation warning)
       rendererRef.current = renderer;
 
       // Clear any residual children before attaching
@@ -472,6 +634,13 @@ export default function InteractiveBookViewer({
         container.removeChild(container.firstChild);
       }
       container.appendChild(renderer.domElement);
+
+      // Non-passive wheel listener for smooth zoom without browser console warnings
+      const onContainerWheel = (e: WheelEvent) => {
+        e.preventDefault();
+        targetCameraZ.current = Math.max(9.0, Math.min(22.0, targetCameraZ.current + e.deltaY * 0.015));
+      };
+      container.addEventListener("wheel", onContainerWheel, { passive: false });
 
       // 2. Studio Lighting Rig
       const ambientLight = new THREE.AmbientLight(0xfffdf8, 1.4);
@@ -515,14 +684,24 @@ export default function InteractiveBookViewer({
       const bookD = 0.52; // 17.4 mm scaled
       const boardThick = 0.06;
 
-      const bookBackMat = new THREE.MeshStandardMaterial({
+      const bookFrontMat = new THREE.MeshStandardMaterial({
         map: bakeCoverTexture("front"),
+        roughness: 0.82,
+        metalness: 0.0,
+      });
+      const bookBackMat = new THREE.MeshStandardMaterial({
+        map: bakeCoverTexture("back"),
         roughness: 0.82,
         metalness: 0.0,
       });
       const bookSpineMat = new THREE.MeshStandardMaterial({
         map: bakeCoverTexture("spine"),
         roughness: 0.82,
+        metalness: 0.0,
+      });
+      const bookPaperEdgeMat = new THREE.MeshStandardMaterial({
+        map: bakePaperEdgeTexture(),
+        roughness: 0.95,
         metalness: 0.0,
       });
       const bookSpreadMat = new THREE.MeshStandardMaterial({
@@ -535,18 +714,23 @@ export default function InteractiveBookViewer({
       });
 
       bookMaterialsRef.current = {
+        frontMat: bookFrontMat,
         backMat: bookBackMat,
         spineMat: bookSpineMat,
-        frontMat: bookBackMat,
+        paperEdgeMat: bookPaperEdgeMat,
+        spreadMat: bookSpreadMat,
+        endpaperMat: bookEndpaperMat,
       };
 
-      // Book Body Pages Block
+      // Book Body Pages Block (Trimmed paper block on top, bottom, and right fore-edge)
       const pagesGeo = new THREE.BoxGeometry(bookW - 0.15, bookH - 0.25, bookD - 0.08);
       const pagesBlock = new THREE.Mesh(pagesGeo, [
-        bookSpineMat, bookSpineMat,
-        bookSpreadMat, // Top edge (revealed when cover opens)
-        bookSpreadMat,
-        bookSpreadMat, bookSpreadMat,
+        bookPaperEdgeMat, // 0: +X Right fore-edge (Lembaran kertas ivory bertumpuk)
+        bookPaperEdgeMat, // 1: -X Left edge (Spine side)
+        bookPaperEdgeMat, // 2: +Y Top cut edge
+        bookPaperEdgeMat, // 3: -Y Bottom cut edge
+        bookSpreadMat,    // 4: +Z First page spread (Revealed when front cover opens)
+        bookEndpaperMat,  // 5: -Z Back endpaper
       ]);
       pagesBlock.position.set(0.08, 0, -boardThick / 2);
       pagesBlock.castShadow = true;
@@ -555,7 +739,14 @@ export default function InteractiveBookViewer({
 
       // Back Board & Spine
       const backBoardGeo = new THREE.BoxGeometry(bookW, bookH, boardThick);
-      const backBoardMesh = new THREE.Mesh(backBoardGeo, bookBackMat);
+      const backBoardMesh = new THREE.Mesh(backBoardGeo, [
+        bookSpineMat,    // 0: +X
+        bookSpineMat,    // 1: -X
+        bookSpineMat,    // 2: +Y
+        bookSpineMat,    // 3: -Y
+        bookEndpaperMat, // 4: +Z (Inside back board)
+        bookBackMat,     // 5: -Z (Authentic back cover: Synopsis, ISBN barcode, IKAPI)
+      ]);
       backBoardMesh.position.set(0, 0, -bookD / 2);
       backBoardMesh.castShadow = true;
       bookRoot.add(backBoardMesh);
@@ -573,9 +764,12 @@ export default function InteractiveBookViewer({
 
       const frontBoardGeo = new THREE.BoxGeometry(bookW, bookH, boardThick);
       const frontBoardMesh = new THREE.Mesh(frontBoardGeo, [
-        bookSpineMat, bookSpineMat, bookSpineMat, bookSpineMat,
-        bookBackMat, // Front cover
-        bookEndpaperMat, // Inside endpaper
+        bookSpineMat,    // 0: +X
+        bookSpineMat,    // 1: -X
+        bookSpineMat,    // 2: +Y
+        bookSpineMat,    // 3: -Y
+        bookFrontMat,    // 4: +Z (Front cover: Belajar Desain Grafis & Ps)
+        bookEndpaperMat, // 5: -Z (Inside front board: Ex-Libris Bookplate)
       ]);
       frontBoardMesh.position.set(bookW / 2, 0, 0);
       frontBoardMesh.castShadow = true;
@@ -595,7 +789,7 @@ export default function InteractiveBookViewer({
       const boxD = 5.2;
       const wallT = 0.08;
 
-      // Material cache
+      // Material cache (Ext branding, Int greeting, Plain walls, Clean floor)
       const kraftExt = new THREE.MeshStandardMaterial({
         map: bakeBoxTexture("kraft", "top"),
         roughness: 0.88,
@@ -606,6 +800,17 @@ export default function InteractiveBookViewer({
         roughness: 0.88,
         metalness: 0.0,
       });
+      const kraftPlain = new THREE.MeshStandardMaterial({
+        map: bakeBoxTexture("kraft", "side"),
+        roughness: 0.88,
+        metalness: 0.0,
+      });
+      const kraftFloor = new THREE.MeshStandardMaterial({
+        map: bakeBoxTexture("kraft", "inside_floor"),
+        roughness: 0.88,
+        metalness: 0.0,
+      });
+
       const blackExt = new THREE.MeshStandardMaterial({
         map: bakeBoxTexture("black", "top"),
         roughness: 0.78,
@@ -616,6 +821,17 @@ export default function InteractiveBookViewer({
         roughness: 0.65,
         metalness: 0.0,
       });
+      const blackPlain = new THREE.MeshStandardMaterial({
+        map: bakeBoxTexture("black", "side"),
+        roughness: 0.78,
+        metalness: 0.02,
+      });
+      const blackFloor = new THREE.MeshStandardMaterial({
+        map: bakeBoxTexture("black", "inside_floor"),
+        roughness: 0.65,
+        metalness: 0.0,
+      });
+
       const whiteExt = new THREE.MeshStandardMaterial({
         map: bakeBoxTexture("white", "top"),
         roughness: 0.75,
@@ -626,55 +842,81 @@ export default function InteractiveBookViewer({
         roughness: 0.65,
         metalness: 0.0,
       });
+      const whitePlain = new THREE.MeshStandardMaterial({
+        map: bakeBoxTexture("white", "side"),
+        roughness: 0.75,
+        metalness: 0.0,
+      });
+      const whiteFloor = new THREE.MeshStandardMaterial({
+        map: bakeBoxTexture("white", "inside_floor"),
+        roughness: 0.65,
+        metalness: 0.0,
+      });
 
       boxMaterialsRef.current = {
         kraftExterior: kraftExt,
         kraftInterior: kraftInt,
+        kraftPlain,
+        kraftFloor,
         blackExterior: blackExt,
         blackInterior: blackInt,
+        blackPlain,
+        blackFloor,
         whiteExterior: whiteExt,
         whiteInterior: whiteInt,
+        whitePlain,
+        whiteFloor,
       };
 
       const curExtMat = kraftExt;
       const curIntMat = kraftInt;
+      const curPlainMat = kraftPlain;
+      const curFloorMat = kraftFloor;
 
-      // A. Hollow Base Floor
+      boxMeshesRef.current = [];
+      boxPlainMeshesRef.current = [];
+
+      // A. Hollow Base Floor (Clean unprinted cardboard with subtle corner eco-mark)
       const baseFloorGeo = new THREE.BoxGeometry(boxW, wallT, boxD);
-      const baseFloor = new THREE.Mesh(baseFloorGeo, curExtMat);
+      const baseFloor = new THREE.Mesh(baseFloorGeo, [
+        curPlainMat, curPlainMat,
+        curFloorMat, // Top floor face facing inside box
+        curPlainMat, // Bottom floor face facing table
+        curPlainMat, curPlainMat,
+      ]);
       baseFloor.position.set(0, -boxH / 2, 0);
       baseFloor.castShadow = true;
       baseFloor.receiveShadow = true;
       boxRoot.add(baseFloor);
-      boxMeshesRef.current.push(baseFloor);
+      boxFloorMeshRef.current = baseFloor;
 
-      // B. 4 Upright Hollow Walls (Rear, Front, Left, Right)
+      // B. 4 Upright Hollow Walls (Rear, Front, Left, Right - All clean unprinted kraft)
       const rearWallGeo = new THREE.BoxGeometry(boxW, boxH, wallT);
-      const rearWall = new THREE.Mesh(rearWallGeo, curExtMat);
+      const rearWall = new THREE.Mesh(rearWallGeo, curPlainMat);
       rearWall.position.set(0, 0, -boxD / 2);
       rearWall.castShadow = true;
       boxRoot.add(rearWall);
-      boxMeshesRef.current.push(rearWall);
+      boxPlainMeshesRef.current.push(rearWall);
 
       const frontWallGeo = new THREE.BoxGeometry(boxW, boxH, wallT);
-      const frontWall = new THREE.Mesh(frontWallGeo, curExtMat);
+      const frontWall = new THREE.Mesh(frontWallGeo, curPlainMat);
       frontWall.position.set(0, 0, boxD / 2);
       frontWall.castShadow = true;
       boxRoot.add(frontWall);
-      boxMeshesRef.current.push(frontWall);
+      boxPlainMeshesRef.current.push(frontWall);
 
       const sideWallGeo = new THREE.BoxGeometry(wallT, boxH, boxD - wallT * 2);
-      const leftWall = new THREE.Mesh(sideWallGeo, curExtMat);
+      const leftWall = new THREE.Mesh(sideWallGeo, curPlainMat);
       leftWall.position.set(-boxW / 2 + wallT / 2, 0, 0);
       leftWall.castShadow = true;
       boxRoot.add(leftWall);
-      boxMeshesRef.current.push(leftWall);
+      boxPlainMeshesRef.current.push(leftWall);
 
-      const rightWall = new THREE.Mesh(sideWallGeo, curExtMat);
+      const rightWall = new THREE.Mesh(sideWallGeo, curPlainMat);
       rightWall.position.set(boxW / 2 - wallT / 2, 0, 0);
       rightWall.castShadow = true;
       boxRoot.add(rightWall);
-      boxMeshesRef.current.push(rightWall);
+      boxPlainMeshesRef.current.push(rightWall);
 
       // C. Forward Kinematics Lid Assembly
       const rearHinge = new THREE.Group();
@@ -683,50 +925,50 @@ export default function InteractiveBookViewer({
 
       const mainLidGeo = new THREE.BoxGeometry(boxW + 0.05, wallT, boxD);
       const mainLid = new THREE.Mesh(mainLidGeo, [
-        curExtMat, curExtMat,
-        curExtMat, // Top exterior
-        curIntMat, // Inside lid greeting
-        curExtMat, curExtMat,
+        curPlainMat, curPlainMat,
+        curExtMat, // Top exterior branding (ARTHUR & CO.)
+        curIntMat, // Inside lid greeting (TERIMA KASIH)
+        curPlainMat, curPlainMat,
       ]);
       mainLid.position.set(0, wallT / 2, boxD / 2);
       mainLid.castShadow = true;
       rearHinge.add(mainLid);
       boxMeshesRef.current.push(mainLid);
 
-      // Front Tuck Flap (Nested under Main Lid)
+      // Front Tuck Flap (Nested under Main Lid - Clean natural fold without branding)
       const tuckHinge = new THREE.Group();
       tuckHinge.position.set(0, 0, boxD / 2);
       boxTuckHinge.current = tuckHinge;
 
       const tuckFlapGeo = new THREE.BoxGeometry(boxW * 0.95, boxH * 0.75, wallT);
-      const tuckFlap = new THREE.Mesh(tuckFlapGeo, curExtMat);
+      const tuckFlap = new THREE.Mesh(tuckFlapGeo, curPlainMat);
       tuckFlap.position.set(0, -boxH * 0.375, 0);
       tuckFlap.castShadow = true;
       tuckHinge.add(tuckFlap);
       mainLid.add(tuckHinge);
-      boxMeshesRef.current.push(tuckFlap);
+      boxPlainMeshesRef.current.push(tuckFlap);
 
       // Side Dust Flaps (Integrated onto Main Lid in FEFCO 0427 RETF standard)
       const leftDustHinge = new THREE.Group();
       leftDustHinge.position.set(-boxW / 2 + wallT, 0, 0);
       boxLeftDustHinge.current = leftDustHinge;
       const dustGeo = new THREE.BoxGeometry(wallT, boxH * 0.78, boxD * 0.88);
-      const leftDust = new THREE.Mesh(dustGeo, curExtMat);
+      const leftDust = new THREE.Mesh(dustGeo, curPlainMat);
       leftDust.position.set(0, -boxH * 0.39, 0);
       leftDust.castShadow = true;
       leftDustHinge.add(leftDust);
       mainLid.add(leftDustHinge);
-      boxMeshesRef.current.push(leftDust);
+      boxPlainMeshesRef.current.push(leftDust);
 
       const rightDustHinge = new THREE.Group();
       rightDustHinge.position.set(boxW / 2 - wallT, 0, 0);
       boxRightDustHinge.current = rightDustHinge;
-      const rightDust = new THREE.Mesh(dustGeo, curExtMat);
+      const rightDust = new THREE.Mesh(dustGeo, curPlainMat);
       rightDust.position.set(0, -boxH * 0.39, 0);
       rightDust.castShadow = true;
       rightDustHinge.add(rightDust);
       mainLid.add(rightDustHinge);
-      boxMeshesRef.current.push(rightDust);
+      boxPlainMeshesRef.current.push(rightDust);
 
       // Custom Logo Decal Mesh (Positioned on top of main lid)
       const decalGeo = new THREE.PlaneGeometry(boxW * 0.6, boxD * 0.6);
@@ -759,15 +1001,15 @@ export default function InteractiveBookViewer({
       tissueMesh.position.set(0, -boxH / 2 + 0.12, 0);
       contentsGroup.add(tissueMesh);
 
-      // Inside Hardcover Book (Resting snug in the box without geometric clipping)
+      // Inside Hardcover Book (Resting snug in the box with authentic book faces)
       const innerBookGeo = new THREE.BoxGeometry(3.5, 0.38, 4.4);
       const innerBookMats = [
-        bookSpineMat, // 0: +X Right edge
-        bookSpreadMat, // 1: -X Left edge
-        bookBackMat, // 2: +Y Top cover (Belajar Desain Grafis & Ps logo)
-        bookEndpaperMat, // 3: -Y Bottom cover
-        bookSpreadMat, // 4: +Z Front page block edge (Clean ivory paper)
-        bookSpreadMat, // 5: -Z Rear page block edge
+        bookPaperEdgeMat, // 0: +X Right fore-edge (Lembaran kertas)
+        bookSpineMat,     // 1: -X Left edge (Spine jilid buku)
+        bookFrontMat,     // 2: +Y Top cover (Front cover Belajar Desain Grafis)
+        bookBackMat,      // 3: -Y Bottom cover (Back cover sinopsis & barcode)
+        bookPaperEdgeMat, // 4: +Z Front cut edge (Lembaran kertas)
+        bookPaperEdgeMat, // 5: -Z Rear cut edge (Lembaran kertas)
       ];
       const innerBook = new THREE.Mesh(innerBookGeo, innerBookMats);
       innerBook.position.set(0, -boxH / 2 + 0.12 + 0.19, 0);
@@ -805,7 +1047,12 @@ export default function InteractiveBookViewer({
           topLidHinge.position.set(0, boxH / 2, -boxD / 2);
           stackedTopLidHinge.current = topLidHinge;
 
-          const topLid = new THREE.Mesh(new THREE.BoxGeometry(boxW + 0.05, wallT, boxD), curExtMat);
+          const topLid = new THREE.Mesh(new THREE.BoxGeometry(boxW + 0.05, wallT, boxD), [
+            curPlainMat, curPlainMat,
+            curExtMat,
+            curIntMat,
+            curPlainMat, curPlainMat,
+          ]);
           topLid.position.set(0, wallT / 2, boxD / 2);
           topLidHinge.add(topLid);
 
@@ -813,7 +1060,7 @@ export default function InteractiveBookViewer({
           topTuckHinge.position.set(0, 0, boxD / 2);
           stackedTopTuckHinge.current = topTuckHinge;
 
-          const topTuck = new THREE.Mesh(new THREE.BoxGeometry(boxW * 0.95, boxH * 0.7, wallT), curExtMat);
+          const topTuck = new THREE.Mesh(new THREE.BoxGeometry(boxW * 0.95, boxH * 0.7, wallT), curPlainMat);
           topTuck.position.set(0, -boxH * 0.35, 0);
           topTuckHinge.add(topTuck);
           topLid.add(topTuckHinge);
@@ -877,14 +1124,14 @@ export default function InteractiveBookViewer({
           bookFrontHinge.current.rotation.y = -p * 2.75; // 0 to -160 degrees
         }
 
-        // Kinematics for Mailer Box
+        // Kinematics for Mailer Box (Natural fold: tuck flap stays aligned with lid)
         if (boxTuckHinge.current) {
           const tuckP = Math.min(1.0, p / 0.18);
-          boxTuckHinge.current.rotation.x = tuckP * (Math.PI * 0.65);
+          boxTuckHinge.current.rotation.x = -tuckP * 0.25; // Relax slightly inward, zero upward poking
         }
         if (boxLidHinge.current) {
           const lidP = Math.max(0.0, Math.min(1.0, (p - 0.12) / 0.65));
-          boxLidHinge.current.rotation.x = -lidP * (Math.PI * 0.65);
+          boxLidHinge.current.rotation.x = -lidP * 2.0; // Open smoothly ~115 degrees
         }
         if (boxLeftDustHinge.current && boxRightDustHinge.current) {
           const flareP = Math.max(0.0, Math.min(1.0, (p - 0.2) / 0.6));
@@ -900,11 +1147,11 @@ export default function InteractiveBookViewer({
         // Kinematics for Top Stacked Box
         if (stackedTopTuckHinge.current) {
           const tuckP = Math.min(1.0, p / 0.18);
-          stackedTopTuckHinge.current.rotation.x = tuckP * (Math.PI * 0.65);
+          stackedTopTuckHinge.current.rotation.x = -tuckP * 0.25;
         }
         if (stackedTopLidHinge.current) {
           const lidP = Math.max(0.0, Math.min(1.0, (p - 0.12) / 0.65));
-          stackedTopLidHinge.current.rotation.x = -lidP * (Math.PI * 0.65);
+          stackedTopLidHinge.current.rotation.x = -lidP * 2.0;
         }
 
         // Camera Zoom & Elevated Framing Damping (Keeps objects centered above UI controls)
@@ -934,13 +1181,14 @@ export default function InteractiveBookViewer({
 
       return () => {
         window.removeEventListener("resize", handleResize);
+        container.removeEventListener("wheel", onContainerWheel);
         if (animFrameId.current) cancelAnimationFrame(animFrameId.current);
         renderer.dispose();
       };
     } catch {
       setWebglError(true);
     }
-  }, [bakeCoverTexture, bakeBoxTexture]); // Mounted ONCE
+  }, [bakeCoverTexture, bakeBoxTexture, bakePaperEdgeTexture]); // Mounted ONCE
 
   // Reactive Synchronizers without Remounting Scene
   useEffect(() => {
@@ -977,6 +1225,20 @@ export default function InteractiveBookViewer({
         ? boxMaterialsRef.current.blackInterior
         : boxMaterialsRef.current.whiteInterior;
 
+    const plainMat =
+      materialType === "kraft"
+        ? boxMaterialsRef.current.kraftPlain
+        : materialType === "black"
+        ? boxMaterialsRef.current.blackPlain
+        : boxMaterialsRef.current.whitePlain;
+
+    const floorMat =
+      materialType === "kraft"
+        ? boxMaterialsRef.current.kraftFloor
+        : materialType === "black"
+        ? boxMaterialsRef.current.blackFloor
+        : boxMaterialsRef.current.whiteFloor;
+
     boxMeshesRef.current.forEach((mesh) => {
       if (Array.isArray(mesh.material)) {
         mesh.material[2] = extMat;
@@ -985,6 +1247,19 @@ export default function InteractiveBookViewer({
         mesh.material = extMat;
       }
     });
+
+    boxPlainMeshesRef.current.forEach((mesh) => {
+      mesh.material = plainMat;
+    });
+
+    if (boxFloorMeshRef.current && Array.isArray(boxFloorMeshRef.current.material)) {
+      boxFloorMeshRef.current.material[2] = floorMat;
+      boxFloorMeshRef.current.material[0] = plainMat;
+      boxFloorMeshRef.current.material[1] = plainMat;
+      boxFloorMeshRef.current.material[3] = plainMat;
+      boxFloorMeshRef.current.material[4] = plainMat;
+      boxFloorMeshRef.current.material[5] = plainMat;
+    }
   }, [materialType]);
 
   // Update Book Materials when bookFinish preset changes
@@ -1166,11 +1441,6 @@ export default function InteractiveBookViewer({
     touchStartDistance.current = null;
   };
 
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault();
-    targetCameraZ.current = Math.max(9.0, Math.min(22.0, targetCameraZ.current + e.deltaY * 0.015));
-  };
-
   const zoomIn = () => {
     targetCameraZ.current = Math.max(9.0, targetCameraZ.current - 2.0);
   };
@@ -1204,7 +1474,7 @@ export default function InteractiveBookViewer({
 
   if (webglError) {
     return (
-      <div className="w-full h-[520px] bg-amber-50 rounded-2xl flex flex-col items-center justify-center p-6 text-center border border-amber-200">
+      <div className="w-full h-[440px] sm:h-[550px] bg-amber-50 rounded-2xl flex flex-col items-center justify-center p-6 text-center border border-amber-200">
         <Package className="w-12 h-12 text-amber-700 mb-3" />
         <h3 className="font-heading font-bold text-lg text-zinc-900">Spesimen 3D Interaktif</h3>
         <p className="text-sm text-zinc-600 max-w-md mt-1 mb-4">
@@ -1227,39 +1497,41 @@ export default function InteractiveBookViewer({
       />
 
       {/* Top Main Navigation Bar */}
-      <div className="p-3 sm:p-4 border-b border-zinc-200/80 bg-white/90 backdrop-blur-xs flex flex-wrap items-center justify-between gap-3">
-        {/* Specimen Switcher (3 Pills) */}
-        <div className="flex items-center gap-1.5 p-1 rounded-xl bg-zinc-100 border border-zinc-200/70 text-xs">
+      <div className="p-2.5 sm:p-4 border-b border-zinc-200/80 bg-white/90 backdrop-blur-xs flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+        {/* Specimen Switcher (3 Pills Responsive) */}
+        <div className="flex items-center gap-1 p-1 rounded-xl bg-zinc-100 border border-zinc-200/70 text-xs">
           <button
             type="button"
             onClick={() => switchModel("book")}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-2.5 sm:px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
               modelType === "book"
                 ? "bg-zinc-900 text-white shadow-xs"
                 : "text-zinc-600 hover:text-zinc-900"
             }`}
           >
             <Book className="w-3.5 h-3.5" />
-            <span>1: Buku Hardcover</span>
+            <span className="hidden sm:inline">1: Buku Hardcover</span>
+            <span className="sm:hidden">1: Hardcover</span>
           </button>
 
           <button
             type="button"
             onClick={() => switchModel("box")}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-2.5 sm:px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
               modelType === "box"
                 ? "bg-zinc-900 text-white shadow-xs"
                 : "text-zinc-600 hover:text-zinc-900"
             }`}
           >
             <Package className="w-3.5 h-3.5" />
-            <span>2: Dus Kemasan Box</span>
+            <span className="hidden sm:inline">2: Dus Kemasan Box</span>
+            <span className="sm:hidden">2: Kemasan Box</span>
           </button>
 
           <button
             type="button"
             onClick={() => switchModel("stacked")}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
+            className={`px-2.5 sm:px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 ${
               modelType === "stacked"
                 ? "bg-zinc-900 text-white shadow-xs"
                 : "text-zinc-600 hover:text-zinc-900"
@@ -1272,7 +1544,7 @@ export default function InteractiveBookViewer({
         </div>
 
         {/* Right Tools: Angle Presets & Studio Drawer Toggle */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <div className="hidden sm:flex items-center gap-1 bg-zinc-100 p-1 rounded-lg border border-zinc-200/70 text-xs">
             <button
               type="button"
@@ -1313,21 +1585,21 @@ export default function InteractiveBookViewer({
           <button
             type="button"
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-            className={`px-3 py-1.5 rounded-xl border text-xs font-semibold flex items-center gap-1.5 transition-colors ${
+            className={`px-2.5 sm:px-3 py-1.5 rounded-xl border text-xs font-semibold flex items-center gap-1.5 transition-colors ${
               isDrawerOpen
                 ? "bg-teal-700 text-white border-teal-700"
                 : "bg-white text-zinc-700 border-zinc-200 hover:bg-zinc-50 shadow-2xs"
             }`}
           >
             <Sliders className="w-3.5 h-3.5" />
-            <span>Kustomisasi</span>
+            <span className="hidden sm:inline">Kustomisasi</span>
           </button>
         </div>
       </div>
 
       {/* Dynamic Specimen Context Banner */}
-      <div className="px-4 py-2.5 bg-amber-50/60 border-b border-zinc-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-        <div className="flex items-center gap-2">
+      <div className="px-3 sm:px-4 py-2 sm:py-2.5 bg-amber-50/60 border-b border-zinc-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 text-xs">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
           <span className="font-bold text-zinc-900">
             {modelType === "book" && "Spesimen 1: Buku Fisik Hardcover (ISO A5)"}
             {modelType === "box" && "Spesimen 2: Dus Kemasan Mailer Box (FEFCO 0427)"}
@@ -1341,7 +1613,7 @@ export default function InteractiveBookViewer({
           </span>
         </div>
         <div className="shrink-0">
-          <span className="px-2.5 py-0.5 rounded-md font-mono text-[11px] bg-white border border-zinc-200 text-zinc-700 shadow-2xs">
+          <span className="px-2 py-0.5 rounded-md font-mono text-[10px] sm:text-[11px] bg-white border border-zinc-200 text-zinc-700 shadow-2xs">
             {modelType === "book" && "ISO A5 • 240 Hlm • Jahit Benang"}
             {modelType === "box" && "FEFCO 0427 • E-Flute 1.5mm • 22x16x4.5cm"}
             {modelType === "stacked" && "Display Toko • 3 Tingkat • Ritel Ready"}
@@ -1349,7 +1621,7 @@ export default function InteractiveBookViewer({
         </div>
       </div>
 
-      {/* Main Interactive 3D Canvas */}
+      {/* Main Interactive 3D Canvas (Height tuned for mobile viewports) */}
       <div
         ref={mountRef}
         onPointerDown={handlePointerDown}
@@ -1358,8 +1630,7 @@ export default function InteractiveBookViewer({
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        onWheel={handleWheel}
-        className={`w-full h-[520px] sm:h-[620px] cursor-grab active:cursor-grabbing touch-none ${
+        className={`w-full h-[440px] sm:h-[600px] cursor-grab active:cursor-grabbing touch-none ${
           isDragging ? "cursor-grabbing" : ""
         }`}
       />
@@ -1579,8 +1850,8 @@ export default function InteractiveBookViewer({
         </div>
       )}
 
-      {/* Floating Zoom Controls (Top Left) */}
-      <div className="absolute top-28 left-3 sm:left-4 z-10 flex flex-col gap-1 bg-white/95 p-1 rounded-xl border border-zinc-200/90 shadow-xs backdrop-blur-xs">
+      {/* Floating Zoom Controls (Ergonomic Bottom-Left, Thumb-Friendly on Mobile) */}
+      <div className="absolute bottom-24 sm:bottom-28 left-3 sm:left-4 z-10 flex flex-col gap-1 bg-white/95 p-1 rounded-xl border border-zinc-200/90 shadow-xs backdrop-blur-xs">
         <button
           type="button"
           onClick={zoomIn}
@@ -1610,8 +1881,8 @@ export default function InteractiveBookViewer({
       {/* Bottom Floating Scrubber & Interactive Controls Bar */}
       <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 z-10 flex flex-col gap-2 pointer-events-none">
         {/* Scrubber Slider Card */}
-        <div className="pointer-events-auto bg-white/95 backdrop-blur-md border border-zinc-200/90 rounded-2xl p-3 sm:p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3 w-full sm:w-auto shrink-0 justify-between sm:justify-start">
+        <div className="pointer-events-auto bg-white/95 backdrop-blur-md border border-zinc-200/90 rounded-2xl p-2.5 sm:p-4 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto shrink-0 justify-between sm:justify-start">
             <button
               type="button"
               onClick={toggleOpen}
@@ -1626,7 +1897,7 @@ export default function InteractiveBookViewer({
                 {modelType === "book"
                   ? isOpen ? "Tutup Buku" : "Buka Buku"
                   : modelType === "box"
-                  ? isOpen ? "Tutup Kemasan" : "Buka Kemasan"
+                  ? isOpen ? "Tutup Boks" : "Buka Boks"
                   : isOpen ? "Tutup Boks Atas" : "Buka Boks Atas"}
               </span>
             </button>
@@ -1639,15 +1910,16 @@ export default function InteractiveBookViewer({
                   ? "bg-zinc-100 text-zinc-800 border-zinc-200"
                   : "bg-white text-zinc-600 border-zinc-200"
               }`}
+              title="Putar Otomatis 360°"
             >
               <RotateCw className={`w-3.5 h-3.5 ${isAutoRotating ? "animate-spin" : ""}`} />
             </button>
           </div>
 
           {/* Interactive Unboxing Scrubber Slider */}
-          <div className="w-full sm:flex-1 flex items-center gap-3">
+          <div className="w-full sm:flex-1 flex items-center gap-2 sm:gap-3">
             <span className="text-[11px] font-mono text-zinc-500 shrink-0">
-              {modelType === "book" ? "Tutup" : modelType === "box" ? "Terkunci" : "Tertata"}
+              {modelType === "book" ? "Tertutup" : modelType === "box" ? "Tertutup" : "Tertata"}
             </span>
 
             <input
@@ -1657,11 +1929,11 @@ export default function InteractiveBookViewer({
               value={scrubberValue}
               onChange={handleScrubberChange}
               className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-teal-700"
-              title="Geser untuk mengatur tingkat bukaan boks secara presisi"
+              title="Geser untuk mengatur tingkat bukaan secara presisi"
             />
 
             <span className="text-[11px] font-mono text-zinc-500 shrink-0">
-              {modelType === "book" ? "Terbuka" : modelType === "box" ? "Unboxed" : "Terbuka"}
+              {modelType === "book" ? "Terbuka" : modelType === "box" ? "Terbuka" : "Terbuka"}
             </span>
 
             <span className="text-xs font-mono font-bold text-zinc-800 min-w-[36px] text-right shrink-0">
@@ -1671,12 +1943,12 @@ export default function InteractiveBookViewer({
         </div>
 
         {/* Tactile Gestures Guidance Note */}
-        <div className="flex items-center justify-between text-[11px] text-zinc-500 px-2 pointer-events-auto">
+        <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-zinc-500 px-2 pointer-events-auto">
           <span>
             {modelType === "book"
               ? "Putar 360° bebas. Buka buku atau geser slider untuk memeriksa bagian dalam halaman naskah."
               : modelType === "box"
-              ? "Engsel 4-tahap FEFCO 0427. Geser slider untuk simulasi unboxing buku."
+              ? "Engsel 4-tahap FEFCO 0427. Geser slider untuk simulasi buka-tutup kemasan dus."
               : "Display tumpukan 3 boks ritel. Buka boks teratas untuk inspeksi produk."}
           </span>
           <span className="font-mono text-teal-800 font-semibold hidden sm:inline">

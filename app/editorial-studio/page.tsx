@@ -140,8 +140,8 @@ export default function EditorialStudioPage() {
         <section className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl sm:text-2xl font-heading font-bold text-zinc-900">
-                Spesimen Fisik Interaktif: Buku Hardcover & Dus Kemasan Box FEFCO 0427
+              <h2 className="text-lg sm:text-2xl font-heading font-bold text-zinc-900">
+                Spesimen Fisik Interaktif: Buku Hardcover & Dus Kemasan Box <span className="whitespace-nowrap">FEFCO 0427</span>
               </h2>
               <p className="text-sm text-zinc-600">
                 Pilih spesimen di bilah kontrol: periksa kurvatur jilid buku fisik, buka kemasan dus mailer dengan penggeser unboxing, atau amati tumpukan karton display etalase toko.
