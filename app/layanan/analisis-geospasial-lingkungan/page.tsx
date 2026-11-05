@@ -4,6 +4,7 @@ import { ArrowLeft, MapPin, ArrowRight, CheckCircle2, ShieldCheck, Satellite, Tr
 import { DirectAnswerBox } from "@/components/DirectAnswerBox";
 import { EntityPills } from "@/components/EntityPills";
 import { ProtectedContact } from "@/components/ProtectedContact";
+import GeospatialInteractiveStudio from "@/components/GeospatialInteractiveStudio";
 
 export const metadata: Metadata = {
   title: "Analisis Geospasial, GIS & Citra Satelit Lingkungan | Zadit",
@@ -91,6 +92,9 @@ export default function GeospatialEnvironmentalPage() {
             "Ekspor Vektor Siap Publikasi: Hasil diserahkan dalam format Shapefile, GeoJSON, dan peta kartografi vektor murni (SVG/PDF) tanpa watermark."
           ]}
         />
+
+        {/* Live Interactive Studio & Verification Laboratory */}
+        <GeospatialInteractiveStudio />
 
         {/* Section: Tantangan Pengolahan GIS Konvensional */}
         <section className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-4">
