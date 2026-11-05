@@ -476,6 +476,90 @@ export const COMMERCIAL_PACKAGES: CommercialPackage[] = [
         ]
       }
     ]
+  },
+  {
+    id: "spatial-geo-intelligence",
+    pillarNumber: "06",
+    title: "Analisis Geospasial, GIS & Citra Satelit Lingkungan",
+    badge: "Presisi Spasial & Ekologi",
+    iconName: "MapPin",
+    problemSummary: "Peneliti dan instansi perencana sering terbentur kompleksitas analisis spasial multikriteria (AHP-GIS), keterbatasan komputasi laptop saat memproses citra radar banjir Sentinel-1 SAR, serta kesulitan mengonversi sensus pohon drone menjadi angka serapan karbon dan emisi CO2e yang diakui standar internasional.",
+    solutionMechanism: "Kami menghadirkan pipeline geospasial terdesentralisasi: perhitungan matriks perbandingan berpasangan Saaty (CR < 0,10), klasifikasi kesesuaian lahan FAO (S1 hingga N), pemrosesan SAR dan DEM berbasis cloud, serta model alometri Chave 2014 dan i-Tree Eco berformat Shapefile, GeoJSON, dan peta kartografi vektor SVG siap publikasi.",
+    tiers: [
+      {
+        id: "ahp-gis-suitability",
+        name: "Evaluasi Kesesuaian Lahan AHP-GIS (SMCE)",
+        tagline: "Matriks Perbandingan Berpasangan Saaty & Tumpang Susun Spasial FAO",
+        priceIdr: 850000,
+        priceFormatted: "Rp850.000",
+        sla: "2-3 Hari Kerja",
+        targetAudience: "Mahasiswa S1/S2 Perencanaan Wilayah, Kehutanan, Pertanian, Geografi",
+        bestFor: "Menentukan lokasi optimal (TPA, permukiman, komoditas tani) dengan pengujian rasio konsistensi matematis yang lolos uji sidang",
+        highlight: true,
+        deliverables: [
+          "Matriks perbandingan berpasangan kriteria Saaty teruji konsistensi (CR < 0,10)",
+          "Tumpang susun spasial terbobot (Weighted Overlay) klasifikasi FAO S1, S2, S3, dan N",
+          "Draf narasi metodologi dan interpretasi tabel Bab 4 berstandar akademik",
+          "Peta kartografi vektor resolusi tinggi (SVG dan Shapefile/GeoJSON)",
+          "Lembar catatan kisi-kisi tanya jawab untuk menghadapi penguji sidang"
+        ],
+        proofLinks: [
+          {
+            label: "Arsitektur Geospasial Headless ADR-0054",
+            url: "https://muhzadit.pages.dev/layanan/analisis-geospasial-lingkungan/",
+            type: "case-study"
+          }
+        ]
+      },
+      {
+        id: "sentinel1-flood-sar",
+        name: "Pemetaan Genangan Banjir Radar SAR Sentinel-1",
+        tagline: "Deteksi Perubahan Backscatter Bebas Gangguan Awan & Filter Kelerengan DEM",
+        priceIdr: 1450000,
+        priceFormatted: "Rp1.450.000",
+        sla: "3-4 Hari Kerja",
+        targetAudience: "Peneliti Bencana, BPBD, Konsultan AMDAL, Mahasiswa Lingkungan Hidup",
+        bestFor: "Memetakan luasan genangan banjir saat musim hujan lebat tanpa terhalang tutupan awan optik",
+        deliverables: [
+          "Pemrosesan citra radar Sentinel-1 GRD polarisasi ganda (VV/VH) sebelum dan sesudah bencana",
+          "Reduksi derau hamburan dengan Lee Speckle Filter deterministik",
+          "Penyaringan badan air permanen (JRC Global Surface Water) dan topografi curam (SRTM DEM slope)",
+          "Kalkulasi total luasan genangan banjir per unit desa/kecamatan (hektare)",
+          "Paket data spasial lengkap (GeoTIFF raster genangan, GeoJSON vektor batas banjir, dan peta infografis)"
+        ],
+        proofLinks: [
+          {
+            label: "Pipeline Remote Sensing GEE Sentinel-1",
+            url: "https://muhzadit.pages.dev/layanan/analisis-geospasial-lingkungan/",
+            type: "case-study"
+          }
+        ]
+      },
+      {
+        id: "canopy-carbon-atlas",
+        name: "Inventarisasi Karbon & Kanopi Pohon Drone/Satelit",
+        tagline: "Model Alometri Pantropis Chave 2014 & Standarisasi Ekologis i-Tree Eco",
+        priceIdr: 2850000,
+        priceFormatted: "Rp2.850.000",
+        sla: "5-7 Hari Kerja",
+        targetAudience: "Pengelola Hutan Kota, Perusahaan ESG, Dinas Lingkungan Hidup, Riset Tesis Kehutanan",
+        bestFor: "Audit biomassa tegakan pohon, stok karbon tersimpan, dan serapan emisi gas rumah kaca untuk laporan keberlanjutan",
+        deliverables: [
+          "Kompilasi sensus biometrik pohon (DBH, tinggi, diameter tajuk) berbasis ortofoto drone atau survei lapang",
+          "Kalkulasi biomassa di atas permukaan tanah (AGB) model alometri Chave 2014",
+          "Estimasi stok karbon (C) dan ekuivalen emisi gas rumah kaca terserap (CO2e)",
+          "Atlas digital sebaran pohon interaktif format GeoJSON dan peta zonasi tematik",
+          "Laporan eksekutif inventarisasi karbon lengkap siap lampir dokumen ESG atau publikasi jurnal"
+        ],
+        proofLinks: [
+          {
+            label: "Audit Karbon Pohon Kampus PROOF-ITREE-001",
+            url: "https://muhzadit.pages.dev/layanan/analisis-geospasial-lingkungan/",
+            type: "case-study"
+          }
+        ]
+      }
+    ]
   }
 ];
 

@@ -68,6 +68,18 @@ const KATEGORI = [
     skalaLabel: ["Laporan audit saja", "Audit + perbaikan minor", "Audit + perbaikan menyeluruh"],
     skalaMulti: [1, 2, 3.5],
   },
+  {
+    id: "geospasial",
+    label: "Analisis Geospasial, GIS & Citra Satelit",
+    deskripsi: "AHP Spasial, deteksi banjir radar SAR Sentinel-1, sensus pohon & karbon i-Tree Eco",
+    base: 850000,
+    skalaLabel: [
+      "Evaluasi Lahan AHP Spasial (Matriks CR < 0,10 + Peta Vektor)",
+      "Deteksi Banjir Radar SAR Sentinel-1 (Sebelum-Sesudah + Mask Lereng)",
+      "Inventarisasi Karbon Pohon Drone/Satelit (Allometri Chave & i-Tree Eco)"
+    ],
+    skalaMulti: [1, 1.7058, 3.3529],
+  },
 ];
 
 function formatRupiah(n: number) {
