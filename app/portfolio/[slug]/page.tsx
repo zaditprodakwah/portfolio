@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPortfolioBySlug, getAllPortfolioSlugs } from "@/lib/portfolio";
+import GeospatialInteractiveStudio from "@/components/GeospatialInteractiveStudio";
 
 export const dynamic = "force-static";
 
@@ -78,6 +79,10 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
           </h1>
           <p className="text-base sm:text-lg text-zinc-600 leading-relaxed">{item.summary}</p>
         </header>
+
+        {item.slug === "geospatial-intelligence-studio" && (
+          <GeospatialInteractiveStudio />
+        )}
 
         {item.kind === "embed" && (
           <section className="rounded-2xl border border-zinc-200 overflow-hidden bg-white">
