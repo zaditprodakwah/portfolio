@@ -55,6 +55,7 @@ export default function WebGisLiveViewer() {
         zoom: 10,
         zoomControl: false,
         attributionControl: false
+        
       });
 
       L.control.zoom({ position: "bottomright" }).addTo(map);
@@ -71,12 +72,12 @@ export default function WebGisLiveViewer() {
       );
 
       const cartoPositron = L.tileLayer(
-        "/api/tiles/light_all/{z}/{x}/{y}{r}.png",
+        "/api/tiles?s=light_all&z={z}&x={x}&y={y}&r={r}",
         { maxZoom: 19 }
       );
 
       const cartoVoyager = L.tileLayer(
-        "/api/tiles/voyager/{z}/{x}/{y}{r}.png",
+        "/api/tiles?s=voyager&z={z}&x={x}&y={y}&r={r}",
         { maxZoom: 19 }
       );
 

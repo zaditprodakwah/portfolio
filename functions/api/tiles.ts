@@ -1,54 +1,54 @@
 /**
- * Cloudflare Pages Edge Function: /api/tiles/[[catchall]]
+ * Cloudflare Pages Edge Function: /api/tiles
  * 
- * Proxies and caches raster basemap tiles securely at the Cloudflare Edge.
- * Prevents API key exposure in public client code and DevTools.
- * Enforces strict SSRF validation, path sanitization, and 30-day edge caching.
+ * Secure raster tile proxy for CARTO Basemaps.
+ * Protects CARTO API keys from client exposure (OWASP A04/A07).
+ * Caches raster tiles at Cloudflare Edge for 30 days.
  */
 
 interface Env {
   CARTO_API_KEY?: string;
 }
 
-export async function onRequestGet(context: { request: Request; env: Env }) {
+export async function onRequestGet(context: any) {
   const { request, env } = context;
   const url = new URL(request.url);
 
-  // 1. Path Parsing & Strict Whitelist Validation (Anti-SSRF / Anti-Path-Traversal)
-  // Expected path format: /api/tiles/:style/:z/:x/:y[@2x].png
-  const prefix = "/api/tiles/";
-  const index = url.pathname.indexOf(prefix);
-  if (index === -1) {
-    return new Response(JSON.stringify({ error: "Endpoint tidak valid." }), {
+  // 1. Query Parameter Extraction
+  const s = url.searchParams.get("s") || "light_all";
+  const zStr = url.searchParams.get("z");
+  const xStr = url.searchParams.get("x");
+  const yStr = url.searchParams.get("y");
+  const r = url.searchParams.get("r") || "";
+
+  // 2. Strict Whitelist & SSRF Guardrails
+  const allowedStyles = ["light_all", "voyager", "dark_all"];
+  if (!allowedStyles.includes(s)) {
+    return new Response(JSON.stringify({ error: "Gaya ubin tidak diizinkan." }), {
       status: 400,
       headers: { "Content-Type": "application/json" }
     });
   }
 
-  const subPath = url.pathname.slice(index + prefix.length);
-  const match = subPath.match(/^(light_all|voyager|dark_all)\/(\d{1,2})\/(\d+)\/(\d+)(@2x)?\.png$/);
-
-  if (!match) {
-    return new Response(JSON.stringify({ error: "Parameter ubin kartografi tidak valid." }), {
+  if (!zStr || !xStr || !yStr) {
+    return new Response(JSON.stringify({ error: "Parameter z, x, dan y wajib diisi." }), {
       status: 400,
       headers: { "Content-Type": "application/json" }
     });
   }
 
-  const [, style, zStr, xStr, yStr, retina] = match;
   const z = parseInt(zStr, 10);
   const x = parseInt(xStr, 10);
   const y = parseInt(yStr, 10);
 
-  // Validate zoom range (Web Mercator 0 - 20)
-  if (z < 0 || z > 20 || x < 0 || y < 0) {
-    return new Response(JSON.stringify({ error: "Koordinat ubin di luar batas jangkauan." }), {
+  if (isNaN(z) || isNaN(x) || isNaN(y) || z < 0 || z > 20 || x < 0 || y < 0) {
+    return new Response(JSON.stringify({ error: "Koordinat ubin tidak valid." }), {
       status: 400,
       headers: { "Content-Type": "application/json" }
     });
   }
 
-  // 2. Cloudflare Edge Cache Verification
+  // 3. Edge Cache Lookup
   const cache = (caches as any).default;
   const cacheKey = new Request(url.toString(), {
     method: "GET",
@@ -62,10 +62,10 @@ export async function onRequestGet(context: { request: Request; env: Env }) {
     }
   }
 
-  // 3. Upstream Fetch to CARTO with Server-Side Secret Key
+  // 4. Fetch from Upstream CARTO with Server-Side Secret Key
   const apiKey = env.CARTO_API_KEY || "cb1_52p0_1_c919c75f025b6585c436eb41";
-  const retinaSuffix = retina || "";
-  const upstreamUrl = `https://basemaps.cartocdn.com/rastertiles/${style}/${z}/${x}/${y}${retinaSuffix}.png?key=${apiKey}`;
+  const retinaSuffix = r === "@2x" ? "@2x" : "";
+  const upstreamUrl = `https://basemaps.cartocdn.com/rastertiles/${s}/${z}/${x}/${y}${retinaSuffix}.png?key=${apiKey}`;
 
   try {
     const upstreamRes = await fetch(upstreamUrl, {
@@ -91,7 +91,7 @@ export async function onRequestGet(context: { request: Request; env: Env }) {
       }
     });
 
-    if (cache) {
+    if (cache && typeof context.waitUntil === "function") {
       context.waitUntil(cache.put(cacheKey, response.clone()));
     }
 
@@ -99,4 +99,8 @@ export async function onRequestGet(context: { request: Request; env: Env }) {
   } catch (err: any) {
     return new Response("Kesalahan internal saat memproses ubin spasial.", { status: 500 });
   }
+}
+
+export async function onRequestHead(context: any) {
+  return onRequestGet(context);
 }
