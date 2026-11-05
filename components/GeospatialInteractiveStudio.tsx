@@ -71,7 +71,7 @@ export default function GeospatialInteractiveStudio() {
             Studio Intelijen Geospasial Terpadu
           </h2>
           <p className="text-zinc-500 text-xs font-sans">
-            Bukan sekadar mockup statis. Eksplorasi WebGIS satelit riil, verifikasi konsistensi matematis Saaty, estimasi karbon pohon allometrik, dan galeri dokumen siap serah terima.
+            Eksplorasi interaktif WebGIS citra satelit, pengujian rasio konsistensi matriks AHP Saaty, kalkulasi allometri karbon tegakan pohon, dan spesifikasi paket deliverable spasial.
           </p>
         </div>
 

@@ -84,7 +84,7 @@ export default function GeospatialEnvironmentalPage() {
 
         {/* Direct-Answer BLUF */}
         <DirectAnswerBox
-          summary="Layanan geospasial kami berfokus pada ketepatan matematis dan kepatuhan metodologi akademik, bukan sekadar menggambar tata letak peta estetis. Seluruh proses pembobotan kriteria diuji rasio konsistensinya secara deterministik (CR < 0,10), citra satelit radar diproses bebas hambatan awan melalui cloud processing, dan data pohon dihitung potensi serapan karbonnya berstandar IPCC untuk dokumen yang siap dipertahankan di hadapan dewan penguji maupun asesor teknis."
+          summary="Layanan geospasial ini memadukan ketepatan matematis, kepatuhan metodologi akademik, dan visualisasi kartografis berstandar penerbitan. Seluruh proses pembobotan kriteria diuji rasio konsistensinya secara deterministik (CR < 0,10), citra satelit radar diproses bebas hambatan tutupan awan, dan sensus vegetasi dihitung potensi cadangan karbonnya berstandar IPCC untuk dokumen yang siap dipertahankan di hadapan dewan penguji maupun penilai teknis instansi."
           takeaways={[
             "Evaluasi Kesesuaian Lahan AHP-GIS: Matriks perbandingan berpasangan Saaty teruji konsistensi dengan klasifikasi kesesuaian FAO (S1 hingga N).",
             "Radar Satelit Sentinel-1 SAR: Deteksi banjir akurat saat cuaca berawan lebat menggunakan polarisasi ganda dan filter kelerengan DEM.",
