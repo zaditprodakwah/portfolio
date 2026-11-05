@@ -373,6 +373,39 @@ def generate_editorial_studio_card():
     img.save(out_file, "JPEG", quality=95, optimize=True)
     print(f"Generated: {out_file}")
 
+def generate_cad_estimator_card():
+    img, draw = create_base_canvas()
+    render_left_column(
+        draw,
+        eyebrow="DRAFTER TEKNIS & ESTIMATOR RAB PROYEK",
+        title_lines=[
+            ("Gambar Kerja CAD 2D,", font_title_large, (15, 23, 42)),
+            ("Visual 3D & RAB BoQ", font_title_large, (13, 148, 136))
+        ],
+        sub_lines=[
+            "Paket Shop Drawing AutoCAD, Perspektif Fasad SketchUp,",
+            "dan Rekapitulasi RAB Terformula Berbasis AHSP PUPR Cirebon."
+        ],
+        pills_data=[
+            ["AutoCAD Model Space", "SketchUp Visual 3D"],
+            ["AHSP PUPR 2024", "Formula Excel Terkunci"]
+        ],
+        max_left_w=670
+    )
+    render_right_metric_card(
+        img, draw,
+        header_text="Spesifikasi & Standar Teknis",
+        metric_rows=[
+            ("AutoCAD", "Format DWG & DXF"),
+            ("SketchUp", "Model Fasad 3D"),
+            ("PUPR 2024", "Standar AHSP BoQ"),
+            ("100% Valid", "Kalkulasi Terformula")
+        ]
+    )
+    out_file = os.path.join(PUBLIC_DIR, "og-cad-estimator.jpg")
+    img.save(out_file, "JPEG", quality=95, optimize=True)
+    print(f"Generated: {out_file}")
+
 def generate_solution_cards():
     solutions_dir = "/Users/mac/Documents/AGENTS_WORK_HUB/apps/zadit-pages/content/solutions"
     if not os.path.exists(solutions_dir):
@@ -439,5 +472,6 @@ if __name__ == "__main__":
     generate_audit_card()
     generate_pillar_cards()
     generate_editorial_studio_card()
+    generate_cad_estimator_card()
     generate_solution_cards()
     print("All OG images successfully generated!")

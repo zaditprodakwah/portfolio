@@ -10,7 +10,8 @@ import {
   FileText, 
   Database, 
   ExternalLink,
-  Layers
+  Layers,
+  UserCheck
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { PORTFOLIO_EVIDENCE, PortfolioCategory, PortfolioEvidenceItem } from "@/lib/portfolio-data";
@@ -22,8 +23,9 @@ export const SelectedCaseEvidence: React.FC = () => {
 
   const categories = [
     { id: "all", label: isId ? "Semua Studi Kasus" : "All Proof of Work" },
-    { id: "business", label: isId ? "Strategi Bisnis & Pemasaran" : "Business Strategy & Growth" },
+    { id: "career", label: isId ? "Rekayasa Karir & Dosen" : "Career & Faculty Mobility" },
     { id: "metascience", label: isId ? "Metasains & Komputasi" : "Metascience & Compute" },
+    { id: "business", label: isId ? "Strategi Bisnis & Pemasaran" : "Business Strategy & Growth" },
     { id: "web-systems", label: isId ? "Arsitektur Sistem & Web" : "Systems & Web Architecture" },
   ];
 
@@ -33,6 +35,8 @@ export const SelectedCaseEvidence: React.FC = () => {
 
   const getCategoryIcon = (category: PortfolioEvidenceItem["category"]) => {
     switch (category) {
+      case "career":
+        return <UserCheck className="w-3.5 h-3.5 text-amber-700" />;
       case "business":
         return <Building2 className="w-3.5 h-3.5 text-slate-700" />;
       case "metascience":

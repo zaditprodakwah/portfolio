@@ -2,7 +2,7 @@
 // Single Source of Truth (SSOT) untuk Entity Knowledge Graph & Graphify Linking Engine
 // Diadopsi dari arsitektur NEWSPORTAL / groundworkpub/engine dengan hierarki 2-tingkat (Makro & Mikro)
 
-export type PillarId = "business-docs" | "marketing-seo" | "academic-research" | "digital-solutions";
+export type PillarId = "business-docs" | "marketing-seo" | "academic-research" | "digital-solutions" | "career-positioning";
 
 export interface EntityNode {
   id: string;
@@ -22,7 +22,7 @@ export interface EntityEdge {
 }
 
 export const ENTITY_NODES: Record<string, EntityNode> = {
-  // --- Pilar 1: Dokumen, Tata Kelola & Administrasi Bisnis ---
+  // === Pilar 1: Dokumen, Tata Kelola & Administrasi Bisnis ===
   "business-admin": {
     id: "business-admin",
     name: "Business Administration & Governance",
@@ -60,7 +60,7 @@ export const ENTITY_NODES: Record<string, EntityNode> = {
     aliases: ["proposal usaha", "penawaran konsinyasi", "pitch deck kemitraan"]
   },
 
-  // --- Pilar 2: SEO, Konten & Konversi Digital ---
+  // === Pilar 2: SEO, Konten & Konversi Digital ===
   "seo-strategy": {
     id: "seo-strategy",
     name: "Search Engine Optimization Strategy",
@@ -80,7 +80,7 @@ export const ENTITY_NODES: Record<string, EntityNode> = {
     aliases: ["audit technical seo", "internal linking kontekstual", "crawl budget"]
   },
 
-  // --- Pilar 3: Olah Data Statistik & Riset SINTA ---
+  // === Pilar 3: Olah Data Statistik & Riset SINTA ===
   "statistics-data": {
     id: "statistics-data",
     name: "Statistics & Quantitative Methodology",
@@ -118,7 +118,7 @@ export const ENTITY_NODES: Record<string, EntityNode> = {
     aliases: ["jurnal sinta 2", "akreditasi jurnal kemendikbud", "revisi peer-review ilmiah"]
   },
 
-  // --- Pilar 4: Solusi Web Performa & Edge Engineering ---
+  // === Pilar 4: Solusi Web Performa & Edge Engineering ===
   "web-engineering": {
     id: "web-engineering",
     name: "Web Performance & Edge Computing",
@@ -136,6 +136,26 @@ export const ENTITY_NODES: Record<string, EntityNode> = {
     wikidataUri: "https://www.wikidata.org/wiki/Q106670857",
     description: "Standar metrik resmi Google untuk mengukur kecepatan render visual (LCP), interaktivitas (INP), dan stabilitas visual (CLS).",
     aliases: ["google core web vitals", "kecepatan lcp ttfb", "pagespeed 100"]
+  },
+
+  // === Pilar 5: Rekayasa Karir, CV ATS & Profil LinkedIn ===
+  "career-engineering": {
+    id: "career-engineering",
+    name: "Career Engineering & ATS Resume",
+    level: "macro",
+    pillar: "career-positioning",
+    wikidataUri: "https://www.wikidata.org/wiki/Q186649",
+    description: "Rekayasa narasi mobilitas karir berbasis formula Google XYZ, standar Tri Dharma Dikti, dan optimasi lolos seleksi mesin ATS.",
+    aliases: ["cv ats", "rekayasa karir", "curriculum vitae profesional"]
+  },
+  "linkedin-optimization": {
+    id: "linkedin-optimization",
+    name: "Executive LinkedIn Optimization",
+    level: "micro",
+    pillar: "career-positioning",
+    wikidataUri: "https://www.wikidata.org/wiki/Q213660",
+    description: "Penataan profil LinkedIn publik berorientasi landing page kemitraan bisnis dan pencarian rekruter tanpa kebocoran kata sandi.",
+    aliases: ["optimasi linkedin", "profil linkedin b2b", "personal branding eksekutif"]
   }
 };
 

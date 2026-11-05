@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+<defs>
+
+      <style>
+        .ui-font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .mono-font { font-family: "SF Mono", Menlo, Consolas, "Courier New", monospace; }
+        .num-font { font-family: "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+      </style>
+    
+</defs>
+<rect width="900" height="480" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 0 6 A 6 6 0 0 1 6 0 L 894 0 A 6 6 0 0 1 900 6 L 900 32 L 0 32 Z" fill="#107c41"/>
+<rect x="12" y="8" width="16" height="16" rx="2" fill="#ffffff"/>
+<text x="20" y="21" class="ui-font" font-size="12" font-weight="900" fill="#107c41" text-anchor="middle">X</text>
+<text x="36" y="21" class="ui-font" font-size="11" font-weight="600" fill="#ffffff">RAB_Konstruksi_Billboard_4x8_Kota_Cirebon.xlsx - Excel</text>
+<rect x="420" y="7" width="90" height="18" rx="9" fill="rgba(255, 255, 255, 0.2)"/>
+<circle cx="432" cy="16" r="3.5" fill="#4ade80"/>
+<text x="442" y="19.5" class="ui-font" font-size="9" font-weight="500" fill="#ffffff">Tersimpan</text>
+<rect x="825" y="11" width="10" height="1" fill="#ffffff"/>
+<rect x="850" y="10" width="9" height="9" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M 875 10 L 883 18 M 883 10 L 875 18" stroke="#ffffff" stroke-width="1.2"/>
+<rect y="32" width="900" height="26" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="0.8"/>
+<rect x="12" y="35" width="34" height="20" rx="3" fill="#107c41"/>
+<text x="29.0" y="49" class="ui-font" font-size="10" font-weight="600" fill="#ffffff" text-anchor="middle">File</text>
+<text x="80.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Beranda</text>
+<text x="138.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Sisipkan</text>
+<text x="200.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Tata Letak</text>
+<text x="260.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Rumus</text>
+<text x="311.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Data</text>
+<text x="360.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Tinjau</text>
+<text x="416.0" y="49" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">Tampilan</text>
+<rect y="58" width="900" height="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.8"/>
+<rect x="8" y="61" width="52" height="22" rx="2" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+<text x="34" y="76" class="mono-font" font-size="11" font-weight="600" fill="#1f2937" text-anchor="middle">F18</text>
+<text x="74" y="76" class="ui-font" font-size="11" fill="#9ca3af">✕</text>
+<text x="92" y="76" class="ui-font" font-size="11" fill="#9ca3af">✓</text>
+<text x="114" y="77" class="ui-font" font-size="13" font-weight="700" font-style="italic" fill="#107c41">fx</text>
+<rect x="138" y="61" width="752" height="22" rx="2" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+<text x="148" y="76" class="mono-font" font-size="11" fill="#1f2937">=</text>
+<text x="156" y="76" class="mono-font" font-size="11" font-weight="700" fill="#2563eb">D18</text>
+<text x="178" y="76" class="mono-font" font-size="11" fill="#1f2937">*</text>
+<text x="186" y="76" class="mono-font" font-size="11" font-weight="700" fill="#dc2626">E18</text>
+<text x="216" y="76" class="mono-font" font-size="10" fill="#6b7280">(Volume x Harga Satuan AHSP PUPR Cirebon)</text>
+<rect x="0" y="86" width="42" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<path d="M 38 90 L 38 104 L 24 104 Z" fill="#9ca3af"/>
+<rect x="42" y="86" width="50" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="67.0" y="101" class="ui-font" font-size="10" font-weight="700" fill="#4b5563" text-anchor="middle">A</text>
+<rect x="92" y="86" width="360" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="272.0" y="101" class="ui-font" font-size="10" font-weight="700" fill="#4b5563" text-anchor="middle">B</text>
+<rect x="452" y="86" width="80" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="492.0" y="101" class="ui-font" font-size="10" font-weight="700" fill="#4b5563" text-anchor="middle">C</text>
+<rect x="532" y="86" width="60" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="562.0" y="101" class="ui-font" font-size="10" font-weight="700" fill="#4b5563" text-anchor="middle">D</text>
+<rect x="592" y="86" width="140" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="662.0" y="101" class="ui-font" font-size="10" font-weight="700" fill="#4b5563" text-anchor="middle">E</text>
+<rect x="732" y="86" width="168" height="22" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="816.0" y="101" class="ui-font" font-size="10" font-weight="700" fill="#4b5563" text-anchor="middle">F</text>
+<rect x="0" y="108" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="124" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">14</text>
+<rect x="42" y="108" width="50" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="108" width="360" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="108" width="80" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="108" width="60" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="108" width="140" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="108" width="168" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="124" class="ui-font" font-size="10" fill="#374151" text-anchor="middle"></text>
+<text x="100" y="124" class="ui-font" font-size="10" font-weight="bold" fill="#0f172a">A. PEKERJAAN STRUKTUR PONDASI DAN TANAH</text>
+<text x="524" y="124" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="562.0" y="124" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle"></text>
+<text x="724" y="124" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="892" y="124" class="num-font" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="end">Rp </text>
+<rect x="0" y="132" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="148" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">15</text>
+<rect x="42" y="132" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="132" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="132" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="132" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="132" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="132" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="148" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">1</text>
+<text x="100" y="148" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Galian Tanah Pondasi Tapak Dalam 2.0 m</text>
+<text x="524" y="148" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">12.00</text>
+<text x="562.0" y="148" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">m3</text>
+<text x="724" y="148" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">82.500</text>
+<text x="892" y="148" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 990.000</text>
+<rect x="0" y="156" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="172" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">16</text>
+<rect x="42" y="156" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="156" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="156" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="156" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="156" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="156" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="172" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">2</text>
+<text x="100" y="172" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Lantai Kerja Beton Mutu f'c=7.4 MPa (B0)</text>
+<text x="524" y="172" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">0.80</text>
+<text x="562.0" y="172" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">m3</text>
+<text x="724" y="172" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">985.000</text>
+<text x="892" y="172" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 788.000</text>
+<rect x="0" y="180" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="196" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">17</text>
+<rect x="42" y="180" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="180" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="180" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="180" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="180" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="180" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="196" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">3</text>
+<text x="100" y="196" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Pondasi Tapak Beton Bertulang K-250 (Site Mix)</text>
+<text x="524" y="196" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">5.60</text>
+<text x="562.0" y="196" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">m3</text>
+<text x="724" y="196" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">1.429.600</text>
+<text x="892" y="196" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 8.005.760</text>
+<rect x="0" y="204" width="42" height="24" fill="#e5e7eb" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="220" class="ui-font" font-size="9" font-weight="700" fill="#4b5563" text-anchor="middle">18</text>
+<rect x="42" y="204" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="204" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="204" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="204" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="204" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="204" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="220" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">4</text>
+<text x="100" y="220" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Angkur Baut Baja Mutu Tinggi Dia. 25mm t=80cm</text>
+<text x="524" y="220" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">16.00</text>
+<text x="562.0" y="220" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">btg</text>
+<text x="724" y="220" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">460.715</text>
+<text x="892" y="220" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 7.371.440</text>
+<rect x="732" y="204" width="168" height="24" fill="rgba(16, 124, 65, 0.06)" stroke="#107c41" stroke-width="2"/>
+<rect x="897" y="225" width="5" height="5" fill="#107c41"/>
+<rect x="0" y="228" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="244" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">19</text>
+<rect x="42" y="228" width="50" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="228" width="360" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="228" width="80" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="228" width="60" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="228" width="140" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="228" width="168" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="244" class="ui-font" font-size="10" fill="#374151" text-anchor="middle"></text>
+<text x="100" y="244" class="ui-font" font-size="10" font-weight="bold" fill="#0f172a">B. PEKERJAAN STRUKTUR PIPA BAJA DAN BRACING</text>
+<text x="524" y="244" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="562.0" y="244" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle"></text>
+<text x="724" y="244" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="892" y="244" class="num-font" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="end">Rp </text>
+<rect x="0" y="252" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="268" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">20</text>
+<rect x="42" y="252" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="252" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="252" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="252" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="252" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="252" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="268" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">5</text>
+<text x="100" y="268" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Tiang Utama Pipa Baja Seamless 14" t=10mm</text>
+<text x="524" y="268" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">752.00</text>
+<text x="562.0" y="268" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">kg</text>
+<text x="724" y="268" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">42.500</text>
+<text x="892" y="268" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 31.960.000</text>
+<rect x="0" y="276" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="292" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">21</text>
+<rect x="42" y="276" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="276" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="276" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="276" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="276" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="276" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="292" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">6</text>
+<text x="100" y="292" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Rangka Bracing &amp; Siku L.50.50.5 (Truss Belakang)</text>
+<text x="524" y="292" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">221.60</text>
+<text x="562.0" y="292" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">kg</text>
+<text x="724" y="292" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">38.000</text>
+<text x="892" y="292" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 8.420.800</text>
+<rect x="0" y="300" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="316" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">22</text>
+<rect x="42" y="300" width="50" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="300" width="360" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="300" width="80" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="300" width="60" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="300" width="140" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="300" width="168" height="24" fill="#f1f5f9" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="316" class="ui-font" font-size="10" fill="#374151" text-anchor="middle"></text>
+<text x="100" y="316" class="ui-font" font-size="10" font-weight="bold" fill="#0f172a">C. PEKERJAAN PANEL ACP SEVEN DAN ELEKTRIKAL</text>
+<text x="524" y="316" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="562.0" y="316" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle"></text>
+<text x="724" y="316" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="892" y="316" class="num-font" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="end">Rp </text>
+<rect x="0" y="324" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="340" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">23</text>
+<rect x="42" y="324" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="324" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="324" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="324" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="324" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="324" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="340" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">7</text>
+<text x="100" y="340" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Rangka Hollow Galvalum 40x40 &amp; Panel ACP 4mm</text>
+<text x="524" y="340" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">32.00</text>
+<text x="562.0" y="340" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">m2</text>
+<text x="724" y="340" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">475.000</text>
+<text x="892" y="340" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 15.200.000</text>
+<rect x="0" y="348" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="364" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">24</text>
+<rect x="42" y="348" width="50" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="348" width="360" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="348" width="80" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="348" width="60" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="348" width="140" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="348" width="168" height="24" fill="#ffffff" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="364" class="ui-font" font-size="10" fill="#374151" text-anchor="middle">8</text>
+<text x="100" y="364" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">Lampu Sorot LED Outdoor 100W IP66 + Instalasi</text>
+<text x="524" y="364" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">3.00</text>
+<text x="562.0" y="364" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">unit</text>
+<text x="724" y="364" class="num-font" font-size="10" fill="#1e293b" text-anchor="end">1.250.000</text>
+<text x="892" y="364" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 3.750.000</text>
+<rect x="0" y="372" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="388" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">25</text>
+<rect x="42" y="372" width="50" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="372" width="360" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="372" width="80" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="372" width="60" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="372" width="140" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="372" width="168" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="388" class="ui-font" font-size="10" fill="#374151" text-anchor="middle"></text>
+<text x="100" y="388" class="ui-font" font-size="10" font-weight="bold" fill="#0f172a">SUBTOTAL PEKERJAAN KONSTRUKSI</text>
+<text x="524" y="388" class="num-font" font-size="10" fill="#2563eb" text-anchor="end">=SUM(F15:F24)</text>
+<text x="562.0" y="388" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle"></text>
+<text x="724" y="388" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="892" y="388" class="num-font" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="end">Rp 78.486.000</text>
+<rect x="0" y="396" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="412" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">26</text>
+<rect x="42" y="396" width="50" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="396" width="360" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="396" width="80" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="396" width="60" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="396" width="140" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="396" width="168" height="24" fill="#f8fafc" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="412" class="ui-font" font-size="10" fill="#374151" text-anchor="middle"></text>
+<text x="100" y="412" class="ui-font" font-size="10" font-weight="normal" fill="#1e293b">PPN 11% (UU HPP No. 7/2021)</text>
+<text x="524" y="412" class="num-font" font-size="10" fill="#2563eb" text-anchor="end">=F25*11%</text>
+<text x="562.0" y="412" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle"></text>
+<text x="724" y="412" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="892" y="412" class="num-font" font-size="10" font-weight="500" fill="#0f172a" text-anchor="end">Rp 8.633.460</text>
+<rect x="0" y="420" width="42" height="24" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<text x="21.0" y="436" class="ui-font" font-size="9" font-weight="400" fill="#4b5563" text-anchor="middle">27</text>
+<rect x="42" y="420" width="50" height="24" fill="#ecfdf5" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="92" y="420" width="360" height="24" fill="#ecfdf5" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="452" y="420" width="80" height="24" fill="#ecfdf5" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="532" y="420" width="60" height="24" fill="#ecfdf5" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="592" y="420" width="140" height="24" fill="#ecfdf5" stroke="#e5e7eb" stroke-width="0.6"/>
+<rect x="732" y="420" width="168" height="24" fill="#ecfdf5" stroke="#e5e7eb" stroke-width="0.6"/>
+<text x="67.0" y="436" class="ui-font" font-size="10" fill="#374151" text-anchor="middle"></text>
+<text x="100" y="436" class="ui-font" font-size="10" font-weight="bold" fill="#0f172a">TOTAL BIAYA TENDER (TERMASUK PAJAK)</text>
+<text x="524" y="436" class="num-font" font-size="10" fill="#2563eb" text-anchor="end">=F25+F26</text>
+<text x="562.0" y="436" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle"></text>
+<text x="724" y="436" class="num-font" font-size="10" fill="#1e293b" text-anchor="end"></text>
+<text x="892" y="436" class="num-font" font-size="11" font-weight="bold" fill="#15803d" text-anchor="end">Rp 87.119.460</text>
+<rect y="454" width="900" height="26" fill="#f3f4f6" stroke="#d1d5db" stroke-width="0.8"/>
+<circle cx="16" cy="467" r="7" fill="#e5e7eb"/>
+<text x="16" y="471" class="ui-font" font-size="12" fill="#4b5563" text-anchor="middle">+</text>
+<rect x="32" y="456" width="115" height="24" rx="2" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+<rect x="32" y="478" width="115" height="2" fill="#107c41"/>
+<text x="89" y="470" class="ui-font" font-size="10" font-weight="700" fill="#107c41" text-anchor="middle">Rekapitulasi RAB</text>
+<text x="199" y="470" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">Rincian BoQ 4x8</text>
+<text x="304" y="470" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">AHSP PUPR 2024</text>
+<text x="409" y="470" class="ui-font" font-size="10" fill="#64748b" text-anchor="middle">Harga Upah &amp; Bahan</text>
+<text x="884" y="470" class="ui-font" font-size="9" fill="#64748b" text-anchor="end">Siap • Rata-rata: Rp 9.810.750 • Jumlah: Rp 78.486.000 • Hitung: 8</text>
+</svg>

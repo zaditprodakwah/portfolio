@@ -2,13 +2,13 @@
 // Single Source of Truth (SSOT) untuk Portofolio dan Bukti Empiris Terverifikasi
 // Disinkronkan dengan 04_KNOWLEDGE_VAULT dan apps/zadevpenseo.github.io
 
-export type PortfolioCategory = "all" | "metascience" | "business" | "web-systems";
+export type PortfolioCategory = "all" | "metascience" | "business" | "web-systems" | "career";
 
 export interface PortfolioEvidenceItem {
   id: string;
   title: string;
   domain: string;
-  category: "metascience" | "business" | "web-systems";
+  category: "metascience" | "business" | "web-systems" | "career";
   summary: string;
   tag: string;
   artifactType: string;
@@ -17,6 +17,50 @@ export interface PortfolioEvidenceItem {
 }
 
 export const PORTFOLIO_EVIDENCE: PortfolioEvidenceItem[] = [
+  {
+    id: "academic-cv-pgsd-dosen",
+    title: "Rekonstruksi Academic CV & Konsultasi Seleksi Dosen PGSD",
+    domain: "Rekayasa Karir Akademik & Dosen",
+    category: "career",
+    summary: "Transformasi Curriculum Vitae kandidat magister Pendidikan Fisika menjadi CV Akademik standar Tri Dharma Dikti (PO-PAK) menggunakan mesin Typst Oslo, formula pencapaian Google XYZ, dan penataan portofolio pengajaran yang meloloskan kandidat pada seleksi dosen PGSD.",
+    tag: "Academic CV Typst",
+    artifactType: "Vektor Typst PDF",
+    artifactUrl: "/layanan/karir-ats-linkedin-eksekutif/",
+    highlights: ["Standar Tri Dharma Dikti", "Formula Google XYZ", "Typst Oslo Engine"],
+  },
+  {
+    id: "stata-mra-panel",
+    title: "Regresi Data Panel Moderated Regression Analysis (MRA) 312 Observasi",
+    domain: "Ekonometrika & Analisis Keuangan",
+    category: "metascience",
+    summary: "Penyelesaian heteroskedastisitas dan outlier rasio keuangan ROA melalui prosedur ilmiah Winsorizing batas p1-p99 (Leone et al., 2019) dan mean-centering, lolos uji normalitas residual Shapiro-Wilk (p = 0.082 > 0.05).",
+    tag: "Ekonometrika Stata",
+    artifactType: "Syntax Do-file & Output",
+    artifactUrl: "/layanan/olah-data-statistik-sinta/",
+    highlights: ["312 Observasi", "Winsor2 (p1 p99)", "Shapiro-Wilk p = 0.082"],
+  },
+  {
+    id: "itree-biometric-malang",
+    title: "Pemodelan Biometrik Serapan Karbon 1.403 Pohon Kampus UM",
+    domain: "Ekologi, Biologi & Sains Lingkungan",
+    category: "metascience",
+    summary: "Estimasi cadangan biomassa dan serapan karbon 1.403 pohon dari 110 spesies tropis berbasis persamaan alometrik Chave et al. (2014) equation 4 (DOI: 10.1111/gcb.12629) dan integrasi native software i-Tree Eco v6.",
+    tag: "Biometrik i-Tree Eco",
+    artifactType: "Dataset & Bab 4",
+    artifactUrl: "/layanan/olah-data-statistik-sinta/",
+    highlights: ["1.403 Pohon", "110 Spesies Tropis", "842,15 Ton Karbon"],
+  },
+  {
+    id: "infogest-pharmacy-thesis",
+    title: "Optimasi Mikroenkapsulasi Cuka Kesemek & Digesti INFOGEST 2.0",
+    domain: "Teknologi Farmasi & Formulasi Laboratorium",
+    category: "metascience",
+    summary: "Perancangan formula mikroenkapsulasi Maltodekstrin dan Gum Arab sebagai pelindung termal pada pengeringan oven, pengujian viabilitas 4 titik Total Plate Count berstandar internasional INFOGEST 2.0 (Nature Protocols), dan dossier amunisi sempro.",
+    tag: "Farmasi & Laboratorium",
+    artifactType: "Protokol Eksperimen",
+    artifactUrl: "/layanan/olah-data-statistik-sinta/",
+    highlights: ["INFOGEST 2.0", "Maltodekstrin + Gum Arab", "ANOVA Parametrik"],
+  },
   {
     id: "tiket-4c-diamond",
     title: "The Fundamentals of Marketing: 4C Diamond & 4P Analysis",

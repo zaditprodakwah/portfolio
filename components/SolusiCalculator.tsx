@@ -5,6 +5,30 @@ import { MessageSquare } from "lucide-react";
 
 const KATEGORI = [
   {
+    id: "karir",
+    label: "Karir, CV ATS & Profil LinkedIn",
+    deskripsi: "Formula Google XYZ, custom banner 1584x396, Zero-Password Blueprint, Tri Dharma",
+    base: 350000,
+    skalaLabel: [
+      "Profil LinkedIn Mandiri (Blueprint + Banner)",
+      "The Double Threat: CV ATS + LinkedIn Overhaul",
+      "Academic & Executive Prestige: Tri Dharma / Founder B2B"
+    ],
+    skalaMulti: [1, 1.5714, 2.7142],
+  },
+  {
+    id: "sempro",
+    label: "Ringkasan Kuliah & Persiapan Sempro",
+    deskripsi: "Exam-ready synthesis, transkrip bebas noise, prediksi soal, bedah metopen",
+    base: 250000,
+    skalaLabel: [
+      "Exam-Ready Synthesis (Transkrip + Kisi-kisi)",
+      "Dossier Pertahanan Sempro Bab 1-3",
+      "Pendampingan Metodologi Sempro Lengkap"
+    ],
+    skalaMulti: [1, 2, 3.8],
+  },
+  {
     id: "website",
     label: "Website bisnis baru",
     deskripsi: "Landing page, company profile, toko sederhana, undangan digital",
@@ -167,7 +191,7 @@ export function SolusiCalculator() {
             className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-semibold text-sm transition-colors shadow-sm"
           >
             <MessageSquare className="w-4 h-4" />
-            Diskusikan via WhatsApp
+            Konsultasikan Kebutuhan via WhatsApp
           </a>
 
           <p className="text-center text-xs text-slate-400">

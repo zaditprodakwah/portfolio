@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+<defs>
+
+      <linearGradient id="skpSkyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#bfe3ff"/>
+        <stop offset="70%" stop-color="#e8f4ff"/>
+        <stop offset="100%" stop-color="#ffffff"/>
+      </linearGradient>
+      <linearGradient id="skpGroundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#dedecf"/>
+        <stop offset="100%" stop-color="#cbccbe"/>
+      </linearGradient>
+      <linearGradient id="steelColGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#1e293b"/>
+        <stop offset="45%" stop-color="#475569"/>
+        <stop offset="75%" stop-color="#64748b"/>
+        <stop offset="100%" stop-color="#334155"/>
+      </linearGradient>
+      <style>
+        .skp-ui { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .skp-mono { font-family: "SF Mono", Menlo, Consolas, "Courier New", monospace; }
+      </style>
+    
+</defs>
+<rect width="900" height="480" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<path d="M 0 6 A 6 6 0 0 1 6 0 L 894 0 A 6 6 0 0 1 900 6 L 900 30 L 0 30 Z" fill="#2d3748"/>
+<rect x="12" y="7" width="16" height="16" rx="2" fill="#e11d48"/>
+<polygon points="15,9 21,6 26,9 20,12" fill="#ffffff"/>
+<polygon points="15,9 20,12 20,20 15,17" fill="#fbcfe8"/>
+<polygon points="20,12 26,9 26,17 20,20" fill="#fda4af"/>
+<text x="36" y="20" class="skp-ui" font-size="11" font-weight="500" fill="#ffffff">SketchUp Pro 2026 - [Billboard_4x8_Perspektif_Fasad.skp*]</text>
+<rect x="825" y="11" width="10" height="1" fill="#cbd5e1"/>
+<rect x="850" y="10" width="9" height="9" fill="none" stroke="#cbd5e1" stroke-width="1.2"/>
+<path d="M 875 10 L 883 18 M 883 10 L 875 18" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect y="30" width="900" height="28" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.8"/>
+<text x="14" y="48" class="skp-ui" font-size="10.5" fill="#334155">File</text>
+<text x="48" y="48" class="skp-ui" font-size="10.5" fill="#334155">Edit</text>
+<text x="82" y="48" class="skp-ui" font-size="10.5" fill="#334155">View</text>
+<text x="122" y="48" class="skp-ui" font-size="10.5" fill="#334155">Camera</text>
+<text x="175" y="48" class="skp-ui" font-size="10.5" fill="#334155">Draw</text>
+<text x="215" y="48" class="skp-ui" font-size="10.5" fill="#334155">Tools</text>
+<text x="258" y="48" class="skp-ui" font-size="10.5" fill="#334155">Window</text>
+<text x="312" y="48" class="skp-ui" font-size="10.5" fill="#334155">Extensions</text>
+<text x="388" y="48" class="skp-ui" font-size="10.5" fill="#334155">Help</text>
+<rect x="640" y="34" width="48" height="20" rx="3" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="0.8"/>
+<text x="664" y="48" class="skp-ui" font-size="9" font-weight="bold" fill="#e11d48" text-anchor="middle">Select</text>
+<rect x="691" y="34" width="48" height="20" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+<text x="715" y="48" class="skp-ui" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle">Line</text>
+<rect x="742" y="34" width="48" height="20" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+<text x="766" y="48" class="skp-ui" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle">Push/Pull</text>
+<rect x="793" y="34" width="48" height="20" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+<text x="817" y="48" class="skp-ui" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle">Orbit</text>
+<rect x="844" y="34" width="48" height="20" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8"/>
+<text x="868" y="48" class="skp-ui" font-size="9" font-weight="normal" fill="#475569" text-anchor="middle">Shadows</text>
+<rect y="58" width="900" height="272" fill="url(#skpSkyGrad)"/>
+<rect y="330" width="900" height="124" fill="url(#skpGroundGrad)"/>
+<line x1="0" y1="330" x2="900" y2="330" stroke="#b0b5a8" stroke-width="1"/>
+<line x1="65" y1="370" x2="140" y2="400" stroke="#dc2626" stroke-width="2"/>
+<text x="147" y="405" class="skp-ui" font-size="11" font-weight="bold" fill="#dc2626">X</text>
+<line x1="65" y1="370" x2="120" y2="340" stroke="#16a34a" stroke-width="2"/>
+<text x="125" y="338" class="skp-ui" font-size="11" font-weight="bold" fill="#16a34a">Y</text>
+<line x1="65" y1="370" x2="65" y2="295" stroke="#2563eb" stroke-width="2"/>
+<text x="51" y="300" class="skp-ui" font-size="11" font-weight="bold" fill="#2563eb">Z</text>
+<polygon points="430,350 690,388 620,405 370,355" fill="rgba(140, 140, 130, 0.45)"/>
+<polygon points="450,345 820,395 780,408 445,347" fill="rgba(120, 120, 110, 0.38)"/>
+<polygon points="670,378 880,405 810,418 620,392" fill="rgba(110, 110, 100, 0.42)"/>
+<polygon points="395,330 485,330 485,352 395,352" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.6"/>
+<polygon points="395,330 430,312 520,312 485,330" fill="#f1f5f9" stroke="#0f172a" stroke-width="1.6"/>
+<polygon points="485,330 520,312 520,334 485,352" fill="#94a3b8" stroke="#0f172a" stroke-width="1.6"/>
+<polygon points="420,325 470,325 485,318 435,318" fill="#334155" stroke="#0f172a" stroke-width="1.2"/>
+<rect x="439.0" y="195" width="26" height="127" fill="url(#steelColGrad)" stroke="#0f172a" stroke-width="1.6"/>
+<line x1="446.0" y1="195" x2="446.0" y2="322" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+<line x1="465.0" y1="215" x2="465.0" y2="322" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="465.0" y1="225" x2="475.0" y2="220" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="465.0" y1="243" x2="475.0" y2="238" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="465.0" y1="261" x2="475.0" y2="256" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="465.0" y1="279" x2="475.0" y2="274" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="465.0" y1="297" x2="475.0" y2="292" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="465.0" y1="315" x2="475.0" y2="310" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="475.0" y1="215" x2="475.0" y2="314" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="367" y1="225" x2="537" y2="225" stroke="#1e293b" stroke-width="3"/>
+<line x1="377" y1="255" x2="527" y2="255" stroke="#1e293b" stroke-width="3"/>
+<line x1="367" y1="225" x2="452" y2="255" stroke="#0f172a" stroke-width="2"/>
+<line x1="478" y1="255" x2="537" y2="225" stroke="#0f172a" stroke-width="2"/>
+<polygon points="260,105 690,130 690,245 260,220" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<polygon points="260,105 275,95 705,120 690,130" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="690,130 705,120 705,235 690,245" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="274,117 676,140 676,233 274,210" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<text x="475" y="160" class="skp-ui" font-size="17" font-weight="900" fill="#0f172a" text-anchor="middle" transform="rotate(3.3 475 160)">BILLBOARD OUTDOOR 4 x 8 M</text>
+<text x="475" y="183" class="skp-ui" font-size="11.5" font-weight="600" fill="#475569" text-anchor="middle" transform="rotate(3.3 475 183)">MODEL SKETCHUP 3D • KOTA CIREBON</text>
+<text x="475" y="203" class="skp-mono" font-size="10" fill="#0284c7" text-anchor="middle" transform="rotate(3.3 475 203)">PANEL ACP SEVEN 4mm • ELEVASI PIPA: +6.00 M</text>
+<line x1="330" y1="109" x2="316" y2="89" stroke="#0f172a" stroke-width="2"/>
+<polygon points="312,85 320,89 322,95 310,91" fill="#334155" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="316,93 295,144 355,149" fill="rgba(250, 204, 21, 0.15)"/>
+<line x1="475" y1="117" x2="461" y2="97" stroke="#0f172a" stroke-width="2"/>
+<polygon points="457,93 465,97 467,103 455,99" fill="#334155" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="461,101 440,152 500,157" fill="rgba(250, 204, 21, 0.15)"/>
+<line x1="620" y1="125" x2="606" y2="105" stroke="#0f172a" stroke-width="2"/>
+<polygon points="602,101 610,105 612,111 600,107" fill="#334155" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="606,109 585,160 645,165" fill="rgba(250, 204, 21, 0.15)"/>
+
+      <g transform="translate(370, 310)">
+        <circle cx="8" cy="8" r="5.5" fill="#334155"/>
+        <path d="M 3 16 L 13 16 L 12 36 L 4 36 Z" fill="#334155"/>
+        <line x1="5" y1="36" x2="4" y2="58" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+        <line x1="11" y1="36" x2="12" y2="58" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+        <text x="8" y="70" class="skp-ui" font-size="9" font-weight="bold" fill="#64748b" text-anchor="middle">1.75 m</text>
+      </g>
+    
+<rect x="15" y="73" width="250" height="24" rx="3" fill="rgba(255, 255, 255, 0.95)" stroke="#cbd5e1" stroke-width="1"/>
+<text x="25" y="89" class="skp-ui" font-size="10" font-weight="bold" fill="#0f172a">SKETCHUP PRO 3D • PERSPEKTIF ISOMETRIK</text>
+<rect y="454" width="900" height="26" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/>
+<text x="12" y="471" class="skp-ui" font-size="9.5" fill="#64748b">Pilih objek atau klik alat gambar untuk memodifikasi komponen 3D • Bayangan: 14:00 WIB</text>
+<rect x="732" y="457" width="160" height="20" rx="2" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="746" y="471" class="skp-ui" font-size="9" fill="#64748b">Ukuran:</text>
+<text x="886" y="471" class="skp-mono" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="end">Panjang 8.0000 m</text>
+</svg>

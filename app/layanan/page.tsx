@@ -5,19 +5,28 @@ import { getCanonicalUrl } from "@/lib/canonical-registry";
 
 export const metadata: Metadata = {
   title: "Katalog Layanan Modular Eksekutif | Zadit",
-  description: "Daftar lengkap 4 pilar layanan rekayasa modular: Dokumen Administrasi Bisnis, Olah Data Statistik SINTA, SEO Teknis Konversi, dan Arsitektur Web Performa Tinggi.",
+  description: "Daftar lengkap 5 pilar layanan rekayasa modular: Dokumen Administrasi Bisnis, Olah Data Statistik SINTA, Rekayasa Karir & LinkedIn, SEO Teknis Konversi, dan Arsitektur Web Performa Tinggi.",
   alternates: {
     canonical: getCanonicalUrl("/layanan/"),
   },
   openGraph: {
     title: "Katalog Layanan Modular Eksekutif | Zadit",
-    description: "Rekayasa presisi untuk efisiensi bisnis, integritas data ilmiah, dan performa web serverless edge.",
+    description: "Rekayasa presisi untuk efisiensi bisnis, integritas data ilmiah, mobilitas karir profesional, dan performa web serverless edge.",
     url: getCanonicalUrl("/layanan/"),
     type: "website",
   },
 };
 
 const pillars = [
+  {
+    slug: "karir-ats-linkedin-eksekutif",
+    title: "Rekayasa Karir, CV ATS & Profil LinkedIn Eksekutif",
+    badge: "Mobilitas Karir & Otoritas Publik",
+    description: "Restrukturisasi profil publik profesional, pelamar industri, dan calon dosen berbasis formula Google XYZ, standar Tri Dharma Dikti, dan penyerahan aman tanpa kata sandi sesuai ADR-0052.",
+    deliverables: ["Master Blueprint Salin-Tempel", "Custom Spanduk LinkedIn 1584x396px", "Format CV ATS Typst Vektor / OpenXML"],
+    sla: "2–4 Hari Kerja",
+    href: "/layanan/karir-ats-linkedin-eksekutif/",
+  },
   {
     slug: "dokumen-administrasi-bisnis",
     title: "Dokumen Administrasi & Tata Kelola Bisnis",
@@ -65,7 +74,7 @@ export default function LayananDirectoryPage() {
         "@id": getCanonicalUrl("/layanan/"),
         "url": getCanonicalUrl("/layanan/"),
         "name": "Katalog Layanan Modular Eksekutif | Zadit",
-        "description": "Indeks resmi 4 pilar layanan rekayasa teknologi dan tata kelola bisnis.",
+        "description": "Indeks resmi 5 pilar layanan rekayasa teknologi, mobilitas karir, dan tata kelola bisnis.",
         "isPartOf": {
           "@type": "WebSite",
           "@id": getCanonicalUrl("/"),

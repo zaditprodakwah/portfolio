@@ -316,8 +316,32 @@ export const COMMERCIAL_PACKAGES: CommercialPackage[] = [
     badge: "100% Legal & Bebas Joki",
     iconName: "BarChart3",
     problemSummary: "Naskah penelitian dosen dan mahasiswa pascasarjana kerap tertahan atau ditolak reviewer SINTA/Scopus akibat cacat uji asumsi statistik, ketidakjelasan sintesis literatur, atau pemformatan sitasi manual yang acak-acakan.",
-    solutionMechanism: "Dipimpin langsung oleh praktisi berlatar belakang studi S1 Tadris Matematika (tuntas 140 SKS, IPK 3.71, nilai Statistika 89.8/A-), kami mentransfer penalaran komputasi legal dan menyusun naskah Word OpenXML Native Zotero standar APA 7th Edition murni.",
+    solutionMechanism: "Dipimpin langsung oleh praktisi berlatar belakang studi S1 Tadris Matematika Institut Al Bahjah Cirebon (tuntas 132 SKS, IPK 3.64), kami mentransfer penalaran komputasi legal dan menyusun naskah Word OpenXML Native Zotero standar APA 7th Edition murni.",
     tiers: [
+      {
+        id: "exam-lecture-synthesis",
+        name: "Exam-Ready Lecture Synthesis Kit",
+        tagline: "Audio Rekaman Kelas ke Modul Ringkasan & 10 Prediksi Soal Ujian",
+        priceIdr: 250000,
+        priceFormatted: "Rp250.000",
+        period: "paket 6-8 sesi",
+        sla: "24-48 Jam",
+        targetAudience: "Mahasiswa Sarjana & Pascasarjana",
+        bestFor: "Mengubah rekaman suara kuliah Zoom atau kelas luring yang bising menjadi ringkasan PDF 4-6 halaman dan kisi-kisi ujian",
+        deliverables: [
+          "Denoising audio dan transkripsi akurat bebas noise ruangan",
+          "Modul ringkasan eksekutif 4-6 halaman siap cetak",
+          "10 prediksi soal ujian beserta kunci jawaban konseptual",
+          "Bebas repot mendengarkan ulang rekaman kuliah berjam-jam"
+        ],
+        proofLinks: [
+          {
+            label: "Katalog Penawaran Akademik SSOT",
+            url: "https://muhzadit.pages.dev/layanan/olah-data-statistik-sinta/",
+            type: "case-study"
+          }
+        ]
+      },
       {
         id: "statistical-computing",
         name: "Advanced Statistical Computing & Modeling",
@@ -366,6 +390,87 @@ export const COMMERCIAL_PACKAGES: CommercialPackage[] = [
           {
             label: "HLD Blueprint Peer-Reviewed Empirical Publishing",
             url: "https://zadevpenseo.github.io/case-studies/writer/peer-reviewed-empirical-publishing/",
+            type: "case-study"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "career-linkedin-positioning",
+    pillarNumber: "05",
+    title: "Career Engineering & Executive LinkedIn Positioning",
+    badge: "Mobilitas Karir & Otoritas B2B",
+    iconName: "UserCheck",
+    problemSummary: "Profil LinkedIn yang usang, tata letak CV Canva warna-warni yang gugur di sistem ATS, dan ketiadaan narasi pencapaian terukur membuat kandidat berpotensi serta pemilik bisnis kehilangan peluang kemitraan bernilai tinggi.",
+    solutionMechanism: "Kami merestrukturisasi narasi karir berbasis formula Google XYZ, merancang spanduk visual terkurasi 1584x396px, dan menyusun Master Blueprint siap pasang dengan jaminan 100% Zero-Password Handover sesuai ADR-0052.",
+    tiers: [
+      {
+        id: "linkedin-standalone",
+        name: "Standalone LinkedIn Profile Overhaul",
+        tagline: "Profil Publik Siap Konversi Kemitraan & Penyerahan Bebas Password",
+        priceIdr: 350000,
+        priceFormatted: "Rp350.000",
+        sla: "2 Hari Kerja",
+        targetAudience: "Founder Studio, Konsultan Independen, Praktisi Bisnis",
+        bestFor: "Mengubah akun LinkedIn pasif menjadi landing page kemitraan bisnis tanpa membocorkan kata sandi",
+        deliverables: [
+          "Restrukturisasi Headline berdaya pikat dan About section naratif",
+          "3 sampai 5 deskripsi pengalaman kerja berbasis formula Google XYZ",
+          "Custom Branded Banner 1584x396px siap pasang (Canva/PNG)",
+          "Master Blueprint (.docx) panduan salin-tempel 5 menit mandiri"
+        ],
+        proofLinks: [
+          {
+            label: "Arsitektur Layanan LinkedIn ADR-0052",
+            url: "https://muhzadit.pages.dev/layanan/karir-ats-linkedin-eksekutif/",
+            type: "case-study"
+          }
+        ]
+      },
+      {
+        id: "double-threat-combo",
+        name: "The Double Threat: CV ATS + LinkedIn Overhaul",
+        tagline: "Paket Kombo Karir Lengkap (Mesin ATS & Profil Publik)",
+        priceIdr: 550000,
+        priceFormatted: "Rp550.000",
+        sla: "3 Hari Kerja",
+        targetAudience: "Job Seeker Korporat, Fresh Graduate, Profesional Menengah",
+        bestFor: "Menembus seleksi mesin ATS sekaligus memikat rekruter saat memantau profil LinkedIn",
+        highlight: true,
+        deliverables: [
+          "Format CV ATS standar industri (Typst Vektor PDF + Dokumen Master Word)",
+          "Overhaul profil LinkedIn penuh (Headline, About, Experience, Skills)",
+          "Custom Branded Banner visual 1584x396px resolusi tinggi",
+          "Surat lamaran kerja (Cover Letter) adaptif siap sesuaikan lowongan"
+        ],
+        proofLinks: [
+          {
+            label: "Studi Kasus Rekayasa Karir PROOF-DOSEN-001",
+            url: "https://muhzadit.pages.dev/layanan/karir-ats-linkedin-eksekutif/",
+            type: "case-study"
+          }
+        ]
+      },
+      {
+        id: "academic-executive-prestige",
+        name: "Academic & Executive Prestige Suite",
+        tagline: "Standarisasi Tri Dharma Dikti / Portofolio Founder B2B",
+        priceIdr: 950000,
+        priceFormatted: "Rp950.000",
+        sla: "4-5 Hari Kerja",
+        targetAudience: "Calon Dosen, Peneliti Lembaga, Agency Owner",
+        bestFor: "Seleksi formasi dosen perguruan tinggi atau akuisisi klien bernilai tinggi",
+        deliverables: [
+          "Curriculum Vitae Akademik standar PO-PAK Dikti (Tri Dharma Perguruan Tinggi)",
+          "Overhaul profil LinkedIn berorientasi Thought Leadership & Kemitraan",
+          "Paket starter konten opini bulan pertama (3 draf artikel LinkedIn)",
+          "Master Blueprint dokumen siap arsip dan bebas retensi pihak ketiga"
+        ],
+        proofLinks: [
+          {
+            label: "Studi Kasus Seleksi Dosen Fisika Nikmah",
+            url: "https://muhzadit.pages.dev/layanan/karir-ats-linkedin-eksekutif/",
             type: "case-study"
           }
         ]

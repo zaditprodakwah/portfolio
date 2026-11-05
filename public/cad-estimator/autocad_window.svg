@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+<defs>
+
+      <pattern id="cadGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="0.5"/>
+        <circle cx="0" cy="0" r="0.8" fill="rgba(255, 255, 255, 0.18)"/>
+      </pattern>
+      <style>
+        .cad-ui { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        .cad-mono { font-family: "SF Mono", Menlo, Consolas, "Courier New", monospace; }
+      </style>
+    
+</defs>
+<rect width="900" height="480" rx="6" fill="#181c24" stroke="#334155" stroke-width="1.5"/>
+<path d="M 0 6 A 6 6 0 0 1 6 0 L 894 0 A 6 6 0 0 1 900 6 L 900 30 L 0 30 Z" fill="#21262d"/>
+<rect x="12" y="7" width="16" height="16" rx="2" fill="#dc2626"/>
+<text x="20" y="20" class="cad-ui" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">A</text>
+<text x="36" y="20" class="cad-ui" font-size="11" font-weight="500" fill="#e6edf3">Autodesk AutoCAD 2026 - [BILLBOARD_4X8_CIREBON_MODEL.dwg]</text>
+<rect x="825" y="11" width="10" height="1" fill="#94a3b8"/>
+<rect x="850" y="10" width="9" height="9" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+<path d="M 875 10 L 883 18 M 883 10 L 875 18" stroke="#94a3b8" stroke-width="1.2"/>
+<rect y="30" width="900" height="28" fill="#1c2128" stroke="#30363d" stroke-width="0.8"/>
+<text x="14" y="48" class="cad-ui" font-size="10.5" font-weight="700" fill="#58a6ff">Home</text>
+<text x="64" y="48" class="cad-ui" font-size="10.5" font-weight="400" fill="#8b949e">Insert</text>
+<text x="116" y="48" class="cad-ui" font-size="10.5" font-weight="400" fill="#8b949e">Annotate</text>
+<text x="182" y="48" class="cad-ui" font-size="10.5" font-weight="400" fill="#8b949e">Parametric</text>
+<text x="262" y="48" class="cad-ui" font-size="10.5" font-weight="400" fill="#8b949e">View</text>
+<text x="308" y="48" class="cad-ui" font-size="10.5" font-weight="400" fill="#8b949e">Output</text>
+<rect x="635" y="34" width="250" height="20" rx="2" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<rect x="642" y="38" width="12" height="12" fill="#38bdf8"/>
+<text x="660" y="48" class="cad-mono" font-size="9" fill="#e6edf3">0_STRUKTUR_BAJA • ByLayer • 0.35mm</text>
+<rect y="58" width="900" height="360" fill="#161b22"/>
+<rect y="58" width="900" height="360" fill="url(#cadGrid)"/>
+<line x1="0" y1="220" x2="900" y2="220" stroke="rgba(255,255,255,0.20)" stroke-width="0.75"/>
+<line x1="450" y1="58" x2="450" y2="418" stroke="rgba(255,255,255,0.20)" stroke-width="0.75"/>
+<rect x="446" y="216" width="8" height="8" fill="none" stroke="#ffffff" stroke-width="1"/>
+<rect x="395.0" y="285" width="110" height="25" fill="#30363d" stroke="#ffffff" stroke-width="1.8"/>
+<rect x="415" y="273" width="70" height="12" fill="#ef4444" stroke="#ffffff" stroke-width="1.2"/>
+<line x1="415" y1="273" x2="485" y2="285" stroke="#ffffff" stroke-width="0.8"/>
+<line x1="485" y1="273" x2="415" y2="285" stroke="#ffffff" stroke-width="0.8"/>
+<text x="450" y="325" class="cad-mono" font-size="9" font-weight="bold" fill="#facc15" text-anchor="middle">PONDASI TELAPAK K-250 (2.00 x 2.00 M)</text>
+<rect x="438.0" y="175" width="24" height="98" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+<line x1="450" y1="160" x2="450" y2="315" stroke="#ef4444" stroke-width="0.75" stroke-dasharray="6,3"/>
+<line x1="466.0" y1="185" x2="466.0" y2="273" stroke="#facc15" stroke-width="1.5"/>
+<line x1="466.0" y1="195" x2="474.0" y2="195" stroke="#facc15" stroke-width="1.2"/>
+<line x1="466.0" y1="210" x2="474.0" y2="210" stroke="#facc15" stroke-width="1.2"/>
+<line x1="466.0" y1="225" x2="474.0" y2="225" stroke="#facc15" stroke-width="1.2"/>
+<line x1="466.0" y1="240" x2="474.0" y2="240" stroke="#facc15" stroke-width="1.2"/>
+<line x1="466.0" y1="255" x2="474.0" y2="255" stroke="#facc15" stroke-width="1.2"/>
+<line x1="466.0" y1="270" x2="474.0" y2="270" stroke="#facc15" stroke-width="1.2"/>
+<line x1="474.0" y1="185" x2="474.0" y2="273" stroke="#facc15" stroke-width="1.5"/>
+<rect x="310.0" y="92" width="280" height="83" fill="rgba(33, 38, 45, 0.75)" stroke="#ffffff" stroke-width="2"/>
+<line x1="310" y1="92" x2="380" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="380" y1="92" x2="310" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="310" y1="92" x2="310" y2="175" stroke="#ffffff" stroke-width="1"/>
+<line x1="380" y1="92" x2="450" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="450" y1="92" x2="380" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="380" y1="92" x2="380" y2="175" stroke="#ffffff" stroke-width="1"/>
+<line x1="450" y1="92" x2="520" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="520" y1="92" x2="450" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="450" y1="92" x2="450" y2="175" stroke="#ffffff" stroke-width="1"/>
+<line x1="520" y1="92" x2="590" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="590" y1="92" x2="520" y2="175" stroke="#38bdf8" stroke-width="1.2"/>
+<line x1="520" y1="92" x2="520" y2="175" stroke="#ffffff" stroke-width="1"/>
+<line x1="590.0" y1="92" x2="590.0" y2="175" stroke="#ffffff" stroke-width="1"/>
+<text x="450" y="129.5" class="cad-ui" font-size="11.5" font-weight="700" fill="#facc15" text-anchor="middle">BIDANG REKLAME 4.00 x 8.00 M</text>
+<text x="450" y="145.5" class="cad-mono" font-size="9" fill="#e2e8f0" text-anchor="middle">Rangka Siku L.50.50.5 • ACP 4mm • 3x Spotlight 100W</text>
+<line x1="310.0" y1="74" x2="590.0" y2="74" stroke="#22c55e" stroke-width="1.2"/>
+<line x1="306.0" y1="78" x2="314.0" y2="70" stroke="#22c55e" stroke-width="2"/>
+<line x1="586.0" y1="78" x2="594.0" y2="70" stroke="#22c55e" stroke-width="2"/>
+<line x1="310.0" y1="90" x2="310.0" y2="69" stroke="#22c55e" stroke-width="0.75" stroke-dasharray="2,2"/>
+<line x1="590.0" y1="90" x2="590.0" y2="69" stroke="#22c55e" stroke-width="0.75" stroke-dasharray="2,2"/>
+<text x="450" y="69" class="cad-mono" font-size="10.5" font-weight="700" fill="#22c55e" text-anchor="middle">8.0000 m</text>
+<line x1="284.0" y1="92" x2="284.0" y2="175" stroke="#22c55e" stroke-width="1.2"/>
+<line x1="280.0" y1="96" x2="288.0" y2="88" stroke="#22c55e" stroke-width="2"/>
+<line x1="280.0" y1="179" x2="288.0" y2="171" stroke="#22c55e" stroke-width="2"/>
+<line x1="308.0" y1="92" x2="279.0" y2="92" stroke="#22c55e" stroke-width="0.75" stroke-dasharray="2,2"/>
+<line x1="308.0" y1="175" x2="279.0" y2="175" stroke="#22c55e" stroke-width="0.75" stroke-dasharray="2,2"/>
+<text x="276.0" y="133.5" class="cad-mono" font-size="10" font-weight="700" fill="#22c55e" text-anchor="middle" transform="rotate(-90 276.0 133.5)">4.0000 m</text>
+<line x1="507.0" y1="175" x2="507.0" y2="273" stroke="#22c55e" stroke-width="1.2"/>
+<line x1="503.0" y1="179" x2="511.0" y2="171" stroke="#22c55e" stroke-width="2"/>
+<line x1="503.0" y1="277" x2="511.0" y2="269" stroke="#22c55e" stroke-width="2"/>
+<text x="517.0" y="224.0" class="cad-mono" font-size="10" font-weight="700" fill="#22c55e" text-anchor="middle" transform="rotate(90 517.0 224.0)">6.0000 m</text>
+<circle cx="35" cy="388" r="2" fill="#ffffff"/>
+<line x1="35" y1="388" x2="59" y2="388" stroke="#ef4444" stroke-width="2"/>
+<polygon points="59,385 65,388 59,391" fill="#ef4444"/>
+<text x="69" y="392" class="cad-mono" font-size="9" font-weight="bold" fill="#ef4444">X</text>
+<line x1="35" y1="388" x2="35" y2="364" stroke="#22c55e" stroke-width="2"/>
+<polygon points="32,364 35,358 38,364" fill="#22c55e"/>
+<text x="32" y="355" class="cad-mono" font-size="9" font-weight="bold" fill="#22c55e">Y</text>
+<rect x="585" y="348" width="300" height="60" fill="#0d1117" stroke="#ffffff" stroke-width="1.2"/>
+<line x1="745" y1="348" x2="745" y2="408" stroke="#30363d" stroke-width="1"/>
+<text x="593" y="364" class="cad-ui" font-size="9.5" font-weight="bold" fill="#ffffff">REKLAME BILLBOARD 4X8 M</text>
+<text x="593" y="378" class="cad-mono" font-size="8" fill="#8b949e">LOKASI: KOTA CIREBON</text>
+<text x="593" y="392" class="cad-mono" font-size="8" fill="#58a6ff">FORMAT: DWG / DXF R2010</text>
+<text x="753" y="364" class="cad-mono" font-size="8" fill="#8b949e">SKALA: 1:50</text>
+<text x="753" y="378" class="cad-mono" font-size="8" fill="#facc15">DRAFTER: M. KHOIRUZZADITTAQWA</text>
+<text x="753" y="392" class="cad-mono" font-size="8" fill="#7ee787">STATUS: AS-PLANNED</text>
+<rect y="418" width="900" height="36" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<text x="12" y="432" class="cad-mono" font-size="9" fill="#8b949e">Command: _DIST  Distance = 8.0000 m, Angle in XY Plane = 0.00</text>
+<text x="12" y="446" class="cad-mono" font-size="10" font-weight="600" fill="#e6edf3">Command: <tspan fill="#58a6ff">_DIMLINEAR</tspan> Specify second extension line origin: 8.00, 6.00 <tspan fill="#38bdf8">|</tspan></text>
+<rect y="454" width="900" height="26" fill="#161b22" stroke="#30363d" stroke-width="0.8"/>
+<rect x="10" y="456" width="65" height="23" fill="#21262d" stroke="#58a6ff" stroke-width="1"/>
+<text x="42" y="471" class="cad-ui" font-size="9" font-weight="700" fill="#58a6ff" text-anchor="middle">Model</text>
+<text x="120" y="471" class="cad-ui" font-size="9" fill="#8b949e" text-anchor="middle">Layout1 - Kop A3</text>
+<text x="200" y="471" class="cad-ui" font-size="9" fill="#8b949e" text-anchor="middle">Layout2 - Detail</text>
+<text x="885" y="471" class="cad-mono" font-size="8.5" fill="#8b949e" text-anchor="end">GRID • SNAP • ORTHO • POLAR • OSNAP: ON</text>
+</svg>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, MessageSquare, Linkedin, Github, ExternalLink, Award, FileText, Compass, MapPin, BookOpen } from 'lucide-react';
+import { Mail, MessageSquare, Linkedin, Github, ExternalLink, Award, FileText, Compass, MapPin, BookOpen, ShieldCheck, UserCheck } from 'lucide-react';
 import { cvProfile } from '@/lib/cv-data';
 import { ProtectedContact } from './ProtectedContact';
 
@@ -42,6 +42,13 @@ export const ContactFooter: React.FC = () => {
                 >
                   <Compass className="w-3.5 h-3.5 text-teal-400" />
                   <span>Katalog Layanan (/layanan/)</span>
+                </Link>
+                <Link
+                  href="/layanan/karir-ats-linkedin-eksekutif/"
+                  className="flex items-center gap-2 text-slate-300 hover:text-teal-300 transition-colors"
+                >
+                  <UserCheck className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Karir & LinkedIn (/karir-ats...)</span>
                 </Link>
                 <Link
                   href="/solusi/"
@@ -106,6 +113,15 @@ export const ContactFooter: React.FC = () => {
                 >
                   <BookOpen className="w-4 h-4 text-amber-400" />
                   <span>Ilmify (Penerbit Riset)</span>
+                </a>
+                <a
+                  href="https://ilmify.id/verify"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-200 hover:text-teal-300 transition-colors font-medium"
+                >
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <span>Verifikasi Mandiri Ilmify</span>
                 </a>
                 <a
                   href={cvProfile.contact.linkedin}

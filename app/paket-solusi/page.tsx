@@ -11,19 +11,20 @@ import {
   Building2,
   ArrowRight,
   ChevronRight,
+  UserCheck,
 } from "lucide-react";
 import { getCanonicalUrl } from "@/lib/canonical-registry";
 import { SolusiCalculator } from "@/components/SolusiCalculator";
 
 export const metadata: Metadata = {
-  title: "Layanan & Solusi Digital | Mulai dari Rp300rb -- Zadit",
+  title: "Layanan & Solusi Digital | Mulai dari Rp300rb: Zadit",
   description:
     "Website bisnis, SEO, dokumen resmi, olah data, dan audit digital untuk UMKM, perusahaan, yayasan, dan peneliti di Indonesia. Mulai dari Rp300rb sudah termasuk domain.",
   alternates: {
     canonical: getCanonicalUrl("/paket-solusi/"),
   },
   openGraph: {
-    title: "Layanan & Solusi Digital | Mulai dari Rp300rb -- Zadit",
+    title: "Layanan & Solusi Digital | Mulai dari Rp300rb: Zadit",
     description:
       "Website bisnis, SEO, dokumen resmi, olah data, dan audit digital. Termin 50:50, NDA tersedia, legalitas PT resmi.",
     url: getCanonicalUrl("/paket-solusi/"),
@@ -33,11 +34,26 @@ export const metadata: Metadata = {
 
 const layanan = [
   {
+    id: "karir-linkedin",
+    icon: UserCheck,
+    judul: "Rekayasa Karir & Optimasi LinkedIn",
+    cerita:
+      "Profil LinkedIn Anda sepi dan CV Canva warna-warni gugur di sistem ATS sebelum sempat dibaca HRD. Kami rekonstruksi narasi pencapaian Anda berbasis formula Google XYZ, banner visual kustom 1584x396px, dan Master Blueprint siap pasang tanpa meminta kata sandi akun Anda.",
+    contoh: [
+      "Overhaul profil LinkedIn berorientasi kemitraan B2B",
+      "Format CV ATS standar industri (Typst Vektor / Word)",
+      "Curriculum Vitae Akademik standar Tri Dharma Dikti",
+      "Custom Spanduk LinkedIn 1584x396px siap pasang",
+    ],
+    mulaiDari: "350.000",
+    href: "/layanan/karir-ats-linkedin-eksekutif/",
+  },
+  {
     id: "website-bisnis",
     icon: Globe,
     judul: "Website Bisnis & Undangan Digital",
     cerita:
-      "Seorang pembeli di Instagram menanyakan: \"Ada websitenya gak, Kak?\" Tanpa website, deal sering batal di sini. Kami bangun halaman bisnis yang memuat profil, layanan, dan kontak -- tanpa biaya server bulanan, tidak down saat ramai pengunjung, dan tampil profesional di Google.",
+      "Seorang pembeli di Instagram menanyakan: \"Ada websitenya gak, Kak?\" Tanpa website, deal sering batal di sini. Kami bangun halaman bisnis yang memuat profil, layanan, dan kontak (tanpa biaya server bulanan, tidak down saat ramai pengunjung, dan tampil profesional di Google).",
     contoh: [
       "Landing page produk atau jasa",
       "Company profile & portofolio",
@@ -52,7 +68,7 @@ const layanan = [
     icon: Search,
     judul: "SEO & Visibilitas di Google",
     cerita:
-      "Kompetitor Anda muncul di halaman pertama Google. Anda tidak. Bukan karena produk mereka lebih baik -- tapi karena mereka mengoptimalkan konten untuk pencarian. Kami riset kata kunci yang relevan, audit kompetitor, dan bangun strategi agar bisnis Anda ditemukan lebih dulu.",
+      "Kompetitor Anda muncul di halaman pertama Google. Anda tidak. Bukan karena produk mereka lebih baik, melainkan karena mereka mengoptimalkan konten untuk pencarian. Kami riset kata kunci yang relevan, audit kompetitor, dan bangun strategi agar bisnis Anda ditemukan lebih dulu.",
     contoh: [
       "Riset kata kunci & analisis kompetitor",
       "Audit SEO teknis website yang ada",
@@ -67,7 +83,7 @@ const layanan = [
     icon: FileText,
     judul: "Dokumen Bisnis & Administratif",
     cerita:
-      "Proposal investor Anda ditolak bukan karena ide yang kurang bagus, tapi karena dokumennya tidak meyakinkan. Atau yayasan Anda butuh profil lembaga, SOP operasional, dan laporan tahunan yang rapi -- tapi tidak ada staf yang menguasainya. Kami kerjakan dari nol, format profesional, siap cetak.",
+      "Proposal investor Anda ditolak bukan karena ide yang kurang bagus, tapi karena dokumennya tidak meyakinkan. Atau yayasan Anda butuh profil lembaga, SOP operasional, dan laporan tahunan yang rapi, tetapi tidak ada staf yang menguasainya. Kami kerjakan dari nol, format profesional, siap cetak.",
     contoh: [
       "Proposal bisnis & investasi",
       "Profil perusahaan & lembaga",
@@ -82,7 +98,7 @@ const layanan = [
     icon: BarChart3,
     judul: "Olah Data & Analitik",
     cerita:
-      "Data sudah terkumpul di spreadsheet, tapi angka-angkanya belum bicara apapun. Atau Anda butuh data dari sumber eksternal yang tidak tersedia secara manual. Kami proses data SPSS, mining, scraping, hingga laporan riset dan publikasi SINTA -- dengan metodologi yang bisa dipertanggungjawabkan.",
+      "Data sudah terkumpul di spreadsheet, tapi angka-angkanya belum bicara apapun. Atau Anda butuh data dari sumber eksternal yang tidak tersedia secara manual. Kami proses data SPSS, mining, scraping, hingga laporan riset dan publikasi SINTA dengan metodologi yang bisa dipertanggungjawabkan.",
     contoh: [
       "Olah data SPSS & statistika inferensial",
       "Data scraping & mining terstruktur",
@@ -124,7 +140,7 @@ const faq = [
   },
   {
     q: "Apa bedanya website di sini dengan yang di Wordpress atau Wix?",
-    a: "Website yang kami bangun tidak perlu bayar server bulanan (Rp200rb-Rp800rb/bulan yang biasa diminta hosting konvensional). Dibangun dengan teknologi modern yang berjalan di jaringan edge global -- lebih cepat, tidak down saat ramai, dan lebih aman dari serangan.",
+    a: "Website yang kami bangun tidak perlu bayar server bulanan (Rp200rb-Rp800rb/bulan yang biasa diminta hosting konvensional). Dibangun dengan teknologi modern yang berjalan di jaringan edge global: lebih cepat, tidak down saat ramai, dan lebih aman dari serangan.",
   },
   {
     q: "Berapa lama pengerjaan biasanya?",
@@ -173,7 +189,7 @@ export default function PaketSolusiPage() {
 
         <div className="max-w-3xl">
           <p className="text-xs font-mono font-bold text-teal-700 uppercase tracking-widest mb-4">
-            Mulai dari Rp300.000 -- termasuk domain
+            Mulai dari Rp300.000 (termasuk domain)
           </p>
 
           <h1 className="text-4xl sm:text-5xl font-heading font-extrabold text-slate-900 leading-tight tracking-tight mb-6">
@@ -182,7 +198,7 @@ export default function PaketSolusiPage() {
 
           <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
             Bisnis yang hanya bergantung pada story IG dan WA blast tidak akan tumbuh mandiri.
-            Website, dokumen yang meyakinkan, dan data yang bicara -- itu yang membuat pembeli
+            Website, dokumen yang meyakinkan, dan data yang bicara, itulah yang membuat pembeli
             datang tanpa perlu dikejar-kejar.
           </p>
 
@@ -233,7 +249,7 @@ export default function PaketSolusiPage() {
             {[
               {
                 no: "01",
-                teks: "Toko Anda ramai di IG, tapi calon pembeli bertanya \"ada websitenya gak?\" -- dan deal batal di situ.",
+                teks: "Toko Anda ramai di IG, tapi calon pembeli bertanya \"ada websitenya gak?\", dan deal batal di situ.",
               },
               {
                 no: "02",
@@ -259,8 +275,8 @@ export default function PaketSolusiPage() {
       <section className="px-4 sm:px-6 py-14 max-w-5xl mx-auto">
         <div className="bg-teal-50 border border-teal-100 rounded-3xl p-8 sm:p-12">
           <p className="text-teal-800 text-lg sm:text-xl font-semibold leading-relaxed max-w-2xl">
-            Kami tidak menjual paket. Kami menyelesaikan masalah spesifik Anda -- website,
-            dokumen, data, atau visibilitas pencarian -- dengan hasil yang bisa Anda pegang
+            Kami tidak menjual paket. Kami menyelesaikan masalah spesifik Anda (website,
+            dokumen, data, atau visibilitas pencarian) dengan hasil yang bisa Anda pegang
             dan harga yang disepakati dari awal.
           </p>
           <p className="mt-4 text-teal-700 text-sm font-mono">
@@ -276,7 +292,7 @@ export default function PaketSolusiPage() {
             Apa yang bisa kami bantu?
           </h2>
           <p className="text-slate-500 text-sm">
-            Lima area kerja -- pilih yang paling relevan dengan situasi Anda saat ini.
+            Area kerja terarah: pilih yang paling relevan dengan situasi Anda saat ini.
           </p>
         </div>
 
@@ -342,7 +358,7 @@ export default function PaketSolusiPage() {
             </h2>
             <p className="text-slate-500 text-sm">
               Pilih apa yang Anda butuhkan, dapatkan estimasi, lalu langsung diskusikan via
-              WhatsApp -- tanpa komitmen.
+              WhatsApp tanpa komitmen.
             </p>
           </div>
           <SolusiCalculator />
@@ -441,7 +457,7 @@ export default function PaketSolusiPage() {
           Ceritakan kebutuhan Anda
         </h2>
         <p className="text-slate-500 text-sm">
-          Tidak perlu tahu istilah teknisnya. Ceritakan saja situasi bisnis Anda -- kami akan
+          Tidak perlu tahu istilah teknisnya. Ceritakan saja situasi bisnis Anda: kami akan
           respons dalam 1x24 jam dengan estimasi yang jujur.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

@@ -139,6 +139,20 @@ export const SITE_CANONICAL_REGISTRY: Record<string, IntentMapping> = {
     pillar: "web",
     category: "layanan",
   },
+  "/cad-estimator/": {
+    canonicalPath: "/cad-estimator/",
+    primaryKeyword: "layanan drafter autocad 2d sketchup 3d estimator rab proyek",
+    secondaryKeywords: ["jasa drafter cirebon", "gambar kerja shop drawing reklame", "rab boq ahsp pupr", "pemodelan 3d sketchup"],
+    pillar: "general",
+    category: "layanan",
+  },
+  "/editorial-studio/": {
+    canonicalPath: "/editorial-studio/",
+    primaryKeyword: "visual editorial studio dan desain sampul buku realistis",
+    secondaryKeywords: ["desain sampul hardcover", "mockup kemasan box fefco 0427", "pola dieline cetak", "animasi teaser buku"],
+    pillar: "general",
+    category: "layanan",
+  },
 };
 
 

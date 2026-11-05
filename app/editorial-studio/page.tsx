@@ -16,6 +16,7 @@ import {
   Download,
   ShieldCheck,
   Package,
+  Compass,
 } from "lucide-react";
 
 export const dynamic = "force-static";
@@ -512,6 +513,14 @@ export default function EditorialStudioPage() {
               <MessageCircle className="w-4 h-4" />
               <span>Konsultasi Langsung via WhatsApp</span>
             </a>
+
+            <Link
+              href="/cad-estimator"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white border border-zinc-300 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors"
+            >
+              <Compass className="w-4 h-4 text-emerald-700" />
+              <span>Studio CAD &amp; Estimator Proyek</span>
+            </Link>
 
             <Link
               href="/portfolio"
