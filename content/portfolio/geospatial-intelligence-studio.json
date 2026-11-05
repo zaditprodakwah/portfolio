@@ -1,0 +1,33 @@
+{
+  "slug": "geospatial-intelligence-studio",
+  "title": "Studio Intelijen Geospasial: Analisis Multikriteria AHP, Neraca Karbon Kanopi, & Pemantauan Bencana Cloud GEE",
+  "metaDescription": "Studi kasus dan etalase analisis geospasial presisi: penentuan kesesuaian lahan AHP Saaty (CR < 0.10), estimasi biomassa dan serapan karbon ortofoto drone (Chave 2014 & i-Tree Eco), serta deteksi genangan banjir radar Sentinel-1 SAR cloud computing.",
+  "badge": "SPATIAL AI & ANALISIS PRESISI",
+  "category": "Geospasial & Lingkungan",
+  "year": "2026",
+  "kind": "case-study",
+  "demoUrl": "/layanan/analisis-geospasial-lingkungan/",
+  "tags": [
+    "AHP Saaty (CR < 0.10)",
+    "Karbon Kanopi Drone",
+    "Sentinel-1 SAR",
+    "Google Earth Engine",
+    "Vektor SVG Murni",
+    "FAO 1976",
+    "QGIS & ArcGIS Pro"
+  ],
+  "summary": "Bukan sekadar layout peta gambar statis. Saya mengintegrasikan pemodelan spasial multikriteria terverifikasi matematis (AHP Saaty) dengan otomasi cloud computing untuk pemrosesan citra skala luas. Layanan ini mencakup penentuan kesesuaian lahan bergaransi rasio konsistensi di bawah 0.10, estimasi biomassa dan serapan karbon pohon individu dari citra drone berbasis allometri Chave 2014 dan i-Tree Eco EPA, deteksi genangan banjir bebas awan dengan Sentinel-1 SAR UN-SPIDER, serta kompilasi laporan akademik dan tata letak kartografi vektor SVG presisi tinggi.",
+  "highlights": [
+    "Pemodelan Kesesuaian Lahan AHP Saaty: Matriks perbandingan berpasangan (pairwise matrix) divalidasi deterministik hingga nilai Consistency Ratio (CR) di bawah ambang batas kritis 0.10, mencegah bias subjektif dalam zonasi tata ruang dan kesesuaian komoditas (S1, S2, S3, N).",
+    "Kalkulasi Neraca Karbon & Biomassa Kanopi: Segmentasi mahkota pohon ortofoto drone diintegrasikan dengan model allometrik Chave et al. (2014) dan i-Tree Eco EPA, menghasilkan estimasi AGB (Aboveground Biomass), stok karbon tersimpan (Mg C), dan serapan tahunan (kg CO2e/thn) siap audit ESG.",
+    "Deteksi Genangan Banjir Radar Sentinel-1 SAR: Pipeline Google Earth Engine berbasis protokol UN-SPIDER mengekstrak genangan air tembus awan dengan penapisan permanent water mask JRC, slope mask Copernicus DEM, dan filter konektivitas spasial.",
+    "Arsitektur Skrip Cloud & Ekspor Vektor Ringan: Alur kerja analitis berat didelegasikan ke cloud computing (GEE dan Colab GPU) untuk mencegah laptop freeze saat memproses ortofoto giga-piksel, dipadukan dengan generator peta vektor SVG skala 1:1."
+  ],
+  "deliverables": [
+    "Laporan Saintifik Lengkap: Naskah komprehensif dalam format Microsoft Word (.docx) berfitur sitasi aktif Zotero OpenXML dan dokumen PDF cetak Typst Munken B5.",
+    "Paket Peta Vektor Tematik: Layout kartografi presisi skala 1:1 dalam format vektor SVG murni dan PDF resolusi tinggi (grid koordinat, skala grafis, legenda terstruktur, sumber data).",
+    "Skrip Otomasi Terbuka: Berkas skrip Google Earth Engine JavaScript dan Python Geopandas siap pakai untuk pembaruan data berkala tanpa biaya lisensi perangkat lunak tambahan.",
+    "Dataset Geospasial Baku: Berkas Shapefile (.shp), GeoJSON (.geojson), dan ringkasan tabulasi statistik (.csv) dengan metadata spasial terstandarisasi."
+  ]
+}
+

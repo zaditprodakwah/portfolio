@@ -100,6 +100,28 @@ export default async function PortfolioDetailPage({ params }: PageProps) {
           </section>
         )}
 
+        {item.kind === "case-study" && item.demoUrl && (
+          <section className="rounded-2xl border border-teal-200/80 bg-gradient-to-br from-teal-50/70 via-white to-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-xs">
+            <div className="space-y-1.5">
+              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-teal-800">
+                Spesifikasi Layanan & Implementasi
+              </span>
+              <h3 className="text-lg font-heading font-bold text-zinc-900">
+                Eksplorasi Metodologi & Estimasi Investasi Solusi
+              </h3>
+              <p className="text-sm text-zinc-600 max-w-xl">
+                Pelajari rincian alur kerja AHP Saaty, formula alometrik biomassa Chave, skrip deteksi banjir SAR GEE, serta simulasi biaya implementasi.
+              </p>
+            </div>
+            <Link
+              href={item.demoUrl}
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-teal-800 hover:bg-teal-900 text-white text-sm font-medium transition-all shadow-sm shrink-0"
+            >
+              Lihat Layanan Lengkap &rarr;
+            </Link>
+          </section>
+        )}
+
         <section className="space-y-3 bg-white p-6 sm:p-8 rounded-xl border border-zinc-200 shadow-xs">
           <h2 className="text-lg font-heading font-semibold text-zinc-900">Highlight</h2>
           <ul className="space-y-2 list-disc list-inside text-sm text-zinc-700 leading-relaxed">
