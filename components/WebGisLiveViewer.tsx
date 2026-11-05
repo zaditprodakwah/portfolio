@@ -72,12 +72,12 @@ export default function WebGisLiveViewer() {
       );
 
       const cartoPositron = L.tileLayer(
-        "/api/tiles?s=light_all&z={z}&x={x}&y={y}&r={r}",
+        "/api/tiles/light_all/{z}/{x}/{y}{r}.png",
         { maxZoom: 19 }
       );
 
       const cartoVoyager = L.tileLayer(
-        "/api/tiles?s=voyager&z={z}&x={x}&y={y}&r={r}",
+        "/api/tiles/voyager/{z}/{x}/{y}{r}.png",
         { maxZoom: 19 }
       );
 

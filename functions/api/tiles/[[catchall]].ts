@@ -1,45 +1,53 @@
 /**
- * Cloudflare Pages Edge Function: /api/tiles
+ * Cloudflare Pages Edge Function: /api/tiles/[[catchall]]
  * 
  * Secure raster tile proxy for CARTO Basemaps.
  * Protects CARTO API keys from client exposure (OWASP A04/A07).
  * Caches raster tiles at Cloudflare Edge for 30 days.
  */
 
-interface Env {
-  CARTO_API_KEY?: string;
-}
-
 export async function onRequestGet(context: any) {
   const { request, env } = context;
   const url = new URL(request.url);
 
-  // 1. Query Parameter Extraction
-  const s = url.searchParams.get("s") || "light_all";
-  const zStr = url.searchParams.get("z");
-  const xStr = url.searchParams.get("x");
-  const yStr = url.searchParams.get("y");
-  const r = url.searchParams.get("r") || "";
+  // 1. Path & Parameter Extraction
+  // Supports both /api/tiles/:style/:z/:x/:y[@2x].png and /api/tiles/:style/:z/:x/:y
+  const prefix = "/api/tiles/";
+  const index = url.pathname.indexOf(prefix);
+  
+  let style = "light_all";
+  let z = 0;
+  let x = 0;
+  let y = 0;
+  let retina = "";
+
+  if (index !== -1) {
+    const subPath = url.pathname.slice(index + prefix.length);
+    const match = subPath.match(/^(light_all|voyager|dark_all)\/(\d{1,2})\/(\d+)\/(\d+)(@2x)?(\.png)?$/);
+    if (match) {
+      style = match[1];
+      z = parseInt(match[2], 10);
+      x = parseInt(match[3], 10);
+      y = parseInt(match[4], 10);
+      retina = match[5] || "";
+    } else {
+      // Fallback to query params if available
+      style = url.searchParams.get("s") || "light_all";
+      z = parseInt(url.searchParams.get("z") || "-1", 10);
+      x = parseInt(url.searchParams.get("x") || "-1", 10);
+      y = parseInt(url.searchParams.get("y") || "-1", 10);
+      retina = url.searchParams.get("r") === "@2x" ? "@2x" : "";
+    }
+  }
 
   // 2. Strict Whitelist & SSRF Guardrails
   const allowedStyles = ["light_all", "voyager", "dark_all"];
-  if (!allowedStyles.includes(s)) {
+  if (!allowedStyles.includes(style)) {
     return new Response(JSON.stringify({ error: "Gaya ubin tidak diizinkan." }), {
       status: 400,
       headers: { "Content-Type": "application/json" }
     });
   }
-
-  if (!zStr || !xStr || !yStr) {
-    return new Response(JSON.stringify({ error: "Parameter z, x, dan y wajib diisi." }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
-  }
-
-  const z = parseInt(zStr, 10);
-  const x = parseInt(xStr, 10);
-  const y = parseInt(yStr, 10);
 
   if (isNaN(z) || isNaN(x) || isNaN(y) || z < 0 || z > 20 || x < 0 || y < 0) {
     return new Response(JSON.stringify({ error: "Koordinat ubin tidak valid." }), {
@@ -62,18 +70,19 @@ export async function onRequestGet(context: any) {
     }
   }
 
-  // 4. Fetch from Upstream CARTO with Server-Side Secret Key
-  const apiKey = env.CARTO_API_KEY || "cb1_52p0_1_c919c75f025b6585c436eb41";
-  const retinaSuffix = r === "@2x" ? "@2x" : "";
-  const upstreamUrl = `https://basemaps.cartocdn.com/rastertiles/${s}/${z}/${x}/${y}${retinaSuffix}.png?key=${apiKey}`;
+  // 4. Upstream Fetch to CARTO with Server-Side Secret Key
+  const apiKey = env?.CARTO_API_KEY || "cb1_52p0_1_c919c75f025b6585c436eb41";
+  const upstreamUrl = `https://basemaps.cartocdn.com/rastertiles/${style}/${z}/${x}/${y}${retina}.png?key=${apiKey}`;
 
   try {
-    const upstreamRes = await fetch(upstreamUrl, {
+    const fetchInit: any = {
       cf: {
         cacheEverything: true,
         cacheTtl: 2592000 // 30 days CDN cache
-      } as any
-    });
+      }
+    };
+
+    const upstreamRes = await fetch(upstreamUrl, fetchInit);
 
     if (!upstreamRes.ok) {
       return new Response("Gagal memuat ubin dari penyedia hulu.", { status: upstreamRes.status });
